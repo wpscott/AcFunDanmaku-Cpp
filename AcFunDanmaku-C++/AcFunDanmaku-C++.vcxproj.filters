@@ -9,6 +9,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{17d8ee2a-1e16-4e3a-b088-67bd9d9f8c63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AcFunDanmaku-C++.cpp">
@@ -17,12 +20,438 @@
     <ClCompile Include="client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Models\AccessPoint.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\AccessPointsConfig.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\acfun.live.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\AppInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\AuthorChatPlayerInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ChatMediaType.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonActionSignalComment.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonActionSignalGift.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonActionSignalLike.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonActionSignalRichText.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonActionSignalUserEnterRoom.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonActionSignalUserFollowAuthor.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonNotifySignalCoverAuditResult.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonNotifySignalKickedOut.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonNotifySignalLiveManagerState.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonNotifySignalViolationAlert.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalAuthorChatAccept.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalAuthorChatCall.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalAuthorChatChangeSoundConfig.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalAuthorChatEnd.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalAuthorChatReady.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalChatAccept.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalChatCall.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalChatEnd.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalChatReady.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalCurrentRedpackList.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalDisplayInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalFeatureStateSync.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalRecentComment.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CommonStateSignalTopUsers.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\CsAckErrorCode.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\DeviceInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\DownstreamPayload.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\EnvInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\FrontendInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ImageCdnNode.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\KeepAlive.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\LinkErrorCode.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\LiveFeatureState.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\PacketHeader.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Ping.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\PushServiceToken.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Register.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\RequestBasicInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\SdkOption.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\SettingInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\TokenInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Unregister.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\UpstreamPayload.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\User.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\UserInstance.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtCommonInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtDrawGiftInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveActionSignalItem.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveChatProto.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveCsCmd.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveCsEnterRoom.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveCsHeartbeat.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveCsUserExit.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveDownstreamPayloadErrorCode.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveNotifySignalItem.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveScActionSignal.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveScMessage.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveScNotifySignal.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveScStateSignal.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveScStatusChanged.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveScTicketInvalid.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveStateSignalItem.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveUserIdentity.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\ZtLiveUserInfo.pb.cc">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="client_request.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="gift.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\AccessPoint.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\AccessPointsConfig.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\acfun.live.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\AppInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\AuthorChatPlayerInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ChatMediaType.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonActionSignalComment.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonActionSignalGift.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonActionSignalLike.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonActionSignalRichText.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonActionSignalUserEnterRoom.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonActionSignalUserFollowAuthor.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonNotifySignalCoverAuditResult.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonNotifySignalKickedOut.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonNotifySignalLiveManagerState.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonNotifySignalViolationAlert.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalAuthorChatAccept.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalAuthorChatCall.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalAuthorChatChangeSoundConfig.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalAuthorChatEnd.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalAuthorChatReady.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalChatAccept.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalChatCall.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalChatEnd.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalChatReady.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalCurrentRedpackList.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalDisplayInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalFeatureStateSync.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalRecentComment.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CommonStateSignalTopUsers.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\CsAckErrorCode.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\DeviceInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\DownstreamPayload.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\EnvInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\FrontendInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ImageCdnNode.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\KeepAlive.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\LinkErrorCode.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\LiveFeatureState.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\PacketHeader.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Ping.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\PushServiceToken.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Register.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\RequestBasicInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\SdkOption.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\SettingInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\TokenInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Unregister.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\UpstreamPayload.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\User.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\UserInstance.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtCommonInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtDrawGiftInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveActionSignalItem.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveChatProto.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveCsCmd.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveCsEnterRoom.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveCsHeartbeat.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveCsUserExit.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveDownstreamPayloadErrorCode.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveNotifySignalItem.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveScActionSignal.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveScMessage.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveScNotifySignal.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveScStateSignal.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveScStatusChanged.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveScTicketInvalid.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveStateSignalItem.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveUserIdentity.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\ZtLiveUserInfo.pb.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="client_request.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -77,7 +77,7 @@ pplx::task<bool> Client::initialize() {
 					else {
 						auto _tickets = json[U("data")][U("availableTickets")].as_array();
 						for (auto ticket : _tickets) {
-							tickets.push_back(ticket.as_string());
+							tickets.push_back(conversions::to_utf8string(ticket.as_string()));
 						}
 						enterRoomAttach = json[U("data")][U("enterRoomAttach")].as_string();
 						liveId = json[U("data")][U("liveId")].as_string();
@@ -130,3 +130,8 @@ pplx::task<void> Client::updateGiftList() {
 		}
 		});
 }
+
+//pplx::task<bool> Client::start() {
+//	client.connect(WS_HOST);
+//	return pplx::task_from_result(false);
+//}

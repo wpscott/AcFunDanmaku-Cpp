@@ -7,7 +7,8 @@
 #include <iostream>
 #include <unordered_map>
 #include <cpprest/http_client.h>
-#include <cpprest/json.h>                       // JSON library
+#include <cpprest/json.h>					// JSON library
+#include <cpprest/ws_client.h>
 
 #include "gift.h"
 
@@ -15,7 +16,8 @@ using namespace utility;                    // Common utilities like string conv
 using namespace web;                        // Common features like URIs.
 using namespace web::http;                  // Common HTTP functionality
 using namespace web::http::client;          // HTTP client features
-using namespace web::json;                                  // JSON library
+using namespace web::json;                  // JSON library
+using namespace web::websockets::client;	// WebSocket client features
 
 class Client
 {
@@ -23,6 +25,8 @@ public:
 	Client(const string_t uperId) :uperId(uperId) {}
 	pplx::task<bool> initialize();
 	pplx::task<void> updateGiftList();
+
+	//pplx::task<bool> start();
 
 private:
 	int64_t userId{};
@@ -33,7 +37,9 @@ private:
 	string_t securityKey{};
 	string_t enterRoomAttach{};
 	string_t liveId{};
-	std::vector<string_t> tickets{};
+	std::vector<std::string> tickets{};
+
+	//websocket_client client;
 
 	std::unordered_map<int32_t, Gift> giftList{};
 
@@ -50,6 +56,8 @@ private:
 	inline static const string_t _did_key = U("_did=");
 
 	inline static const string_t VisitorToken = U("acfun.api.visitor_st");
+
+	inline static const string_t WS_HOST = U("wss://link.xiatou.com/");
 
 	static bool isOK(const http_response response) {
 		return (&response != nullptr) && response.status_code() == status_codes::OK;
