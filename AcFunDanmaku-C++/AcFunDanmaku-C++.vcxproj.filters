@@ -17,9 +17,6 @@
     <ClCompile Include="AcFunDanmaku-C++.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="client.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Models\AccessPoint.pb.cc">
       <Filter>Models</Filter>
     </ClCompile>
@@ -230,15 +227,9 @@
     <ClCompile Include="Models\ZtLiveUserInfo.pb.cc">
       <Filter>Models</Filter>
     </ClCompile>
-    <ClCompile Include="client_request.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="gift.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Models\AccessPoint.pb.h">
@@ -452,6 +443,12 @@
       <Filter>Models</Filter>
     </ClInclude>
     <ClInclude Include="client_request.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="client_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

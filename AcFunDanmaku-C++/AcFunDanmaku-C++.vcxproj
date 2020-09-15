@@ -142,8 +142,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AcFunDanmaku-C++.cpp" />
-    <ClCompile Include="client.cpp" />
-    <ClCompile Include="client_request.cpp" />
     <ClCompile Include="Models\AccessPoint.pb.cc" />
     <ClCompile Include="Models\AccessPointsConfig.pb.cc" />
     <ClCompile Include="Models\acfun.live.pb.cc" />
@@ -218,7 +216,8 @@
   <ItemGroup>
     <ClInclude Include="client.h" />
     <ClInclude Include="client_request.h" />
-    <ClInclude Include="gift.h" />
+    <ClInclude Include="client_utils.h" />
+    <ClInclude Include="enums.h" />
     <ClInclude Include="Models\AccessPoint.pb.h" />
     <ClInclude Include="Models\AccessPointsConfig.pb.h" />
     <ClInclude Include="Models\acfun.live.pb.h" />
