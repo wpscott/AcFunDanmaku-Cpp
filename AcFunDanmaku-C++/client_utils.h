@@ -112,14 +112,14 @@ namespace ClientUtils {
 		return recovered;
 	}
 
-	void _convertLength(std::vector<uint8_t>& buffer, const size_t& length) {
+ 	void convertLength(std::vector<uint8_t>& buffer, const size_t& length) {
 		buffer.push_back((length & 0xFF000000) >> 24);
 		buffer.push_back((length & 0x00FF0000) >> 16);
 		buffer.push_back((length & 0x0000FF00) >> 8);
 		buffer.push_back(length & 0x000000FF);
 	}
 
-	const std::unique_ptr<websocket_outgoing_message> Encode(const std::string& header, const std::string& body, const std::vector<CryptoPP::byte>& key) {
+	const websocket_outgoing_message Encode(const std::string& header, const std::string& body, const std::vector<CryptoPP::byte>& key) {
 		auto encrypted = Encrypt(key, body);
 
 		std::vector<uint8_t> buf;
@@ -127,8 +127,8 @@ namespace ClientUtils {
 		buf.push_back(0xCD);
 		buf.push_back(0x00);
 		buf.push_back(0x01);
-		_convertLength(buf, header.length());
-		_convertLength(buf, encrypted.length());
+		convertLength(buf, header.length());
+		convertLength(buf, encrypted.length());
 		std::copy(header.begin(), header.end(), std::back_inserter(buf));
 		std::copy(encrypted.begin(), encrypted.end(), std::back_inserter(buf));
 
@@ -138,12 +138,12 @@ namespace ClientUtils {
 		websocket_outgoing_message msg;
 		msg.set_binary_message(buffer.create_istream(), length);
 
-		return std::make_unique<websocket_outgoing_message>(msg);
+		return msg;
 	}
 
-	const std::tuple<std::unique_ptr<AcFunDanmu::PacketHeader>, std::unique_ptr<AcFunDanmu::DownstreamPayload>> Decode(const websocket_incoming_message& message, const std::vector<CryptoPP::byte>& securityKey, const std::vector<CryptoPP::byte>& sessionKey) {
+	const std::tuple<AcFunDanmu::PacketHeader, AcFunDanmu::DownstreamPayload> Decode(const websocket_incoming_message& message, const std::vector<CryptoPP::byte>& securityKey, const std::vector<CryptoPP::byte>& sessionKey) {
 		const auto& is = message.body();
-		auto length = message.length();
+		const auto& length = message.length();
 
 		container_buffer<std::vector<uint8_t>> buffer;
 		is.read_to_end(buffer).wait();
@@ -180,6 +180,6 @@ namespace ClientUtils {
 			}
 			down.ParseFromArray(&data[HeaderOffset + headerlen], payloadlen);
 		}
-		return std::make_tuple(std::make_unique<AcFunDanmu::PacketHeader>(header), std::make_unique<AcFunDanmu::DownstreamPayload>(down));
+		return std::make_tuple(std::move(header), std::move(down));
 	}
 }

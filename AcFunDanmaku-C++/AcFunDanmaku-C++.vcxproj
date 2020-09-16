@@ -141,7 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AcFunDanmaku-C++.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Models\AccessPoint.pb.cc" />
     <ClCompile Include="Models\AccessPointsConfig.pb.cc" />
     <ClCompile Include="Models\acfun.live.pb.cc" />

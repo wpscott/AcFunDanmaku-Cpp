@@ -4,8 +4,12 @@
 #define _WIN32_WINNT 0x0601
 #endif
 
-#include <iostream>
 #include <unordered_map>
+
+#include <boost/system/error_code.hpp>
+#include <boost/asio.hpp>
+#include <boost/bind.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
 
 #include <gzip/decompress.hpp>
 
@@ -160,116 +164,190 @@ namespace AcFunDanmu {
 			this->handler = handler;
 		}
 
-		pplx::task<void> start() {
-			return pplx::task<void>([&]() {
-				auto request = client_request(
-					userId,
-					conversions::to_utf8string(serviceToken),
-					conversions::from_base64(securityKey),
-					conversions::to_utf8string(liveId),
-					conversions::to_utf8string(enterRoomAttach),
-					tickets);
+		pplx::task<bool> start() {
+			auto request = client_request(
+				userId,
+				conversions::to_utf8string(serviceToken),
+				conversions::from_base64(securityKey),
+				conversions::to_utf8string(liveId),
+				conversions::to_utf8string(enterRoomAttach),
+				tickets);
 
-				try {
-					websocket_client client;
-					client.connect(WS_HOST).then([&]() {
-						return client.send(*(request.RegisterRequest())).then([]() {
-							});
-						}).wait();
-						const auto msg = client.receive().get();
-						const auto& [header, down] = ClientUtils::Decode(msg, request.getSecurityKey(), request.getSessionKey());
-						AcFunDanmu::RegisterResponse regresp;
-						regresp.ParseFromString(down->payloaddata());
+			try {
+				bool running = true;
+				websocket_client client;
+				client.connect(WS_HOST).then([&]() {
+					return client.send(request.RegisterRequest()).then([]() {
+						});
+					}).wait();
+					const auto& msg = client.receive().get();
+					const auto& [header, down] = ClientUtils::Decode(msg, request.getSecurityKey(), request.getSessionKey());
+					AcFunDanmu::RegisterResponse regresp;
+					regresp.ParseFromString(down.payloaddata());
 
-						request.Register(regresp.instanceid(), regresp.sesskey(), regresp.sdkoption().lz4compressionthresholdbytes());
+					request.Register(regresp.instanceid(), regresp.sesskey(), regresp.sdkoption().lz4compressionthresholdbytes());
 
-						client.send(*(request.KeepAliveRequest(true))).wait();
+					client.send(request.KeepAliveRequest(true)).wait();
 
-						client.send(*(request.EnterRoomRequest())).wait();
+					client.send(request.EnterRoomRequest()).wait();
 
-						while (true) {
-							try {
-								const auto msg = client.receive().get();
-								const auto& [header, down] = ClientUtils::Decode(msg, request.getSecurityKey(), request.getSessionKey());
-								const auto& command = down->command();
-								if (command == Command::GLOBAL_COMMAND) {
-									AcFunDanmu::ZtLiveCsCmdAck cmd;
-									cmd.ParseFromString(down->payloaddata());
-									const auto& cmdack = cmd.cmdacktype();
-									if (cmdack == GlobalCommand::ENTER_ROOM_ACK) {
-										AcFunDanmu::ZtLiveCsHeartbeatAck ack;
-										ack.ParseFromString(cmd.payload());
+					int64_t heartbeatinterval;
+					std::thread hbt;
+					boost::asio::io_service ios;
+					boost::asio::deadline_timer* timer;
 
-									}
-									else if (cmdack == GlobalCommand::HEARTBEAT_ACK) {
-
-									}
-									else if (cmdack == GlobalCommand::USER_EXIT_ACK) {
-
-									}
-									else {
-										std::cout << "Unhandled Global.ZtLiveInteractive.CsCmdAck: " << cmdack << std::endl;
-									}
-								}
-								else if (command == Command::KEEP_ALIVE) {
-
-								}
-								else if (command == Command::PING) {
-
-								}
-								else if (command == Command::UNREGISTER) {
-									client.close();
-									break;
-								}
-								else if (command == Command::PUSH_MESSAGE) {
-									client.send(*(request.PushMessageResponse(header->seqid()))).get();
-									AcFunDanmu::ZtLiveScMessage message;
-									message.ParseFromString(down->payloaddata());
-									std::string payload = message.payload();
-									if (message.compressiontype() == AcFunDanmu::ZtLiveScMessage::GZIP) {
-										payload = gzip::decompress(payload.data(), payload.length());
-									}
-
-									const auto& msgType = message.messagetype();
-									if (msgType == PushMessage::ACTION_SIGNAL || msgType == PushMessage::STATE_SIGNAL || msgType == PushMessage::NOTIFY_SIGNAL) {
-										if (handler) {
-											handler(msgType, std::move(payload));
-										}
-									}
-									else if (msgType == PushMessage::STATUS_CHANGED) {
-										ZtLiveScStatusChanged statusChanged;
-										statusChanged.ParseFromString(payload);
-										const auto& type = statusChanged.type();
-										if (type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_CLOSED || type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_BANNED) {
-											client.close();
-										}
-									}
-									else if (msgType == PushMessage::TICKET_INVALID) {
-										request.nextTicket();
-										client.send(*(request.EnterRoomRequest())).get();
-									}
-									else {
-										std::cout << "Unhandled Push.ZtLiveInteractive.Message: " << msgType << std::endl;
-									}
-								}
-								else {
-									std::cout << "Unhandled command: " << command << std::endl;
-								}
-							}
-							catch (websocket_exception ex) {
-								std::cout << ex.error_code() << ": " << ex.what() << std::endl;
-								client.close();
-								break;
+					const auto& stop = [&]() {
+						running = false;
+						client.close();
+						if (timer) {
+							timer->cancel();
+							ios.stop();
+							if (hbt.joinable()) {
+								hbt.join();
 							}
 						}
-				}
-				catch (std::exception e) {
-					std::cout << e.what() << std::endl;
-				}
-				});
+					};
+
+					std::function<void(boost::system::error_code)> hbhandler = [&](const boost::system::error_code& error) {
+						if (!error) {
+							if (running && timer) {
+								try {
+									client.send(request.HeartbeatRequest()).wait();
+									client.send(request.KeepAliveRequest()).wait();
+									timer->expires_from_now(boost::posix_time::milliseconds(heartbeatinterval));
+									timer->async_wait(hbhandler);
+								}
+								catch (const std::exception& e) {
+									ucout << conversions::to_string_t(e.what()) << std::endl;
+									stop();
+								}
+							}
+							else {
+								stop();
+							}
+						}
+						else {
+							stop();
+						}
+					};
+
+					/*concurrency::timer<int>* timer;
+					concurrency::call<int> heartbeat([&](int _) {
+						try {
+							if (&client) {
+								client.send(request.HeartbeatRequest()).wait();
+								client.send(request.KeepAliveRequest()).wait();
+							}
+							else {
+								if (timer) {
+									timer->stop();
+								}
+							}
+						}
+						catch (const websocket_exception& e) {
+							ucout << e.what() << std::endl;
+							if (timer) {
+								timer->stop();
+							}
+						}
+						});*/
+
+					
+					while (running) {
+						try {
+							const auto msg = client.receive().get();
+							const auto& [header, down] = ClientUtils::Decode(msg, request.getSecurityKey(), request.getSessionKey());
+							const auto& command = down.command();
+							if (command == Command::GLOBAL_COMMAND) {
+								AcFunDanmu::ZtLiveCsCmdAck cmd;
+								cmd.ParseFromString(down.payloaddata());
+								const auto& cmdack = cmd.cmdacktype();
+								if (cmdack == GlobalCommand::ENTER_ROOM_ACK) {
+									AcFunDanmu::ZtLiveCsEnterRoomAck ack;
+									ack.ParseFromString(cmd.payload());
+									heartbeatinterval = std::move(ack.heartbeatintervalms());
+
+									/*timer = new concurrency::timer<int>(heartbeatinterval, 0, &heartbeat, true);
+									timer->start();*/
+									timer = new boost::asio::deadline_timer(ios, boost::posix_time::milliseconds(heartbeatinterval));
+									timer->async_wait(hbhandler);
+									hbt = std::thread([&] {ios.run(); });
+								}
+								else if (cmdack == GlobalCommand::HEARTBEAT_ACK) {
+
+								}
+								else if (cmdack == GlobalCommand::USER_EXIT_ACK) {
+
+								}
+								else {
+									ucout << U("Unhandled Global.ZtLiveInteractive.CsCmdAck: ") << conversions::to_string_t(cmdack) << std::endl;
+								}
+							}
+							else if (command == Command::KEEP_ALIVE) {
+
+							}
+							else if (command == Command::PING) {
+
+							}
+							else if (command == Command::UNREGISTER) {
+								stop();
+								break;
+							}
+							else if (command == Command::PUSH_MESSAGE) {
+								client.send(request.PushMessageResponse(header.seqid())).wait();
+								AcFunDanmu::ZtLiveScMessage message;
+								message.ParseFromString(down.payloaddata());
+								std::string payload = message.payload();
+								if (message.compressiontype() == AcFunDanmu::ZtLiveScMessage::GZIP) {
+									payload = gzip::decompress(payload.data(), payload.length());
+								}
+
+								const auto& msgType = message.messagetype();
+								if (msgType == PushMessage::ACTION_SIGNAL || msgType == PushMessage::STATE_SIGNAL || msgType == PushMessage::NOTIFY_SIGNAL) {
+									if (handler) {
+										handler(msgType, std::move(payload));
+									}
+								}
+								else if (msgType == PushMessage::STATUS_CHANGED) {
+									ZtLiveScStatusChanged statusChanged;
+									statusChanged.ParseFromString(payload);
+									const auto& type = statusChanged.type();
+									if (type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_CLOSED || type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_BANNED) {
+										stop();
+										break;
+									}
+								}
+								else if (msgType == PushMessage::TICKET_INVALID) {
+									request.nextTicket();
+									client.send(request.EnterRoomRequest()).wait();
+								}
+								else {
+									ucout << U("Unhandled Push.ZtLiveInteractive.Message: ") << conversions::to_string_t(msgType) << std::endl;
+								}
+							}
+							else {
+								ucout << U("Unhandled command: ") << conversions::to_string_t(command) << std::endl;
+							}
+						}
+						catch (const websocket_exception& ex) {
+							ucout << ex.error_code() << ": " << conversions::to_string_t(ex.what()) << std::endl;
+							stop();
+							//delete& heartbeat;
+							//delete timer;
+							return pplx::task_from_result(false);
+						}
+					}
+					//delete& heartbeat;
+					//delete timer;
+					return pplx::task_from_result(true);
+			}
+			catch (const std::exception& e) {
+				ucout << conversions::to_string_t(e.what()) << std::endl;
+				return pplx::task_from_result(false);
+			}
 		}
 
-		const Gift getGift(int64_t giftId) { return giftList[giftId]; }
+		const Gift getGift(int64_t giftId) { return giftList.at(giftId); }
 
 	private:
 		int64_t userId{};

@@ -9,7 +9,18 @@ namespace AcFunDanmu {
 	class client_request
 	{
 	public:
-		client_request(const long long& userId, const  std::string& serviceToken, const std::vector<CryptoPP::byte>& securityKey, const std::string& liveId, const std::string& enterRoomAttach, const std::vector<std::string>& tickets) :userId(userId), serviceToken(serviceToken), securityKey(securityKey), liveId(liveId), enterRoomAttach(enterRoomAttach), tickets(tickets) {};
+		client_request(
+			const int64_t& userId,
+			const std::string& serviceToken,
+			const std::vector<CryptoPP::byte>& securityKey,
+			const std::string& liveId,
+			const std::string& enterRoomAttach,
+			const std::vector<std::string>& tickets) :
+			userId(userId),
+			serviceToken(serviceToken),
+			securityKey(securityKey), liveId(liveId),
+			enterRoomAttach(enterRoomAttach),
+			tickets(tickets) {};
 
 		void Register(const int64_t& instanceId, const std::string& sessionKey, const long& lz4compressionThreshold) {
 			this->instanceId = instanceId;
@@ -22,7 +33,7 @@ namespace AcFunDanmu {
 		const std::vector<CryptoPP::byte> getSessionKey() { return sessionKey; }
 		const std::string nextTicket() { return tickets[++ticketIndex]; }
 
-		const std::unique_ptr<websocket_outgoing_message> RegisterRequest() {
+		const websocket_outgoing_message RegisterRequest() {
 			AcFunDanmu::RegisterRequest reg;
 			auto app = reg.mutable_appinfo();
 			auto dev = reg.mutable_deviceinfo();
@@ -40,28 +51,28 @@ namespace AcFunDanmu {
 			reg.set_instanceid(instanceId);
 
 			auto payload = generatePayload(Command::REGISTER, reg.SerializeAsString());
-			auto body = payload->SerializeAsString();
+			auto body = payload.SerializeAsString();
 
 			auto header = generateHeader(body);
 
-			auto token = header->mutable_tokeninfo();
+			auto token = header.mutable_tokeninfo();
 			token->set_tokentype(AcFunDanmu::TokenInfo::kServiceToken);
 			token->set_token(serviceToken);
 
-			header->set_encryptionmode(AcFunDanmu::PacketHeader::kEncryptionServiceToken);
+			header.set_encryptionmode(AcFunDanmu::PacketHeader::kEncryptionServiceToken);
 
 			seqId++;
 
-			return ClientUtils::Encode(header->SerializeAsString(), body, securityKey);
+			return ClientUtils::Encode(header.SerializeAsString(), body, securityKey);
 		}
 
-		const std::unique_ptr<websocket_outgoing_message> KeepAliveRequest(bool shouldIncrease = false) {
+		const websocket_outgoing_message KeepAliveRequest(const bool& shouldIncrease = false) {
 			AcFunDanmu::KeepAliveRequest kareq;
 			kareq.set_presencestatus(AcFunDanmu::RegisterRequest::kPresenceOnline);
 			kareq.set_appactivestatus(AcFunDanmu::RegisterRequest::kAppInForeground);
 
 			auto payload = generatePayload(Command::KEEP_ALIVE, kareq.SerializeAsString());
-			auto body = payload->SerializeAsString();
+			auto body = payload.SerializeAsString();
 
 			auto header = generateHeader(body);
 
@@ -69,72 +80,72 @@ namespace AcFunDanmu {
 				seqId++;
 			}
 
-			return ClientUtils::Encode(header->SerializeAsString(), body, sessionKey);
+			return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
 		}
 
-		const std::unique_ptr<websocket_outgoing_message> EnterRoomRequest() {
+		const websocket_outgoing_message EnterRoomRequest() {
 			AcFunDanmu::ZtLiveCsEnterRoom enterRoom;
 			enterRoom.set_enterroomattach(enterRoomAttach);
 			enterRoom.set_clientlivesdkversion(ClientLiveSdkVersion);
 
 			auto cmd = generateCommand(GlobalCommand::ENTER_ROOM, enterRoom.SerializeAsString());
 
-			auto payload = generatePayload(Command::GLOBAL_COMMAND, cmd->SerializeAsString());
-			auto body = payload->SerializeAsString();
+			auto payload = generatePayload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
+			auto body = payload.SerializeAsString();
 
 			auto header = generateHeader(body);
 
 			seqId++;
 
-			return ClientUtils::Encode(header->SerializeAsString(), body, sessionKey);
+			return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
 		}
 
-		const std::unique_ptr<websocket_outgoing_message> PushMessageResponse(long long headerSeqId) {
+		const websocket_outgoing_message PushMessageResponse(long long headerSeqId) {
 			auto payload = generatePayload(Command::PUSH_MESSAGE);
-			auto body = payload->SerializeAsString();
+			auto body = payload.SerializeAsString();
 
 			auto header = generateHeader(body);
-			header->set_seqid(headerSeqId);
+			header.set_seqid(headerSeqId);
 
-			return ClientUtils::Encode(header->SerializeAsString(), body, sessionKey);
+			return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
 		}
 
-		const std::unique_ptr<websocket_outgoing_message> HeartbeatRequest() {
+		const websocket_outgoing_message HeartbeatRequest() {
 			ZtLiveCsHeartbeat heartbeat;
 			heartbeat.set_clienttimestampms(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
 			heartbeat.set_sequence(heartbeatSeqId);
 
 			auto cmd = generateCommand(GlobalCommand::HEARTBEAT, heartbeat.SerializeAsString());
 
-			auto payload = generatePayload(Command::GLOBAL_COMMAND, cmd->SerializeAsString());
-			auto body = payload->SerializeAsString();
+			auto payload = generatePayload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
+			auto body = payload.SerializeAsString();
 
 			auto header = generateHeader(body);
 
 			heartbeatSeqId++;
 			seqId++;
 
-			return ClientUtils::Encode(header->SerializeAsString(), body, sessionKey);
+			return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
 		}
 
-		const std::unique_ptr<websocket_outgoing_message> UserExitRequest() {
+		const websocket_outgoing_message UserExitRequest() {
 			auto cmd = generateCommand(GlobalCommand::USER_EXIT);
 
-			auto payload = generatePayload(Command::GLOBAL_COMMAND, cmd->SerializeAsString());
-			auto body = payload->SerializeAsString();
+			auto payload = generatePayload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
+			auto body = payload.SerializeAsString();
 
 			auto header = generateHeader(body);
 
-			return ClientUtils::Encode(header->SerializeAsString(), body, sessionKey);
+			return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
 		}
 
-		const std::unique_ptr<websocket_outgoing_message> UnregisterRequest() {
+		const websocket_outgoing_message UnregisterRequest() {
 			auto payload = generatePayload(Command::UNREGISTER);
-			auto body = payload->SerializeAsString();
+			auto body = payload.SerializeAsString();
 
 			auto header = generateHeader(body);
 
-			return ClientUtils::Encode(header->SerializeAsString(), body, sessionKey);
+			return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
 		}
 
 	private:
@@ -151,38 +162,38 @@ namespace AcFunDanmu {
 		int64_t heartbeatSeqId = 1;
 
 		int ticketIndex = 0;
-		std::string currentTicket() { return tickets[ticketIndex]; }
+		const std::string currentTicket() { return tickets[ticketIndex]; }
 
-		std::unique_ptr<AcFunDanmu::ZtLiveCsCmd> generateCommand(const std::string& command) {
+		const AcFunDanmu::ZtLiveCsCmd generateCommand(const std::string& command) {
 			AcFunDanmu::ZtLiveCsCmd cmd;
 			cmd.set_cmdtype(command);
 			cmd.set_ticket(currentTicket());
 			cmd.set_liveid(liveId);
-			return std::make_unique<AcFunDanmu::ZtLiveCsCmd>(cmd);
-		}
-
-		std::unique_ptr<AcFunDanmu::ZtLiveCsCmd> generateCommand(const std::string& command, const  std::string& msg) {
-			auto cmd = generateCommand(command);
-			cmd->set_payload(msg);
 			return cmd;
 		}
 
-		std::unique_ptr<AcFunDanmu::UpstreamPayload> generatePayload(const std::string& command) {
+		const AcFunDanmu::ZtLiveCsCmd generateCommand(const std::string& command, const  std::string& msg) {
+			auto cmd = generateCommand(command);
+			cmd.set_payload(msg);
+			return cmd;
+		}
+
+		const AcFunDanmu::UpstreamPayload generatePayload(const std::string& command) {
 			AcFunDanmu::UpstreamPayload payload;
 			payload.set_command(command);
 			payload.set_retrycount(retryCount);
 			payload.set_seqid(seqId);
 			payload.set_subbiz(SubBiz);
-			return std::make_unique<AcFunDanmu::UpstreamPayload>(payload);
-		}
-
-		std::unique_ptr<AcFunDanmu::UpstreamPayload> generatePayload(const std::string& command, const std::string& msg) {
-			auto payload = generatePayload(command);
-			payload->set_payloaddata(msg);
 			return payload;
 		}
 
-		std::unique_ptr<AcFunDanmu::PacketHeader> generateHeader(const std::string& msg) {
+		const AcFunDanmu::UpstreamPayload generatePayload(const std::string& command, const std::string& msg) {
+			auto payload = generatePayload(command);
+			payload.set_payloaddata(msg);
+			return payload;
+		}
+
+		const AcFunDanmu::PacketHeader generateHeader(const std::string& msg) {
 			AcFunDanmu::PacketHeader header;
 			header.set_appid(AppId);
 			header.set_uid(userId);
@@ -191,7 +202,7 @@ namespace AcFunDanmu {
 			header.set_seqid(seqId);
 			header.set_kpn(KPN);
 			header.set_decodedpayloadlen(msg.length());
-			return std::make_unique<AcFunDanmu::PacketHeader>(header);
+			return header;
 		}
 
 		static const uint32_t retryCount = 1;
