@@ -8,7 +8,6 @@
 
 #include <boost/system/error_code.hpp>
 #include <boost/asio.hpp>
-#include <boost/bind.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
 #include <gzip/decompress.hpp>
@@ -230,28 +229,6 @@ namespace AcFunDanmu {
 							stop();
 						}
 					};
-
-					/*concurrency::timer<int>* timer;
-					concurrency::call<int> heartbeat([&](int _) {
-						try {
-							if (&client) {
-								client.send(request.HeartbeatRequest()).wait();
-								client.send(request.KeepAliveRequest()).wait();
-							}
-							else {
-								if (timer) {
-									timer->stop();
-								}
-							}
-						}
-						catch (const websocket_exception& e) {
-							ucout << e.what() << std::endl;
-							if (timer) {
-								timer->stop();
-							}
-						}
-						});*/
-
 					
 					while (running) {
 						try {
@@ -267,8 +244,6 @@ namespace AcFunDanmu {
 									ack.ParseFromString(cmd.payload());
 									heartbeatinterval = std::move(ack.heartbeatintervalms());
 
-									/*timer = new concurrency::timer<int>(heartbeatinterval, 0, &heartbeat, true);
-									timer->start();*/
 									timer = new boost::asio::deadline_timer(ios, boost::posix_time::milliseconds(heartbeatinterval));
 									timer->async_wait(hbhandler);
 									hbt = std::thread([&] {ios.run(); });
@@ -332,13 +307,9 @@ namespace AcFunDanmu {
 						catch (const websocket_exception& ex) {
 							ucout << ex.error_code() << ": " << conversions::to_string_t(ex.what()) << std::endl;
 							stop();
-							//delete& heartbeat;
-							//delete timer;
 							return pplx::task_from_result(false);
 						}
 					}
-					//delete& heartbeat;
-					//delete timer;
 					return pplx::task_from_result(true);
 			}
 			catch (const std::exception& e) {
