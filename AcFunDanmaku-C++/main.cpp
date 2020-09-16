@@ -104,7 +104,7 @@ int main(int argc, char** argv)
 											<< " - " << conversions::to_string_t(gift.user().nickname())
 											<< "(" << gift.user().userid() << ") sent gift "
 											<< giftInfo->name
-											<< " × " << gift.count()
+											<< U(" × ") << gift.count()
 											<< ", combo: " << gift.combo()
 											<< ", value: " << gift.value()
 											<< std::endl;
