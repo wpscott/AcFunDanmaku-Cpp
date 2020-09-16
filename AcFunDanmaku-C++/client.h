@@ -141,14 +141,12 @@ namespace AcFunDanmu {
 					else {
 						auto list = json[U("data")][U("giftList")].as_array();
 						for (auto gift : list) {
-							giftList.insert({
-								gift[U("giftId")].as_number().to_int64(),
-								{
-									gift[U("giftName")].as_string(),
-									gift[U("giftPrice")].as_number().to_int32(),
-									gift[U("webpPicList")].as_array()[0][U("url")].as_string()
-								}
-								});
+							giftList[gift[U("giftId")].as_number().to_int64()] =
+							{
+								gift[U("giftName")].as_string(),
+								gift[U("giftPrice")].as_number().to_int32(),
+								gift[U("webpPicList")].as_array()[0][U("url")].as_string()
+							};
 						}
 						ucout << U("gift list updated") << std::endl;
 					}
@@ -158,6 +156,9 @@ namespace AcFunDanmu {
 				}
 				});
 		}
+
+		const Gift* getGift(int64_t giftId) { const auto& it = giftList.find(giftId); if (it == giftList.end()) { return nullptr; } else { return &it->second; } }
+
 
 		void set_handler(const std::function<void(const std::string&, const std::string&)>& handler) {
 			this->handler = handler;
@@ -229,7 +230,7 @@ namespace AcFunDanmu {
 							stop();
 						}
 					};
-					
+
 					while (running) {
 						try {
 							const auto msg = client.receive().get();
@@ -317,8 +318,6 @@ namespace AcFunDanmu {
 				return pplx::task_from_result(false);
 			}
 		}
-
-		const Gift getGift(int64_t giftId) { return giftList.at(giftId); }
 
 	private:
 		int64_t userId{};

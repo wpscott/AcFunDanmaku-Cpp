@@ -21,7 +21,7 @@ void init_locale(void)
 	setlocale(LC_ALL, cp_utf16le);
 	int result = _setmode(_fileno(stdout), _O_WTEXT);
 	if (result == -1) {
-		std::cout << "Cannot set mode" << std::endl;
+		ucout << "Cannot set mode" << std::endl;
 	}
 #else
 	// The correct locale name may vary by OS, e.g., "en_US.utf8".
@@ -43,146 +43,156 @@ int main(int argc, char** argv)
 		if (client.initialize().get()) {
 			client.updateGiftList().wait();
 			client.set_handler([&](const std::string& type, const std::string& payload) {
-				if (type == PushMessage::ACTION_SIGNAL) {
-					AcFunDanmu::ZtLiveScActionSignal signal;
-					signal.ParseFromString(payload);
-					for (const auto& item : signal.item()) {
-						const auto& type = item.signaltype();
-						if (type == PushMessage::ActionSignal::COMMENT) {
-							for (const auto& pl : item.payload()) {
-								AcFunDanmu::CommonActionSignalComment comment;
-								comment.ParseFromString(pl);
-								ucout
-									<< comment.sendtimems()
-									<< " - " << conversions::to_string_t(comment.userinfo().nickname())
-									<< "(" << comment.userinfo().userid() << "): " << conversions::to_string_t(comment.content())
-									<< std::endl;
+				try {
+					if (type == PushMessage::ACTION_SIGNAL) {
+						AcFunDanmu::ZtLiveScActionSignal signal;
+						signal.ParseFromString(payload);
+						for (const auto& item : signal.item()) {
+							const auto& type = item.signaltype();
+							if (type == PushMessage::ActionSignal::COMMENT) {
+								for (const auto& pl : item.payload()) {
+									AcFunDanmu::CommonActionSignalComment comment;
+									comment.ParseFromString(pl);
+									ucout
+										<< comment.sendtimems()
+										<< " - " << conversions::to_string_t(comment.userinfo().nickname())
+										<< "(" << comment.userinfo().userid() << "): " << conversions::to_string_t(comment.content())
+										<< std::endl;
+								}
+							}
+							else if (type == PushMessage::ActionSignal::LIKE) {
+								for (const auto& pl : item.payload()) {
+									AcFunDanmu::CommonActionSignalLike like;
+									like.ParseFromString(pl);
+									ucout
+										<< like.sendtimems()
+										<< " - " << conversions::to_string_t(like.userinfo().nickname())
+										<< "(" << like.userinfo().userid() << ") liked"
+										<< std::endl;
+								}
+							}
+							else if (type == PushMessage::ActionSignal::ENTER_ROOM) {
+								for (const auto& pl : item.payload()) {
+									AcFunDanmu::CommonActionSignalUserEnterRoom enterroom;
+									enterroom.ParseFromString(pl);
+									ucout << enterroom.sendtimems()
+										<< " - " << conversions::to_string_t(enterroom.userinfo().nickname())
+										<< "(" << enterroom.userinfo().userid() << ") entered"
+										<< std::endl;
+								}
+							}
+							else if (type == PushMessage::ActionSignal::FOLLOW) {
+								for (const auto& pl : item.payload()) {
+									AcFunDanmu::CommonActionSignalUserFollowAuthor follow;
+									follow.ParseFromString(pl);
+									ucout << follow.sendtimems()
+										<< " - " << conversions::to_string_t(follow.userinfo().nickname())
+										<< "(" << follow.userinfo().userid() << ") followed author"
+										<< std::endl;
+								}
+							}
+							else if (type == PushMessage::ActionSignal::GIFT) {
+								for (const auto& pl : item.payload()) {
+									AcFunDanmu::CommonActionSignalGift gift;
+									gift.ParseFromString(pl);
+									const auto& giftId = gift.giftid();
+									const auto& giftInfo = client.getGift(giftId);
+									if (giftInfo == nullptr) { ucout << U("cannot gift id: " << giftId << std::endl;) }
+									else {
+										gift.ParseFromString(pl);
+										ucout << gift.sendtimems()
+											<< " - " << conversions::to_string_t(gift.user().nickname())
+											<< "(" << gift.user().userid() << ") sent gift "
+											<< giftInfo->name
+											<< " × " << gift.count()
+											<< ", combo: " << gift.combo()
+											<< ", value: " << gift.value()
+											<< std::endl;
+									}
+								}
+							}
+							else if (type == PushMessage::ActionSignal::THROW_BANANA) {}
+							else if (type == PushMessage::NotifySignal::KICKED_OUT) {}
+							else if (type == PushMessage::NotifySignal::VIOLATION_ALERT) {}
+							else if (type == PushMessage::NotifySignal::LIVE_MANAGER_STATE) {}
+							else {
+								ucout << "Unhandled action signal: " << conversions::to_string_t(type) << std::endl;
 							}
 						}
-						else if (type == PushMessage::ActionSignal::LIKE) {
-							for (const auto& pl : item.payload()) {
-								AcFunDanmu::CommonActionSignalLike like;
-								like.ParseFromString(pl);
-								ucout
-									<< like.sendtimems()
-									<< " - " << conversions::to_string_t(like.userinfo().nickname())
-									<< "(" << like.userinfo().userid() << ") liked"
-									<< std::endl;
+					}
+					else if (type == PushMessage::STATE_SIGNAL) {
+						AcFunDanmu::ZtLiveScStateSignal signal;
+						signal.ParseFromString(payload);
+						for (const auto& item : signal.item()) {
+							const auto& type = item.signaltype();
+							if (type == PushMessage::StateSignal::ACFUN_DISPLAY_INFO) {
+
 							}
-						}
-						else if (type == PushMessage::ActionSignal::ENTER_ROOM) {
-							for (const auto& pl : item.payload()) {
-								AcFunDanmu::CommonActionSignalUserEnterRoom enterroom;
-								enterroom.ParseFromString(pl);
-								ucout << enterroom.sendtimems()
-									<< " - " << conversions::to_string_t(enterroom.userinfo().nickname())
-									<< "(" << enterroom.userinfo().userid() << ") entered"
-									<< std::endl;
+							else if (type == PushMessage::StateSignal::DISPLAY_INFO) {
+
 							}
-						}
-						else if (type == PushMessage::ActionSignal::FOLLOW) {
-							for (const auto& pl : item.payload()) {
-								AcFunDanmu::CommonActionSignalUserFollowAuthor follow;
-								follow.ParseFromString(pl);
-								ucout << follow.sendtimems()
-									<< " - " << conversions::to_string_t(follow.userinfo().nickname())
-									<< "(" << follow.userinfo().userid() << ") followed author"
-									<< std::endl;
+							else if (type == PushMessage::StateSignal::TOP_USRES) {
+
 							}
-						}
-						else if (type == PushMessage::ActionSignal::GIFT) {
-							for (const auto& pl : item.payload()) {
-								AcFunDanmu::CommonActionSignalGift gift;
-								const auto& giftInfo = client.getGift(gift.giftid());
-								gift.ParseFromString(pl);
-								ucout << gift.sendtimems()
-									<< " - " << conversions::to_string_t(gift.user().nickname())
-									<< "(" << gift.user().userid() << ") sent gift "
-									<< giftInfo.name
-									<< " × " << gift.count()
-									<< ", combo: " << gift.combo()
-									<< ", value: " << gift.value()
-									<< std::endl;
+							else if (type == PushMessage::StateSignal::RECENT_COMMENT) {
+								AcFunDanmu::CommonStateSignalRecentComment comments;
+								comments.ParseFromString(item.payload());
+								for (const auto& comment : comments.comment()) {
+									ucout
+										<< comment.sendtimems()
+										<< " - " << conversions::to_string_t(comment.userinfo().nickname())
+										<< "(" << comment.userinfo().userid() << "): " << conversions::to_string_t(comment.content())
+										<< std::endl;
+								}
 							}
+							else if (type == PushMessage::StateSignal::CHAT_CALL) {
+							}
+							else if (type == PushMessage::StateSignal::CHAT_ACCEPT) {
+							}
+							else if (type == PushMessage::StateSignal::CHAT_READY) {
+							}
+							else if (type == PushMessage::StateSignal::CHAT_END) {
+							}
+							else if (type == PushMessage::StateSignal::CURRENT_RED_PACK_LIST) {
+							}
+							else {
+								ucout << U("Unhandled state signal: ") << conversions::to_string_t(type) << std::endl;
+							}
+
 						}
-						else if (type == PushMessage::ActionSignal::THROW_BANANA) {}
-						else if (type == PushMessage::NotifySignal::KICKED_OUT) {}
-						else if (type == PushMessage::NotifySignal::VIOLATION_ALERT) {}
-						else if (type == PushMessage::NotifySignal::LIVE_MANAGER_STATE) {}
-						else {
-							std::cout << "Unhandled action signal: " << type << std::endl;
+					}
+					else if (type == PushMessage::NOTIFY_SIGNAL) {
+						AcFunDanmu::ZtLiveScNotifySignal signal;
+						signal.ParseFromString(payload);
+						for (const auto& item : signal.item()) {
+							const auto& type = item.signaltype();
+							if (type == PushMessage::NotifySignal::KICKED_OUT) {}
+							else if (type == PushMessage::NotifySignal::VIOLATION_ALERT) {}
+							else if (type == PushMessage::NotifySignal::LIVE_MANAGER_STATE) {}
+							else {
+								ucout << U("Unhandled notify signal: ") << conversions::to_string_t(type) << std::endl;
+							}
 						}
 					}
 				}
-				else if (type == PushMessage::STATE_SIGNAL) {
-					AcFunDanmu::ZtLiveScStateSignal signal;
-					signal.ParseFromString(payload);
-					for (const auto& item : signal.item()) {
-						const auto& type = item.signaltype();
-						if (type == PushMessage::StateSignal::ACFUN_DISPLAY_INFO) {
-
-						}
-						else if (type == PushMessage::StateSignal::DISPLAY_INFO) {
-
-						}
-						else if (type == PushMessage::StateSignal::TOP_USRES) {
-
-						}
-						else if (type == PushMessage::StateSignal::RECENT_COMMENT) {
-							AcFunDanmu::CommonStateSignalRecentComment comments;
-							comments.ParseFromString(item.payload());
-							for (const auto& comment : comments.comment()) {
-								ucout
-									<< comment.sendtimems()
-									<< " - " << conversions::to_string_t(comment.userinfo().nickname())
-									<< "(" << comment.userinfo().userid() << "): " << conversions::to_string_t(comment.content())
-									<< std::endl;
-							}
-						}
-						else if (type == PushMessage::StateSignal::CHAT_CALL) {
-						}
-						else if (type == PushMessage::StateSignal::CHAT_ACCEPT) {
-						}
-						else if (type == PushMessage::StateSignal::CHAT_READY) {
-						}
-						else if (type == PushMessage::StateSignal::CHAT_END) {
-						}
-						else if (type == PushMessage::StateSignal::CURRENT_RED_PACK_LIST) {
-						}
-						else {
-							std::cout << "Unhandled state signal: " << type << std::endl;
-						}
-
-					}
-				}
-				else if (type == PushMessage::NOTIFY_SIGNAL) {
-					AcFunDanmu::ZtLiveScNotifySignal signal;
-					signal.ParseFromString(payload);
-					for (const auto& item : signal.item()) {
-						const auto& type = item.signaltype();
-						if (type == PushMessage::NotifySignal::KICKED_OUT) {}
-						else if (type == PushMessage::NotifySignal::VIOLATION_ALERT) {}
-						else if (type == PushMessage::NotifySignal::LIVE_MANAGER_STATE) {}
-						else {
-							std::cout << "Unhandled notify signal: " << type << std::endl;
-						}
-					}
+				catch (const std::exception& e) {
+					ucout << conversions::to_string_t(e.what()) << std::endl;
 				}
 				});
-			client.start().wait();
+			const auto& result = client.start().get();
 		}
 	}
 	catch (const http_exception& e) {
-		std::cout << "http exception:" << e.error_code() << e.what() << std::endl;
+		ucout << "http exception:" << e.error_code() << e.what() << std::endl;
 	}
 	catch (const json_exception& e) {
-		std::cout << "json exception: " << e.what() << std::endl;
+		ucout << "json exception: " << e.what() << std::endl;
 	}
 	catch (const std::exception& e) {
-		std::cout << "exception: " << e.what() << std::endl << "Task Cancelled" << std::endl;
+		ucout << "exception: " << e.what() << std::endl << "Task Cancelled" << std::endl;
 	}
 	catch (...) {
-		std::cout << "Task Cancelled" << std::endl;
+		ucout << "Task Cancelled" << std::endl;
 	}
 	return 0;
 }
