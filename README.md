@@ -8,6 +8,8 @@
 2. [Crypto++ 8.2](https://www.cryptopp.com/)
 3. [gzip-hpp](https://github.com/mapbox/gzip-hpp)
 
+使用C++17标准
+
 支持Windows 7以上及linux系统（wsl2 Ubuntu 20.04编译通过）
 
 ## 咕咕咕List
