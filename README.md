@@ -13,4 +13,5 @@
 支持Windows 7以上及linux系统（wsl2 Ubuntu 20.04编译通过）
 
 ## 咕咕咕List
+* CMake
 * obs插件
