@@ -80,7 +80,7 @@ using namespace web::json;					// JSON library
 namespace ClientUtils {
 	static const int HeaderOffset = 12;
 
-	const std::string Encrypt(const std::vector<CryptoPP::byte>& key, const std::string& body) {
+	const static inline std::string Encrypt(const std::vector<CryptoPP::byte>& key, const std::string& body) {
 		AutoSeededRandomPool prng;
 		CryptoPP::SecByteBlock iv(AES::BLOCKSIZE);
 		prng.GenerateBlock(iv, iv.size());
@@ -99,7 +99,7 @@ namespace ClientUtils {
 		return ss.str();
 	}
 
-	const std::string Decrypt(const std::vector<CryptoPP::byte>& key, const std::string& data) {
+	const static inline  std::string Decrypt(const std::vector<CryptoPP::byte>& key, const std::string& data) {
 		CryptoPP::SecByteBlock iv((const CryptoPP::byte*)data.substr(0, AES::BLOCKSIZE).data(), AES::BLOCKSIZE);
 		CryptoPP::SecByteBlock aeskey(&key[0], key.size());
 
@@ -112,14 +112,14 @@ namespace ClientUtils {
 		return recovered;
 	}
 
- 	void convertLength(std::vector<uint8_t>& buffer, const size_t& length) {
+	static inline void convertLength(std::vector<uint8_t>& buffer, const size_t& length) {
 		buffer.push_back((length & 0xFF000000) >> 24);
 		buffer.push_back((length & 0x00FF0000) >> 16);
 		buffer.push_back((length & 0x0000FF00) >> 8);
 		buffer.push_back(length & 0x000000FF);
 	}
 
-	const websocket_outgoing_message Encode(const std::string& header, const std::string& body, const std::vector<CryptoPP::byte>& key) {
+	const static inline websocket_outgoing_message Encode(const std::string& header, const std::string& body, const std::vector<CryptoPP::byte>& key) {
 		auto encrypted = Encrypt(key, body);
 
 		std::vector<uint8_t> buf;
@@ -141,7 +141,7 @@ namespace ClientUtils {
 		return msg;
 	}
 
-	const std::tuple<AcFunDanmu::PacketHeader, AcFunDanmu::DownstreamPayload> Decode(const websocket_incoming_message& message, const std::vector<CryptoPP::byte>& securityKey, const std::vector<CryptoPP::byte>& sessionKey) {
+	const static inline std::tuple<AcFunDanmu::PacketHeader, AcFunDanmu::DownstreamPayload> Decode(const websocket_incoming_message& message, const std::vector<CryptoPP::byte>& securityKey, const std::vector<CryptoPP::byte>& sessionKey) {
 		const auto& is = message.body();
 		const auto& length = message.length();
 
