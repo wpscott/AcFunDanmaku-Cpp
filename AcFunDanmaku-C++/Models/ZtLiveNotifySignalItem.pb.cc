@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_ZtLiveNotifySignalItem_ZtLiveNotifySignalItem_2
     new (ptr) ::AcFunDanmu::ZtLiveNotifySignalItem();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveNotifySignalItem::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveNotifySignalItem_ZtLiveNotifySignalItem_2eproto =
@@ -79,8 +78,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void ZtLiveNotifySignalItem::InitAsDefaultInstance() {
-}
 class ZtLiveNotifySignalItem::_Internal {
  public:
 };
@@ -96,12 +93,12 @@ ZtLiveNotifySignalItem::ZtLiveNotifySignalItem(const ZtLiveNotifySignalItem& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   signaltype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_signaltype().empty()) {
-    signaltype_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_signaltype(),
+    signaltype_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_signaltype(), 
       GetArena());
   }
   payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payload().empty()) {
-    payload_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_payload(),
+    payload_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payload(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveNotifySignalItem)
@@ -146,14 +143,13 @@ void ZtLiveNotifySignalItem::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  signaltype_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payload_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  signaltype_.ClearToEmpty();
+  payload_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ZtLiveNotifySignalItem::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

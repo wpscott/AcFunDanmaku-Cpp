@@ -32,7 +32,6 @@ static void InitDefaultsscc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto() {
     new (ptr) ::AcFunDanmu::ZtLiveCsEnterRoom();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveCsEnterRoom::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto =
@@ -46,7 +45,6 @@ static void InitDefaultsscc_info_ZtLiveCsEnterRoomAck_ZtLiveCsEnterRoom_2eproto(
     new (ptr) ::AcFunDanmu::ZtLiveCsEnterRoomAck();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveCsEnterRoomAck::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsEnterRoomAck_ZtLiveCsEnterRoom_2eproto =
@@ -112,8 +110,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void ZtLiveCsEnterRoom::InitAsDefaultInstance() {
-}
 class ZtLiveCsEnterRoom::_Internal {
  public:
 };
@@ -129,12 +125,12 @@ ZtLiveCsEnterRoom::ZtLiveCsEnterRoom(const ZtLiveCsEnterRoom& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   enterroomattach_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_enterroomattach().empty()) {
-    enterroomattach_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_enterroomattach(),
+    enterroomattach_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_enterroomattach(), 
       GetArena());
   }
   clientlivesdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_clientlivesdkversion().empty()) {
-    clientlivesdkversion_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_clientlivesdkversion(),
+    clientlivesdkversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_clientlivesdkversion(), 
       GetArena());
   }
   ::memcpy(&isauthor_, &from.isauthor_,
@@ -147,8 +143,9 @@ void ZtLiveCsEnterRoom::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto.base);
   enterroomattach_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   clientlivesdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&isauthor_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&lasterrorcode_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&isauthor_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&lasterrorcode_) -
       reinterpret_cast<char*>(&isauthor_)) + sizeof(lasterrorcode_));
 }
 
@@ -185,8 +182,8 @@ void ZtLiveCsEnterRoom::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  enterroomattach_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  clientlivesdkversion_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  enterroomattach_.ClearToEmpty();
+  clientlivesdkversion_.ClearToEmpty();
   ::memset(&isauthor_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&lasterrorcode_) -
       reinterpret_cast<char*>(&isauthor_)) + sizeof(lasterrorcode_));
@@ -195,7 +192,6 @@ void ZtLiveCsEnterRoom::Clear() {
 
 const char* ZtLiveCsEnterRoom::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -441,8 +437,6 @@ void ZtLiveCsEnterRoom::InternalSwap(ZtLiveCsEnterRoom* other) {
 
 // ===================================================================
 
-void ZtLiveCsEnterRoomAck::InitAsDefaultInstance() {
-}
 class ZtLiveCsEnterRoomAck::_Internal {
  public:
 };
@@ -501,7 +495,6 @@ void ZtLiveCsEnterRoomAck::Clear() {
 
 const char* ZtLiveCsEnterRoomAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

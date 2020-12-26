@@ -33,7 +33,6 @@ static void InitDefaultsscc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2ep
     new (ptr) ::AcFunDanmu::ZtLiveScStatusChanged();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveScStatusChanged::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto =
@@ -48,7 +47,6 @@ static void InitDefaultsscc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatus
     new (ptr) ::AcFunDanmu::ZtLiveScStatusChanged_BannedInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveScStatusChanged_BannedInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto =
@@ -142,8 +140,6 @@ constexpr int ZtLiveScStatusChanged::Type_ARRAYSIZE;
 
 // ===================================================================
 
-void ZtLiveScStatusChanged_BannedInfo::InitAsDefaultInstance() {
-}
 class ZtLiveScStatusChanged_BannedInfo::_Internal {
  public:
 };
@@ -159,7 +155,7 @@ ZtLiveScStatusChanged_BannedInfo::ZtLiveScStatusChanged_BannedInfo(const ZtLiveS
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   banreason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_banreason().empty()) {
-    banreason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_banreason(),
+    banreason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_banreason(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveScStatusChanged.BannedInfo)
@@ -202,13 +198,12 @@ void ZtLiveScStatusChanged_BannedInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  banreason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  banreason_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ZtLiveScStatusChanged_BannedInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -351,10 +346,6 @@ void ZtLiveScStatusChanged_BannedInfo::InternalSwap(ZtLiveScStatusChanged_Banned
 
 // ===================================================================
 
-void ZtLiveScStatusChanged::InitAsDefaultInstance() {
-  ::AcFunDanmu::_ZtLiveScStatusChanged_default_instance_._instance.get_mutable()->bannedinfo_ = const_cast< ::AcFunDanmu::ZtLiveScStatusChanged_BannedInfo*>(
-      ::AcFunDanmu::ZtLiveScStatusChanged_BannedInfo::internal_default_instance());
-}
 class ZtLiveScStatusChanged::_Internal {
  public:
   static const ::AcFunDanmu::ZtLiveScStatusChanged_BannedInfo& bannedinfo(const ZtLiveScStatusChanged* msg);
@@ -386,8 +377,9 @@ ZtLiveScStatusChanged::ZtLiveScStatusChanged(const ZtLiveScStatusChanged& from)
 
 void ZtLiveScStatusChanged::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto.base);
-  ::memset(&bannedinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&type_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&bannedinfo_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&type_) -
       reinterpret_cast<char*>(&bannedinfo_)) + sizeof(type_));
 }
 
@@ -435,7 +427,6 @@ void ZtLiveScStatusChanged::Clear() {
 
 const char* ZtLiveScStatusChanged::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

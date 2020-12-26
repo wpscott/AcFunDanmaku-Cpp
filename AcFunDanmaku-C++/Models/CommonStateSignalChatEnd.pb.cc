@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_CommonStateSignalChatEnd_CommonStateSignalChatE
     new (ptr) ::AcFunDanmu::CommonStateSignalChatEnd();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonStateSignalChatEnd::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalChatEnd_CommonStateSignalChatEnd_2eproto =
@@ -118,8 +117,6 @@ constexpr int CommonStateSignalChatEnd::EndType_ARRAYSIZE;
 
 // ===================================================================
 
-void CommonStateSignalChatEnd::InitAsDefaultInstance() {
-}
 class CommonStateSignalChatEnd::_Internal {
  public:
 };
@@ -135,7 +132,7 @@ CommonStateSignalChatEnd::CommonStateSignalChatEnd(const CommonStateSignalChatEn
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_chatid().empty()) {
-    chatid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_chatid(),
+    chatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_chatid(), 
       GetArena());
   }
   endtype_ = from.endtype_;
@@ -180,14 +177,13 @@ void CommonStateSignalChatEnd::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  chatid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  chatid_.ClearToEmpty();
   endtype_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CommonStateSignalChatEnd::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

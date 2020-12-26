@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_SdkOption_SdkOption_2eproto() {
     new (ptr) ::AcFunDanmu::SdkOption();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::SdkOption::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SdkOption_SdkOption_2eproto =
@@ -83,8 +82,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void SdkOption::InitAsDefaultInstance() {
-}
 class SdkOption::_Internal {
  public:
 };
@@ -102,7 +99,7 @@ SdkOption::SdkOption(const SdkOption& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   reportsecurity_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reportsecurity().empty()) {
-    reportsecurity_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_reportsecurity(),
+    reportsecurity_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reportsecurity(), 
       GetArena());
   }
   ::memcpy(&reportintervalseconds_, &from.reportintervalseconds_,
@@ -114,8 +111,9 @@ SdkOption::SdkOption(const SdkOption& from)
 void SdkOption::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SdkOption_SdkOption_2eproto.base);
   reportsecurity_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&reportintervalseconds_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&lz4compressionthresholdbytes_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&reportintervalseconds_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&lz4compressionthresholdbytes_) -
       reinterpret_cast<char*>(&reportintervalseconds_)) + sizeof(lz4compressionthresholdbytes_));
 }
 
@@ -152,7 +150,7 @@ void SdkOption::Clear() {
   (void) cached_has_bits;
 
   netcheckservers_.Clear();
-  reportsecurity_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  reportsecurity_.ClearToEmpty();
   ::memset(&reportintervalseconds_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&lz4compressionthresholdbytes_) -
       reinterpret_cast<char*>(&reportintervalseconds_)) + sizeof(lz4compressionthresholdbytes_));
@@ -161,7 +159,6 @@ void SdkOption::Clear() {
 
 const char* SdkOption::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

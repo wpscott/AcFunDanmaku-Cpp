@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_ZtLiveUserIdentity_ZtLiveUserIdentity_2eproto()
     new (ptr) ::AcFunDanmu::ZtLiveUserIdentity();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveUserIdentity::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveUserIdentity_ZtLiveUserIdentity_2eproto =
@@ -101,8 +100,6 @@ constexpr int ZtLiveUserIdentity::ManagerType_ARRAYSIZE;
 
 // ===================================================================
 
-void ZtLiveUserIdentity::InitAsDefaultInstance() {
-}
 class ZtLiveUserIdentity::_Internal {
  public:
 };
@@ -161,7 +158,6 @@ void ZtLiveUserIdentity::Clear() {
 
 const char* ZtLiveUserIdentity::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

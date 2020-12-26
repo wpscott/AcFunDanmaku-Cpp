@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_PushServiceToken_PushServiceToken_2eproto() {
     new (ptr) ::AcFunDanmu::PushServiceToken();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::PushServiceToken::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PushServiceToken_PushServiceToken_2eproto =
@@ -121,8 +120,6 @@ constexpr int PushServiceToken::PushType_ARRAYSIZE;
 
 // ===================================================================
 
-void PushServiceToken::InitAsDefaultInstance() {
-}
 class PushServiceToken::_Internal {
  public:
 };
@@ -138,7 +135,7 @@ PushServiceToken::PushServiceToken(const PushServiceToken& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_token().empty()) {
-    token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_token(),
+    token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_token(), 
       GetArena());
   }
   ::memcpy(&pushtype_, &from.pushtype_,
@@ -150,8 +147,9 @@ PushServiceToken::PushServiceToken(const PushServiceToken& from)
 void PushServiceToken::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PushServiceToken_PushServiceToken_2eproto.base);
   token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&pushtype_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ispassthrough_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&pushtype_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&ispassthrough_) -
       reinterpret_cast<char*>(&pushtype_)) + sizeof(ispassthrough_));
 }
 
@@ -187,7 +185,7 @@ void PushServiceToken::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  token_.ClearToEmpty();
   ::memset(&pushtype_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&ispassthrough_) -
       reinterpret_cast<char*>(&pushtype_)) + sizeof(ispassthrough_));
@@ -196,7 +194,6 @@ void PushServiceToken::Clear() {
 
 const char* PushServiceToken::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

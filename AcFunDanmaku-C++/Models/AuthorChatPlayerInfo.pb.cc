@@ -29,7 +29,6 @@ static void InitDefaultsscc_info_AuthorChatPlayerInfo_AuthorChatPlayerInfo_2epro
     new (ptr) ::AcFunDanmu::AuthorChatPlayerInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::AuthorChatPlayerInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AuthorChatPlayerInfo_AuthorChatPlayerInfo_2eproto =
@@ -46,9 +45,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AuthorChatPlayerInfo_2eproto::
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AuthorChatPlayerInfo, user_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AuthorChatPlayerInfo, b_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AuthorChatPlayerInfo, c_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AuthorChatPlayerInfo, player_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AuthorChatPlayerInfo, liveid_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AuthorChatPlayerInfo, enablejumppeerliveroom_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::AuthorChatPlayerInfo)},
@@ -60,9 +59,10 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_AuthorChatPlayerInfo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\032AuthorChatPlayerInfo.proto\022\nAcFunDanmu"
-  "\032\024ZtLiveUserInfo.proto\"V\n\024AuthorChatPlay"
-  "erInfo\022(\n\004user\030\001 \001(\0132\032.AcFunDanmu.ZtLive"
-  "UserInfo\022\t\n\001b\030\002 \001(\t\022\t\n\001c\030\003 \001(\010b\006proto3"
+  "\032\024ZtLiveUserInfo.proto\"r\n\024AuthorChatPlay"
+  "erInfo\022*\n\006player\030\001 \001(\0132\032.AcFunDanmu.ZtLi"
+  "veUserInfo\022\016\n\006liveId\030\002 \001(\t\022\036\n\026enableJump"
+  "PeerLiveRoom\030\003 \001(\010b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AuthorChatPlayerInfo_2eproto_deps[1] = {
   &::descriptor_table_ZtLiveUserInfo_2eproto,
@@ -72,7 +72,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Aut
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AuthorChatPlayerInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AuthorChatPlayerInfo_2eproto = {
-  false, false, descriptor_table_protodef_AuthorChatPlayerInfo_2eproto, "AuthorChatPlayerInfo.proto", 158,
+  false, false, descriptor_table_protodef_AuthorChatPlayerInfo_2eproto, "AuthorChatPlayerInfo.proto", 186,
   &descriptor_table_AuthorChatPlayerInfo_2eproto_once, descriptor_table_AuthorChatPlayerInfo_2eproto_sccs, descriptor_table_AuthorChatPlayerInfo_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_AuthorChatPlayerInfo_2eproto::offsets,
   file_level_metadata_AuthorChatPlayerInfo_2eproto, 1, file_level_enum_descriptors_AuthorChatPlayerInfo_2eproto, file_level_service_descriptors_AuthorChatPlayerInfo_2eproto,
@@ -84,24 +84,20 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void AuthorChatPlayerInfo::InitAsDefaultInstance() {
-  ::AcFunDanmu::_AuthorChatPlayerInfo_default_instance_._instance.get_mutable()->user_ = const_cast< ::AcFunDanmu::ZtLiveUserInfo*>(
-      ::AcFunDanmu::ZtLiveUserInfo::internal_default_instance());
-}
 class AuthorChatPlayerInfo::_Internal {
  public:
-  static const ::AcFunDanmu::ZtLiveUserInfo& user(const AuthorChatPlayerInfo* msg);
+  static const ::AcFunDanmu::ZtLiveUserInfo& player(const AuthorChatPlayerInfo* msg);
 };
 
 const ::AcFunDanmu::ZtLiveUserInfo&
-AuthorChatPlayerInfo::_Internal::user(const AuthorChatPlayerInfo* msg) {
-  return *msg->user_;
+AuthorChatPlayerInfo::_Internal::player(const AuthorChatPlayerInfo* msg) {
+  return *msg->player_;
 }
-void AuthorChatPlayerInfo::clear_user() {
-  if (GetArena() == nullptr && user_ != nullptr) {
-    delete user_;
+void AuthorChatPlayerInfo::clear_player() {
+  if (GetArena() == nullptr && player_ != nullptr) {
+    delete player_;
   }
-  user_ = nullptr;
+  player_ = nullptr;
 }
 AuthorChatPlayerInfo::AuthorChatPlayerInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
@@ -112,26 +108,27 @@ AuthorChatPlayerInfo::AuthorChatPlayerInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena
 AuthorChatPlayerInfo::AuthorChatPlayerInfo(const AuthorChatPlayerInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  b_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_b().empty()) {
-    b_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_b(),
+  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_liveid().empty()) {
+    liveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_liveid(), 
       GetArena());
   }
-  if (from._internal_has_user()) {
-    user_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.user_);
+  if (from._internal_has_player()) {
+    player_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.player_);
   } else {
-    user_ = nullptr;
+    player_ = nullptr;
   }
-  c_ = from.c_;
+  enablejumppeerliveroom_ = from.enablejumppeerliveroom_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AuthorChatPlayerInfo)
 }
 
 void AuthorChatPlayerInfo::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AuthorChatPlayerInfo_AuthorChatPlayerInfo_2eproto.base);
-  b_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&user_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&c_) -
-      reinterpret_cast<char*>(&user_)) + sizeof(c_));
+  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&player_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&enablejumppeerliveroom_) -
+      reinterpret_cast<char*>(&player_)) + sizeof(enablejumppeerliveroom_));
 }
 
 AuthorChatPlayerInfo::~AuthorChatPlayerInfo() {
@@ -142,8 +139,8 @@ AuthorChatPlayerInfo::~AuthorChatPlayerInfo() {
 
 void AuthorChatPlayerInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  b_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete user_;
+  liveid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete player_;
 }
 
 void AuthorChatPlayerInfo::ArenaDtor(void* object) {
@@ -167,43 +164,42 @@ void AuthorChatPlayerInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  b_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  if (GetArena() == nullptr && user_ != nullptr) {
-    delete user_;
+  liveid_.ClearToEmpty();
+  if (GetArena() == nullptr && player_ != nullptr) {
+    delete player_;
   }
-  user_ = nullptr;
-  c_ = false;
+  player_ = nullptr;
+  enablejumppeerliveroom_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* AuthorChatPlayerInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .AcFunDanmu.ZtLiveUserInfo user = 1;
+      // .AcFunDanmu.ZtLiveUserInfo player = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_user(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_player(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string b = 2;
+      // string liveId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_b();
+          auto str = _internal_mutable_liveid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.AuthorChatPlayerInfo.b"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.AuthorChatPlayerInfo.liveId"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool c = 3;
+      // bool enableJumpPeerLiveRoom = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          c_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          enablejumppeerliveroom_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -235,28 +231,28 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .AcFunDanmu.ZtLiveUserInfo user = 1;
-  if (this->has_user()) {
+  // .AcFunDanmu.ZtLiveUserInfo player = 1;
+  if (this->has_player()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        1, _Internal::user(this), target, stream);
+        1, _Internal::player(this), target, stream);
   }
 
-  // string b = 2;
-  if (this->b().size() > 0) {
+  // string liveId = 2;
+  if (this->liveid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_b().data(), static_cast<int>(this->_internal_b().length()),
+      this->_internal_liveid().data(), static_cast<int>(this->_internal_liveid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "AcFunDanmu.AuthorChatPlayerInfo.b");
+      "AcFunDanmu.AuthorChatPlayerInfo.liveId");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_b(), target);
+        2, this->_internal_liveid(), target);
   }
 
-  // bool c = 3;
-  if (this->c() != 0) {
+  // bool enableJumpPeerLiveRoom = 3;
+  if (this->enablejumppeerliveroom() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_c(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_enablejumppeerliveroom(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -275,22 +271,22 @@ size_t AuthorChatPlayerInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string b = 2;
-  if (this->b().size() > 0) {
+  // string liveId = 2;
+  if (this->liveid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_b());
+        this->_internal_liveid());
   }
 
-  // .AcFunDanmu.ZtLiveUserInfo user = 1;
-  if (this->has_user()) {
+  // .AcFunDanmu.ZtLiveUserInfo player = 1;
+  if (this->has_player()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *user_);
+        *player_);
   }
 
-  // bool c = 3;
-  if (this->c() != 0) {
+  // bool enableJumpPeerLiveRoom = 3;
+  if (this->enablejumppeerliveroom() != 0) {
     total_size += 1 + 1;
   }
 
@@ -325,14 +321,14 @@ void AuthorChatPlayerInfo::MergeFrom(const AuthorChatPlayerInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.b().size() > 0) {
-    _internal_set_b(from._internal_b());
+  if (from.liveid().size() > 0) {
+    _internal_set_liveid(from._internal_liveid());
   }
-  if (from.has_user()) {
-    _internal_mutable_user()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(from._internal_user());
+  if (from.has_player()) {
+    _internal_mutable_player()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(from._internal_player());
   }
-  if (from.c() != 0) {
-    _internal_set_c(from._internal_c());
+  if (from.enablejumppeerliveroom() != 0) {
+    _internal_set_enablejumppeerliveroom(from._internal_enablejumppeerliveroom());
   }
 }
 
@@ -357,13 +353,13 @@ bool AuthorChatPlayerInfo::IsInitialized() const {
 void AuthorChatPlayerInfo::InternalSwap(AuthorChatPlayerInfo* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  b_.Swap(&other->b_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  liveid_.Swap(&other->liveid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(AuthorChatPlayerInfo, c_)
-      + sizeof(AuthorChatPlayerInfo::c_)
-      - PROTOBUF_FIELD_OFFSET(AuthorChatPlayerInfo, user_)>(
-          reinterpret_cast<char*>(&user_),
-          reinterpret_cast<char*>(&other->user_));
+      PROTOBUF_FIELD_OFFSET(AuthorChatPlayerInfo, enablejumppeerliveroom_)
+      + sizeof(AuthorChatPlayerInfo::enablejumppeerliveroom_)
+      - PROTOBUF_FIELD_OFFSET(AuthorChatPlayerInfo, player_)>(
+          reinterpret_cast<char*>(&player_),
+          reinterpret_cast<char*>(&other->player_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AuthorChatPlayerInfo::GetMetadata() const {

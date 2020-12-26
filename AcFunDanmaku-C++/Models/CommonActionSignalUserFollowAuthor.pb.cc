@@ -29,7 +29,6 @@ static void InitDefaultsscc_info_CommonActionSignalUserFollowAuthor_CommonAction
     new (ptr) ::AcFunDanmu::CommonActionSignalUserFollowAuthor();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonActionSignalUserFollowAuthor::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalUserFollowAuthor_CommonActionSignalUserFollowAuthor_2eproto =
@@ -84,10 +83,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonActionSignalUserFollowAuthor::InitAsDefaultInstance() {
-  ::AcFunDanmu::_CommonActionSignalUserFollowAuthor_default_instance_._instance.get_mutable()->userinfo_ = const_cast< ::AcFunDanmu::ZtLiveUserInfo*>(
-      ::AcFunDanmu::ZtLiveUserInfo::internal_default_instance());
-}
 class CommonActionSignalUserFollowAuthor::_Internal {
  public:
   static const ::AcFunDanmu::ZtLiveUserInfo& userinfo(const CommonActionSignalUserFollowAuthor* msg);
@@ -123,8 +118,9 @@ CommonActionSignalUserFollowAuthor::CommonActionSignalUserFollowAuthor(const Com
 
 void CommonActionSignalUserFollowAuthor::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalUserFollowAuthor_CommonActionSignalUserFollowAuthor_2eproto.base);
-  ::memset(&userinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&sendtimems_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&userinfo_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&sendtimems_) -
       reinterpret_cast<char*>(&userinfo_)) + sizeof(sendtimems_));
 }
 
@@ -170,7 +166,6 @@ void CommonActionSignalUserFollowAuthor::Clear() {
 
 const char* CommonActionSignalUserFollowAuthor::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

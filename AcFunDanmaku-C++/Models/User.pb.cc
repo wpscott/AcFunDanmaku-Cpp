@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_User_User_2eproto() {
     new (ptr) ::AcFunDanmu::User();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::User::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_User_User_2eproto =
@@ -78,8 +77,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void User::InitAsDefaultInstance() {
-}
 class User::_Internal {
  public:
 };
@@ -100,8 +97,9 @@ User::User(const User& from)
 }
 
 void User::SharedCtor() {
-  ::memset(&uid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&appid_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&uid_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&appid_) -
       reinterpret_cast<char*>(&uid_)) + sizeof(appid_));
 }
 
@@ -144,7 +142,6 @@ void User::Clear() {
 
 const char* User::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

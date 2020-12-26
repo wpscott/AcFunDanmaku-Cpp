@@ -29,7 +29,6 @@ static void InitDefaultsscc_info_CommonActionSignalComment_CommonActionSignalCom
     new (ptr) ::AcFunDanmu::CommonActionSignalComment();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonActionSignalComment::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto =
@@ -85,10 +84,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonActionSignalComment::InitAsDefaultInstance() {
-  ::AcFunDanmu::_CommonActionSignalComment_default_instance_._instance.get_mutable()->userinfo_ = const_cast< ::AcFunDanmu::ZtLiveUserInfo*>(
-      ::AcFunDanmu::ZtLiveUserInfo::internal_default_instance());
-}
 class CommonActionSignalComment::_Internal {
  public:
   static const ::AcFunDanmu::ZtLiveUserInfo& userinfo(const CommonActionSignalComment* msg);
@@ -115,7 +110,7 @@ CommonActionSignalComment::CommonActionSignalComment(const CommonActionSignalCom
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_content().empty()) {
-    content_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_content(),
+    content_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_content(), 
       GetArena());
   }
   if (from._internal_has_userinfo()) {
@@ -130,8 +125,9 @@ CommonActionSignalComment::CommonActionSignalComment(const CommonActionSignalCom
 void CommonActionSignalComment::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto.base);
   content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&userinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&sendtimems_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&userinfo_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&sendtimems_) -
       reinterpret_cast<char*>(&userinfo_)) + sizeof(sendtimems_));
 }
 
@@ -168,7 +164,7 @@ void CommonActionSignalComment::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  content_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  content_.ClearToEmpty();
   if (GetArena() == nullptr && userinfo_ != nullptr) {
     delete userinfo_;
   }
@@ -179,7 +175,6 @@ void CommonActionSignalComment::Clear() {
 
 const char* CommonActionSignalComment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

@@ -32,7 +32,6 @@ static void InitDefaultsscc_info_ZtLiveCsHeartbeat_ZtLiveCsHeartbeat_2eproto() {
     new (ptr) ::AcFunDanmu::ZtLiveCsHeartbeat();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveCsHeartbeat::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsHeartbeat_ZtLiveCsHeartbeat_2eproto =
@@ -46,7 +45,6 @@ static void InitDefaultsscc_info_ZtLiveCsHeartbeatAck_ZtLiveCsHeartbeat_2eproto(
     new (ptr) ::AcFunDanmu::ZtLiveCsHeartbeatAck();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveCsHeartbeatAck::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsHeartbeatAck_ZtLiveCsHeartbeat_2eproto =
@@ -111,8 +109,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void ZtLiveCsHeartbeat::InitAsDefaultInstance() {
-}
 class ZtLiveCsHeartbeat::_Internal {
  public:
 };
@@ -133,8 +129,9 @@ ZtLiveCsHeartbeat::ZtLiveCsHeartbeat(const ZtLiveCsHeartbeat& from)
 }
 
 void ZtLiveCsHeartbeat::SharedCtor() {
-  ::memset(&clienttimestampms_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&sequence_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&clienttimestampms_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&sequence_) -
       reinterpret_cast<char*>(&clienttimestampms_)) + sizeof(sequence_));
 }
 
@@ -177,7 +174,6 @@ void ZtLiveCsHeartbeat::Clear() {
 
 const char* ZtLiveCsHeartbeat::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -342,8 +338,6 @@ void ZtLiveCsHeartbeat::InternalSwap(ZtLiveCsHeartbeat* other) {
 
 // ===================================================================
 
-void ZtLiveCsHeartbeatAck::InitAsDefaultInstance() {
-}
 class ZtLiveCsHeartbeatAck::_Internal {
  public:
 };
@@ -364,8 +358,9 @@ ZtLiveCsHeartbeatAck::ZtLiveCsHeartbeatAck(const ZtLiveCsHeartbeatAck& from)
 }
 
 void ZtLiveCsHeartbeatAck::SharedCtor() {
-  ::memset(&servertimestampms_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&clientsequence_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&servertimestampms_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&clientsequence_) -
       reinterpret_cast<char*>(&servertimestampms_)) + sizeof(clientsequence_));
 }
 
@@ -408,7 +403,6 @@ void ZtLiveCsHeartbeatAck::Clear() {
 
 const char* ZtLiveCsHeartbeatAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

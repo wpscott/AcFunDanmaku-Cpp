@@ -28,6 +28,10 @@ class AcfunStateSignalDisplayInfoDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AcfunStateSignalDisplayInfo> _instance;
 } _AcfunStateSignalDisplayInfo_default_instance_;
+class AcfunActionSignalJoinClubDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AcfunActionSignalJoinClub> _instance;
+} _AcfunActionSignalJoinClub_default_instance_;
 }  // namespace AcFunDanmu
 static void InitDefaultsscc_info_AcFunUserInfo_acfun_2elive_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -37,11 +41,24 @@ static void InitDefaultsscc_info_AcFunUserInfo_acfun_2elive_2eproto() {
     new (ptr) ::AcFunDanmu::AcFunUserInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::AcFunUserInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AcFunUserInfo_acfun_2elive_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AcFunUserInfo_acfun_2elive_2eproto}, {}};
+
+static void InitDefaultsscc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::AcFunDanmu::_AcfunActionSignalJoinClub_default_instance_;
+    new (ptr) ::AcFunDanmu::AcfunActionSignalJoinClub();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto}, {
+      &scc_info_AcFunUserInfo_acfun_2elive_2eproto.base,}};
 
 static void InitDefaultsscc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -51,7 +68,6 @@ static void InitDefaultsscc_info_AcfunActionSignalThrowBanana_acfun_2elive_2epro
     new (ptr) ::AcFunDanmu::AcfunActionSignalThrowBanana();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::AcfunActionSignalThrowBanana::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto =
@@ -66,13 +82,12 @@ static void InitDefaultsscc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eprot
     new (ptr) ::AcFunDanmu::AcfunStateSignalDisplayInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::AcfunStateSignalDisplayInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_acfun_2elive_2eproto[3];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_acfun_2elive_2eproto[4];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_acfun_2elive_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_acfun_2elive_2eproto = nullptr;
 
@@ -98,17 +113,27 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_acfun_2elive_2eproto::offsets[
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AcfunStateSignalDisplayInfo, bananacount_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AcfunActionSignalJoinClub, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AcfunActionSignalJoinClub, fansinfo_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AcfunActionSignalJoinClub, uperinfo_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AcfunActionSignalJoinClub, jointimems_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::AcFunUserInfo)},
   { 7, -1, sizeof(::AcFunDanmu::AcfunActionSignalThrowBanana)},
   { 15, -1, sizeof(::AcFunDanmu::AcfunStateSignalDisplayInfo)},
+  { 21, -1, sizeof(::AcFunDanmu::AcfunActionSignalJoinClub)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_AcFunUserInfo_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_AcfunActionSignalThrowBanana_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_AcfunStateSignalDisplayInfo_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_AcfunActionSignalJoinClub_default_instance_),
 };
 
 const char descriptor_table_protodef_acfun_2elive_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -118,21 +143,25 @@ const char descriptor_table_protodef_acfun_2elive_2eproto[] PROTOBUF_SECTION_VAR
   "\030\001 \001(\0132\031.AcFunDanmu.AcFunUserInfo\022\r\n\005cou"
   "nt\030\002 \001(\005\022\022\n\nsendTimeMs\030\003 \001(\003\"2\n\033AcfunSta"
   "teSignalDisplayInfo\022\023\n\013bananaCount\030\001 \001(\t"
-  "b\006proto3"
+  "\"\211\001\n\031AcfunActionSignalJoinClub\022+\n\010fansIn"
+  "fo\030\001 \001(\0132\031.AcFunDanmu.AcFunUserInfo\022+\n\010u"
+  "perInfo\030\002 \001(\0132\031.AcFunDanmu.AcFunUserInfo"
+  "\022\022\n\njoinTimeMs\030\003 \001(\003b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_acfun_2elive_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_acfun_2elive_2eproto_sccs[3] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_acfun_2elive_2eproto_sccs[4] = {
   &scc_info_AcFunUserInfo_acfun_2elive_2eproto.base,
+  &scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto.base,
   &scc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto.base,
   &scc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_acfun_2elive_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_acfun_2elive_2eproto = {
-  false, false, descriptor_table_protodef_acfun_2elive_2eproto, "acfun.live.proto", 248,
-  &descriptor_table_acfun_2elive_2eproto_once, descriptor_table_acfun_2elive_2eproto_sccs, descriptor_table_acfun_2elive_2eproto_deps, 3, 0,
+  false, false, descriptor_table_protodef_acfun_2elive_2eproto, "acfun.live.proto", 388,
+  &descriptor_table_acfun_2elive_2eproto_once, descriptor_table_acfun_2elive_2eproto_sccs, descriptor_table_acfun_2elive_2eproto_deps, 4, 0,
   schemas, file_default_instances, TableStruct_acfun_2elive_2eproto::offsets,
-  file_level_metadata_acfun_2elive_2eproto, 3, file_level_enum_descriptors_acfun_2elive_2eproto, file_level_service_descriptors_acfun_2elive_2eproto,
+  file_level_metadata_acfun_2elive_2eproto, 4, file_level_enum_descriptors_acfun_2elive_2eproto, file_level_service_descriptors_acfun_2elive_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -141,8 +170,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void AcFunUserInfo::InitAsDefaultInstance() {
-}
 class AcFunUserInfo::_Internal {
  public:
 };
@@ -158,7 +185,7 @@ AcFunUserInfo::AcFunUserInfo(const AcFunUserInfo& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
       GetArena());
   }
   userid_ = from.userid_;
@@ -203,14 +230,13 @@ void AcFunUserInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.ClearToEmpty();
   userid_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* AcFunUserInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -377,10 +403,6 @@ void AcFunUserInfo::InternalSwap(AcFunUserInfo* other) {
 
 // ===================================================================
 
-void AcfunActionSignalThrowBanana::InitAsDefaultInstance() {
-  ::AcFunDanmu::_AcfunActionSignalThrowBanana_default_instance_._instance.get_mutable()->visitor_ = const_cast< ::AcFunDanmu::AcFunUserInfo*>(
-      ::AcFunDanmu::AcFunUserInfo::internal_default_instance());
-}
 class AcfunActionSignalThrowBanana::_Internal {
  public:
   static const ::AcFunDanmu::AcFunUserInfo& visitor(const AcfunActionSignalThrowBanana* msg);
@@ -412,8 +434,9 @@ AcfunActionSignalThrowBanana::AcfunActionSignalThrowBanana(const AcfunActionSign
 
 void AcfunActionSignalThrowBanana::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto.base);
-  ::memset(&visitor_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&count_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&visitor_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&count_) -
       reinterpret_cast<char*>(&visitor_)) + sizeof(count_));
 }
 
@@ -461,7 +484,6 @@ void AcfunActionSignalThrowBanana::Clear() {
 
 const char* AcfunActionSignalThrowBanana::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -651,8 +673,6 @@ void AcfunActionSignalThrowBanana::InternalSwap(AcfunActionSignalThrowBanana* ot
 
 // ===================================================================
 
-void AcfunStateSignalDisplayInfo::InitAsDefaultInstance() {
-}
 class AcfunStateSignalDisplayInfo::_Internal {
  public:
 };
@@ -668,7 +688,7 @@ AcfunStateSignalDisplayInfo::AcfunStateSignalDisplayInfo(const AcfunStateSignalD
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   bananacount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bananacount().empty()) {
-    bananacount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bananacount(),
+    bananacount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bananacount(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AcfunStateSignalDisplayInfo)
@@ -711,13 +731,12 @@ void AcfunStateSignalDisplayInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  bananacount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  bananacount_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* AcfunStateSignalDisplayInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -858,6 +877,289 @@ void AcfunStateSignalDisplayInfo::InternalSwap(AcfunStateSignalDisplayInfo* othe
 }
 
 
+// ===================================================================
+
+class AcfunActionSignalJoinClub::_Internal {
+ public:
+  static const ::AcFunDanmu::AcFunUserInfo& fansinfo(const AcfunActionSignalJoinClub* msg);
+  static const ::AcFunDanmu::AcFunUserInfo& uperinfo(const AcfunActionSignalJoinClub* msg);
+};
+
+const ::AcFunDanmu::AcFunUserInfo&
+AcfunActionSignalJoinClub::_Internal::fansinfo(const AcfunActionSignalJoinClub* msg) {
+  return *msg->fansinfo_;
+}
+const ::AcFunDanmu::AcFunUserInfo&
+AcfunActionSignalJoinClub::_Internal::uperinfo(const AcfunActionSignalJoinClub* msg) {
+  return *msg->uperinfo_;
+}
+AcfunActionSignalJoinClub::AcfunActionSignalJoinClub(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:AcFunDanmu.AcfunActionSignalJoinClub)
+}
+AcfunActionSignalJoinClub::AcfunActionSignalJoinClub(const AcfunActionSignalJoinClub& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_fansinfo()) {
+    fansinfo_ = new ::AcFunDanmu::AcFunUserInfo(*from.fansinfo_);
+  } else {
+    fansinfo_ = nullptr;
+  }
+  if (from._internal_has_uperinfo()) {
+    uperinfo_ = new ::AcFunDanmu::AcFunUserInfo(*from.uperinfo_);
+  } else {
+    uperinfo_ = nullptr;
+  }
+  jointimems_ = from.jointimems_;
+  // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AcfunActionSignalJoinClub)
+}
+
+void AcfunActionSignalJoinClub::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto.base);
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&fansinfo_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&jointimems_) -
+      reinterpret_cast<char*>(&fansinfo_)) + sizeof(jointimems_));
+}
+
+AcfunActionSignalJoinClub::~AcfunActionSignalJoinClub() {
+  // @@protoc_insertion_point(destructor:AcFunDanmu.AcfunActionSignalJoinClub)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void AcfunActionSignalJoinClub::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete fansinfo_;
+  if (this != internal_default_instance()) delete uperinfo_;
+}
+
+void AcfunActionSignalJoinClub::ArenaDtor(void* object) {
+  AcfunActionSignalJoinClub* _this = reinterpret_cast< AcfunActionSignalJoinClub* >(object);
+  (void)_this;
+}
+void AcfunActionSignalJoinClub::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void AcfunActionSignalJoinClub::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AcfunActionSignalJoinClub& AcfunActionSignalJoinClub::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AcfunActionSignalJoinClub::Clear() {
+// @@protoc_insertion_point(message_clear_start:AcFunDanmu.AcfunActionSignalJoinClub)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArena() == nullptr && fansinfo_ != nullptr) {
+    delete fansinfo_;
+  }
+  fansinfo_ = nullptr;
+  if (GetArena() == nullptr && uperinfo_ != nullptr) {
+    delete uperinfo_;
+  }
+  uperinfo_ = nullptr;
+  jointimems_ = PROTOBUF_LONGLONG(0);
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AcfunActionSignalJoinClub::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .AcFunDanmu.AcFunUserInfo fansInfo = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_fansinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .AcFunDanmu.AcFunUserInfo uperInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_uperinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int64 joinTimeMs = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          jointimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AcfunActionSignalJoinClub::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.AcfunActionSignalJoinClub)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .AcFunDanmu.AcFunUserInfo fansInfo = 1;
+  if (this->has_fansinfo()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::fansinfo(this), target, stream);
+  }
+
+  // .AcFunDanmu.AcFunUserInfo uperInfo = 2;
+  if (this->has_uperinfo()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::uperinfo(this), target, stream);
+  }
+
+  // int64 joinTimeMs = 3;
+  if (this->jointimems() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_jointimems(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.AcfunActionSignalJoinClub)
+  return target;
+}
+
+size_t AcfunActionSignalJoinClub::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.AcfunActionSignalJoinClub)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .AcFunDanmu.AcFunUserInfo fansInfo = 1;
+  if (this->has_fansinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *fansinfo_);
+  }
+
+  // .AcFunDanmu.AcFunUserInfo uperInfo = 2;
+  if (this->has_uperinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *uperinfo_);
+  }
+
+  // int64 joinTimeMs = 3;
+  if (this->jointimems() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_jointimems());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AcfunActionSignalJoinClub::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.AcfunActionSignalJoinClub)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AcfunActionSignalJoinClub* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AcfunActionSignalJoinClub>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.AcfunActionSignalJoinClub)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.AcfunActionSignalJoinClub)
+    MergeFrom(*source);
+  }
+}
+
+void AcfunActionSignalJoinClub::MergeFrom(const AcfunActionSignalJoinClub& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.AcfunActionSignalJoinClub)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_fansinfo()) {
+    _internal_mutable_fansinfo()->::AcFunDanmu::AcFunUserInfo::MergeFrom(from._internal_fansinfo());
+  }
+  if (from.has_uperinfo()) {
+    _internal_mutable_uperinfo()->::AcFunDanmu::AcFunUserInfo::MergeFrom(from._internal_uperinfo());
+  }
+  if (from.jointimems() != 0) {
+    _internal_set_jointimems(from._internal_jointimems());
+  }
+}
+
+void AcfunActionSignalJoinClub::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.AcfunActionSignalJoinClub)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AcfunActionSignalJoinClub::CopyFrom(const AcfunActionSignalJoinClub& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:AcFunDanmu.AcfunActionSignalJoinClub)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AcfunActionSignalJoinClub::IsInitialized() const {
+  return true;
+}
+
+void AcfunActionSignalJoinClub::InternalSwap(AcfunActionSignalJoinClub* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AcfunActionSignalJoinClub, jointimems_)
+      + sizeof(AcfunActionSignalJoinClub::jointimems_)
+      - PROTOBUF_FIELD_OFFSET(AcfunActionSignalJoinClub, fansinfo_)>(
+          reinterpret_cast<char*>(&fansinfo_),
+          reinterpret_cast<char*>(&other->fansinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AcfunActionSignalJoinClub::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
@@ -869,6 +1171,9 @@ template<> PROTOBUF_NOINLINE ::AcFunDanmu::AcfunActionSignalThrowBanana* Arena::
 }
 template<> PROTOBUF_NOINLINE ::AcFunDanmu::AcfunStateSignalDisplayInfo* Arena::CreateMaybeMessage< ::AcFunDanmu::AcfunStateSignalDisplayInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::AcfunStateSignalDisplayInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::AcfunActionSignalJoinClub* Arena::CreateMaybeMessage< ::AcFunDanmu::AcfunActionSignalJoinClub >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::AcFunDanmu::AcfunActionSignalJoinClub >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

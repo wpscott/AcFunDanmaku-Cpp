@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_ZtLiveScTicketInvalid_ZtLiveScTicketInvalid_2ep
     new (ptr) ::AcFunDanmu::ZtLiveScTicketInvalid();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtLiveScTicketInvalid::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveScTicketInvalid_ZtLiveScTicketInvalid_2eproto =
@@ -76,8 +75,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void ZtLiveScTicketInvalid::InitAsDefaultInstance() {
-}
 class ZtLiveScTicketInvalid::_Internal {
  public:
 };
@@ -133,7 +130,6 @@ void ZtLiveScTicketInvalid::Clear() {
 
 const char* ZtLiveScTicketInvalid::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

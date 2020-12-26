@@ -30,7 +30,6 @@ static void InitDefaultsscc_info_CommonActionSignalGift_CommonActionSignalGift_2
     new (ptr) ::AcFunDanmu::CommonActionSignalGift();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonActionSignalGift::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_CommonActionSignalGift_CommonActionSignalGift_2eproto =
@@ -100,12 +99,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonActionSignalGift::InitAsDefaultInstance() {
-  ::AcFunDanmu::_CommonActionSignalGift_default_instance_._instance.get_mutable()->user_ = const_cast< ::AcFunDanmu::ZtLiveUserInfo*>(
-      ::AcFunDanmu::ZtLiveUserInfo::internal_default_instance());
-  ::AcFunDanmu::_CommonActionSignalGift_default_instance_._instance.get_mutable()->drawgiftinfo_ = const_cast< ::AcFunDanmu::ZtDrawGiftInfo*>(
-      ::AcFunDanmu::ZtDrawGiftInfo::internal_default_instance());
-}
 class CommonActionSignalGift::_Internal {
  public:
   static const ::AcFunDanmu::ZtLiveUserInfo& user(const CommonActionSignalGift* msg);
@@ -143,7 +136,7 @@ CommonActionSignalGift::CommonActionSignalGift(const CommonActionSignalGift& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   comboid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_comboid().empty()) {
-    comboid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_comboid(),
+    comboid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_comboid(), 
       GetArena());
   }
   if (from._internal_has_user()) {
@@ -165,8 +158,9 @@ CommonActionSignalGift::CommonActionSignalGift(const CommonActionSignalGift& fro
 void CommonActionSignalGift::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalGift_CommonActionSignalGift_2eproto.base);
   comboid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&user_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&expiredurationms_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&user_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&expiredurationms_) -
       reinterpret_cast<char*>(&user_)) + sizeof(expiredurationms_));
 }
 
@@ -204,7 +198,7 @@ void CommonActionSignalGift::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  comboid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  comboid_.ClearToEmpty();
   if (GetArena() == nullptr && user_ != nullptr) {
     delete user_;
   }
@@ -221,7 +215,6 @@ void CommonActionSignalGift::Clear() {
 
 const char* CommonActionSignalGift::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

@@ -32,7 +32,6 @@ static void InitDefaultsscc_info_PingRequest_Ping_2eproto() {
     new (ptr) ::AcFunDanmu::PingRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::PingRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PingRequest_Ping_2eproto =
@@ -46,7 +45,6 @@ static void InitDefaultsscc_info_PingResponse_Ping_2eproto() {
     new (ptr) ::AcFunDanmu::PingResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::PingResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PingResponse_Ping_2eproto =
@@ -137,8 +135,6 @@ constexpr int PingRequest::PingType_ARRAYSIZE;
 
 // ===================================================================
 
-void PingRequest::InitAsDefaultInstance() {
-}
 class PingRequest::_Internal {
  public:
 };
@@ -159,8 +155,9 @@ PingRequest::PingRequest(const PingRequest& from)
 }
 
 void PingRequest::SharedCtor() {
-  ::memset(&pingtype_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&pinground_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&pingtype_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&pinground_) -
       reinterpret_cast<char*>(&pingtype_)) + sizeof(pinground_));
 }
 
@@ -203,7 +200,6 @@ void PingRequest::Clear() {
 
 const char* PingRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -369,8 +365,6 @@ void PingRequest::InternalSwap(PingRequest* other) {
 
 // ===================================================================
 
-void PingResponse::InitAsDefaultInstance() {
-}
 class PingResponse::_Internal {
  public:
 };
@@ -391,8 +385,9 @@ PingResponse::PingResponse(const PingResponse& from)
 }
 
 void PingResponse::SharedCtor() {
-  ::memset(&servertimestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&redirectport_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&servertimestamp_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&redirectport_) -
       reinterpret_cast<char*>(&servertimestamp_)) + sizeof(redirectport_));
 }
 
@@ -435,7 +430,6 @@ void PingResponse::Clear() {
 
 const char* PingResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

@@ -32,7 +32,6 @@ static void InitDefaultsscc_info_UnregisterRequest_Unregister_2eproto() {
     new (ptr) ::AcFunDanmu::UnregisterRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::UnregisterRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UnregisterRequest_Unregister_2eproto =
@@ -46,7 +45,6 @@ static void InitDefaultsscc_info_UnregisterResponse_Unregister_2eproto() {
     new (ptr) ::AcFunDanmu::UnregisterResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::UnregisterResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UnregisterResponse_Unregister_2eproto =
@@ -103,8 +101,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void UnregisterRequest::InitAsDefaultInstance() {
-}
 class UnregisterRequest::_Internal {
  public:
 };
@@ -160,7 +156,6 @@ void UnregisterRequest::Clear() {
 
 const char* UnregisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -268,8 +263,6 @@ void UnregisterRequest::InternalSwap(UnregisterRequest* other) {
 
 // ===================================================================
 
-void UnregisterResponse::InitAsDefaultInstance() {
-}
 class UnregisterResponse::_Internal {
  public:
 };
@@ -325,7 +318,6 @@ void UnregisterResponse::Clear() {
 
 const char* UnregisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

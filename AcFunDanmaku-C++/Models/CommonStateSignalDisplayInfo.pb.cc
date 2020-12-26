@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_CommonStateSignalDisplayInfo_CommonStateSignalD
     new (ptr) ::AcFunDanmu::CommonStateSignalDisplayInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonStateSignalDisplayInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalDisplayInfo_CommonStateSignalDisplayInfo_2eproto =
@@ -81,8 +80,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonStateSignalDisplayInfo::InitAsDefaultInstance() {
-}
 class CommonStateSignalDisplayInfo::_Internal {
  public:
 };
@@ -98,12 +95,12 @@ CommonStateSignalDisplayInfo::CommonStateSignalDisplayInfo(const CommonStateSign
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   watchingcount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_watchingcount().empty()) {
-    watchingcount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_watchingcount(),
+    watchingcount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_watchingcount(), 
       GetArena());
   }
   likecount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_likecount().empty()) {
-    likecount_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_likecount(),
+    likecount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_likecount(), 
       GetArena());
   }
   likedelta_ = from.likedelta_;
@@ -150,15 +147,14 @@ void CommonStateSignalDisplayInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  watchingcount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  likecount_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  watchingcount_.ClearToEmpty();
+  likecount_.ClearToEmpty();
   likedelta_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CommonStateSignalDisplayInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

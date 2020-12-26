@@ -32,7 +32,6 @@ static void InitDefaultsscc_info_UpstreamPayload_UpstreamPayload_2eproto() {
     new (ptr) ::AcFunDanmu::UpstreamPayload();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::UpstreamPayload::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_UpstreamPayload_UpstreamPayload_2eproto =
@@ -111,16 +110,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void UpstreamPayload::InitAsDefaultInstance() {
-  ::AcFunDanmu::_UpstreamPayload_default_instance_._instance.get_mutable()->userinstance_ = const_cast< ::AcFunDanmu::UserInstance*>(
-      ::AcFunDanmu::UserInstance::internal_default_instance());
-  ::AcFunDanmu::_UpstreamPayload_default_instance_._instance.get_mutable()->settinginfo_ = const_cast< ::AcFunDanmu::SettingInfo*>(
-      ::AcFunDanmu::SettingInfo::internal_default_instance());
-  ::AcFunDanmu::_UpstreamPayload_default_instance_._instance.get_mutable()->requestbasicinfo_ = const_cast< ::AcFunDanmu::RequestBasicInfo*>(
-      ::AcFunDanmu::RequestBasicInfo::internal_default_instance());
-  ::AcFunDanmu::_UpstreamPayload_default_instance_._instance.get_mutable()->frontendinfo_ = const_cast< ::AcFunDanmu::FrontendInfo*>(
-      ::AcFunDanmu::FrontendInfo::internal_default_instance());
-}
 class UpstreamPayload::_Internal {
  public:
   static const ::AcFunDanmu::UserInstance& userinstance(const UpstreamPayload* msg);
@@ -180,22 +169,22 @@ UpstreamPayload::UpstreamPayload(const UpstreamPayload& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_command().empty()) {
-    command_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_command(),
+    command_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_command(), 
       GetArena());
   }
   payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payloaddata().empty()) {
-    payloaddata_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_payloaddata(),
+    payloaddata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payloaddata(), 
       GetArena());
   }
   subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_subbiz().empty()) {
-    subbiz_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_subbiz(),
+    subbiz_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_subbiz(), 
       GetArena());
   }
   kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpn().empty()) {
-    kpn_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_kpn(),
+    kpn_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpn(), 
       GetArena());
   }
   if (from._internal_has_userinstance()) {
@@ -230,8 +219,9 @@ void UpstreamPayload::SharedCtor() {
   payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&userinstance_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&anonymouseuser_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&userinstance_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&anonymouseuser_) -
       reinterpret_cast<char*>(&userinstance_)) + sizeof(anonymouseuser_));
 }
 
@@ -274,10 +264,10 @@ void UpstreamPayload::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  command_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payloaddata_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  subbiz_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  kpn_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  command_.ClearToEmpty();
+  payloaddata_.ClearToEmpty();
+  subbiz_.ClearToEmpty();
+  kpn_.ClearToEmpty();
   if (GetArena() == nullptr && userinstance_ != nullptr) {
     delete userinstance_;
   }
@@ -302,7 +292,6 @@ void UpstreamPayload::Clear() {
 
 const char* UpstreamPayload::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

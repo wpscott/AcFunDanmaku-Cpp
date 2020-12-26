@@ -15,24 +15,23 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 namespace AcFunDanmu {
-class CommonStateSignalAuthorChatChangesSoundConfigDefaultTypeInternal {
+class CommonStateSignalAuthorChatChangeSoundConfigDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalAuthorChatChangesSoundConfig> _instance;
-} _CommonStateSignalAuthorChatChangesSoundConfig_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalAuthorChatChangeSoundConfig> _instance;
+} _CommonStateSignalAuthorChatChangeSoundConfig_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalAuthorChatChangesSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto() {
+static void InitDefaultsscc_info_CommonStateSignalAuthorChatChangeSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalAuthorChatChangesSoundConfig_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig();
+    void* ptr = &::AcFunDanmu::_CommonStateSignalAuthorChatChangeSoundConfig_default_instance_;
+    new (ptr) ::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalAuthorChatChangesSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonStateSignalAuthorChatChangesSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalAuthorChatChangeSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonStateSignalAuthorChatChangeSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalAuthorChatChangeSoundConfig_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_CommonStateSignalAuthorChatChangeSoundConfig_2eproto[1];
@@ -40,38 +39,40 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonStateSignalAuthorChatChangeSoundConfig_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig, a_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig, b_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig, authorchatid_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig, soundconfigchangetype_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig)},
+  { 0, -1, sizeof(::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonStateSignalAuthorChatChangesSoundConfig_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonStateSignalAuthorChatChangeSoundConfig_default_instance_),
 };
 
 const char descriptor_table_protodef_CommonStateSignalAuthorChatChangeSoundConfig_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n2CommonStateSignalAuthorChatChangeSound"
-  "Config.proto\022\nAcFunDanmu\"\250\001\n-CommonState"
-  "SignalAuthorChatChangesSoundConfig\022\t\n\001a\030"
-  "\001 \001(\t\022L\n\001b\030\002 \001(\0162A.AcFunDanmu.CommonStat"
-  "eSignalAuthorChatChangesSoundConfig.Unkn"
-  "own\"\036\n\007Unknown\022\005\n\001c\020\000\022\005\n\001d\020\001\022\005\n\001e\020\002b\006pro"
-  "to3"
+  "Config.proto\022\nAcFunDanmu\"\372\001\n,CommonState"
+  "SignalAuthorChatChangeSoundConfig\022\024\n\014aut"
+  "horChatId\030\001 \001(\t\022m\n\025soundConfigChangeType"
+  "\030\002 \001(\0162N.AcFunDanmu.CommonStateSignalAut"
+  "horChatChangeSoundConfig.SoundConfigChan"
+  "geType\"E\n\025SoundConfigChangeType\022\013\n\007UNKNO"
+  "WN\020\000\022\016\n\nOPEN_SOUND\020\001\022\017\n\013CLOSE_SOUND\020\002b\006p"
+  "roto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto_deps[1] = {
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalAuthorChatChangesSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto.base,
+  &scc_info_CommonStateSignalAuthorChatChangeSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalAuthorChatChangeSoundConfig_2eproto, "CommonStateSignalAuthorChatChangeSoundConfig.proto", 243,
+  false, false, descriptor_table_protodef_CommonStateSignalAuthorChatChangeSoundConfig_2eproto, "CommonStateSignalAuthorChatChangeSoundConfig.proto", 325,
   &descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto_once, descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto_sccs, descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_CommonStateSignalAuthorChatChangeSoundConfig_2eproto::offsets,
   file_level_metadata_CommonStateSignalAuthorChatChangeSoundConfig_2eproto, 1, file_level_enum_descriptors_CommonStateSignalAuthorChatChangeSoundConfig_2eproto, file_level_service_descriptors_CommonStateSignalAuthorChatChangeSoundConfig_2eproto,
@@ -80,11 +81,11 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Common
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_CommonStateSignalAuthorChatChangeSoundConfig_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto)), true);
 namespace AcFunDanmu {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CommonStateSignalAuthorChatChangesSoundConfig_Unknown_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_CommonStateSignalAuthorChatChangeSoundConfig_2eproto);
   return file_level_enum_descriptors_CommonStateSignalAuthorChatChangeSoundConfig_2eproto[0];
 }
-bool CommonStateSignalAuthorChatChangesSoundConfig_Unknown_IsValid(int value) {
+bool CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -96,106 +97,103 @@ bool CommonStateSignalAuthorChatChangesSoundConfig_Unknown_IsValid(int value) {
 }
 
 #if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr CommonStateSignalAuthorChatChangesSoundConfig_Unknown CommonStateSignalAuthorChatChangesSoundConfig::c;
-constexpr CommonStateSignalAuthorChatChangesSoundConfig_Unknown CommonStateSignalAuthorChatChangesSoundConfig::d;
-constexpr CommonStateSignalAuthorChatChangesSoundConfig_Unknown CommonStateSignalAuthorChatChangesSoundConfig::e;
-constexpr CommonStateSignalAuthorChatChangesSoundConfig_Unknown CommonStateSignalAuthorChatChangesSoundConfig::Unknown_MIN;
-constexpr CommonStateSignalAuthorChatChangesSoundConfig_Unknown CommonStateSignalAuthorChatChangesSoundConfig::Unknown_MAX;
-constexpr int CommonStateSignalAuthorChatChangesSoundConfig::Unknown_ARRAYSIZE;
+constexpr CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType CommonStateSignalAuthorChatChangeSoundConfig::UNKNOWN;
+constexpr CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType CommonStateSignalAuthorChatChangeSoundConfig::OPEN_SOUND;
+constexpr CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType CommonStateSignalAuthorChatChangeSoundConfig::CLOSE_SOUND;
+constexpr CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType CommonStateSignalAuthorChatChangeSoundConfig::SoundConfigChangeType_MIN;
+constexpr CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType CommonStateSignalAuthorChatChangeSoundConfig::SoundConfigChangeType_MAX;
+constexpr int CommonStateSignalAuthorChatChangeSoundConfig::SoundConfigChangeType_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 
 // ===================================================================
 
-void CommonStateSignalAuthorChatChangesSoundConfig::InitAsDefaultInstance() {
-}
-class CommonStateSignalAuthorChatChangesSoundConfig::_Internal {
+class CommonStateSignalAuthorChatChangeSoundConfig::_Internal {
  public:
 };
 
-CommonStateSignalAuthorChatChangesSoundConfig::CommonStateSignalAuthorChatChangesSoundConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+CommonStateSignalAuthorChatChangeSoundConfig::CommonStateSignalAuthorChatChangeSoundConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+  // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
 }
-CommonStateSignalAuthorChatChangesSoundConfig::CommonStateSignalAuthorChatChangesSoundConfig(const CommonStateSignalAuthorChatChangesSoundConfig& from)
+CommonStateSignalAuthorChatChangeSoundConfig::CommonStateSignalAuthorChatChangeSoundConfig(const CommonStateSignalAuthorChatChangeSoundConfig& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_a().empty()) {
-    a_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_a(),
+  authorchatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_authorchatid().empty()) {
+    authorchatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_authorchatid(), 
       GetArena());
   }
-  b_ = from.b_;
-  // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+  soundconfigchangetype_ = from.soundconfigchangetype_;
+  // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalAuthorChatChangesSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto.base);
-  a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  b_ = 0;
+void CommonStateSignalAuthorChatChangeSoundConfig::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalAuthorChatChangeSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto.base);
+  authorchatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  soundconfigchangetype_ = 0;
 }
 
-CommonStateSignalAuthorChatChangesSoundConfig::~CommonStateSignalAuthorChatChangesSoundConfig() {
-  // @@protoc_insertion_point(destructor:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+CommonStateSignalAuthorChatChangeSoundConfig::~CommonStateSignalAuthorChatChangeSoundConfig() {
+  // @@protoc_insertion_point(destructor:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::SharedDtor() {
+void CommonStateSignalAuthorChatChangeSoundConfig::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  a_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  authorchatid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::ArenaDtor(void* object) {
-  CommonStateSignalAuthorChatChangesSoundConfig* _this = reinterpret_cast< CommonStateSignalAuthorChatChangesSoundConfig* >(object);
+void CommonStateSignalAuthorChatChangeSoundConfig::ArenaDtor(void* object) {
+  CommonStateSignalAuthorChatChangeSoundConfig* _this = reinterpret_cast< CommonStateSignalAuthorChatChangeSoundConfig* >(object);
   (void)_this;
 }
-void CommonStateSignalAuthorChatChangesSoundConfig::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void CommonStateSignalAuthorChatChangeSoundConfig::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void CommonStateSignalAuthorChatChangesSoundConfig::SetCachedSize(int size) const {
+void CommonStateSignalAuthorChatChangeSoundConfig::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalAuthorChatChangesSoundConfig& CommonStateSignalAuthorChatChangesSoundConfig::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalAuthorChatChangesSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto.base);
+const CommonStateSignalAuthorChatChangeSoundConfig& CommonStateSignalAuthorChatChangeSoundConfig::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalAuthorChatChangeSoundConfig_CommonStateSignalAuthorChatChangeSoundConfig_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void CommonStateSignalAuthorChatChangesSoundConfig::Clear() {
-// @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+void CommonStateSignalAuthorChatChangeSoundConfig::Clear() {
+// @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  a_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  b_ = 0;
+  authorchatid_.ClearToEmpty();
+  soundconfigchangetype_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonStateSignalAuthorChatChangesSoundConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonStateSignalAuthorChatChangeSoundConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string a = 1;
+      // string authorChatId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_a();
+          auto str = _internal_mutable_authorchatid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig.a"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig.authorChatId"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig.Unknown b = 2;
+      // .AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig.SoundConfigChangeType soundConfigChangeType = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_b(static_cast<::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig_Unknown>(val));
+          _internal_set_soundconfigchangetype(static_cast<::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig_SoundConfigChangeType>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -220,56 +218,56 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonStateSignalAuthorChatChangesSoundConfig::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* CommonStateSignalAuthorChatChangeSoundConfig::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+  // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a = 1;
-  if (this->a().size() > 0) {
+  // string authorChatId = 1;
+  if (this->authorchatid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a().data(), static_cast<int>(this->_internal_a().length()),
+      this->_internal_authorchatid().data(), static_cast<int>(this->_internal_authorchatid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig.a");
+      "AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig.authorChatId");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_a(), target);
+        1, this->_internal_authorchatid(), target);
   }
 
-  // .AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig.Unknown b = 2;
-  if (this->b() != 0) {
+  // .AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig.SoundConfigChangeType soundConfigChangeType = 2;
+  if (this->soundconfigchangetype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      2, this->_internal_b(), target);
+      2, this->_internal_soundconfigchangetype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+  // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   return target;
 }
 
-size_t CommonStateSignalAuthorChatChangesSoundConfig::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+size_t CommonStateSignalAuthorChatChangeSoundConfig::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string a = 1;
-  if (this->a().size() > 0) {
+  // string authorChatId = 1;
+  if (this->authorchatid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a());
+        this->_internal_authorchatid());
   }
 
-  // .AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig.Unknown b = 2;
-  if (this->b() != 0) {
+  // .AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig.SoundConfigChangeType soundConfigChangeType = 2;
+  if (this->soundconfigchangetype() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_b());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_soundconfigchangetype());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -281,62 +279,62 @@ size_t CommonStateSignalAuthorChatChangesSoundConfig::ByteSizeLong() const {
   return total_size;
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+void CommonStateSignalAuthorChatChangeSoundConfig::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   GOOGLE_DCHECK_NE(&from, this);
-  const CommonStateSignalAuthorChatChangesSoundConfig* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonStateSignalAuthorChatChangesSoundConfig>(
+  const CommonStateSignalAuthorChatChangeSoundConfig* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonStateSignalAuthorChatChangeSoundConfig>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
     MergeFrom(*source);
   }
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::MergeFrom(const CommonStateSignalAuthorChatChangesSoundConfig& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+void CommonStateSignalAuthorChatChangeSoundConfig::MergeFrom(const CommonStateSignalAuthorChatChangeSoundConfig& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.a().size() > 0) {
-    _internal_set_a(from._internal_a());
+  if (from.authorchatid().size() > 0) {
+    _internal_set_authorchatid(from._internal_authorchatid());
   }
-  if (from.b() != 0) {
-    _internal_set_b(from._internal_b());
+  if (from.soundconfigchangetype() != 0) {
+    _internal_set_soundconfigchangetype(from._internal_soundconfigchangetype());
   }
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+void CommonStateSignalAuthorChatChangeSoundConfig::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::CopyFrom(const CommonStateSignalAuthorChatChangesSoundConfig& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangesSoundConfig)
+void CommonStateSignalAuthorChatChangeSoundConfig::CopyFrom(const CommonStateSignalAuthorChatChangeSoundConfig& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:AcFunDanmu.CommonStateSignalAuthorChatChangeSoundConfig)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool CommonStateSignalAuthorChatChangesSoundConfig::IsInitialized() const {
+bool CommonStateSignalAuthorChatChangeSoundConfig::IsInitialized() const {
   return true;
 }
 
-void CommonStateSignalAuthorChatChangesSoundConfig::InternalSwap(CommonStateSignalAuthorChatChangesSoundConfig* other) {
+void CommonStateSignalAuthorChatChangeSoundConfig::InternalSwap(CommonStateSignalAuthorChatChangeSoundConfig* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  a_.Swap(&other->a_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(b_, other->b_);
+  authorchatid_.Swap(&other->authorchatid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(soundconfigchangetype_, other->soundconfigchangetype_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalAuthorChatChangesSoundConfig::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalAuthorChatChangeSoundConfig::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -344,8 +342,8 @@ void CommonStateSignalAuthorChatChangesSoundConfig::InternalSwap(CommonStateSign
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::AcFunDanmu::CommonStateSignalAuthorChatChangesSoundConfig >(arena);
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::AcFunDanmu::CommonStateSignalAuthorChatChangeSoundConfig >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

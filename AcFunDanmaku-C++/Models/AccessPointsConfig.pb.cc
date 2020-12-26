@@ -29,7 +29,6 @@ static void InitDefaultsscc_info_AccessPointsConfig_AccessPointsConfig_2eproto()
     new (ptr) ::AcFunDanmu::AccessPointsConfig();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::AccessPointsConfig::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AccessPointsConfig_AccessPointsConfig_2eproto =
@@ -88,10 +87,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void AccessPointsConfig::InitAsDefaultInstance() {
-  ::AcFunDanmu::_AccessPointsConfig_default_instance_._instance.get_mutable()->forecelastconnectedap_ = const_cast< ::AcFunDanmu::AccessPoint*>(
-      ::AcFunDanmu::AccessPoint::internal_default_instance());
-}
 class AccessPointsConfig::_Internal {
  public:
   static const ::AcFunDanmu::AccessPoint& forecelastconnectedap(const AccessPointsConfig* msg);
@@ -185,7 +180,6 @@ void AccessPointsConfig::Clear() {
 
 const char* AccessPointsConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

@@ -33,7 +33,6 @@ static void InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto() {
     new (ptr) ::AcFunDanmu::ZtDrawGiftInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtDrawGiftInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto =
@@ -48,7 +47,6 @@ static void InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2epro
     new (ptr) ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto =
@@ -116,8 +114,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void ZtDrawGiftInfo_ZtDrawPoint::InitAsDefaultInstance() {
-}
 class ZtDrawGiftInfo_ZtDrawPoint::_Internal {
  public:
 };
@@ -138,8 +134,9 @@ ZtDrawGiftInfo_ZtDrawPoint::ZtDrawGiftInfo_ZtDrawPoint(const ZtDrawGiftInfo_ZtDr
 }
 
 void ZtDrawGiftInfo_ZtDrawPoint::SharedCtor() {
-  ::memset(&marginleft_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&handup_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&marginleft_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&handup_) -
       reinterpret_cast<char*>(&marginleft_)) + sizeof(handup_));
 }
 
@@ -182,7 +179,6 @@ void ZtDrawGiftInfo_ZtDrawPoint::Clear() {
 
 const char* ZtDrawGiftInfo_ZtDrawPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -389,8 +385,6 @@ void ZtDrawGiftInfo_ZtDrawPoint::InternalSwap(ZtDrawGiftInfo_ZtDrawPoint* other)
 
 // ===================================================================
 
-void ZtDrawGiftInfo::InitAsDefaultInstance() {
-}
 class ZtDrawGiftInfo::_Internal {
  public:
 };
@@ -414,8 +408,9 @@ ZtDrawGiftInfo::ZtDrawGiftInfo(const ZtDrawGiftInfo& from)
 
 void ZtDrawGiftInfo::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto.base);
-  ::memset(&screenwidth_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&screenheight_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&screenwidth_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&screenheight_) -
       reinterpret_cast<char*>(&screenwidth_)) + sizeof(screenheight_));
 }
 
@@ -459,7 +454,6 @@ void ZtDrawGiftInfo::Clear() {
 
 const char* ZtDrawGiftInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

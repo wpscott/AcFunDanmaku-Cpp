@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_CommonNotifySignalKickedOut_CommonNotifySignalK
     new (ptr) ::AcFunDanmu::CommonNotifySignalKickedOut();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonNotifySignalKickedOut::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonNotifySignalKickedOut_CommonNotifySignalKickedOut_2eproto =
@@ -78,8 +77,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonNotifySignalKickedOut::InitAsDefaultInstance() {
-}
 class CommonNotifySignalKickedOut::_Internal {
  public:
 };
@@ -95,7 +92,7 @@ CommonNotifySignalKickedOut::CommonNotifySignalKickedOut(const CommonNotifySigna
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
-    reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_reason(),
+    reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonNotifySignalKickedOut)
@@ -138,13 +135,12 @@ void CommonNotifySignalKickedOut::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  reason_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CommonNotifySignalKickedOut::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

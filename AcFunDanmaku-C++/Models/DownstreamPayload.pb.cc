@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_DownstreamPayload_DownstreamPayload_2eproto() {
     new (ptr) ::AcFunDanmu::DownstreamPayload();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::DownstreamPayload::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DownstreamPayload_DownstreamPayload_2eproto =
@@ -86,8 +85,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void DownstreamPayload::InitAsDefaultInstance() {
-}
 class DownstreamPayload::_Internal {
  public:
 };
@@ -103,27 +100,27 @@ DownstreamPayload::DownstreamPayload(const DownstreamPayload& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_command().empty()) {
-    command_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_command(),
+    command_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_command(), 
       GetArena());
   }
   payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payloaddata().empty()) {
-    payloaddata_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_payloaddata(),
+    payloaddata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payloaddata(), 
       GetArena());
   }
   errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_errormsg().empty()) {
-    errormsg_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_errormsg(),
+    errormsg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_errormsg(), 
       GetArena());
   }
   errordata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_errordata().empty()) {
-    errordata_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_errordata(),
+    errordata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_errordata(), 
       GetArena());
   }
   subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_subbiz().empty()) {
-    subbiz_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_subbiz(),
+    subbiz_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_subbiz(), 
       GetArena());
   }
   ::memcpy(&seqid_, &from.seqid_,
@@ -139,8 +136,9 @@ void DownstreamPayload::SharedCtor() {
   errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   errordata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&seqid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&errorcode_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&seqid_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&errorcode_) -
       reinterpret_cast<char*>(&seqid_)) + sizeof(errorcode_));
 }
 
@@ -180,11 +178,11 @@ void DownstreamPayload::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  command_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payloaddata_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  errormsg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  errordata_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  subbiz_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  command_.ClearToEmpty();
+  payloaddata_.ClearToEmpty();
+  errormsg_.ClearToEmpty();
+  errordata_.ClearToEmpty();
+  subbiz_.ClearToEmpty();
   ::memset(&seqid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&errorcode_) -
       reinterpret_cast<char*>(&seqid_)) + sizeof(errorcode_));
@@ -193,7 +191,6 @@ void DownstreamPayload::Clear() {
 
 const char* DownstreamPayload::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

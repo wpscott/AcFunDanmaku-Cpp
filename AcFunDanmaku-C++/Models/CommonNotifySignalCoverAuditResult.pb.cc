@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_CommonNotifySignalCoverAuditResult_CommonNotify
     new (ptr) ::AcFunDanmu::CommonNotifySignalCoverAuditResult();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonNotifySignalCoverAuditResult::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonNotifySignalCoverAuditResult_CommonNotifySignalCoverAuditResult_2eproto =
@@ -107,8 +106,6 @@ constexpr int CommonNotifySignalCoverAuditResult::AuditStatus_ARRAYSIZE;
 
 // ===================================================================
 
-void CommonNotifySignalCoverAuditResult::InitAsDefaultInstance() {
-}
 class CommonNotifySignalCoverAuditResult::_Internal {
  public:
 };
@@ -167,7 +164,6 @@ void CommonNotifySignalCoverAuditResult::Clear() {
 
 const char* CommonNotifySignalCoverAuditResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

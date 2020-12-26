@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_LiveFeatureState_LiveFeatureState_2eproto() {
     new (ptr) ::AcFunDanmu::LiveFeatureState();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::LiveFeatureState::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LiveFeatureState_LiveFeatureState_2eproto =
@@ -129,8 +128,6 @@ constexpr int LiveFeatureState::FeatureState_ARRAYSIZE;
 
 // ===================================================================
 
-void LiveFeatureState::InitAsDefaultInstance() {
-}
 class LiveFeatureState::_Internal {
  public:
 };
@@ -151,8 +148,9 @@ LiveFeatureState::LiveFeatureState(const LiveFeatureState& from)
 }
 
 void LiveFeatureState::SharedCtor() {
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&state_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&type_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&state_) -
       reinterpret_cast<char*>(&type_)) + sizeof(state_));
 }
 
@@ -195,7 +193,6 @@ void LiveFeatureState::Clear() {
 
 const char* LiveFeatureState::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

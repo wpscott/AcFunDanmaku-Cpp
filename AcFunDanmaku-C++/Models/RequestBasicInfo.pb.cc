@@ -31,7 +31,6 @@ static void InitDefaultsscc_info_RequestBasicInfo_RequestBasicInfo_2eproto() {
     new (ptr) ::AcFunDanmu::RequestBasicInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::RequestBasicInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_RequestBasicInfo_RequestBasicInfo_2eproto =
@@ -105,14 +104,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void RequestBasicInfo::InitAsDefaultInstance() {
-  ::AcFunDanmu::_RequestBasicInfo_default_instance_._instance.get_mutable()->appinfo_ = const_cast< ::AcFunDanmu::AppInfo*>(
-      ::AcFunDanmu::AppInfo::internal_default_instance());
-  ::AcFunDanmu::_RequestBasicInfo_default_instance_._instance.get_mutable()->deviceinfo_ = const_cast< ::AcFunDanmu::DeviceInfo*>(
-      ::AcFunDanmu::DeviceInfo::internal_default_instance());
-  ::AcFunDanmu::_RequestBasicInfo_default_instance_._instance.get_mutable()->envinfo_ = const_cast< ::AcFunDanmu::EnvInfo*>(
-      ::AcFunDanmu::EnvInfo::internal_default_instance());
-}
 class RequestBasicInfo::_Internal {
  public:
   static const ::AcFunDanmu::AppInfo& appinfo(const RequestBasicInfo* msg);
@@ -161,32 +152,32 @@ RequestBasicInfo::RequestBasicInfo(const RequestBasicInfo& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   deviceid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_deviceid().empty()) {
-    deviceid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_deviceid(),
+    deviceid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_deviceid(), 
       GetArena());
   }
   clientip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_clientip().empty()) {
-    clientip_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_clientip(),
+    clientip_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_clientip(), 
       GetArena());
   }
   appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appversion().empty()) {
-    appversion_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_appversion(),
+    appversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appversion(), 
       GetArena());
   }
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_channel().empty()) {
-    channel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_channel(),
+    channel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_channel(), 
       GetArena());
   }
   location_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_location().empty()) {
-    location_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_location(),
+    location_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_location(), 
       GetArena());
   }
   kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpf().empty()) {
-    kpf_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_kpf(),
+    kpf_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpf(), 
       GetArena());
   }
   if (from._internal_has_appinfo()) {
@@ -218,8 +209,9 @@ void RequestBasicInfo::SharedCtor() {
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   location_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&appinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&clientport_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&appinfo_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&clientport_) -
       reinterpret_cast<char*>(&appinfo_)) + sizeof(clientport_));
 }
 
@@ -263,12 +255,12 @@ void RequestBasicInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  deviceid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  clientip_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  appversion_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  channel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  location_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  kpf_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  deviceid_.ClearToEmpty();
+  clientip_.ClearToEmpty();
+  appversion_.ClearToEmpty();
+  channel_.ClearToEmpty();
+  location_.ClearToEmpty();
+  kpf_.ClearToEmpty();
   if (GetArena() == nullptr && appinfo_ != nullptr) {
     delete appinfo_;
   }
@@ -289,7 +281,6 @@ void RequestBasicInfo::Clear() {
 
 const char* RequestBasicInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

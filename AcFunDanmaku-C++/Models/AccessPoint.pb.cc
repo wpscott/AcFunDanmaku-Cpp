@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_AccessPoint_AccessPoint_2eproto() {
     new (ptr) ::AcFunDanmu::AccessPoint();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::AccessPoint::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AccessPoint_AccessPoint_2eproto =
@@ -108,8 +107,6 @@ constexpr int AccessPoint::AddressType_ARRAYSIZE;
 
 // ===================================================================
 
-void AccessPoint::InitAsDefaultInstance() {
-}
 class AccessPoint::_Internal {
  public:
 };
@@ -125,12 +122,12 @@ AccessPoint::AccessPoint(const AccessPoint& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_ipv6().empty()) {
-    ipv6_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_ipv6(),
+    ipv6_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ipv6(), 
       GetArena());
   }
   domain_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_domain().empty()) {
-    domain_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_domain(),
+    domain_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_domain(), 
       GetArena());
   }
   ::memcpy(&addresstype_, &from.addresstype_,
@@ -143,8 +140,9 @@ void AccessPoint::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AccessPoint_AccessPoint_2eproto.base);
   ipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   domain_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&addresstype_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ipv4_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&addresstype_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&ipv4_) -
       reinterpret_cast<char*>(&addresstype_)) + sizeof(ipv4_));
 }
 
@@ -181,8 +179,8 @@ void AccessPoint::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ipv6_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  domain_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ipv6_.ClearToEmpty();
+  domain_.ClearToEmpty();
   ::memset(&addresstype_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&ipv4_) -
       reinterpret_cast<char*>(&addresstype_)) + sizeof(ipv4_));
@@ -191,7 +189,6 @@ void AccessPoint::Clear() {
 
 const char* AccessPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

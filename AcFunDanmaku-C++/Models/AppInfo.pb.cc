@@ -33,7 +33,6 @@ static void InitDefaultsscc_info_AppInfo_AppInfo_2eproto() {
     new (ptr) ::AcFunDanmu::AppInfo();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::AppInfo::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AppInfo_AppInfo_2eproto =
@@ -47,7 +46,6 @@ static void InitDefaultsscc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2ep
     void* ptr = &::AcFunDanmu::_AppInfo_ExtensionInfoEntry_DoNotUse_default_instance_;
     new (ptr) ::AcFunDanmu::AppInfo_ExtensionInfoEntry_DoNotUse();
   }
-  ::AcFunDanmu::AppInfo_ExtensionInfoEntry_DoNotUse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2eproto =
@@ -134,8 +132,6 @@ void AppInfo_ExtensionInfoEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void AppInfo::InitAsDefaultInstance() {
-}
 class AppInfo::_Internal {
  public:
 };
@@ -153,22 +149,22 @@ AppInfo::AppInfo(const AppInfo& from)
   extensioninfo_.MergeFrom(from.extensioninfo_);
   appname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appname().empty()) {
-    appname_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_appname(),
+    appname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appname(), 
       GetArena());
   }
   appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appversion().empty()) {
-    appversion_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_appversion(),
+    appversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appversion(), 
       GetArena());
   }
   appchannel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appchannel().empty()) {
-    appchannel_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_appchannel(),
+    appchannel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appchannel(), 
       GetArena());
   }
   sdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sdkversion().empty()) {
-    sdkversion_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sdkversion(),
+    sdkversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sdkversion(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AppInfo)
@@ -218,16 +214,15 @@ void AppInfo::Clear() {
   (void) cached_has_bits;
 
   extensioninfo_.Clear();
-  appname_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  appversion_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  appchannel_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sdkversion_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  appname_.ClearToEmpty();
+  appversion_.ClearToEmpty();
+  appchannel_.ClearToEmpty();
+  sdkversion_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* AppInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

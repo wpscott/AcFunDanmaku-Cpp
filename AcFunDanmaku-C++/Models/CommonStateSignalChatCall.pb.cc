@@ -28,7 +28,6 @@ static void InitDefaultsscc_info_CommonStateSignalChatCall_CommonStateSignalChat
     new (ptr) ::AcFunDanmu::CommonStateSignalChatCall();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonStateSignalChatCall::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalChatCall_CommonStateSignalChatCall_2eproto =
@@ -81,8 +80,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonStateSignalChatCall::InitAsDefaultInstance() {
-}
 class CommonStateSignalChatCall::_Internal {
  public:
 };
@@ -98,12 +95,12 @@ CommonStateSignalChatCall::CommonStateSignalChatCall(const CommonStateSignalChat
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_chatid().empty()) {
-    chatid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_chatid(),
+    chatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_chatid(), 
       GetArena());
   }
   liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_liveid().empty()) {
-    liveid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_liveid(),
+    liveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_liveid(), 
       GetArena());
   }
   calltimestampms_ = from.calltimestampms_;
@@ -150,15 +147,14 @@ void CommonStateSignalChatCall::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  chatid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  liveid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  chatid_.ClearToEmpty();
+  liveid_.ClearToEmpty();
   calltimestampms_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CommonStateSignalChatCall::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

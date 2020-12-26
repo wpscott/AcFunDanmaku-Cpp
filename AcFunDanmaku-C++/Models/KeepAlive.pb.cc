@@ -34,7 +34,6 @@ static void InitDefaultsscc_info_KeepAliveRequest_KeepAlive_2eproto() {
     new (ptr) ::AcFunDanmu::KeepAliveRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::KeepAliveRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_KeepAliveRequest_KeepAlive_2eproto =
@@ -49,7 +48,6 @@ static void InitDefaultsscc_info_KeepAliveResponse_KeepAlive_2eproto() {
     new (ptr) ::AcFunDanmu::KeepAliveResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::KeepAliveResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_KeepAliveResponse_KeepAlive_2eproto =
@@ -130,10 +128,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void KeepAliveRequest::InitAsDefaultInstance() {
-  ::AcFunDanmu::_KeepAliveRequest_default_instance_._instance.get_mutable()->pushservicetoken_ = const_cast< ::AcFunDanmu::PushServiceToken*>(
-      ::AcFunDanmu::PushServiceToken::internal_default_instance());
-}
 class KeepAliveRequest::_Internal {
  public:
   static const ::AcFunDanmu::PushServiceToken& pushservicetoken(const KeepAliveRequest* msg);
@@ -176,8 +170,9 @@ KeepAliveRequest::KeepAliveRequest(const KeepAliveRequest& from)
 
 void KeepAliveRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_KeepAliveRequest_KeepAlive_2eproto.base);
-  ::memset(&pushservicetoken_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keepaliveintervalsec_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&pushservicetoken_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&keepaliveintervalsec_) -
       reinterpret_cast<char*>(&pushservicetoken_)) + sizeof(keepaliveintervalsec_));
 }
 
@@ -226,7 +221,6 @@ void KeepAliveRequest::Clear() {
 
 const char* KeepAliveRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -470,12 +464,6 @@ void KeepAliveRequest::InternalSwap(KeepAliveRequest* other) {
 
 // ===================================================================
 
-void KeepAliveResponse::InitAsDefaultInstance() {
-  ::AcFunDanmu::_KeepAliveResponse_default_instance_._instance.get_mutable()->accesspointsconfig_ = const_cast< ::AcFunDanmu::AccessPointsConfig*>(
-      ::AcFunDanmu::AccessPointsConfig::internal_default_instance());
-  ::AcFunDanmu::_KeepAliveResponse_default_instance_._instance.get_mutable()->accesspointsconfigipv6_ = const_cast< ::AcFunDanmu::AccessPointsConfig*>(
-      ::AcFunDanmu::AccessPointsConfig::internal_default_instance());
-}
 class KeepAliveResponse::_Internal {
  public:
   static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfig(const KeepAliveResponse* msg);
@@ -527,8 +515,9 @@ KeepAliveResponse::KeepAliveResponse(const KeepAliveResponse& from)
 
 void KeepAliveResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_KeepAliveResponse_KeepAlive_2eproto.base);
-  ::memset(&accesspointsconfig_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&servermsec_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&accesspointsconfig_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&servermsec_) -
       reinterpret_cast<char*>(&accesspointsconfig_)) + sizeof(servermsec_));
 }
 
@@ -579,7 +568,6 @@ void KeepAliveResponse::Clear() {
 
 const char* KeepAliveResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

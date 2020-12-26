@@ -29,7 +29,6 @@ static void InitDefaultsscc_info_CommonStateSignalRecentComment_CommonStateSigna
     new (ptr) ::AcFunDanmu::CommonStateSignalRecentComment();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonStateSignalRecentComment::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalRecentComment_CommonStateSignalRecentComment_2eproto =
@@ -83,8 +82,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonStateSignalRecentComment::InitAsDefaultInstance() {
-}
 class CommonStateSignalRecentComment::_Internal {
  public:
 };
@@ -147,7 +144,6 @@ void CommonStateSignalRecentComment::Clear() {
 
 const char* CommonStateSignalRecentComment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

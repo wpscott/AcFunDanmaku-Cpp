@@ -29,7 +29,6 @@ static void InitDefaultsscc_info_PacketHeader_PacketHeader_2eproto() {
     new (ptr) ::AcFunDanmu::PacketHeader();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::PacketHeader::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PacketHeader_PacketHeader_2eproto =
@@ -192,10 +191,6 @@ constexpr int PacketHeader::Feature_ARRAYSIZE;
 
 // ===================================================================
 
-void PacketHeader::InitAsDefaultInstance() {
-  ::AcFunDanmu::_PacketHeader_default_instance_._instance.get_mutable()->tokeninfo_ = const_cast< ::AcFunDanmu::TokenInfo*>(
-      ::AcFunDanmu::TokenInfo::internal_default_instance());
-}
 class PacketHeader::_Internal {
  public:
   static const ::AcFunDanmu::TokenInfo& tokeninfo(const PacketHeader* msg);
@@ -224,7 +219,7 @@ PacketHeader::PacketHeader(const PacketHeader& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpn().empty()) {
-    kpn_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_kpn(),
+    kpn_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpn(), 
       GetArena());
   }
   if (from._internal_has_tokeninfo()) {
@@ -241,8 +236,9 @@ PacketHeader::PacketHeader(const PacketHeader& from)
 void PacketHeader::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PacketHeader_PacketHeader_2eproto.base);
   kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&tokeninfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&encryptionmode_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&tokeninfo_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&encryptionmode_) -
       reinterpret_cast<char*>(&tokeninfo_)) + sizeof(encryptionmode_));
 }
 
@@ -280,7 +276,7 @@ void PacketHeader::Clear() {
   (void) cached_has_bits;
 
   features_.Clear();
-  kpn_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  kpn_.ClearToEmpty();
   if (GetArena() == nullptr && tokeninfo_ != nullptr) {
     delete tokeninfo_;
   }
@@ -293,7 +289,6 @@ void PacketHeader::Clear() {
 
 const char* PacketHeader::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);

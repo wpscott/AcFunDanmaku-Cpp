@@ -29,7 +29,6 @@ static void InitDefaultsscc_info_CommonStateSignalChatReady_CommonStateSignalCha
     new (ptr) ::AcFunDanmu::CommonStateSignalChatReady();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::AcFunDanmu::CommonStateSignalChatReady::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto =
@@ -88,10 +87,6 @@ namespace AcFunDanmu {
 
 // ===================================================================
 
-void CommonStateSignalChatReady::InitAsDefaultInstance() {
-  ::AcFunDanmu::_CommonStateSignalChatReady_default_instance_._instance.get_mutable()->guestuserinfo_ = const_cast< ::AcFunDanmu::ZtLiveUserInfo*>(
-      ::AcFunDanmu::ZtLiveUserInfo::internal_default_instance());
-}
 class CommonStateSignalChatReady::_Internal {
  public:
   static const ::AcFunDanmu::ZtLiveUserInfo& guestuserinfo(const CommonStateSignalChatReady* msg);
@@ -118,7 +113,7 @@ CommonStateSignalChatReady::CommonStateSignalChatReady(const CommonStateSignalCh
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_chatid().empty()) {
-    chatid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_chatid(),
+    chatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_chatid(), 
       GetArena());
   }
   if (from._internal_has_guestuserinfo()) {
@@ -133,8 +128,9 @@ CommonStateSignalChatReady::CommonStateSignalChatReady(const CommonStateSignalCh
 void CommonStateSignalChatReady::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto.base);
   chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&guestuserinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&mediatype_) -
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&guestuserinfo_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&mediatype_) -
       reinterpret_cast<char*>(&guestuserinfo_)) + sizeof(mediatype_));
 }
 
@@ -171,7 +167,7 @@ void CommonStateSignalChatReady::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  chatid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  chatid_.ClearToEmpty();
   if (GetArena() == nullptr && guestuserinfo_ != nullptr) {
     delete guestuserinfo_;
   }
@@ -182,7 +178,6 @@ void CommonStateSignalChatReady::Clear() {
 
 const char* CommonStateSignalChatReady::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
