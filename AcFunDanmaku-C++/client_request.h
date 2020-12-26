@@ -29,9 +29,10 @@ namespace AcFunDanmu {
 			this->lz4compressionThreshold = lz4compressionThreshold;
 		}
 
-		const std::vector<CryptoPP::byte> getSecurityKey() { return securityKey; }
-		const std::vector<CryptoPP::byte> getSessionKey() { return sessionKey; }
-		const std::string nextTicket() { return tickets[++ticketIndex]; }
+		const int64_t& getSeqId() { return seqId; }
+		const std::vector<CryptoPP::byte>& getSecurityKey() { return securityKey; }
+		const std::vector<CryptoPP::byte>& getSessionKey() { return sessionKey; }
+		const std::string& nextTicket() { return tickets[++ticketIndex]; }
 
 		const websocket_outgoing_message RegisterRequest() {
 			AcFunDanmu::RegisterRequest reg;

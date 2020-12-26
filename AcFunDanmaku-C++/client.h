@@ -39,14 +39,17 @@ namespace AcFunDanmu {
 					pplx::cancel_current_task();
 				}
 				else {
-					auto headers = response.headers();
-					for (auto [key, value] : headers) {
-						if (key == SetCookieHeader && value.find(_did_key) != string_t::npos) {
-							didCookie = value;
-							did = didCookie.substr(_did_key.length(), didCookie.find_first_of(';') - _did_key.length());
-							break;
+					auto& headers = response.headers();
+					if (didCookie.empty() || did.empty()) {
+						for (auto& [key, value] : headers) {
+							if (key == SetCookieHeader && value.find(_did_key) != string_t::npos) {
+								didCookie = value;
+								did = didCookie.substr(_did_key.length(), didCookie.find_first_of(';') - _did_key.length());
+								break;
+							}
 						}
 					}
+
 					http_client client(LOGIN_HOST);
 
 					http_request request(methods::POST);
@@ -100,8 +103,8 @@ namespace AcFunDanmu {
 								return false;
 							}
 							else {
-								auto _tickets = json[U("data")][U("availableTickets")].as_array();
-								for (auto ticket : _tickets) {
+								auto& _tickets = json[U("data")][U("availableTickets")].as_array();
+								for (auto& ticket : _tickets) {
 									tickets.push_back(conversions::to_utf8string(ticket.as_string()));
 								}
 								enterRoomAttach = json[U("data")][U("enterRoomAttach")].as_string();
@@ -139,8 +142,8 @@ namespace AcFunDanmu {
 						ucout << json[U("error_msg")].as_string() << std::endl;
 					}
 					else {
-						auto list = json[U("data")][U("giftList")].as_array();
-						for (auto gift : list) {
+						auto& list = json[U("data")][U("giftList")].as_array();
+						for (auto& gift : list) {
 							giftList[gift[U("giftId")].as_number().to_int64()] =
 							{
 								gift[U("giftName")].as_string(),
@@ -165,6 +168,7 @@ namespace AcFunDanmu {
 		}
 
 		pplx::task<bool> start() {
+			
 			auto request = client_request(
 				userId,
 				conversions::to_utf8string(serviceToken),
@@ -176,142 +180,142 @@ namespace AcFunDanmu {
 			try {
 				bool running = true;
 				websocket_client client;
-				client.connect(WS_HOST).then([&]() {
-					return client.send(request.RegisterRequest()).then([]() {
-						});
-					}).wait();
-					const auto& msg = client.receive().get();
-					const auto& [header, down] = ClientUtils::Decode(msg, request.getSecurityKey(), request.getSessionKey());
-					AcFunDanmu::RegisterResponse regresp;
-					regresp.ParseFromString(down.payloaddata());
 
-					request.Register(regresp.instanceid(), regresp.sesskey(), regresp.sdkoption().lz4compressionthresholdbytes());
+				int64_t heartbeatinterval;
+				std::thread hbt;
+				boost::asio::io_service ios;
+				boost::asio::deadline_timer* timer;
 
-					client.send(request.KeepAliveRequest(true)).wait();
-
-					client.send(request.EnterRoomRequest()).wait();
-
-					int64_t heartbeatinterval;
-					std::thread hbt;
-					boost::asio::io_service ios;
-					boost::asio::deadline_timer* timer;
-
-					const auto& stop = [&]() {
-						running = false;
-						client.close();
-						if (timer) {
-							timer->cancel();
-							ios.stop();
-							if (hbt.joinable()) {
-								hbt.join();
-							}
+				const auto& stop = [&]() {
+					running = false;
+					client.close();
+					if (timer) {
+						timer->cancel();
+						ios.stop();
+						if (hbt.joinable()) {
+							hbt.join();
 						}
-					};
+					}
+				};
 
-					std::function<void(boost::system::error_code)> hbhandler = [&](const boost::system::error_code& error) {
-						if (!error) {
-							if (running && timer) {
-								try {
-									client.send(request.HeartbeatRequest()).wait();
+				std::function<void(boost::system::error_code)> hbhandler = [&](const boost::system::error_code& error) {
+					if (!error) {
+						if (running && timer) {
+							try {
+								client.send(request.HeartbeatRequest()).wait();
+								if ((request.getSeqId() % 6) == 3) {
 									client.send(request.KeepAliveRequest()).wait();
-									timer->expires_from_now(boost::posix_time::milliseconds(heartbeatinterval));
-									timer->async_wait(hbhandler);
 								}
-								catch (const std::exception& e) {
-									ucout << conversions::to_string_t(e.what()) << std::endl;
-									stop();
-								}
+								timer->expires_from_now(boost::posix_time::milliseconds(heartbeatinterval));
+								timer->async_wait(hbhandler);
 							}
-							else {
+							catch (const std::exception& e) {
+								ucout << conversions::to_string_t(e.what()) << std::endl;
 								stop();
 							}
 						}
 						else {
 							stop();
 						}
-					};
+					}
+					else {
+						stop();
+					}
+				};
 
-					while (running) {
-						try {
-							const auto msg = client.receive().get();
-							const auto& [header, down] = ClientUtils::Decode(msg, request.getSecurityKey(), request.getSessionKey());
-							const auto& command = down.command();
-							if (command == Command::GLOBAL_COMMAND) {
-								AcFunDanmu::ZtLiveCsCmdAck cmd;
-								cmd.ParseFromString(down.payloaddata());
-								const auto& cmdack = cmd.cmdacktype();
-								if (cmdack == GlobalCommand::ENTER_ROOM_ACK) {
-									AcFunDanmu::ZtLiveCsEnterRoomAck ack;
-									ack.ParseFromString(cmd.payload());
-									heartbeatinterval = std::move(ack.heartbeatintervalms());
+				client.connect(WS_HOST).wait();
 
-									timer = new boost::asio::deadline_timer(ios, boost::posix_time::milliseconds(heartbeatinterval));
-									timer->async_wait(hbhandler);
-									hbt = std::thread([&] {ios.run(); });
-								}
-								else if (cmdack == GlobalCommand::HEARTBEAT_ACK) {
+				client.send(request.RegisterRequest()).wait();
 
-								}
-								else if (cmdack == GlobalCommand::USER_EXIT_ACK) {
+				while (running) {
+					try {
+						const auto msg = client.receive().get();
+						const auto& [header, down] = ClientUtils::Decode(msg, request.getSecurityKey(), request.getSessionKey());
+						const auto& command = down.command();
+						if (command == Command::GLOBAL_COMMAND) {
+							AcFunDanmu::ZtLiveCsCmdAck cmd;
+							cmd.ParseFromString(down.payloaddata());
+							const auto& cmdack = cmd.cmdacktype();
+							if (cmdack == GlobalCommand::ENTER_ROOM_ACK) {
+								AcFunDanmu::ZtLiveCsEnterRoomAck ack;
+								ack.ParseFromString(cmd.payload());
+								heartbeatinterval = std::move(ack.heartbeatintervalms());
 
-								}
-								else {
-									ucout << U("Unhandled Global.ZtLiveInteractive.CsCmdAck: ") << conversions::to_string_t(cmdack) << std::endl;
-								}
+								timer = new boost::asio::deadline_timer(ios, boost::posix_time::milliseconds(heartbeatinterval));
+								timer->async_wait(hbhandler);
+								hbt = std::thread([&] {ios.run(); });
 							}
-							else if (command == Command::KEEP_ALIVE) {
+							else if (cmdack == GlobalCommand::HEARTBEAT_ACK) {
 
 							}
-							else if (command == Command::PING) {
+							else if (cmdack == GlobalCommand::USER_EXIT_ACK) {
 
-							}
-							else if (command == Command::UNREGISTER) {
-								stop();
-								break;
-							}
-							else if (command == Command::PUSH_MESSAGE) {
-								client.send(request.PushMessageResponse(header.seqid())).wait();
-								AcFunDanmu::ZtLiveScMessage message;
-								message.ParseFromString(down.payloaddata());
-								std::string payload = message.payload();
-								if (message.compressiontype() == AcFunDanmu::ZtLiveScMessage::GZIP) {
-									payload = gzip::decompress(payload.data(), payload.length());
-								}
-
-								const auto& msgType = message.messagetype();
-								if (msgType == PushMessage::ACTION_SIGNAL || msgType == PushMessage::STATE_SIGNAL || msgType == PushMessage::NOTIFY_SIGNAL) {
-									if (handler) {
-										handler(msgType, std::move(payload));
-									}
-								}
-								else if (msgType == PushMessage::STATUS_CHANGED) {
-									ZtLiveScStatusChanged statusChanged;
-									statusChanged.ParseFromString(payload);
-									const auto& type = statusChanged.type();
-									if (type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_CLOSED || type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_BANNED) {
-										stop();
-										break;
-									}
-								}
-								else if (msgType == PushMessage::TICKET_INVALID) {
-									request.nextTicket();
-									client.send(request.EnterRoomRequest()).wait();
-								}
-								else {
-									ucout << U("Unhandled Push.ZtLiveInteractive.Message: ") << conversions::to_string_t(msgType) << std::endl;
-								}
 							}
 							else {
-								ucout << U("Unhandled command: ") << conversions::to_string_t(command) << std::endl;
+								ucout << U("Unhandled Global.ZtLiveInteractive.CsCmdAck: ") << conversions::to_string_t(cmdack) << std::endl;
 							}
 						}
-						catch (const websocket_exception& ex) {
-							ucout << ex.error_code() << ": " << conversions::to_string_t(ex.what()) << std::endl;
+						else if (command == Command::KEEP_ALIVE) {
+
+						}
+						else if (command == Command::PING) {
+
+						}
+						else if (command == Command::REGISTER) {
+							AcFunDanmu::RegisterResponse regresp;
+							regresp.ParseFromString(down.payloaddata());
+							request.Register(regresp.instanceid(), regresp.sesskey(), regresp.sdkoption().lz4compressionthresholdbytes());
+
+							client.send(request.KeepAliveRequest(true)).wait();
+							client.send(request.EnterRoomRequest()).wait();
+						}
+						else if (command == Command::UNREGISTER) {
 							stop();
-							return pplx::task_from_result(false);
+							break;
+						}
+						else if (command == Command::PUSH_MESSAGE) {
+							client.send(request.PushMessageResponse(header.seqid())).wait();
+							AcFunDanmu::ZtLiveScMessage message;
+							message.ParseFromString(down.payloaddata());
+							std::string payload = message.payload();
+							if (message.compressiontype() == AcFunDanmu::ZtLiveScMessage::GZIP) {
+								payload = gzip::decompress(payload.data(), payload.length());
+							}
+
+							const auto& msgType = message.messagetype();
+							if (msgType == PushMessage::ACTION_SIGNAL || msgType == PushMessage::STATE_SIGNAL || msgType == PushMessage::NOTIFY_SIGNAL) {
+								if (handler) {
+									handler(msgType, std::move(payload));
+								}
+							}
+							else if (msgType == PushMessage::STATUS_CHANGED) {
+								ZtLiveScStatusChanged statusChanged;
+								statusChanged.ParseFromString(payload);
+								const auto& type = statusChanged.type();
+								if (type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_CLOSED || type == AcFunDanmu::ZtLiveScStatusChanged::LIVE_BANNED) {
+									stop();
+									break;
+								}
+							}
+							else if (msgType == PushMessage::TICKET_INVALID) {
+								request.nextTicket();
+								client.send(request.EnterRoomRequest()).wait();
+							}
+							else {
+								ucout << U("Unhandled Push.ZtLiveInteractive.Message: ") << conversions::to_string_t(msgType) << std::endl;
+							}
+						}
+						else {
+							ucout << U("Unhandled command: ") << conversions::to_string_t(command) << std::endl;
 						}
 					}
-					return pplx::task_from_result(true);
+					catch (const websocket_exception& ex) {
+						ucout << ex.error_code() << ": " << conversions::to_string_t(ex.what()) << std::endl;
+						stop();
+						return pplx::task_from_result(false);
+					}
+				}
+				return pplx::task_from_result(true);
 			}
 			catch (const std::exception& e) {
 				ucout << conversions::to_string_t(e.what()) << std::endl;
@@ -320,9 +324,12 @@ namespace AcFunDanmu {
 		}
 
 	private:
+		static string_t didCookie;
+		static string_t did;
+
 		int64_t userId{};
-		string_t didCookie{};
-		string_t did{};
+		//string_t didCookie{};
+		//string_t did{};
 		string_t uperId{};
 		string_t serviceToken{};
 		string_t securityKey{};
@@ -350,8 +357,10 @@ namespace AcFunDanmu {
 
 		inline static const string_t WS_HOST = U("wss://link.xiatou.com/");
 
-		static bool isOK(const http_response response) {
+		static bool isOK(const http_response& response) {
 			return response.status_code() == status_codes::OK;
 		}
 	};
 }
+string_t AcFunDanmu::Client::didCookie = {};
+string_t AcFunDanmu::Client::did = {};
