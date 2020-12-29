@@ -33,5 +33,8 @@
     <ClInclude Include="websocket_endpoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="acfun_obs_plugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
