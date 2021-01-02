@@ -218,7 +218,7 @@ class Client {
               if (running && timer) {
                 try {
                   client.send(request.HeartbeatRequest()).wait();
-                  if ((request.getSeqId() % 6) == 3) {
+                  if ((request.getSeqId() % 5) == 4) {
                     client.send(request.KeepAliveRequest()).wait();
                   }
                   timer->expires_from_now(
@@ -274,7 +274,7 @@ class Client {
                 regresp.instanceid(), regresp.sesskey(),
                 regresp.sdkoption().lz4compressionthresholdbytes());
 
-            client.send(request.KeepAliveRequest(true)).wait();
+            client.send(request.KeepAliveRequest()).wait();
             client.send(request.EnterRoomRequest()).wait();
           } else if (command == Command::UNREGISTER) {
             stop();

@@ -27,7 +27,7 @@ class client_request {
     this->lz4compressionThreshold = lz4compressionThreshold;
   }
 
-  const int64_t& getSeqId() { return seqId; }
+  const int64_t& getSeqId() { return heartbeatSeqId; }
   const std::vector<CryptoPP::byte>& getSecurityKey() { return securityKey; }
   const std::vector<CryptoPP::byte>& getSessionKey() { return sessionKey; }
   const std::string& nextTicket() { return tickets[++ticketIndex]; }
@@ -66,8 +66,7 @@ class client_request {
     return ClientUtils::Encode(header.SerializeAsString(), body, securityKey);
   }
 
-  const websocket_outgoing_message KeepAliveRequest(
-      const bool& shouldIncrease = false) {
+  const websocket_outgoing_message KeepAliveRequest() {
     AcFunDanmu::KeepAliveRequest kareq;
     kareq.set_presencestatus(AcFunDanmu::RegisterRequest::kPresenceOnline);
     kareq.set_appactivestatus(AcFunDanmu::RegisterRequest::kAppInForeground);
@@ -78,9 +77,7 @@ class client_request {
 
     auto header = generateHeader(body);
 
-    if (shouldIncrease) {
-      seqId++;
-    }
+    seqId++;
 
     return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
   }
@@ -169,7 +166,7 @@ class client_request {
   std::vector<CryptoPP::byte> sessionKey;
   int32_t lz4compressionThreshold{};
   int64_t seqId = 1;
-  int64_t heartbeatSeqId = 1;
+  int64_t heartbeatSeqId = 0;
 
   int ticketIndex = 0;
   const std::string currentTicket() { return tickets[ticketIndex]; }
