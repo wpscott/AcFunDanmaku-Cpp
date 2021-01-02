@@ -116,6 +116,10 @@ struct RGBText {
       pTextFormat->SetParagraphAlignment(valign);
       pTextFormat->SetWordWrapping(wrapping);
     }
+
+    gradient_direction = obs_data_get_int(settings, "direction");
+    step = obs_data_get_int(settings, "speed");
+
     text = to_wide(new_text);
     render_text();
     blog(LOG_INFO, "current width: %d, height: %d", width, height);
@@ -182,17 +186,18 @@ struct RGBText {
 
         ID2D1GradientStopCollection* pGradientStops;
 
-        D2D1_GRADIENT_STOP gradient_stops[2];
+        const auto count = 2;
+
+        D2D1_GRADIENT_STOP gradient_stops[count];
         gradient_stops[0].color = D2D1::ColorF(color1, 1.f);
-        gradient_stops[0].position = 0.f - ratio;
+        gradient_stops[0].position = 1.f - ratio;
         gradient_stops[1].color = D2D1::ColorF(color2, 1.f);
-        gradient_stops[1].position = 1 + ratio;
-        // gradient_stops[1].position = .5f;
+        gradient_stops[1].position = ratio;
         // gradient_stops[2].color = D2D1::ColorF(color3, 1.f);
         // gradient_stops[2].position = 1.f;
 
         hr = pRT->CreateGradientStopCollection(
-            gradient_stops, 2, D2D1_GAMMA_2_2, D2D1_EXTEND_MODE_MIRROR,
+            gradient_stops, count, D2D1_GAMMA_2_2, D2D1_EXTEND_MODE_MIRROR,
             &pGradientStops);
 
         if (SUCCEEDED(hr)) {
@@ -214,9 +219,9 @@ struct RGBText {
         pRT->BeginDraw();
         pRT->SetTransform(D2D1::IdentityMatrix());
         pRT->Clear(D2D1::ColorF(0x000000, 0.f));
-         pRT->DrawTextLayout(D2D1_POINT_2F{0, 0}, pTextLayout, pFillBrush,
+        pRT->DrawTextLayout(D2D1_POINT_2F{0, 0}, pTextLayout, pFillBrush,
                             D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT);
-        //pRT->FillRectangle(D2D1::RectF(0.f, 0.f, cx, cy), pFillBrush);
+        // pRT->FillRectangle(D2D1::RectF(0.f, 0.f, cx, cy), pFillBrush);
         hr = pRT->EndDraw();
       }
 
@@ -240,7 +245,7 @@ struct RGBText {
     }
   }
 
-  static inline void color_tick(UINT32& color) {
+  inline void color_tick(UINT32& color) {
     if ((color & 0xFF0000) == 0xFF0000 && color != 0xFFFF00) {
       if ((color & 0x0000FF) > 0) {
         color -= step;
@@ -327,6 +332,9 @@ struct RGBText {
     obs_data_set_default_obj(settings, "font", font_obj);
 
     obs_data_set_default_string(settings, "text", "");
+
+    obs_data_set_default_int(settings, "direction", 0);
+    obs_data_set_default_int(settings, "speed", 1);
   }
   static obs_properties_t* get_properties(void* data) {
     obs_properties_t* ppts = obs_properties_create();
@@ -336,6 +344,9 @@ struct RGBText {
 
     obs_properties_add_font(ppts, "font", u8"字体");
     obs_properties_add_text(ppts, "text", u8"文本", OBS_TEXT_DEFAULT);
+
+    obs_properties_add_int_slider(ppts, "direction", u8"渐变角度", 0, 360, 1);
+    obs_properties_add_int(ppts, "speed", u8"速度", 1, 10, 1);
 
     return ppts;
   }
@@ -348,12 +359,12 @@ struct RGBText {
 
   static constexpr float ratio = 1.6180339887498948482f;
 
-  static constexpr UINT32 step = 2;
+  UINT32 step = 1;
   UINT32 color1 = 0xFF0000;
   UINT32 color2 = 0x0000FF;
   UINT32 color3 = 0x0000FF;
 
-  float gradient_direction = 291.246117975f;
+  float gradient_direction = 0.f;
   float gradient_x;
   float gradient_y;
   float gradient2_x;

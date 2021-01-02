@@ -77,7 +77,7 @@ bool obs_module_load() {
   rgb_text.icon_type = OBS_ICON_TYPE_TEXT;
   rgb_text.type = OBS_SOURCE_TYPE_INPUT;
   rgb_text.output_flags =
-      OBS_SOURCE_VIDEO | OBS_SOURCE_CUSTOM_DRAW | OBS_SOURCE_DO_NOT_DUPLICATE;
+      OBS_SOURCE_VIDEO | OBS_SOURCE_CUSTOM_DRAW;
   rgb_text.get_name = AcFun::Text::RGBText::get_name;
   rgb_text.create = [](obs_data_t* settings, obs_source_t* source) -> void* {
     return new AcFun::Text::RGBText(source, settings);
