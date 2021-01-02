@@ -9,11 +9,13 @@
 #include <websocketpp/common/thread.hpp>
 #include <websocketpp/config/asio_no_tls_client.hpp>
 
+using json = nlohmann::json;
+
 namespace AcFun {
 class websocket_endpoint {
  public:
   typedef websocketpp::client<websocketpp::config::asio_client> client;
-  using json = nlohmann::json;
+  typedef std::function<void(const json& data)> Callback;
 
   websocket_endpoint() {
     endpoint.clear_access_channels(websocketpp::log::alevel::all);
@@ -39,29 +41,33 @@ class websocket_endpoint {
     blog(LOG_INFO, "ws destroyed");
   }
 
-  bool connect(const uint64_t& uid,
-               const std::function<void(const std::string&, const std::string&,
-                                        const int&)>& addGift) {
+  bool connect(const uint64_t& uid, Callback callback) {
     this->uid = uid;
-    this->callback = addGift;
+    this->callback = callback;
 
     status = endpoint_status::running;
     return connect();
   }
 
   void send(const std::string& message) {
-    websocketpp::lib::error_code ec;
+    if (status == endpoint_status::running) {
+      websocketpp::lib::error_code ec;
 
-    endpoint.send(hdl, message, websocketpp::frame::opcode::text, ec);
-    if (ec) {
-      blog(LOG_ERROR, "ws send error: %s", ec.message().c_str());
+      endpoint.send(hdl, message, websocketpp::frame::opcode::text, ec);
+      if (ec) {
+        blog(LOG_ERROR, "ws send error: %s", ec.message().c_str());
+      }
     }
   }
 
   void close() {
     status = endpoint_status::closing;
     if (!is_uninitialized(hdl)) {
-      endpoint.close(hdl, websocketpp::close::status::going_away, "");
+      websocketpp::lib::error_code ec;
+      endpoint.close(hdl, websocketpp::close::status::going_away, "", ec);
+      if (ec) {
+        blog(LOG_ERROR, "ws close error: %s", ec.message().c_str());
+      }
     }
   }
 
@@ -73,8 +79,8 @@ class websocket_endpoint {
   };
   endpoint_status status = endpoint_status::ready;
   uint64_t uid = 0;
-  std::function<void(const std::string&, const std::string&, const int&)>
-      callback;
+  uint8_t retry = 0;
+  Callback callback;
   client endpoint;
   websocketpp::connection_hdl hdl;
 
@@ -110,6 +116,7 @@ class websocket_endpoint {
         websocketpp::lib::bind(&websocket_endpoint::on_message, this,
                                websocketpp::lib::placeholders::_1,
                                websocketpp::lib::placeholders::_2));
+    // conn->set_message_handler(callback);
 
     endpoint.connect(conn);
     return true;
@@ -127,14 +134,20 @@ class websocket_endpoint {
       blog(LOG_ERROR, "ws send error: %s", ec.message().c_str());
     }
   }
+
   void on_fail(client* c, websocketpp::connection_hdl hdl) {
     const auto& conn = c->get_con_from_hdl(hdl);
     blog(LOG_ERROR, "ws failed: %s", conn->get_ec().message().c_str());
 
-    if (status != endpoint_status::closing) {
+    if (status != endpoint_status::closing && retry < 6) {
+      retry++;
       connect();
     }
+    if (retry >= 6) {
+      close();
+    }
   }
+
   void on_close(client* c, websocketpp::connection_hdl hdl) {
     const auto& conn = c->get_con_from_hdl(hdl);
     blog(LOG_INFO, "ws closed, code: %d(%s), reason: %s",
@@ -143,20 +156,28 @@ class websocket_endpoint {
              .c_str(),
          conn->get_remote_close_reason().c_str());
 
-    if (status != endpoint_status::closing) {
+    if (status != endpoint_status::closing && retry < 6) {
+      retry++;
       connect();
     }
+    if (retry >= 6) {
+      close();
+    }
   }
+
   void on_message(websocketpp::connection_hdl hdl, client::message_ptr msg) {
     const auto& data = json::parse(msg->get_payload());
-    if (data["cmd"].get<int>() == 3) {
-      blog(LOG_INFO, "receive gift: %s, %d",
-           data["data"]["giftName"].get<std::string>().c_str(),
-           data["data"]["num"].get<int>());
-      callback(data["data"]["authorName"].get<std::string>(),
-               data["data"]["giftName"].get<std::string>(),
-               data["data"]["num"].get<int>());
-    }
+    callback(data);
+    // switch (data["cmd"].get<int>()) {
+    //  case 3:
+    //    blog(LOG_INFO, "receive gift: %s, %d",
+    //         data["data"]["giftName"].get<std::string>().c_str(),
+    //         data["data"]["num"].get<int>());
+    //    // callback(data["data"]["authorName"].get<std::string>(),
+    //    //         data["data"]["giftName"].get<std::string>(),
+    //    //         data["data"]["num"].get<int>());
+    //    break;
+    //}
   }
 };
 }  // namespace AcFun

@@ -36,5 +36,14 @@
     <ClInclude Include="acfun_obs_plugin.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="acfun_danmaku.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="acfun_body_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="acfun_text.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
