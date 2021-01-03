@@ -58,8 +58,6 @@ struct RGBText {
       obs_leave_graphics();
     }
     release_resource();
-
-    delete[] gradient_stops;
   }
 
   void update(obs_data_t* settings) {
@@ -68,6 +66,8 @@ struct RGBText {
     auto font_obj = obs_data_get_obj(settings, "font");
     const char* new_font_face = obs_data_get_string(font_obj, "face");
     const auto& new_font_size = obs_data_get_int(font_obj, "size");
+
+    obs_data_release(font_obj);
 
     const auto& new_face = to_wide(new_font_face);
     if (new_face != font_face || new_font_size != font_size) {
@@ -87,7 +87,6 @@ struct RGBText {
 
     text = to_wide(new_text);
     render_text();
-    blog(LOG_INFO, "current width: %d, height: %d", width, height);
   }
 
   void render_text() {
@@ -298,6 +297,8 @@ struct RGBText {
 
     obs_data_set_default_int(settings, "direction", 0);
     obs_data_set_default_int(settings, "speed", 1);
+
+    obs_data_release(font_obj);
   }
   static obs_properties_t* get_properties(void* data) {
     obs_properties_t* ppts = obs_properties_create();
