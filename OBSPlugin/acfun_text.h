@@ -42,46 +42,9 @@ static inline std::wstring to_wide(const char* utf8) {
   return text;
 }
 
-struct TargetDC {
-  void* bits;
-  HDC memDC;
-  HBITMAP hBmp;
-
-  TargetDC(long width, long height) {
-    BITMAPINFO info;
-    info.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
-    info.bmiHeader.biWidth = width;
-    info.bmiHeader.biHeight = -height;
-    info.bmiHeader.biBitCount = 32;
-    info.bmiHeader.biPlanes = 1;
-    info.bmiHeader.biXPelsPerMeter = 0;
-    info.bmiHeader.biYPelsPerMeter = 0;
-    info.bmiHeader.biClrUsed = 0;
-    info.bmiHeader.biClrImportant = 0;
-    info.bmiHeader.biCompression = BI_RGB;
-    info.bmiHeader.biSizeImage = width * height;
-    info.bmiColors[0].rgbGreen = 0;
-    info.bmiColors[0].rgbBlue = 0;
-    info.bmiColors[0].rgbRed = 0;
-    info.bmiColors[0].rgbReserved = 0;
-    hBmp = CreateDIBSection(0, &info, DIB_RGB_COLORS, &bits, 0, 0);
-    memDC = CreateCompatibleDC(nullptr);
-
-    if (hBmp != NULL) {
-      SelectObject(memDC, hBmp);
-    }
-  }
-
-  ~TargetDC() {
-    DeleteObject(hBmp);
-    DeleteDC(memDC);
-  }
-};
-
-constexpr auto RBG_NAME = u8"RGB文本";
-
 struct RGBText {
-  static const char* get_name(void* data) { return Text::RBG_NAME; }
+  static constexpr auto NAME = u8"RGB文本";
+  static const char* get_name(void* data) { return NAME; }
 
   RGBText(obs_source_t* source, obs_data_t* settings) {
     initialize_direct_write();
@@ -95,6 +58,8 @@ struct RGBText {
       obs_leave_graphics();
     }
     release_resource();
+
+    delete[] gradient_stops;
   }
 
   void update(obs_data_t* settings) {
@@ -153,31 +118,29 @@ struct RGBText {
       }
 
       if (SUCCEEDED(hr)) {
-        const float angle = atan(cy / cx) * 180.f / M_PI;
+        const float angle = DEG(atan(cy / cx));
         if (gradient_direction <= angle || gradient_direction > 360.f - angle) {
-          const float y = cx / 2.f * tan(gradient_direction * M_PI / 180.f);
+          const float y = cx / 2.f * tan(RAD(gradient_direction));
           gradient_x = cx;
           gradient_y = cy / 2.f - y;
           gradient2_x = 0.f;
           gradient2_y = cy / 2.f + y;
         } else if (gradient_direction <= 180.f - angle &&
                    gradient_direction > angle) {
-          const float x =
-              cy / 2.f * tan((90.f - gradient_direction) * M_PI / 180.f);
+          const float x = cy / 2.f * tan(RAD(90.f - gradient_direction));
           gradient_x = cx / 2.f + x;
           gradient_y = 0.f;
           gradient2_x = cx / 2.f - x;
           gradient2_y = cy;
         } else if (gradient_direction <= 180.f + angle &&
                    gradient_direction > 180.f - angle) {
-          const float y = cx / 2.f * tan(gradient_direction * M_PI / 180.f);
+          const float y = cx / 2.f * tan(RAD(gradient_direction));
           gradient_x = 0.f;
           gradient_y = cy / 2.f + y;
           gradient2_x = cx;
           gradient2_y = cy / 2.f - y;
         } else {
-          const float x =
-              cy / 2.f * tan((270.f - gradient_direction) * M_PI / 180.f);
+          const float x = cy / 2.f * tan(RAD(270.f - gradient_direction));
           gradient_x = cx / 2.f - x;
           gradient_y = cy;
           gradient2_x = cx / 2.f + x;
@@ -186,9 +149,6 @@ struct RGBText {
 
         ID2D1GradientStopCollection* pGradientStops;
 
-        const auto count = 2;
-
-        D2D1_GRADIENT_STOP gradient_stops[count];
         gradient_stops[0].color = D2D1::ColorF(color1, 1.f);
         gradient_stops[0].position = 1.f - ratio;
         gradient_stops[1].color = D2D1::ColorF(color2, 1.f);
@@ -197,7 +157,7 @@ struct RGBText {
         // gradient_stops[2].position = 1.f;
 
         hr = pRT->CreateGradientStopCollection(
-            gradient_stops, count, D2D1_GAMMA_2_2, D2D1_EXTEND_MODE_MIRROR,
+            gradient_stops, stops, D2D1_GAMMA_2_2, D2D1_EXTEND_MODE_MIRROR,
             &pGradientStops);
 
         if (SUCCEEDED(hr)) {
@@ -207,31 +167,33 @@ struct RGBText {
                   D2D1::Point2F(gradient2_x, gradient2_y)),
               pGradientStops, (ID2D1LinearGradientBrush**)&pFillBrush);
         }
+        SafeRelease(&pGradientStops);
       }
-
-      TargetDC target{(long)cx, (long)cy};
 
       if (SUCCEEDED(hr)) {
         RECT rc;
         SetRect(&rc, 0, 0, cx, cy);
-        pRT->BindDC(target.memDC, &rc);
 
-        pRT->BeginDraw();
-        pRT->SetTransform(D2D1::IdentityMatrix());
-        pRT->Clear(D2D1::ColorF(0x000000, 0.f));
-        pRT->DrawTextLayout(D2D1_POINT_2F{0, 0}, pTextLayout, pFillBrush,
-                            D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT);
-        // pRT->FillRectangle(D2D1::RectF(0.f, 0.f, cx, cy), pFillBrush);
-        hr = pRT->EndDraw();
-      }
-
-      if (SUCCEEDED(hr)) {
         obs_enter_graphics();
-        if (texture) {
-          gs_texture_destroy(texture);
+        if (!texture || width != cx || height != cy) {
+          if (texture) {
+            gs_texture_destroy(texture);
+          }
+          texture = gs_texture_create_gdi(cx, cy);
         }
-        const uint8_t* data = (uint8_t*)target.bits;
-        texture = gs_texture_create(cx, cy, GS_BGRA, 1, &data, GS_DYNAMIC);
+        HDC hdc = (HDC)gs_texture_get_dc(texture);
+        if (hdc) {
+          pRT->BindDC(hdc, &rc);
+          pRT->BeginDraw();
+          pRT->SetTransform(D2D1::IdentityMatrix());
+          pRT->Clear(D2D1::ColorF(0x000000, 0.f));
+          pRT->DrawTextLayout(D2D1_POINT_2F{0, 0}, pTextLayout, pFillBrush,
+                              D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT);
+          // pRT->FillRectangle(D2D1::RectF(0.f, 0.f, cx, cy), pFillBrush);
+          hr = pRT->EndDraw();
+
+          gs_texture_release_dc(texture);
+        }
         obs_leave_graphics();
 
         width = cx;
@@ -311,7 +273,8 @@ struct RGBText {
           D2D1_RENDER_TARGET_TYPE_DEFAULT,
           D2D1::PixelFormat(DXGI_FORMAT_B8G8R8A8_UNORM,
                             D2D1_ALPHA_MODE_PREMULTIPLIED),
-          0, 0, D2D1_RENDER_TARGET_USAGE_NONE, D2D1_FEATURE_LEVEL_DEFAULT);
+          0, 0, D2D1_RENDER_TARGET_USAGE_GDI_COMPATIBLE,
+          D2D1_FEATURE_LEVEL_DEFAULT);
     }
   }
 
@@ -327,7 +290,7 @@ struct RGBText {
 
   static void get_defaults(obs_data* settings) {
     obs_data_t* font_obj = obs_data_create();
-    obs_data_set_default_string(font_obj, "face", "Microsoft Yahei UI");
+    obs_data_set_default_string(font_obj, "face", "Arial");
     obs_data_set_default_int(font_obj, "size", 32);
     obs_data_set_default_obj(settings, "font", font_obj);
 
@@ -352,12 +315,15 @@ struct RGBText {
   }
 
   std::wstring text;
-  std::wstring font_face = L"Microsoft Yahei UI";
+  std::wstring font_face = L"Arial";
   int font_size = 32;
-  uint32_t width = 1920;
-  uint32_t height = 1080;
+  uint32_t width = 10;
+  uint32_t height = 10;
 
   static constexpr float ratio = 1.6180339887498948482f;
+
+  static constexpr int stops = 2;
+  D2D1_GRADIENT_STOP gradient_stops[2];
 
   UINT32 step = 1;
   UINT32 color1 = 0xFF0000;

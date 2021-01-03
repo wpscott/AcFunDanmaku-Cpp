@@ -149,27 +149,24 @@ struct Danmaku {
                                           (ID2D1SolidColorBrush**)&pFillBrush);
         }
 
-        TargetDC target{(long)cx, (long)cy};
-
         if (SUCCEEDED(hr)) {
           RECT rc;
           SetRect(&rc, 0, 0, cx, cy);
-          pRT->BindDC(target.memDC, &rc);
-
-          pRT->BeginDraw();
-          pRT->SetTransform(D2D1::IdentityMatrix());
-          pRT->Clear(D2D1::ColorF(0x000000, 0.f));
-          pRT->DrawTextLayout(D2D1_POINT_2F{0, 0}, pTextLayout, pFillBrush,
-                              D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT);
-          hr = pRT->EndDraw();
-        }
-
-        if (SUCCEEDED(hr)) {
-          gs_texture_t* texture;
-          const uint8_t* data = (uint8_t*)target.bits;
 
           obs_enter_graphics();
-          texture = gs_texture_create(cx, cy, GS_BGRA, 1, &data, GS_DYNAMIC);
+          gs_texture_t* texture = gs_texture_create_gdi(cx, cy);
+          HDC hdc = (HDC)gs_texture_get_dc(texture);
+          if (hdc) {
+            pRT->BindDC(hdc, &rc);
+            pRT->BeginDraw();
+            pRT->SetTransform(D2D1::IdentityMatrix());
+            pRT->Clear(D2D1::ColorF(0x000000, 0.f));
+            pRT->DrawTextLayout(D2D1_POINT_2F{0, 0}, pTextLayout, pFillBrush,
+                                D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT);
+            hr = pRT->EndDraw();
+
+            gs_texture_release_dc(texture);
+          }
           obs_leave_graphics();
 
           const auto& source = new BodyData::body_data(

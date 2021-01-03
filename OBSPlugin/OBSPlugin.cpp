@@ -55,7 +55,7 @@ bool obs_module_load() {
     static_cast<AcFun::Danmaku::Danmaku*>(data)->render();
   };
 
-  //danmaku.video_tick = [](void* data, float seconds) {
+  // danmaku.video_tick = [](void* data, float seconds) {
   //  const auto& danmaku = static_cast<AcFun::Danmaku::Danmaku*>(data);
   //  const auto& random = rand() & 1023;
   //  if (random < 16) {
@@ -73,11 +73,10 @@ bool obs_module_load() {
   //};
 
   obs_source_info rgb_text{};
-  rgb_text.id = AcFun::Text::RBG_NAME;
+  rgb_text.id = AcFun::Text::RGBText::NAME;
   rgb_text.icon_type = OBS_ICON_TYPE_TEXT;
   rgb_text.type = OBS_SOURCE_TYPE_INPUT;
-  rgb_text.output_flags =
-      OBS_SOURCE_VIDEO | OBS_SOURCE_CUSTOM_DRAW;
+  rgb_text.output_flags = OBS_SOURCE_VIDEO | OBS_SOURCE_CUSTOM_DRAW;
   rgb_text.get_name = AcFun::Text::RGBText::get_name;
   rgb_text.create = [](obs_data_t* settings, obs_source_t* source) -> void* {
     return new AcFun::Text::RGBText(source, settings);
