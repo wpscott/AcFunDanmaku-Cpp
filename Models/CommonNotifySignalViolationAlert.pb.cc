@@ -14,25 +14,22 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonNotifySignalViolationAlertDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonNotifySignalViolationAlert> _instance;
-} _CommonNotifySignalViolationAlert_default_instance_;
+constexpr CommonNotifySignalViolationAlert::CommonNotifySignalViolationAlert(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : violationcontent_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct CommonNotifySignalViolationAlertDefaultTypeInternal {
+  constexpr CommonNotifySignalViolationAlertDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonNotifySignalViolationAlertDefaultTypeInternal() {}
+  union {
+    CommonNotifySignalViolationAlert _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonNotifySignalViolationAlertDefaultTypeInternal _CommonNotifySignalViolationAlert_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonNotifySignalViolationAlert_CommonNotifySignalViolationAlert_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonNotifySignalViolationAlert_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonNotifySignalViolationAlert();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonNotifySignalViolationAlert_CommonNotifySignalViolationAlert_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonNotifySignalViolationAlert_CommonNotifySignalViolationAlert_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonNotifySignalViolationAlert_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonNotifySignalViolationAlert_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonNotifySignalViolationAlert_2eproto = nullptr;
@@ -59,21 +56,19 @@ const char descriptor_table_protodef_CommonNotifySignalViolationAlert_2eproto[] 
   "ionAlert\022\030\n\020violationContent\030\001 \001(\tb\006prot"
   "o3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonNotifySignalViolationAlert_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonNotifySignalViolationAlert_2eproto_sccs[1] = {
-  &scc_info_CommonNotifySignalViolationAlert_CommonNotifySignalViolationAlert_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonNotifySignalViolationAlert_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonNotifySignalViolationAlert_2eproto = {
-  false, false, descriptor_table_protodef_CommonNotifySignalViolationAlert_2eproto, "CommonNotifySignalViolationAlert.proto", 122,
-  &descriptor_table_CommonNotifySignalViolationAlert_2eproto_once, descriptor_table_CommonNotifySignalViolationAlert_2eproto_sccs, descriptor_table_CommonNotifySignalViolationAlert_2eproto_deps, 1, 0,
+  false, false, 122, descriptor_table_protodef_CommonNotifySignalViolationAlert_2eproto, "CommonNotifySignalViolationAlert.proto", 
+  &descriptor_table_CommonNotifySignalViolationAlert_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_CommonNotifySignalViolationAlert_2eproto::offsets,
-  file_level_metadata_CommonNotifySignalViolationAlert_2eproto, 1, file_level_enum_descriptors_CommonNotifySignalViolationAlert_2eproto, file_level_service_descriptors_CommonNotifySignalViolationAlert_2eproto,
+  file_level_metadata_CommonNotifySignalViolationAlert_2eproto, file_level_enum_descriptors_CommonNotifySignalViolationAlert_2eproto, file_level_service_descriptors_CommonNotifySignalViolationAlert_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonNotifySignalViolationAlert_2eproto_getter() {
+  return &descriptor_table_CommonNotifySignalViolationAlert_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonNotifySignalViolationAlert_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonNotifySignalViolationAlert_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonNotifySignalViolationAlert_2eproto(&descriptor_table_CommonNotifySignalViolationAlert_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -94,14 +89,13 @@ CommonNotifySignalViolationAlert::CommonNotifySignalViolationAlert(const CommonN
   violationcontent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_violationcontent().empty()) {
     violationcontent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_violationcontent(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonNotifySignalViolationAlert)
 }
 
 void CommonNotifySignalViolationAlert::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonNotifySignalViolationAlert_CommonNotifySignalViolationAlert_2eproto.base);
-  violationcontent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+violationcontent_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CommonNotifySignalViolationAlert::~CommonNotifySignalViolationAlert() {
@@ -111,7 +105,7 @@ CommonNotifySignalViolationAlert::~CommonNotifySignalViolationAlert() {
 }
 
 void CommonNotifySignalViolationAlert::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   violationcontent_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -124,11 +118,6 @@ void CommonNotifySignalViolationAlert::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID
 void CommonNotifySignalViolationAlert::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonNotifySignalViolationAlert& CommonNotifySignalViolationAlert::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonNotifySignalViolationAlert_CommonNotifySignalViolationAlert_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonNotifySignalViolationAlert::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonNotifySignalViolationAlert)
@@ -145,7 +134,6 @@ const char* CommonNotifySignalViolationAlert::_InternalParse(const char* ptr, ::
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string violationContent = 1;
       case 1:
@@ -158,7 +146,8 @@ const char* CommonNotifySignalViolationAlert::_InternalParse(const char* ptr, ::
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -185,7 +174,7 @@ failure:
   (void) cached_has_bits;
 
   // string violationContent = 1;
-  if (this->violationcontent().size() > 0) {
+  if (!this->violationcontent().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_violationcontent().data(), static_cast<int>(this->_internal_violationcontent().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -211,7 +200,7 @@ size_t CommonNotifySignalViolationAlert::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string violationContent = 1;
-  if (this->violationcontent().size() > 0) {
+  if (!this->violationcontent().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_violationcontent());
@@ -248,7 +237,7 @@ void CommonNotifySignalViolationAlert::MergeFrom(const CommonNotifySignalViolati
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.violationcontent().size() > 0) {
+  if (!from.violationcontent().empty()) {
     _internal_set_violationcontent(from._internal_violationcontent());
   }
 }
@@ -273,14 +262,19 @@ bool CommonNotifySignalViolationAlert::IsInitialized() const {
 
 void CommonNotifySignalViolationAlert::InternalSwap(CommonNotifySignalViolationAlert* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  violationcontent_.Swap(&other->violationcontent_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &violationcontent_, GetArenaForAllocation(),
+      &other->violationcontent_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonNotifySignalViolationAlert::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonNotifySignalViolationAlert_2eproto_getter, &descriptor_table_CommonNotifySignalViolationAlert_2eproto_once,
+      file_level_metadata_CommonNotifySignalViolationAlert_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

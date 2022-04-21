@@ -14,25 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonNotifySignalLiveManagerStateDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonNotifySignalLiveManagerState> _instance;
-} _CommonNotifySignalLiveManagerState_default_instance_;
+constexpr CommonNotifySignalLiveManagerState::CommonNotifySignalLiveManagerState(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : state_(0)
+{}
+struct CommonNotifySignalLiveManagerStateDefaultTypeInternal {
+  constexpr CommonNotifySignalLiveManagerStateDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonNotifySignalLiveManagerStateDefaultTypeInternal() {}
+  union {
+    CommonNotifySignalLiveManagerState _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonNotifySignalLiveManagerStateDefaultTypeInternal _CommonNotifySignalLiveManagerState_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonNotifySignalLiveManagerState_CommonNotifySignalLiveManagerState_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonNotifySignalLiveManagerState_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonNotifySignalLiveManagerState();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonNotifySignalLiveManagerState_CommonNotifySignalLiveManagerState_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonNotifySignalLiveManagerState_CommonNotifySignalLiveManagerState_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonNotifySignalLiveManagerState_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_CommonNotifySignalLiveManagerState_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonNotifySignalLiveManagerState_2eproto = nullptr;
@@ -62,21 +60,19 @@ const char descriptor_table_protodef_CommonNotifySignalLiveManagerState_2eproto[
   "TE_UNKNOWN\020\000\022\021\n\rMANAGER_ADDED\020\001\022\023\n\017MANAG"
   "ER_REMOVED\020\002\022\016\n\nIS_MANAGER\020\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonNotifySignalLiveManagerState_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonNotifySignalLiveManagerState_2eproto_sccs[1] = {
-  &scc_info_CommonNotifySignalLiveManagerState_CommonNotifySignalLiveManagerState_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonNotifySignalLiveManagerState_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonNotifySignalLiveManagerState_2eproto = {
-  false, false, descriptor_table_protodef_CommonNotifySignalLiveManagerState_2eproto, "CommonNotifySignalLiveManagerState.proto", 276,
-  &descriptor_table_CommonNotifySignalLiveManagerState_2eproto_once, descriptor_table_CommonNotifySignalLiveManagerState_2eproto_sccs, descriptor_table_CommonNotifySignalLiveManagerState_2eproto_deps, 1, 0,
+  false, false, 276, descriptor_table_protodef_CommonNotifySignalLiveManagerState_2eproto, "CommonNotifySignalLiveManagerState.proto", 
+  &descriptor_table_CommonNotifySignalLiveManagerState_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_CommonNotifySignalLiveManagerState_2eproto::offsets,
-  file_level_metadata_CommonNotifySignalLiveManagerState_2eproto, 1, file_level_enum_descriptors_CommonNotifySignalLiveManagerState_2eproto, file_level_service_descriptors_CommonNotifySignalLiveManagerState_2eproto,
+  file_level_metadata_CommonNotifySignalLiveManagerState_2eproto, file_level_enum_descriptors_CommonNotifySignalLiveManagerState_2eproto, file_level_service_descriptors_CommonNotifySignalLiveManagerState_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonNotifySignalLiveManagerState_2eproto_getter() {
+  return &descriptor_table_CommonNotifySignalLiveManagerState_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonNotifySignalLiveManagerState_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonNotifySignalLiveManagerState_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonNotifySignalLiveManagerState_2eproto(&descriptor_table_CommonNotifySignalLiveManagerState_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CommonNotifySignalLiveManagerState_ManagerState_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_CommonNotifySignalLiveManagerState_2eproto);
@@ -124,7 +120,7 @@ CommonNotifySignalLiveManagerState::CommonNotifySignalLiveManagerState(const Com
 }
 
 void CommonNotifySignalLiveManagerState::SharedCtor() {
-  state_ = 0;
+state_ = 0;
 }
 
 CommonNotifySignalLiveManagerState::~CommonNotifySignalLiveManagerState() {
@@ -134,7 +130,7 @@ CommonNotifySignalLiveManagerState::~CommonNotifySignalLiveManagerState() {
 }
 
 void CommonNotifySignalLiveManagerState::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void CommonNotifySignalLiveManagerState::ArenaDtor(void* object) {
@@ -146,11 +142,6 @@ void CommonNotifySignalLiveManagerState::RegisterArenaDtor(::PROTOBUF_NAMESPACE_
 void CommonNotifySignalLiveManagerState::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonNotifySignalLiveManagerState& CommonNotifySignalLiveManagerState::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonNotifySignalLiveManagerState_CommonNotifySignalLiveManagerState_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonNotifySignalLiveManagerState::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonNotifySignalLiveManagerState)
@@ -167,7 +158,6 @@ const char* CommonNotifySignalLiveManagerState::_InternalParse(const char* ptr, 
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.CommonNotifySignalLiveManagerState.ManagerState state = 1;
       case 1:
@@ -179,7 +169,8 @@ const char* CommonNotifySignalLiveManagerState::_InternalParse(const char* ptr, 
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -290,14 +281,15 @@ bool CommonNotifySignalLiveManagerState::IsInitialized() const {
 
 void CommonNotifySignalLiveManagerState::InternalSwap(CommonNotifySignalLiveManagerState* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(state_, other->state_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonNotifySignalLiveManagerState::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonNotifySignalLiveManagerState_2eproto_getter, &descriptor_table_CommonNotifySignalLiveManagerState_2eproto_once,
+      file_level_metadata_CommonNotifySignalLiveManagerState_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

@@ -14,25 +14,25 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalAuthorChatEndDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalAuthorChatEnd> _instance;
-} _CommonStateSignalAuthorChatEnd_default_instance_;
+constexpr CommonStateSignalAuthorChatEnd::CommonStateSignalAuthorChatEnd(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : authorchatid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , endliveid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , endtype_(0)
+{}
+struct CommonStateSignalAuthorChatEndDefaultTypeInternal {
+  constexpr CommonStateSignalAuthorChatEndDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalAuthorChatEndDefaultTypeInternal() {}
+  union {
+    CommonStateSignalAuthorChatEnd _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalAuthorChatEndDefaultTypeInternal _CommonStateSignalAuthorChatEnd_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalAuthorChatEnd_CommonStateSignalAuthorChatEnd_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalAuthorChatEnd_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalAuthorChatEnd();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalAuthorChatEnd_CommonStateSignalAuthorChatEnd_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonStateSignalAuthorChatEnd_CommonStateSignalAuthorChatEnd_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalAuthorChatEnd_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_CommonStateSignalAuthorChatEnd_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalAuthorChatEnd_2eproto = nullptr;
@@ -68,21 +68,19 @@ const char descriptor_table_protodef_CommonStateSignalAuthorChatEnd_2eproto[] PR
   "NVITER_HEARTBEAT_TIMEOUT\020\007\022\025\n\021PEER_LIVE_"
   "STOPPED\020\010b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalAuthorChatEnd_CommonStateSignalAuthorChatEnd_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalAuthorChatEnd_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalAuthorChatEnd_2eproto, "CommonStateSignalAuthorChatEnd.proto", 417,
-  &descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_once, descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_sccs, descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_deps, 1, 0,
+  false, false, 417, descriptor_table_protodef_CommonStateSignalAuthorChatEnd_2eproto, "CommonStateSignalAuthorChatEnd.proto", 
+  &descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_CommonStateSignalAuthorChatEnd_2eproto::offsets,
-  file_level_metadata_CommonStateSignalAuthorChatEnd_2eproto, 1, file_level_enum_descriptors_CommonStateSignalAuthorChatEnd_2eproto, file_level_service_descriptors_CommonStateSignalAuthorChatEnd_2eproto,
+  file_level_metadata_CommonStateSignalAuthorChatEnd_2eproto, file_level_enum_descriptors_CommonStateSignalAuthorChatEnd_2eproto, file_level_service_descriptors_CommonStateSignalAuthorChatEnd_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalAuthorChatEnd_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalAuthorChatEnd_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalAuthorChatEnd_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalAuthorChatEnd_2eproto(&descriptor_table_CommonStateSignalAuthorChatEnd_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CommonStateSignalAuthorChatEnd_EndType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_CommonStateSignalAuthorChatEnd_2eproto);
@@ -138,22 +136,21 @@ CommonStateSignalAuthorChatEnd::CommonStateSignalAuthorChatEnd(const CommonState
   authorchatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_authorchatid().empty()) {
     authorchatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_authorchatid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   endliveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_endliveid().empty()) {
     endliveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_endliveid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   endtype_ = from.endtype_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalAuthorChatEnd)
 }
 
 void CommonStateSignalAuthorChatEnd::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalAuthorChatEnd_CommonStateSignalAuthorChatEnd_2eproto.base);
-  authorchatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  endliveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  endtype_ = 0;
+authorchatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+endliveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+endtype_ = 0;
 }
 
 CommonStateSignalAuthorChatEnd::~CommonStateSignalAuthorChatEnd() {
@@ -163,7 +160,7 @@ CommonStateSignalAuthorChatEnd::~CommonStateSignalAuthorChatEnd() {
 }
 
 void CommonStateSignalAuthorChatEnd::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   authorchatid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   endliveid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -177,11 +174,6 @@ void CommonStateSignalAuthorChatEnd::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::
 void CommonStateSignalAuthorChatEnd::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalAuthorChatEnd& CommonStateSignalAuthorChatEnd::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalAuthorChatEnd_CommonStateSignalAuthorChatEnd_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalAuthorChatEnd::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalAuthorChatEnd)
@@ -200,7 +192,6 @@ const char* CommonStateSignalAuthorChatEnd::_InternalParse(const char* ptr, ::PR
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string authorChatId = 1;
       case 1:
@@ -230,7 +221,8 @@ const char* CommonStateSignalAuthorChatEnd::_InternalParse(const char* ptr, ::PR
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -257,7 +249,7 @@ failure:
   (void) cached_has_bits;
 
   // string authorChatId = 1;
-  if (this->authorchatid().size() > 0) {
+  if (!this->authorchatid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_authorchatid().data(), static_cast<int>(this->_internal_authorchatid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -274,7 +266,7 @@ failure:
   }
 
   // string endLiveId = 3;
-  if (this->endliveid().size() > 0) {
+  if (!this->endliveid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_endliveid().data(), static_cast<int>(this->_internal_endliveid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -300,14 +292,14 @@ size_t CommonStateSignalAuthorChatEnd::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string authorChatId = 1;
-  if (this->authorchatid().size() > 0) {
+  if (!this->authorchatid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_authorchatid());
   }
 
   // string endLiveId = 3;
-  if (this->endliveid().size() > 0) {
+  if (!this->endliveid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_endliveid());
@@ -350,10 +342,10 @@ void CommonStateSignalAuthorChatEnd::MergeFrom(const CommonStateSignalAuthorChat
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.authorchatid().size() > 0) {
+  if (!from.authorchatid().empty()) {
     _internal_set_authorchatid(from._internal_authorchatid());
   }
-  if (from.endliveid().size() > 0) {
+  if (!from.endliveid().empty()) {
     _internal_set_endliveid(from._internal_endliveid());
   }
   if (from.endtype() != 0) {
@@ -381,16 +373,25 @@ bool CommonStateSignalAuthorChatEnd::IsInitialized() const {
 
 void CommonStateSignalAuthorChatEnd::InternalSwap(CommonStateSignalAuthorChatEnd* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  authorchatid_.Swap(&other->authorchatid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  endliveid_.Swap(&other->endliveid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &authorchatid_, GetArenaForAllocation(),
+      &other->authorchatid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &endliveid_, GetArenaForAllocation(),
+      &other->endliveid_, other->GetArenaForAllocation()
+  );
   swap(endtype_, other->endtype_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalAuthorChatEnd::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_getter, &descriptor_table_CommonStateSignalAuthorChatEnd_2eproto_once,
+      file_level_metadata_CommonStateSignalAuthorChatEnd_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

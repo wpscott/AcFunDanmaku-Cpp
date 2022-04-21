@@ -14,42 +14,40 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtLiveCsCmdDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsCmd> _instance;
-} _ZtLiveCsCmd_default_instance_;
-class ZtLiveCsCmdAckDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsCmdAck> _instance;
-} _ZtLiveCsCmdAck_default_instance_;
+constexpr ZtLiveCsCmd::ZtLiveCsCmd(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : cmdtype_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , payload_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , ticket_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , liveid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ZtLiveCsCmdDefaultTypeInternal {
+  constexpr ZtLiveCsCmdDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveCsCmdDefaultTypeInternal() {}
+  union {
+    ZtLiveCsCmd _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveCsCmdDefaultTypeInternal _ZtLiveCsCmd_default_instance_;
+constexpr ZtLiveCsCmdAck::ZtLiveCsCmdAck(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : cmdacktype_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , errormsg_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , payload_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , errorcode_(int64_t{0}){}
+struct ZtLiveCsCmdAckDefaultTypeInternal {
+  constexpr ZtLiveCsCmdAckDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveCsCmdAckDefaultTypeInternal() {}
+  union {
+    ZtLiveCsCmdAck _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveCsCmdAckDefaultTypeInternal _ZtLiveCsCmdAck_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsCmd_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsCmd();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto}, {}};
-
-static void InitDefaultsscc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsCmdAck_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsCmdAck();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveCsCmd_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsCmd_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsCmd_2eproto = nullptr;
@@ -92,22 +90,19 @@ const char descriptor_table_protodef_ZtLiveCsCmd_2eproto[] PROTOBUF_SECTION_VARI
   "ode\030\002 \001(\003\022\020\n\010errorMsg\030\003 \001(\t\022\017\n\007payload\030\004"
   " \001(\014b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveCsCmd_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveCsCmd_2eproto_sccs[2] = {
-  &scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto.base,
-  &scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveCsCmd_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveCsCmd_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveCsCmd_2eproto, "ZtLiveCsCmd.proto", 212,
-  &descriptor_table_ZtLiveCsCmd_2eproto_once, descriptor_table_ZtLiveCsCmd_2eproto_sccs, descriptor_table_ZtLiveCsCmd_2eproto_deps, 2, 0,
+  false, false, 212, descriptor_table_protodef_ZtLiveCsCmd_2eproto, "ZtLiveCsCmd.proto", 
+  &descriptor_table_ZtLiveCsCmd_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_ZtLiveCsCmd_2eproto::offsets,
-  file_level_metadata_ZtLiveCsCmd_2eproto, 2, file_level_enum_descriptors_ZtLiveCsCmd_2eproto, file_level_service_descriptors_ZtLiveCsCmd_2eproto,
+  file_level_metadata_ZtLiveCsCmd_2eproto, file_level_enum_descriptors_ZtLiveCsCmd_2eproto, file_level_service_descriptors_ZtLiveCsCmd_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtLiveCsCmd_2eproto_getter() {
+  return &descriptor_table_ZtLiveCsCmd_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveCsCmd_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveCsCmd_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtLiveCsCmd_2eproto(&descriptor_table_ZtLiveCsCmd_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -128,32 +123,31 @@ ZtLiveCsCmd::ZtLiveCsCmd(const ZtLiveCsCmd& from)
   cmdtype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cmdtype().empty()) {
     cmdtype_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cmdtype(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payload().empty()) {
     payload_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payload(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_ticket().empty()) {
     ticket_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ticket(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_liveid().empty()) {
     liveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_liveid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsCmd)
 }
 
 void ZtLiveCsCmd::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto.base);
-  cmdtype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+cmdtype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ZtLiveCsCmd::~ZtLiveCsCmd() {
@@ -163,7 +157,7 @@ ZtLiveCsCmd::~ZtLiveCsCmd() {
 }
 
 void ZtLiveCsCmd::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   cmdtype_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   payload_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ticket_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -179,11 +173,6 @@ void ZtLiveCsCmd::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveCsCmd::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveCsCmd& ZtLiveCsCmd::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsCmd::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsCmd)
@@ -203,7 +192,6 @@ const char* ZtLiveCsCmd::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string cmdType = 1;
       case 1:
@@ -242,7 +230,8 @@ const char* ZtLiveCsCmd::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -269,7 +258,7 @@ failure:
   (void) cached_has_bits;
 
   // string cmdType = 1;
-  if (this->cmdtype().size() > 0) {
+  if (!this->cmdtype().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cmdtype().data(), static_cast<int>(this->_internal_cmdtype().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -279,13 +268,13 @@ failure:
   }
 
   // bytes payload = 2;
-  if (this->payload().size() > 0) {
+  if (!this->payload().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_payload(), target);
   }
 
   // string ticket = 3;
-  if (this->ticket().size() > 0) {
+  if (!this->ticket().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_ticket().data(), static_cast<int>(this->_internal_ticket().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -295,7 +284,7 @@ failure:
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->liveid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_liveid().data(), static_cast<int>(this->_internal_liveid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -321,28 +310,28 @@ size_t ZtLiveCsCmd::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string cmdType = 1;
-  if (this->cmdtype().size() > 0) {
+  if (!this->cmdtype().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_cmdtype());
   }
 
   // bytes payload = 2;
-  if (this->payload().size() > 0) {
+  if (!this->payload().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payload());
   }
 
   // string ticket = 3;
-  if (this->ticket().size() > 0) {
+  if (!this->ticket().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_ticket());
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->liveid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_liveid());
@@ -379,16 +368,16 @@ void ZtLiveCsCmd::MergeFrom(const ZtLiveCsCmd& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.cmdtype().size() > 0) {
+  if (!from.cmdtype().empty()) {
     _internal_set_cmdtype(from._internal_cmdtype());
   }
-  if (from.payload().size() > 0) {
+  if (!from.payload().empty()) {
     _internal_set_payload(from._internal_payload());
   }
-  if (from.ticket().size() > 0) {
+  if (!from.ticket().empty()) {
     _internal_set_ticket(from._internal_ticket());
   }
-  if (from.liveid().size() > 0) {
+  if (!from.liveid().empty()) {
     _internal_set_liveid(from._internal_liveid());
   }
 }
@@ -413,17 +402,34 @@ bool ZtLiveCsCmd::IsInitialized() const {
 
 void ZtLiveCsCmd::InternalSwap(ZtLiveCsCmd* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  cmdtype_.Swap(&other->cmdtype_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payload_.Swap(&other->payload_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ticket_.Swap(&other->ticket_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  liveid_.Swap(&other->liveid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &cmdtype_, GetArenaForAllocation(),
+      &other->cmdtype_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &payload_, GetArenaForAllocation(),
+      &other->payload_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &ticket_, GetArenaForAllocation(),
+      &other->ticket_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &liveid_, GetArenaForAllocation(),
+      &other->liveid_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsCmd::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveCsCmd_2eproto_getter, &descriptor_table_ZtLiveCsCmd_2eproto_once,
+      file_level_metadata_ZtLiveCsCmd_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -443,28 +449,27 @@ ZtLiveCsCmdAck::ZtLiveCsCmdAck(const ZtLiveCsCmdAck& from)
   cmdacktype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cmdacktype().empty()) {
     cmdacktype_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cmdacktype(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_errormsg().empty()) {
     errormsg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_errormsg(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payload().empty()) {
     payload_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payload(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   errorcode_ = from.errorcode_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsCmdAck)
 }
 
 void ZtLiveCsCmdAck::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto.base);
-  cmdacktype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  errorcode_ = PROTOBUF_LONGLONG(0);
+cmdacktype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+errorcode_ = int64_t{0};
 }
 
 ZtLiveCsCmdAck::~ZtLiveCsCmdAck() {
@@ -474,7 +479,7 @@ ZtLiveCsCmdAck::~ZtLiveCsCmdAck() {
 }
 
 void ZtLiveCsCmdAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   cmdacktype_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   errormsg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   payload_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -489,11 +494,6 @@ void ZtLiveCsCmdAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveCsCmdAck::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveCsCmdAck& ZtLiveCsCmdAck::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsCmdAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsCmdAck)
@@ -504,7 +504,7 @@ void ZtLiveCsCmdAck::Clear() {
   cmdacktype_.ClearToEmpty();
   errormsg_.ClearToEmpty();
   payload_.ClearToEmpty();
-  errorcode_ = PROTOBUF_LONGLONG(0);
+  errorcode_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -513,7 +513,6 @@ const char* ZtLiveCsCmdAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string cmdAckType = 1;
       case 1:
@@ -550,7 +549,8 @@ const char* ZtLiveCsCmdAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -577,7 +577,7 @@ failure:
   (void) cached_has_bits;
 
   // string cmdAckType = 1;
-  if (this->cmdacktype().size() > 0) {
+  if (!this->cmdacktype().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cmdacktype().data(), static_cast<int>(this->_internal_cmdacktype().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -593,7 +593,7 @@ failure:
   }
 
   // string errorMsg = 3;
-  if (this->errormsg().size() > 0) {
+  if (!this->errormsg().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -603,7 +603,7 @@ failure:
   }
 
   // bytes payload = 4;
-  if (this->payload().size() > 0) {
+  if (!this->payload().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_payload(), target);
   }
@@ -625,21 +625,21 @@ size_t ZtLiveCsCmdAck::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string cmdAckType = 1;
-  if (this->cmdacktype().size() > 0) {
+  if (!this->cmdacktype().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_cmdacktype());
   }
 
   // string errorMsg = 3;
-  if (this->errormsg().size() > 0) {
+  if (!this->errormsg().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_errormsg());
   }
 
   // bytes payload = 4;
-  if (this->payload().size() > 0) {
+  if (!this->payload().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payload());
@@ -683,13 +683,13 @@ void ZtLiveCsCmdAck::MergeFrom(const ZtLiveCsCmdAck& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.cmdacktype().size() > 0) {
+  if (!from.cmdacktype().empty()) {
     _internal_set_cmdacktype(from._internal_cmdacktype());
   }
-  if (from.errormsg().size() > 0) {
+  if (!from.errormsg().empty()) {
     _internal_set_errormsg(from._internal_errormsg());
   }
-  if (from.payload().size() > 0) {
+  if (!from.payload().empty()) {
     _internal_set_payload(from._internal_payload());
   }
   if (from.errorcode() != 0) {
@@ -717,17 +717,30 @@ bool ZtLiveCsCmdAck::IsInitialized() const {
 
 void ZtLiveCsCmdAck::InternalSwap(ZtLiveCsCmdAck* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  cmdacktype_.Swap(&other->cmdacktype_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  errormsg_.Swap(&other->errormsg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payload_.Swap(&other->payload_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &cmdacktype_, GetArenaForAllocation(),
+      &other->cmdacktype_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &errormsg_, GetArenaForAllocation(),
+      &other->errormsg_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &payload_, GetArenaForAllocation(),
+      &other->payload_, other->GetArenaForAllocation()
+  );
   swap(errorcode_, other->errorcode_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsCmdAck::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveCsCmd_2eproto_getter, &descriptor_table_ZtLiveCsCmd_2eproto_once,
+      file_level_metadata_ZtLiveCsCmd_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

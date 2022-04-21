@@ -14,42 +14,32 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtLiveCsUserExitDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsUserExit> _instance;
-} _ZtLiveCsUserExit_default_instance_;
-class ZtLiveCsUserExitAckDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsUserExitAck> _instance;
-} _ZtLiveCsUserExitAck_default_instance_;
+constexpr ZtLiveCsUserExit::ZtLiveCsUserExit(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ZtLiveCsUserExitDefaultTypeInternal {
+  constexpr ZtLiveCsUserExitDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveCsUserExitDefaultTypeInternal() {}
+  union {
+    ZtLiveCsUserExit _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveCsUserExitDefaultTypeInternal _ZtLiveCsUserExit_default_instance_;
+constexpr ZtLiveCsUserExitAck::ZtLiveCsUserExitAck(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ZtLiveCsUserExitAckDefaultTypeInternal {
+  constexpr ZtLiveCsUserExitAckDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveCsUserExitAckDefaultTypeInternal() {}
+  union {
+    ZtLiveCsUserExitAck _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveCsUserExitAckDefaultTypeInternal _ZtLiveCsUserExitAck_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveCsUserExit_ZtLiveCsUserExit_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsUserExit_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsUserExit();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsUserExit_ZtLiveCsUserExit_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsUserExit_ZtLiveCsUserExit_2eproto}, {}};
-
-static void InitDefaultsscc_info_ZtLiveCsUserExitAck_ZtLiveCsUserExit_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsUserExitAck_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsUserExitAck();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsUserExitAck_ZtLiveCsUserExit_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsUserExitAck_ZtLiveCsUserExit_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveCsUserExit_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsUserExit_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsUserExit_2eproto = nullptr;
@@ -81,22 +71,19 @@ const char descriptor_table_protodef_ZtLiveCsUserExit_2eproto[] PROTOBUF_SECTION
   "ZtLiveCsUserExit\"\025\n\023ZtLiveCsUserExitAckb"
   "\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveCsUserExit_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveCsUserExit_2eproto_sccs[2] = {
-  &scc_info_ZtLiveCsUserExit_ZtLiveCsUserExit_2eproto.base,
-  &scc_info_ZtLiveCsUserExitAck_ZtLiveCsUserExit_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveCsUserExit_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveCsUserExit_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveCsUserExit_2eproto, "ZtLiveCsUserExit.proto", 87,
-  &descriptor_table_ZtLiveCsUserExit_2eproto_once, descriptor_table_ZtLiveCsUserExit_2eproto_sccs, descriptor_table_ZtLiveCsUserExit_2eproto_deps, 2, 0,
+  false, false, 87, descriptor_table_protodef_ZtLiveCsUserExit_2eproto, "ZtLiveCsUserExit.proto", 
+  &descriptor_table_ZtLiveCsUserExit_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_ZtLiveCsUserExit_2eproto::offsets,
-  file_level_metadata_ZtLiveCsUserExit_2eproto, 2, file_level_enum_descriptors_ZtLiveCsUserExit_2eproto, file_level_service_descriptors_ZtLiveCsUserExit_2eproto,
+  file_level_metadata_ZtLiveCsUserExit_2eproto, file_level_enum_descriptors_ZtLiveCsUserExit_2eproto, file_level_service_descriptors_ZtLiveCsUserExit_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtLiveCsUserExit_2eproto_getter() {
+  return &descriptor_table_ZtLiveCsUserExit_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveCsUserExit_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveCsUserExit_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtLiveCsUserExit_2eproto(&descriptor_table_ZtLiveCsUserExit_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -127,7 +114,7 @@ ZtLiveCsUserExit::~ZtLiveCsUserExit() {
 }
 
 void ZtLiveCsUserExit::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void ZtLiveCsUserExit::ArenaDtor(void* object) {
@@ -139,11 +126,6 @@ void ZtLiveCsUserExit::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveCsUserExit::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveCsUserExit& ZtLiveCsUserExit::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsUserExit_ZtLiveCsUserExit_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsUserExit::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsUserExit)
@@ -159,8 +141,8 @@ const char* ZtLiveCsUserExit::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -253,13 +235,14 @@ bool ZtLiveCsUserExit::IsInitialized() const {
 
 void ZtLiveCsUserExit::InternalSwap(ZtLiveCsUserExit* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsUserExit::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveCsUserExit_2eproto_getter, &descriptor_table_ZtLiveCsUserExit_2eproto_once,
+      file_level_metadata_ZtLiveCsUserExit_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -289,7 +272,7 @@ ZtLiveCsUserExitAck::~ZtLiveCsUserExitAck() {
 }
 
 void ZtLiveCsUserExitAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void ZtLiveCsUserExitAck::ArenaDtor(void* object) {
@@ -301,11 +284,6 @@ void ZtLiveCsUserExitAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveCsUserExitAck::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveCsUserExitAck& ZtLiveCsUserExitAck::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsUserExitAck_ZtLiveCsUserExit_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsUserExitAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsUserExitAck)
@@ -321,8 +299,8 @@ const char* ZtLiveCsUserExitAck::_InternalParse(const char* ptr, ::PROTOBUF_NAME
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -415,13 +393,14 @@ bool ZtLiveCsUserExitAck::IsInitialized() const {
 
 void ZtLiveCsUserExitAck::InternalSwap(ZtLiveCsUserExitAck* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsUserExitAck::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveCsUserExit_2eproto_getter, &descriptor_table_ZtLiveCsUserExit_2eproto_once,
+      file_level_metadata_ZtLiveCsUserExit_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

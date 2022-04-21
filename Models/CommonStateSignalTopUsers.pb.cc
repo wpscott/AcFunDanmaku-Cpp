@@ -14,46 +14,37 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_CommonStateSignalTopUsers_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalTopUsers_TopUserDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalTopUsers_TopUser> _instance;
-} _CommonStateSignalTopUsers_TopUser_default_instance_;
-class CommonStateSignalTopUsersDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalTopUsers> _instance;
-} _CommonStateSignalTopUsers_default_instance_;
+constexpr CommonStateSignalTopUsers_TopUser::CommonStateSignalTopUsers_TopUser(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : customwatchinglistdata_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , displaysendamount_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , userinfo_(nullptr)
+  , anonymoususer_(false){}
+struct CommonStateSignalTopUsers_TopUserDefaultTypeInternal {
+  constexpr CommonStateSignalTopUsers_TopUserDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalTopUsers_TopUserDefaultTypeInternal() {}
+  union {
+    CommonStateSignalTopUsers_TopUser _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalTopUsers_TopUserDefaultTypeInternal _CommonStateSignalTopUsers_TopUser_default_instance_;
+constexpr CommonStateSignalTopUsers::CommonStateSignalTopUsers(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : user_(){}
+struct CommonStateSignalTopUsersDefaultTypeInternal {
+  constexpr CommonStateSignalTopUsersDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalTopUsersDefaultTypeInternal() {}
+  union {
+    CommonStateSignalTopUsers _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalTopUsersDefaultTypeInternal _CommonStateSignalTopUsers_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalTopUsers_CommonStateSignalTopUsers_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalTopUsers_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalTopUsers();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalTopUsers_CommonStateSignalTopUsers_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalTopUsers_CommonStateSignalTopUsers_2eproto}, {
-      &scc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalTopUsers_TopUser_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalTopUsers_TopUser();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalTopUsers_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalTopUsers_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalTopUsers_2eproto = nullptr;
@@ -98,20 +89,19 @@ const char descriptor_table_protodef_CommonStateSignalTopUsers_2eproto[] PROTOBU
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalTopUsers_2eproto_deps[1] = {
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalTopUsers_2eproto_sccs[2] = {
-  &scc_info_CommonStateSignalTopUsers_CommonStateSignalTopUsers_2eproto.base,
-  &scc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalTopUsers_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalTopUsers_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalTopUsers_2eproto, "CommonStateSignalTopUsers.proto", 306,
-  &descriptor_table_CommonStateSignalTopUsers_2eproto_once, descriptor_table_CommonStateSignalTopUsers_2eproto_sccs, descriptor_table_CommonStateSignalTopUsers_2eproto_deps, 2, 1,
+  false, false, 306, descriptor_table_protodef_CommonStateSignalTopUsers_2eproto, "CommonStateSignalTopUsers.proto", 
+  &descriptor_table_CommonStateSignalTopUsers_2eproto_once, descriptor_table_CommonStateSignalTopUsers_2eproto_deps, 1, 2,
   schemas, file_default_instances, TableStruct_CommonStateSignalTopUsers_2eproto::offsets,
-  file_level_metadata_CommonStateSignalTopUsers_2eproto, 2, file_level_enum_descriptors_CommonStateSignalTopUsers_2eproto, file_level_service_descriptors_CommonStateSignalTopUsers_2eproto,
+  file_level_metadata_CommonStateSignalTopUsers_2eproto, file_level_enum_descriptors_CommonStateSignalTopUsers_2eproto, file_level_service_descriptors_CommonStateSignalTopUsers_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalTopUsers_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalTopUsers_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalTopUsers_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalTopUsers_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalTopUsers_2eproto(&descriptor_table_CommonStateSignalTopUsers_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -126,7 +116,7 @@ CommonStateSignalTopUsers_TopUser::_Internal::userinfo(const CommonStateSignalTo
   return *msg->userinfo_;
 }
 void CommonStateSignalTopUsers_TopUser::clear_userinfo() {
-  if (GetArena() == nullptr && userinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && userinfo_ != nullptr) {
     delete userinfo_;
   }
   userinfo_ = nullptr;
@@ -143,12 +133,12 @@ CommonStateSignalTopUsers_TopUser::CommonStateSignalTopUsers_TopUser(const Commo
   customwatchinglistdata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_customwatchinglistdata().empty()) {
     customwatchinglistdata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_customwatchinglistdata(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   displaysendamount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_displaysendamount().empty()) {
     displaysendamount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_displaysendamount(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_userinfo()) {
     userinfo_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.userinfo_);
@@ -160,13 +150,12 @@ CommonStateSignalTopUsers_TopUser::CommonStateSignalTopUsers_TopUser(const Commo
 }
 
 void CommonStateSignalTopUsers_TopUser::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto.base);
-  customwatchinglistdata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  displaysendamount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&userinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&anonymoususer_) -
-      reinterpret_cast<char*>(&userinfo_)) + sizeof(anonymoususer_));
+customwatchinglistdata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+displaysendamount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&userinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&anonymoususer_) -
+    reinterpret_cast<char*>(&userinfo_)) + sizeof(anonymoususer_));
 }
 
 CommonStateSignalTopUsers_TopUser::~CommonStateSignalTopUsers_TopUser() {
@@ -176,7 +165,7 @@ CommonStateSignalTopUsers_TopUser::~CommonStateSignalTopUsers_TopUser() {
 }
 
 void CommonStateSignalTopUsers_TopUser::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   customwatchinglistdata_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   displaysendamount_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete userinfo_;
@@ -191,11 +180,6 @@ void CommonStateSignalTopUsers_TopUser::RegisterArenaDtor(::PROTOBUF_NAMESPACE_I
 void CommonStateSignalTopUsers_TopUser::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalTopUsers_TopUser& CommonStateSignalTopUsers_TopUser::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalTopUsers_TopUser_CommonStateSignalTopUsers_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalTopUsers_TopUser::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalTopUsers.TopUser)
@@ -205,7 +189,7 @@ void CommonStateSignalTopUsers_TopUser::Clear() {
 
   customwatchinglistdata_.ClearToEmpty();
   displaysendamount_.ClearToEmpty();
-  if (GetArena() == nullptr && userinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && userinfo_ != nullptr) {
     delete userinfo_;
   }
   userinfo_ = nullptr;
@@ -218,7 +202,6 @@ const char* CommonStateSignalTopUsers_TopUser::_InternalParse(const char* ptr, :
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserInfo userInfo = 1;
       case 1:
@@ -254,7 +237,8 @@ const char* CommonStateSignalTopUsers_TopUser::_InternalParse(const char* ptr, :
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -289,7 +273,7 @@ failure:
   }
 
   // string customWatchingListData = 3;
-  if (this->customwatchinglistdata().size() > 0) {
+  if (!this->customwatchinglistdata().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_customwatchinglistdata().data(), static_cast<int>(this->_internal_customwatchinglistdata().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -299,7 +283,7 @@ failure:
   }
 
   // string displaySendAmount = 4;
-  if (this->displaysendamount().size() > 0) {
+  if (!this->displaysendamount().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_displaysendamount().data(), static_cast<int>(this->_internal_displaysendamount().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -331,14 +315,14 @@ size_t CommonStateSignalTopUsers_TopUser::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string customWatchingListData = 3;
-  if (this->customwatchinglistdata().size() > 0) {
+  if (!this->customwatchinglistdata().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_customwatchinglistdata());
   }
 
   // string displaySendAmount = 4;
-  if (this->displaysendamount().size() > 0) {
+  if (!this->displaysendamount().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_displaysendamount());
@@ -387,10 +371,10 @@ void CommonStateSignalTopUsers_TopUser::MergeFrom(const CommonStateSignalTopUser
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.customwatchinglistdata().size() > 0) {
+  if (!from.customwatchinglistdata().empty()) {
     _internal_set_customwatchinglistdata(from._internal_customwatchinglistdata());
   }
-  if (from.displaysendamount().size() > 0) {
+  if (!from.displaysendamount().empty()) {
     _internal_set_displaysendamount(from._internal_displaysendamount());
   }
   if (from.has_userinfo()) {
@@ -421,9 +405,17 @@ bool CommonStateSignalTopUsers_TopUser::IsInitialized() const {
 
 void CommonStateSignalTopUsers_TopUser::InternalSwap(CommonStateSignalTopUsers_TopUser* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  customwatchinglistdata_.Swap(&other->customwatchinglistdata_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  displaysendamount_.Swap(&other->displaysendamount_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &customwatchinglistdata_, GetArenaForAllocation(),
+      &other->customwatchinglistdata_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &displaysendamount_, GetArenaForAllocation(),
+      &other->displaysendamount_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CommonStateSignalTopUsers_TopUser, anonymoususer_)
       + sizeof(CommonStateSignalTopUsers_TopUser::anonymoususer_)
@@ -433,9 +425,10 @@ void CommonStateSignalTopUsers_TopUser::InternalSwap(CommonStateSignalTopUsers_T
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalTopUsers_TopUser::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalTopUsers_2eproto_getter, &descriptor_table_CommonStateSignalTopUsers_2eproto_once,
+      file_level_metadata_CommonStateSignalTopUsers_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -458,7 +451,6 @@ CommonStateSignalTopUsers::CommonStateSignalTopUsers(const CommonStateSignalTopU
 }
 
 void CommonStateSignalTopUsers::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalTopUsers_CommonStateSignalTopUsers_2eproto.base);
 }
 
 CommonStateSignalTopUsers::~CommonStateSignalTopUsers() {
@@ -468,7 +460,7 @@ CommonStateSignalTopUsers::~CommonStateSignalTopUsers() {
 }
 
 void CommonStateSignalTopUsers::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void CommonStateSignalTopUsers::ArenaDtor(void* object) {
@@ -480,11 +472,6 @@ void CommonStateSignalTopUsers::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void CommonStateSignalTopUsers::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalTopUsers& CommonStateSignalTopUsers::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalTopUsers_CommonStateSignalTopUsers_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalTopUsers::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalTopUsers)
@@ -501,7 +488,6 @@ const char* CommonStateSignalTopUsers::_InternalParse(const char* ptr, ::PROTOBU
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.CommonStateSignalTopUsers.TopUser user = 1;
       case 1:
@@ -517,7 +503,8 @@ const char* CommonStateSignalTopUsers::_InternalParse(const char* ptr, ::PROTOBU
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -628,14 +615,15 @@ bool CommonStateSignalTopUsers::IsInitialized() const {
 
 void CommonStateSignalTopUsers::InternalSwap(CommonStateSignalTopUsers* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   user_.InternalSwap(&other->user_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalTopUsers::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalTopUsers_2eproto_getter, &descriptor_table_CommonStateSignalTopUsers_2eproto_once,
+      file_level_metadata_CommonStateSignalTopUsers_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

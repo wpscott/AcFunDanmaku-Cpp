@@ -14,44 +14,40 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_CommonStateSignalWishSheetCurrentState_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalWishSheetCurrentState_WishCurrentStateDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalWishSheetCurrentState_WishCurrentState> _instance;
-} _CommonStateSignalWishSheetCurrentState_WishCurrentState_default_instance_;
-class CommonStateSignalWishSheetCurrentStateDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalWishSheetCurrentState> _instance;
-} _CommonStateSignalWishSheetCurrentState_default_instance_;
+constexpr CommonStateSignalWishSheetCurrentState_WishCurrentState::CommonStateSignalWishSheetCurrentState_WishCurrentState(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : c_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , g_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , h_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , d_(int64_t{0})
+  , e_(int64_t{0})
+  , f_(int64_t{0}){}
+struct CommonStateSignalWishSheetCurrentState_WishCurrentStateDefaultTypeInternal {
+  constexpr CommonStateSignalWishSheetCurrentState_WishCurrentStateDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalWishSheetCurrentState_WishCurrentStateDefaultTypeInternal() {}
+  union {
+    CommonStateSignalWishSheetCurrentState_WishCurrentState _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalWishSheetCurrentState_WishCurrentStateDefaultTypeInternal _CommonStateSignalWishSheetCurrentState_WishCurrentState_default_instance_;
+constexpr CommonStateSignalWishSheetCurrentState::CommonStateSignalWishSheetCurrentState(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : b_()
+  , a_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct CommonStateSignalWishSheetCurrentStateDefaultTypeInternal {
+  constexpr CommonStateSignalWishSheetCurrentStateDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalWishSheetCurrentStateDefaultTypeInternal() {}
+  union {
+    CommonStateSignalWishSheetCurrentState _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalWishSheetCurrentStateDefaultTypeInternal _CommonStateSignalWishSheetCurrentState_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalWishSheetCurrentState_CommonStateSignalWishSheetCurrentState_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalWishSheetCurrentState_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalWishSheetCurrentState();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalWishSheetCurrentState_CommonStateSignalWishSheetCurrentState_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalWishSheetCurrentState_CommonStateSignalWishSheetCurrentState_2eproto}, {
-      &scc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalWishSheetCurrentState_WishCurrentState_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalWishSheetCurrentState_WishCurrentState();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalWishSheetCurrentState_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalWishSheetCurrentState_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalWishSheetCurrentState_2eproto = nullptr;
@@ -96,22 +92,19 @@ const char descriptor_table_protodef_CommonStateSignalWishSheetCurrentState_2epr
   "\003 \001(\003\022\t\n\001f\030\004 \001(\003\022\t\n\001g\030\005 \001(\t\022\t\n\001h\030\006 \001(\tb\006"
   "proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_sccs[2] = {
-  &scc_info_CommonStateSignalWishSheetCurrentState_CommonStateSignalWishSheetCurrentState_2eproto.base,
-  &scc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalWishSheetCurrentState_2eproto, "CommonStateSignalWishSheetCurrentState.proto", 286,
-  &descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_once, descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_sccs, descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_deps, 2, 0,
+  false, false, 286, descriptor_table_protodef_CommonStateSignalWishSheetCurrentState_2eproto, "CommonStateSignalWishSheetCurrentState.proto", 
+  &descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_CommonStateSignalWishSheetCurrentState_2eproto::offsets,
-  file_level_metadata_CommonStateSignalWishSheetCurrentState_2eproto, 2, file_level_enum_descriptors_CommonStateSignalWishSheetCurrentState_2eproto, file_level_service_descriptors_CommonStateSignalWishSheetCurrentState_2eproto,
+  file_level_metadata_CommonStateSignalWishSheetCurrentState_2eproto, file_level_enum_descriptors_CommonStateSignalWishSheetCurrentState_2eproto, file_level_service_descriptors_CommonStateSignalWishSheetCurrentState_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalWishSheetCurrentState_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalWishSheetCurrentState_2eproto(&descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -132,17 +125,17 @@ CommonStateSignalWishSheetCurrentState_WishCurrentState::CommonStateSignalWishSh
   c_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_c().empty()) {
     c_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_c(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   g_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_g().empty()) {
     g_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_g(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   h_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_h().empty()) {
     h_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_h(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&d_, &from.d_,
     static_cast<size_t>(reinterpret_cast<char*>(&f_) -
@@ -151,14 +144,13 @@ CommonStateSignalWishSheetCurrentState_WishCurrentState::CommonStateSignalWishSh
 }
 
 void CommonStateSignalWishSheetCurrentState_WishCurrentState::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto.base);
-  c_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  g_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  h_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&d_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&f_) -
-      reinterpret_cast<char*>(&d_)) + sizeof(f_));
+c_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+g_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+h_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&d_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&f_) -
+    reinterpret_cast<char*>(&d_)) + sizeof(f_));
 }
 
 CommonStateSignalWishSheetCurrentState_WishCurrentState::~CommonStateSignalWishSheetCurrentState_WishCurrentState() {
@@ -168,7 +160,7 @@ CommonStateSignalWishSheetCurrentState_WishCurrentState::~CommonStateSignalWishS
 }
 
 void CommonStateSignalWishSheetCurrentState_WishCurrentState::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   c_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   g_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   h_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -183,11 +175,6 @@ void CommonStateSignalWishSheetCurrentState_WishCurrentState::RegisterArenaDtor(
 void CommonStateSignalWishSheetCurrentState_WishCurrentState::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalWishSheetCurrentState_WishCurrentState& CommonStateSignalWishSheetCurrentState_WishCurrentState::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalWishSheetCurrentState_WishCurrentState_CommonStateSignalWishSheetCurrentState_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalWishSheetCurrentState_WishCurrentState::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalWishSheetCurrentState.WishCurrentState)
@@ -209,7 +196,6 @@ const char* CommonStateSignalWishSheetCurrentState_WishCurrentState::_InternalPa
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string c = 1;
       case 1:
@@ -261,7 +247,8 @@ const char* CommonStateSignalWishSheetCurrentState_WishCurrentState::_InternalPa
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -288,7 +275,7 @@ failure:
   (void) cached_has_bits;
 
   // string c = 1;
-  if (this->c().size() > 0) {
+  if (!this->c().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_c().data(), static_cast<int>(this->_internal_c().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -316,7 +303,7 @@ failure:
   }
 
   // string g = 5;
-  if (this->g().size() > 0) {
+  if (!this->g().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_g().data(), static_cast<int>(this->_internal_g().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -326,7 +313,7 @@ failure:
   }
 
   // string h = 6;
-  if (this->h().size() > 0) {
+  if (!this->h().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_h().data(), static_cast<int>(this->_internal_h().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -352,21 +339,21 @@ size_t CommonStateSignalWishSheetCurrentState_WishCurrentState::ByteSizeLong() c
   (void) cached_has_bits;
 
   // string c = 1;
-  if (this->c().size() > 0) {
+  if (!this->c().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_c());
   }
 
   // string g = 5;
-  if (this->g().size() > 0) {
+  if (!this->g().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_g());
   }
 
   // string h = 6;
-  if (this->h().size() > 0) {
+  if (!this->h().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_h());
@@ -424,13 +411,13 @@ void CommonStateSignalWishSheetCurrentState_WishCurrentState::MergeFrom(const Co
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.c().size() > 0) {
+  if (!from.c().empty()) {
     _internal_set_c(from._internal_c());
   }
-  if (from.g().size() > 0) {
+  if (!from.g().empty()) {
     _internal_set_g(from._internal_g());
   }
-  if (from.h().size() > 0) {
+  if (!from.h().empty()) {
     _internal_set_h(from._internal_h());
   }
   if (from.d() != 0) {
@@ -464,10 +451,22 @@ bool CommonStateSignalWishSheetCurrentState_WishCurrentState::IsInitialized() co
 
 void CommonStateSignalWishSheetCurrentState_WishCurrentState::InternalSwap(CommonStateSignalWishSheetCurrentState_WishCurrentState* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  c_.Swap(&other->c_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  g_.Swap(&other->g_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  h_.Swap(&other->h_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &c_, GetArenaForAllocation(),
+      &other->c_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &g_, GetArenaForAllocation(),
+      &other->g_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &h_, GetArenaForAllocation(),
+      &other->h_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CommonStateSignalWishSheetCurrentState_WishCurrentState, f_)
       + sizeof(CommonStateSignalWishSheetCurrentState_WishCurrentState::f_)
@@ -477,9 +476,10 @@ void CommonStateSignalWishSheetCurrentState_WishCurrentState::InternalSwap(Commo
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalWishSheetCurrentState_WishCurrentState::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_getter, &descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_once,
+      file_level_metadata_CommonStateSignalWishSheetCurrentState_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -501,14 +501,13 @@ CommonStateSignalWishSheetCurrentState::CommonStateSignalWishSheetCurrentState(c
   a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_a().empty()) {
     a_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_a(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalWishSheetCurrentState)
 }
 
 void CommonStateSignalWishSheetCurrentState::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalWishSheetCurrentState_CommonStateSignalWishSheetCurrentState_2eproto.base);
-  a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CommonStateSignalWishSheetCurrentState::~CommonStateSignalWishSheetCurrentState() {
@@ -518,7 +517,7 @@ CommonStateSignalWishSheetCurrentState::~CommonStateSignalWishSheetCurrentState(
 }
 
 void CommonStateSignalWishSheetCurrentState::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   a_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -531,11 +530,6 @@ void CommonStateSignalWishSheetCurrentState::RegisterArenaDtor(::PROTOBUF_NAMESP
 void CommonStateSignalWishSheetCurrentState::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalWishSheetCurrentState& CommonStateSignalWishSheetCurrentState::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalWishSheetCurrentState_CommonStateSignalWishSheetCurrentState_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalWishSheetCurrentState::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalWishSheetCurrentState)
@@ -553,7 +547,6 @@ const char* CommonStateSignalWishSheetCurrentState::_InternalParse(const char* p
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string a = 1;
       case 1:
@@ -578,7 +571,8 @@ const char* CommonStateSignalWishSheetCurrentState::_InternalParse(const char* p
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -605,7 +599,7 @@ failure:
   (void) cached_has_bits;
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->a().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_a().data(), static_cast<int>(this->_internal_a().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -646,7 +640,7 @@ size_t CommonStateSignalWishSheetCurrentState::ByteSizeLong() const {
   }
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->a().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a());
@@ -684,7 +678,7 @@ void CommonStateSignalWishSheetCurrentState::MergeFrom(const CommonStateSignalWi
   (void) cached_has_bits;
 
   b_.MergeFrom(from.b_);
-  if (from.a().size() > 0) {
+  if (!from.a().empty()) {
     _internal_set_a(from._internal_a());
   }
 }
@@ -709,15 +703,20 @@ bool CommonStateSignalWishSheetCurrentState::IsInitialized() const {
 
 void CommonStateSignalWishSheetCurrentState::InternalSwap(CommonStateSignalWishSheetCurrentState* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   b_.InternalSwap(&other->b_);
-  a_.Swap(&other->a_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &a_, GetArenaForAllocation(),
+      &other->a_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalWishSheetCurrentState::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_getter, &descriptor_table_CommonStateSignalWishSheetCurrentState_2eproto_once,
+      file_level_metadata_CommonStateSignalWishSheetCurrentState_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

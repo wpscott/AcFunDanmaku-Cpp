@@ -14,33 +14,34 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_FrontendInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FrontendInfo_FrontendInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_RequestBasicInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_RequestBasicInfo_RequestBasicInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_SettingInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SettingInfo_SettingInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_UserInstance_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_UserInstance_UserInstance_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class UpstreamPayloadDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UpstreamPayload> _instance;
-} _UpstreamPayload_default_instance_;
+constexpr UpstreamPayload::UpstreamPayload(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : command_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , payloaddata_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , subbiz_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , kpn_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , laneid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , userinstance_(nullptr)
+  , settinginfo_(nullptr)
+  , requestbasicinfo_(nullptr)
+  , frontendinfo_(nullptr)
+  , seqid_(int64_t{0})
+  , retrycount_(0u)
+  , errorcode_(0)
+  , anonymouseuser_(false){}
+struct UpstreamPayloadDefaultTypeInternal {
+  constexpr UpstreamPayloadDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~UpstreamPayloadDefaultTypeInternal() {}
+  union {
+    UpstreamPayload _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT UpstreamPayloadDefaultTypeInternal _UpstreamPayload_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_UpstreamPayload_UpstreamPayload_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_UpstreamPayload_default_instance_;
-    new (ptr) ::AcFunDanmu::UpstreamPayload();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_UpstreamPayload_UpstreamPayload_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_UpstreamPayload_UpstreamPayload_2eproto}, {
-      &scc_info_UserInstance_UserInstance_2eproto.base,
-      &scc_info_SettingInfo_SettingInfo_2eproto.base,
-      &scc_info_RequestBasicInfo_RequestBasicInfo_2eproto.base,
-      &scc_info_FrontendInfo_FrontendInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_UpstreamPayload_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_UpstreamPayload_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_UpstreamPayload_2eproto = nullptr;
@@ -63,6 +64,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_UpstreamPayload_2eproto::offse
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::UpstreamPayload, frontendinfo_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::UpstreamPayload, kpn_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::UpstreamPayload, anonymouseuser_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::UpstreamPayload, laneid_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::UpstreamPayload)},
@@ -75,7 +77,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_UpstreamPayload_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\025UpstreamPayload.proto\022\nAcFunDanmu\032\022Use"
   "rInstance.proto\032\021SettingInfo.proto\032\026Requ"
-  "estBasicInfo.proto\032\022FrontendInfo.proto\"\350"
+  "estBasicInfo.proto\032\022FrontendInfo.proto\"\370"
   "\002\n\017UpstreamPayload\022\017\n\007command\030\001 \001(\t\022\r\n\005s"
   "eqId\030\002 \001(\003\022\022\n\nretryCount\030\003 \001(\r\022\023\n\013payloa"
   "dData\030\004 \001(\014\022.\n\014userInstance\030\005 \001(\0132\030.AcFu"
@@ -85,7 +87,7 @@ const char descriptor_table_protodef_UpstreamPayload_2eproto[] PROTOBUF_SECTION_
   "nmu.RequestBasicInfo\022\016\n\006subBiz\030\t \001(\t\022.\n\014"
   "frontendInfo\030\n \001(\0132\030.AcFunDanmu.Frontend"
   "Info\022\013\n\003kpn\030\013 \001(\t\022\026\n\016anonymouseUser\030\014 \001("
-  "\010b\006proto3"
+  "\010\022\016\n\006laneId\030\r \001(\tb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_UpstreamPayload_2eproto_deps[4] = {
   &::descriptor_table_FrontendInfo_2eproto,
@@ -93,19 +95,19 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_SettingInfo_2eproto,
   &::descriptor_table_UserInstance_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_UpstreamPayload_2eproto_sccs[1] = {
-  &scc_info_UpstreamPayload_UpstreamPayload_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_UpstreamPayload_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_UpstreamPayload_2eproto = {
-  false, false, descriptor_table_protodef_UpstreamPayload_2eproto, "UpstreamPayload.proto", 489,
-  &descriptor_table_UpstreamPayload_2eproto_once, descriptor_table_UpstreamPayload_2eproto_sccs, descriptor_table_UpstreamPayload_2eproto_deps, 1, 4,
+  false, false, 505, descriptor_table_protodef_UpstreamPayload_2eproto, "UpstreamPayload.proto", 
+  &descriptor_table_UpstreamPayload_2eproto_once, descriptor_table_UpstreamPayload_2eproto_deps, 4, 1,
   schemas, file_default_instances, TableStruct_UpstreamPayload_2eproto::offsets,
-  file_level_metadata_UpstreamPayload_2eproto, 1, file_level_enum_descriptors_UpstreamPayload_2eproto, file_level_service_descriptors_UpstreamPayload_2eproto,
+  file_level_metadata_UpstreamPayload_2eproto, file_level_enum_descriptors_UpstreamPayload_2eproto, file_level_service_descriptors_UpstreamPayload_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_UpstreamPayload_2eproto_getter() {
+  return &descriptor_table_UpstreamPayload_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_UpstreamPayload_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_UpstreamPayload_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_UpstreamPayload_2eproto(&descriptor_table_UpstreamPayload_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -135,25 +137,25 @@ UpstreamPayload::_Internal::frontendinfo(const UpstreamPayload* msg) {
   return *msg->frontendinfo_;
 }
 void UpstreamPayload::clear_userinstance() {
-  if (GetArena() == nullptr && userinstance_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && userinstance_ != nullptr) {
     delete userinstance_;
   }
   userinstance_ = nullptr;
 }
 void UpstreamPayload::clear_settinginfo() {
-  if (GetArena() == nullptr && settinginfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && settinginfo_ != nullptr) {
     delete settinginfo_;
   }
   settinginfo_ = nullptr;
 }
 void UpstreamPayload::clear_requestbasicinfo() {
-  if (GetArena() == nullptr && requestbasicinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && requestbasicinfo_ != nullptr) {
     delete requestbasicinfo_;
   }
   requestbasicinfo_ = nullptr;
 }
 void UpstreamPayload::clear_frontendinfo() {
-  if (GetArena() == nullptr && frontendinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && frontendinfo_ != nullptr) {
     delete frontendinfo_;
   }
   frontendinfo_ = nullptr;
@@ -170,22 +172,27 @@ UpstreamPayload::UpstreamPayload(const UpstreamPayload& from)
   command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_command().empty()) {
     command_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_command(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payloaddata().empty()) {
     payloaddata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payloaddata(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_subbiz().empty()) {
     subbiz_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_subbiz(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpn().empty()) {
     kpn_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpn(), 
-      GetArena());
+      GetArenaForAllocation());
+  }
+  laneid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_laneid().empty()) {
+    laneid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_laneid(), 
+      GetArenaForAllocation());
   }
   if (from._internal_has_userinstance()) {
     userinstance_ = new ::AcFunDanmu::UserInstance(*from.userinstance_);
@@ -214,15 +221,15 @@ UpstreamPayload::UpstreamPayload(const UpstreamPayload& from)
 }
 
 void UpstreamPayload::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UpstreamPayload_UpstreamPayload_2eproto.base);
-  command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&userinstance_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&anonymouseuser_) -
-      reinterpret_cast<char*>(&userinstance_)) + sizeof(anonymouseuser_));
+command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+laneid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&userinstance_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&anonymouseuser_) -
+    reinterpret_cast<char*>(&userinstance_)) + sizeof(anonymouseuser_));
 }
 
 UpstreamPayload::~UpstreamPayload() {
@@ -232,11 +239,12 @@ UpstreamPayload::~UpstreamPayload() {
 }
 
 void UpstreamPayload::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   command_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   payloaddata_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   subbiz_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   kpn_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  laneid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete userinstance_;
   if (this != internal_default_instance()) delete settinginfo_;
   if (this != internal_default_instance()) delete requestbasicinfo_;
@@ -252,11 +260,6 @@ void UpstreamPayload::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void UpstreamPayload::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const UpstreamPayload& UpstreamPayload::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UpstreamPayload_UpstreamPayload_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void UpstreamPayload::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.UpstreamPayload)
@@ -268,19 +271,20 @@ void UpstreamPayload::Clear() {
   payloaddata_.ClearToEmpty();
   subbiz_.ClearToEmpty();
   kpn_.ClearToEmpty();
-  if (GetArena() == nullptr && userinstance_ != nullptr) {
+  laneid_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && userinstance_ != nullptr) {
     delete userinstance_;
   }
   userinstance_ = nullptr;
-  if (GetArena() == nullptr && settinginfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && settinginfo_ != nullptr) {
     delete settinginfo_;
   }
   settinginfo_ = nullptr;
-  if (GetArena() == nullptr && requestbasicinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && requestbasicinfo_ != nullptr) {
     delete requestbasicinfo_;
   }
   requestbasicinfo_ = nullptr;
-  if (GetArena() == nullptr && frontendinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && frontendinfo_ != nullptr) {
     delete frontendinfo_;
   }
   frontendinfo_ = nullptr;
@@ -295,7 +299,6 @@ const char* UpstreamPayload::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string command = 1;
       case 1:
@@ -388,9 +391,19 @@ const char* UpstreamPayload::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // string laneId = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+          auto str = _internal_mutable_laneid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.UpstreamPayload.laneId"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -417,7 +430,7 @@ failure:
   (void) cached_has_bits;
 
   // string command = 1;
-  if (this->command().size() > 0) {
+  if (!this->command().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_command().data(), static_cast<int>(this->_internal_command().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -439,7 +452,7 @@ failure:
   }
 
   // bytes payloadData = 4;
-  if (this->payloaddata().size() > 0) {
+  if (!this->payloaddata().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_payloaddata(), target);
   }
@@ -475,7 +488,7 @@ failure:
   }
 
   // string subBiz = 9;
-  if (this->subbiz().size() > 0) {
+  if (!this->subbiz().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_subbiz().data(), static_cast<int>(this->_internal_subbiz().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -493,7 +506,7 @@ failure:
   }
 
   // string kpn = 11;
-  if (this->kpn().size() > 0) {
+  if (!this->kpn().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_kpn().data(), static_cast<int>(this->_internal_kpn().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -506,6 +519,16 @@ failure:
   if (this->anonymouseuser() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(12, this->_internal_anonymouseuser(), target);
+  }
+
+  // string laneId = 13;
+  if (!this->laneid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_laneid().data(), static_cast<int>(this->_internal_laneid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "AcFunDanmu.UpstreamPayload.laneId");
+    target = stream->WriteStringMaybeAliased(
+        13, this->_internal_laneid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -525,31 +548,38 @@ size_t UpstreamPayload::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string command = 1;
-  if (this->command().size() > 0) {
+  if (!this->command().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_command());
   }
 
   // bytes payloadData = 4;
-  if (this->payloaddata().size() > 0) {
+  if (!this->payloaddata().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payloaddata());
   }
 
   // string subBiz = 9;
-  if (this->subbiz().size() > 0) {
+  if (!this->subbiz().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_subbiz());
   }
 
   // string kpn = 11;
-  if (this->kpn().size() > 0) {
+  if (!this->kpn().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_kpn());
+  }
+
+  // string laneId = 13;
+  if (!this->laneid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_laneid());
   }
 
   // .AcFunDanmu.UserInstance userInstance = 5;
@@ -637,17 +667,20 @@ void UpstreamPayload::MergeFrom(const UpstreamPayload& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.command().size() > 0) {
+  if (!from.command().empty()) {
     _internal_set_command(from._internal_command());
   }
-  if (from.payloaddata().size() > 0) {
+  if (!from.payloaddata().empty()) {
     _internal_set_payloaddata(from._internal_payloaddata());
   }
-  if (from.subbiz().size() > 0) {
+  if (!from.subbiz().empty()) {
     _internal_set_subbiz(from._internal_subbiz());
   }
-  if (from.kpn().size() > 0) {
+  if (!from.kpn().empty()) {
     _internal_set_kpn(from._internal_kpn());
+  }
+  if (!from.laneid().empty()) {
+    _internal_set_laneid(from._internal_laneid());
   }
   if (from.has_userinstance()) {
     _internal_mutable_userinstance()->::AcFunDanmu::UserInstance::MergeFrom(from._internal_userinstance());
@@ -695,11 +728,32 @@ bool UpstreamPayload::IsInitialized() const {
 
 void UpstreamPayload::InternalSwap(UpstreamPayload* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  command_.Swap(&other->command_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payloaddata_.Swap(&other->payloaddata_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  subbiz_.Swap(&other->subbiz_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  kpn_.Swap(&other->kpn_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &command_, GetArenaForAllocation(),
+      &other->command_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &payloaddata_, GetArenaForAllocation(),
+      &other->payloaddata_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &subbiz_, GetArenaForAllocation(),
+      &other->subbiz_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &kpn_, GetArenaForAllocation(),
+      &other->kpn_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &laneid_, GetArenaForAllocation(),
+      &other->laneid_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(UpstreamPayload, anonymouseuser_)
       + sizeof(UpstreamPayload::anonymouseuser_)
@@ -709,9 +763,10 @@ void UpstreamPayload::InternalSwap(UpstreamPayload* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UpstreamPayload::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_UpstreamPayload_2eproto_getter, &descriptor_table_UpstreamPayload_2eproto_once,
+      file_level_metadata_UpstreamPayload_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

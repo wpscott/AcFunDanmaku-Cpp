@@ -14,42 +14,40 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class PingRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PingRequest> _instance;
-} _PingRequest_default_instance_;
-class PingResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PingResponse> _instance;
-} _PingResponse_default_instance_;
+constexpr PingRequest::PingRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : pingtype_(0)
+
+  , pinground_(0u){}
+struct PingRequestDefaultTypeInternal {
+  constexpr PingRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PingRequestDefaultTypeInternal() {}
+  union {
+    PingRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PingRequestDefaultTypeInternal _PingRequest_default_instance_;
+constexpr PingResponse::PingResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : clientipv6_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , servertimestamp_(0)
+  , clientip_(0u)
+  , redirectip_(0u)
+  , redirectport_(0u){}
+struct PingResponseDefaultTypeInternal {
+  constexpr PingResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PingResponseDefaultTypeInternal() {}
+  union {
+    PingResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PingResponseDefaultTypeInternal _PingResponse_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_PingRequest_Ping_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_PingRequest_default_instance_;
-    new (ptr) ::AcFunDanmu::PingRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PingRequest_Ping_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PingRequest_Ping_2eproto}, {}};
-
-static void InitDefaultsscc_info_PingResponse_Ping_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_PingResponse_default_instance_;
-    new (ptr) ::AcFunDanmu::PingResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PingResponse_Ping_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PingResponse_Ping_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Ping_2eproto[2];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Ping_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Ping_2eproto = nullptr;
@@ -71,6 +69,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Ping_2eproto::offsets[] PROTOB
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PingResponse, clientip_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PingResponse, redirectip_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PingResponse, redirectport_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PingResponse, clientipv6_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::PingRequest)},
@@ -87,27 +86,24 @@ const char descriptor_table_protodef_Ping_2eproto[] PROTOBUF_SECTION_VARIABLE(pr
   "\0222\n\010pingType\030\001 \001(\0162 .AcFunDanmu.PingRequ"
   "est.PingType\022\021\n\tpingRound\030\002 \001(\r\"\?\n\010PingT"
   "ype\022\014\n\010kInvalid\020\000\022\022\n\016kPriorRegister\020\001\022\021\n"
-  "\rkPostRegister\020\002\"c\n\014PingResponse\022\027\n\017serv"
+  "\rkPostRegister\020\002\"w\n\014PingResponse\022\027\n\017serv"
   "erTimestamp\030\001 \001(\017\022\020\n\010clientIp\030\002 \001(\007\022\022\n\nr"
-  "edirectIp\030\003 \001(\007\022\024\n\014redirectPort\030\004 \001(\rb\006p"
-  "roto3"
+  "edirectIp\030\003 \001(\007\022\024\n\014redirectPort\030\004 \001(\r\022\022\n"
+  "\nclientIpV6\030\005 \001(\014b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Ping_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Ping_2eproto_sccs[2] = {
-  &scc_info_PingRequest_Ping_2eproto.base,
-  &scc_info_PingResponse_Ping_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Ping_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Ping_2eproto = {
-  false, false, descriptor_table_protodef_Ping_2eproto, "Ping.proto", 285,
-  &descriptor_table_Ping_2eproto_once, descriptor_table_Ping_2eproto_sccs, descriptor_table_Ping_2eproto_deps, 2, 0,
+  false, false, 305, descriptor_table_protodef_Ping_2eproto, "Ping.proto", 
+  &descriptor_table_Ping_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_Ping_2eproto::offsets,
-  file_level_metadata_Ping_2eproto, 2, file_level_enum_descriptors_Ping_2eproto, file_level_service_descriptors_Ping_2eproto,
+  file_level_metadata_Ping_2eproto, file_level_enum_descriptors_Ping_2eproto, file_level_service_descriptors_Ping_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_Ping_2eproto_getter() {
+  return &descriptor_table_Ping_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_Ping_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Ping_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_Ping_2eproto(&descriptor_table_Ping_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PingRequest_PingType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Ping_2eproto);
@@ -155,10 +151,10 @@ PingRequest::PingRequest(const PingRequest& from)
 }
 
 void PingRequest::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&pingtype_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&pinground_) -
-      reinterpret_cast<char*>(&pingtype_)) + sizeof(pinground_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&pingtype_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&pinground_) -
+    reinterpret_cast<char*>(&pingtype_)) + sizeof(pinground_));
 }
 
 PingRequest::~PingRequest() {
@@ -168,7 +164,7 @@ PingRequest::~PingRequest() {
 }
 
 void PingRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void PingRequest::ArenaDtor(void* object) {
@@ -180,11 +176,6 @@ void PingRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void PingRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PingRequest& PingRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PingRequest_Ping_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PingRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.PingRequest)
@@ -203,7 +194,6 @@ const char* PingRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.PingRequest.PingType pingType = 1;
       case 1:
@@ -222,7 +212,8 @@ const char* PingRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -349,7 +340,7 @@ bool PingRequest::IsInitialized() const {
 
 void PingRequest::InternalSwap(PingRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(PingRequest, pinground_)
       + sizeof(PingRequest::pinground_)
@@ -359,9 +350,10 @@ void PingRequest::InternalSwap(PingRequest* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PingRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Ping_2eproto_getter, &descriptor_table_Ping_2eproto_once,
+      file_level_metadata_Ping_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -378,6 +370,11 @@ PingResponse::PingResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 PingResponse::PingResponse(const PingResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  clientipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_clientipv6().empty()) {
+    clientipv6_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_clientipv6(), 
+      GetArenaForAllocation());
+  }
   ::memcpy(&servertimestamp_, &from.servertimestamp_,
     static_cast<size_t>(reinterpret_cast<char*>(&redirectport_) -
     reinterpret_cast<char*>(&servertimestamp_)) + sizeof(redirectport_));
@@ -385,10 +382,11 @@ PingResponse::PingResponse(const PingResponse& from)
 }
 
 void PingResponse::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&servertimestamp_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&redirectport_) -
-      reinterpret_cast<char*>(&servertimestamp_)) + sizeof(redirectport_));
+clientipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&servertimestamp_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&redirectport_) -
+    reinterpret_cast<char*>(&servertimestamp_)) + sizeof(redirectport_));
 }
 
 PingResponse::~PingResponse() {
@@ -398,7 +396,8 @@ PingResponse::~PingResponse() {
 }
 
 void PingResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  clientipv6_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void PingResponse::ArenaDtor(void* object) {
@@ -410,11 +409,6 @@ void PingResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void PingResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PingResponse& PingResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PingResponse_Ping_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PingResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.PingResponse)
@@ -422,6 +416,7 @@ void PingResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  clientipv6_.ClearToEmpty();
   ::memset(&servertimestamp_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&redirectport_) -
       reinterpret_cast<char*>(&servertimestamp_)) + sizeof(redirectport_));
@@ -433,7 +428,6 @@ const char* PingResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // sfixed32 serverTimestamp = 1;
       case 1:
@@ -463,9 +457,18 @@ const char* PingResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // bytes clientIpV6 = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_clientipv6();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -515,6 +518,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->_internal_redirectport(), target);
   }
 
+  // bytes clientIpV6 = 5;
+  if (!this->clientipv6().empty()) {
+    target = stream->WriteBytesMaybeAliased(
+        5, this->_internal_clientipv6(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -530,6 +539,13 @@ size_t PingResponse::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // bytes clientIpV6 = 5;
+  if (!this->clientipv6().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_clientipv6());
+  }
 
   // sfixed32 serverTimestamp = 1;
   if (this->servertimestamp() != 0) {
@@ -584,6 +600,9 @@ void PingResponse::MergeFrom(const PingResponse& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (!from.clientipv6().empty()) {
+    _internal_set_clientipv6(from._internal_clientipv6());
+  }
   if (from.servertimestamp() != 0) {
     _internal_set_servertimestamp(from._internal_servertimestamp());
   }
@@ -618,7 +637,12 @@ bool PingResponse::IsInitialized() const {
 
 void PingResponse::InternalSwap(PingResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &clientipv6_, GetArenaForAllocation(),
+      &other->clientipv6_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(PingResponse, redirectport_)
       + sizeof(PingResponse::redirectport_)
@@ -628,9 +652,10 @@ void PingResponse::InternalSwap(PingResponse* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PingResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Ping_2eproto_getter, &descriptor_table_Ping_2eproto_once,
+      file_level_metadata_Ping_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

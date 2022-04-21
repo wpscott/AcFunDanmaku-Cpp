@@ -14,27 +14,22 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveStateSignalItem_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveStateSignalItem_ZtLiveStateSignalItem_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtLiveScStateSignalDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveScStateSignal> _instance;
-} _ZtLiveScStateSignal_default_instance_;
+constexpr ZtLiveScStateSignal::ZtLiveScStateSignal(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : item_(){}
+struct ZtLiveScStateSignalDefaultTypeInternal {
+  constexpr ZtLiveScStateSignalDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveScStateSignalDefaultTypeInternal() {}
+  union {
+    ZtLiveScStateSignal _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveScStateSignalDefaultTypeInternal _ZtLiveScStateSignal_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveScStateSignal_ZtLiveScStateSignal_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveScStateSignal_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveScStateSignal();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ZtLiveScStateSignal_ZtLiveScStateSignal_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ZtLiveScStateSignal_ZtLiveScStateSignal_2eproto}, {
-      &scc_info_ZtLiveStateSignalItem_ZtLiveStateSignalItem_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveScStateSignal_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtLiveScStateSignal_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveScStateSignal_2eproto = nullptr;
@@ -64,19 +59,19 @@ const char descriptor_table_protodef_ZtLiveScStateSignal_2eproto[] PROTOBUF_SECT
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveScStateSignal_2eproto_deps[1] = {
   &::descriptor_table_ZtLiveStateSignalItem_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveScStateSignal_2eproto_sccs[1] = {
-  &scc_info_ZtLiveScStateSignal_ZtLiveScStateSignal_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveScStateSignal_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveScStateSignal_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveScStateSignal_2eproto, "ZtLiveScStateSignal.proto", 148,
-  &descriptor_table_ZtLiveScStateSignal_2eproto_once, descriptor_table_ZtLiveScStateSignal_2eproto_sccs, descriptor_table_ZtLiveScStateSignal_2eproto_deps, 1, 1,
+  false, false, 148, descriptor_table_protodef_ZtLiveScStateSignal_2eproto, "ZtLiveScStateSignal.proto", 
+  &descriptor_table_ZtLiveScStateSignal_2eproto_once, descriptor_table_ZtLiveScStateSignal_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_ZtLiveScStateSignal_2eproto::offsets,
-  file_level_metadata_ZtLiveScStateSignal_2eproto, 1, file_level_enum_descriptors_ZtLiveScStateSignal_2eproto, file_level_service_descriptors_ZtLiveScStateSignal_2eproto,
+  file_level_metadata_ZtLiveScStateSignal_2eproto, file_level_enum_descriptors_ZtLiveScStateSignal_2eproto, file_level_service_descriptors_ZtLiveScStateSignal_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtLiveScStateSignal_2eproto_getter() {
+  return &descriptor_table_ZtLiveScStateSignal_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveScStateSignal_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveScStateSignal_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtLiveScStateSignal_2eproto(&descriptor_table_ZtLiveScStateSignal_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -103,7 +98,6 @@ ZtLiveScStateSignal::ZtLiveScStateSignal(const ZtLiveScStateSignal& from)
 }
 
 void ZtLiveScStateSignal::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveScStateSignal_ZtLiveScStateSignal_2eproto.base);
 }
 
 ZtLiveScStateSignal::~ZtLiveScStateSignal() {
@@ -113,7 +107,7 @@ ZtLiveScStateSignal::~ZtLiveScStateSignal() {
 }
 
 void ZtLiveScStateSignal::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void ZtLiveScStateSignal::ArenaDtor(void* object) {
@@ -125,11 +119,6 @@ void ZtLiveScStateSignal::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveScStateSignal::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveScStateSignal& ZtLiveScStateSignal::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveScStateSignal_ZtLiveScStateSignal_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveScStateSignal::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveScStateSignal)
@@ -146,7 +135,6 @@ const char* ZtLiveScStateSignal::_InternalParse(const char* ptr, ::PROTOBUF_NAME
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.ZtLiveStateSignalItem item = 1;
       case 1:
@@ -162,7 +150,8 @@ const char* ZtLiveScStateSignal::_InternalParse(const char* ptr, ::PROTOBUF_NAME
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -273,14 +262,15 @@ bool ZtLiveScStateSignal::IsInitialized() const {
 
 void ZtLiveScStateSignal::InternalSwap(ZtLiveScStateSignal* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   item_.InternalSwap(&other->item_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveScStateSignal::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveScStateSignal_2eproto_getter, &descriptor_table_ZtLiveScStateSignal_2eproto_once,
+      file_level_metadata_ZtLiveScStateSignal_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

@@ -14,25 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class FrontendInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FrontendInfo> _instance;
-} _FrontendInfo_default_instance_;
+constexpr FrontendInfo::FrontendInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : ip_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , port_(0){}
+struct FrontendInfoDefaultTypeInternal {
+  constexpr FrontendInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~FrontendInfoDefaultTypeInternal() {}
+  union {
+    FrontendInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FrontendInfoDefaultTypeInternal _FrontendInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_FrontendInfo_FrontendInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_FrontendInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::FrontendInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FrontendInfo_FrontendInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FrontendInfo_FrontendInfo_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_FrontendInfo_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_FrontendInfo_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_FrontendInfo_2eproto = nullptr;
@@ -59,21 +57,19 @@ const char descriptor_table_protodef_FrontendInfo_2eproto[] PROTOBUF_SECTION_VAR
   "tendInfo\022\n\n\002ip\030\001 \001(\t\022\014\n\004port\030\002 \001(\005b\006prot"
   "o3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_FrontendInfo_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_FrontendInfo_2eproto_sccs[1] = {
-  &scc_info_FrontendInfo_FrontendInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_FrontendInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_FrontendInfo_2eproto = {
-  false, false, descriptor_table_protodef_FrontendInfo_2eproto, "FrontendInfo.proto", 82,
-  &descriptor_table_FrontendInfo_2eproto_once, descriptor_table_FrontendInfo_2eproto_sccs, descriptor_table_FrontendInfo_2eproto_deps, 1, 0,
+  false, false, 82, descriptor_table_protodef_FrontendInfo_2eproto, "FrontendInfo.proto", 
+  &descriptor_table_FrontendInfo_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_FrontendInfo_2eproto::offsets,
-  file_level_metadata_FrontendInfo_2eproto, 1, file_level_enum_descriptors_FrontendInfo_2eproto, file_level_service_descriptors_FrontendInfo_2eproto,
+  file_level_metadata_FrontendInfo_2eproto, file_level_enum_descriptors_FrontendInfo_2eproto, file_level_service_descriptors_FrontendInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_FrontendInfo_2eproto_getter() {
+  return &descriptor_table_FrontendInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_FrontendInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_FrontendInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_FrontendInfo_2eproto(&descriptor_table_FrontendInfo_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -94,16 +90,15 @@ FrontendInfo::FrontendInfo(const FrontendInfo& from)
   ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_ip().empty()) {
     ip_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ip(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   port_ = from.port_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.FrontendInfo)
 }
 
 void FrontendInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_FrontendInfo_FrontendInfo_2eproto.base);
-  ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  port_ = 0;
+ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+port_ = 0;
 }
 
 FrontendInfo::~FrontendInfo() {
@@ -113,7 +108,7 @@ FrontendInfo::~FrontendInfo() {
 }
 
 void FrontendInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   ip_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -126,11 +121,6 @@ void FrontendInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void FrontendInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const FrontendInfo& FrontendInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_FrontendInfo_FrontendInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void FrontendInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.FrontendInfo)
@@ -148,7 +138,6 @@ const char* FrontendInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string ip = 1;
       case 1:
@@ -168,7 +157,8 @@ const char* FrontendInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -195,7 +185,7 @@ failure:
   (void) cached_has_bits;
 
   // string ip = 1;
-  if (this->ip().size() > 0) {
+  if (!this->ip().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_ip().data(), static_cast<int>(this->_internal_ip().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -227,7 +217,7 @@ size_t FrontendInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string ip = 1;
-  if (this->ip().size() > 0) {
+  if (!this->ip().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_ip());
@@ -271,7 +261,7 @@ void FrontendInfo::MergeFrom(const FrontendInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.ip().size() > 0) {
+  if (!from.ip().empty()) {
     _internal_set_ip(from._internal_ip());
   }
   if (from.port() != 0) {
@@ -299,15 +289,20 @@ bool FrontendInfo::IsInitialized() const {
 
 void FrontendInfo::InternalSwap(FrontendInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ip_.Swap(&other->ip_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &ip_, GetArenaForAllocation(),
+      &other->ip_, other->GetArenaForAllocation()
+  );
   swap(port_, other->port_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata FrontendInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_FrontendInfo_2eproto_getter, &descriptor_table_FrontendInfo_2eproto_once,
+      file_level_metadata_FrontendInfo_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

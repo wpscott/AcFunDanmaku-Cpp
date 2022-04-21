@@ -14,31 +14,35 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_AppInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AppInfo_AppInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_DeviceInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeviceInfo_DeviceInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_EnvInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_EnvInfo_EnvInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class RequestBasicInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RequestBasicInfo> _instance;
-} _RequestBasicInfo_default_instance_;
+constexpr RequestBasicInfo::RequestBasicInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : deviceid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , clientip_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , appversion_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , channel_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , location_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , kpf_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , clientipv6_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , countrycode_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , appinfo_(nullptr)
+  , deviceinfo_(nullptr)
+  , envinfo_(nullptr)
+  , clienttype_(0)
+
+  , clientport_(0){}
+struct RequestBasicInfoDefaultTypeInternal {
+  constexpr RequestBasicInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~RequestBasicInfoDefaultTypeInternal() {}
+  union {
+    RequestBasicInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RequestBasicInfoDefaultTypeInternal _RequestBasicInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_RequestBasicInfo_RequestBasicInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_RequestBasicInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::RequestBasicInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_RequestBasicInfo_RequestBasicInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_RequestBasicInfo_RequestBasicInfo_2eproto}, {
-      &scc_info_AppInfo_AppInfo_2eproto.base,
-      &scc_info_DeviceInfo_DeviceInfo_2eproto.base,
-      &scc_info_EnvInfo_EnvInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_RequestBasicInfo_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_RequestBasicInfo_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_RequestBasicInfo_2eproto = nullptr;
@@ -60,6 +64,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_RequestBasicInfo_2eproto::offs
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RequestBasicInfo, clientport_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RequestBasicInfo, location_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RequestBasicInfo, kpf_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RequestBasicInfo, clientipv6_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RequestBasicInfo, countrycode_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::RequestBasicInfo)},
@@ -72,7 +78,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_RequestBasicInfo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\026RequestBasicInfo.proto\022\nAcFunDanmu\032\020De"
   "viceInfo.proto\032\rAppInfo.proto\032\rEnvInfo.p"
-  "roto\"\277\002\n\020RequestBasicInfo\0227\n\nclientType\030"
+  "roto\"\350\002\n\020RequestBasicInfo\0227\n\nclientType\030"
   "\001 \001(\0162#.AcFunDanmu.DeviceInfo.PlatformTy"
   "pe\022\020\n\010deviceId\030\002 \001(\t\022\020\n\010clientIp\030\003 \001(\t\022\022"
   "\n\nappVersion\030\004 \001(\t\022\017\n\007channel\030\005 \001(\t\022$\n\007a"
@@ -80,26 +86,27 @@ const char descriptor_table_protodef_RequestBasicInfo_2eproto[] PROTOBUF_SECTION
   "iceInfo\030\007 \001(\0132\026.AcFunDanmu.DeviceInfo\022$\n"
   "\007envInfo\030\010 \001(\0132\023.AcFunDanmu.EnvInfo\022\022\n\nc"
   "lientPort\030\t \001(\005\022\020\n\010location\030\n \001(\t\022\013\n\003kpf"
-  "\030\013 \001(\tb\006proto3"
+  "\030\013 \001(\t\022\022\n\nclientIpV6\030\014 \001(\t\022\023\n\013countryCod"
+  "e\030\r \001(\tb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_RequestBasicInfo_2eproto_deps[3] = {
   &::descriptor_table_AppInfo_2eproto,
   &::descriptor_table_DeviceInfo_2eproto,
   &::descriptor_table_EnvInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_RequestBasicInfo_2eproto_sccs[1] = {
-  &scc_info_RequestBasicInfo_RequestBasicInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_RequestBasicInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_RequestBasicInfo_2eproto = {
-  false, false, descriptor_table_protodef_RequestBasicInfo_2eproto, "RequestBasicInfo.proto", 414,
-  &descriptor_table_RequestBasicInfo_2eproto_once, descriptor_table_RequestBasicInfo_2eproto_sccs, descriptor_table_RequestBasicInfo_2eproto_deps, 1, 3,
+  false, false, 455, descriptor_table_protodef_RequestBasicInfo_2eproto, "RequestBasicInfo.proto", 
+  &descriptor_table_RequestBasicInfo_2eproto_once, descriptor_table_RequestBasicInfo_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_RequestBasicInfo_2eproto::offsets,
-  file_level_metadata_RequestBasicInfo_2eproto, 1, file_level_enum_descriptors_RequestBasicInfo_2eproto, file_level_service_descriptors_RequestBasicInfo_2eproto,
+  file_level_metadata_RequestBasicInfo_2eproto, file_level_enum_descriptors_RequestBasicInfo_2eproto, file_level_service_descriptors_RequestBasicInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_RequestBasicInfo_2eproto_getter() {
+  return &descriptor_table_RequestBasicInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_RequestBasicInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_RequestBasicInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_RequestBasicInfo_2eproto(&descriptor_table_RequestBasicInfo_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -124,19 +131,19 @@ RequestBasicInfo::_Internal::envinfo(const RequestBasicInfo* msg) {
   return *msg->envinfo_;
 }
 void RequestBasicInfo::clear_appinfo() {
-  if (GetArena() == nullptr && appinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && appinfo_ != nullptr) {
     delete appinfo_;
   }
   appinfo_ = nullptr;
 }
 void RequestBasicInfo::clear_deviceinfo() {
-  if (GetArena() == nullptr && deviceinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && deviceinfo_ != nullptr) {
     delete deviceinfo_;
   }
   deviceinfo_ = nullptr;
 }
 void RequestBasicInfo::clear_envinfo() {
-  if (GetArena() == nullptr && envinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && envinfo_ != nullptr) {
     delete envinfo_;
   }
   envinfo_ = nullptr;
@@ -153,32 +160,42 @@ RequestBasicInfo::RequestBasicInfo(const RequestBasicInfo& from)
   deviceid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_deviceid().empty()) {
     deviceid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_deviceid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   clientip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_clientip().empty()) {
     clientip_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_clientip(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appversion().empty()) {
     appversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appversion(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_channel().empty()) {
     channel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_channel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   location_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_location().empty()) {
     location_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_location(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpf().empty()) {
     kpf_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpf(), 
-      GetArena());
+      GetArenaForAllocation());
+  }
+  clientipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_clientipv6().empty()) {
+    clientipv6_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_clientipv6(), 
+      GetArenaForAllocation());
+  }
+  countrycode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_countrycode().empty()) {
+    countrycode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_countrycode(), 
+      GetArenaForAllocation());
   }
   if (from._internal_has_appinfo()) {
     appinfo_ = new ::AcFunDanmu::AppInfo(*from.appinfo_);
@@ -202,17 +219,18 @@ RequestBasicInfo::RequestBasicInfo(const RequestBasicInfo& from)
 }
 
 void RequestBasicInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RequestBasicInfo_RequestBasicInfo_2eproto.base);
-  deviceid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  clientip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  location_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&appinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&clientport_) -
-      reinterpret_cast<char*>(&appinfo_)) + sizeof(clientport_));
+deviceid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+clientip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+channel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+location_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+clientipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+countrycode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&appinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&clientport_) -
+    reinterpret_cast<char*>(&appinfo_)) + sizeof(clientport_));
 }
 
 RequestBasicInfo::~RequestBasicInfo() {
@@ -222,13 +240,15 @@ RequestBasicInfo::~RequestBasicInfo() {
 }
 
 void RequestBasicInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   deviceid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   clientip_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   appversion_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   channel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   location_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   kpf_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  clientipv6_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  countrycode_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete appinfo_;
   if (this != internal_default_instance()) delete deviceinfo_;
   if (this != internal_default_instance()) delete envinfo_;
@@ -243,11 +263,6 @@ void RequestBasicInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void RequestBasicInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const RequestBasicInfo& RequestBasicInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RequestBasicInfo_RequestBasicInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void RequestBasicInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.RequestBasicInfo)
@@ -261,15 +276,17 @@ void RequestBasicInfo::Clear() {
   channel_.ClearToEmpty();
   location_.ClearToEmpty();
   kpf_.ClearToEmpty();
-  if (GetArena() == nullptr && appinfo_ != nullptr) {
+  clientipv6_.ClearToEmpty();
+  countrycode_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && appinfo_ != nullptr) {
     delete appinfo_;
   }
   appinfo_ = nullptr;
-  if (GetArena() == nullptr && deviceinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && deviceinfo_ != nullptr) {
     delete deviceinfo_;
   }
   deviceinfo_ = nullptr;
-  if (GetArena() == nullptr && envinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && envinfo_ != nullptr) {
     delete envinfo_;
   }
   envinfo_ = nullptr;
@@ -284,7 +301,6 @@ const char* RequestBasicInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.DeviceInfo.PlatformType clientType = 1;
       case 1:
@@ -376,9 +392,28 @@ const char* RequestBasicInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // string clientIpV6 = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+          auto str = _internal_mutable_clientipv6();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.RequestBasicInfo.clientIpV6"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string countryCode = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+          auto str = _internal_mutable_countrycode();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.RequestBasicInfo.countryCode"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -412,7 +447,7 @@ failure:
   }
 
   // string deviceId = 2;
-  if (this->deviceid().size() > 0) {
+  if (!this->deviceid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_deviceid().data(), static_cast<int>(this->_internal_deviceid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -422,7 +457,7 @@ failure:
   }
 
   // string clientIp = 3;
-  if (this->clientip().size() > 0) {
+  if (!this->clientip().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_clientip().data(), static_cast<int>(this->_internal_clientip().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -432,7 +467,7 @@ failure:
   }
 
   // string appVersion = 4;
-  if (this->appversion().size() > 0) {
+  if (!this->appversion().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appversion().data(), static_cast<int>(this->_internal_appversion().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -442,7 +477,7 @@ failure:
   }
 
   // string channel = 5;
-  if (this->channel().size() > 0) {
+  if (!this->channel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_channel().data(), static_cast<int>(this->_internal_channel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -482,7 +517,7 @@ failure:
   }
 
   // string location = 10;
-  if (this->location().size() > 0) {
+  if (!this->location().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_location().data(), static_cast<int>(this->_internal_location().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -492,13 +527,33 @@ failure:
   }
 
   // string kpf = 11;
-  if (this->kpf().size() > 0) {
+  if (!this->kpf().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_kpf().data(), static_cast<int>(this->_internal_kpf().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "AcFunDanmu.RequestBasicInfo.kpf");
     target = stream->WriteStringMaybeAliased(
         11, this->_internal_kpf(), target);
+  }
+
+  // string clientIpV6 = 12;
+  if (!this->clientipv6().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_clientipv6().data(), static_cast<int>(this->_internal_clientipv6().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "AcFunDanmu.RequestBasicInfo.clientIpV6");
+    target = stream->WriteStringMaybeAliased(
+        12, this->_internal_clientipv6(), target);
+  }
+
+  // string countryCode = 13;
+  if (!this->countrycode().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_countrycode().data(), static_cast<int>(this->_internal_countrycode().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "AcFunDanmu.RequestBasicInfo.countryCode");
+    target = stream->WriteStringMaybeAliased(
+        13, this->_internal_countrycode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -518,45 +573,59 @@ size_t RequestBasicInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string deviceId = 2;
-  if (this->deviceid().size() > 0) {
+  if (!this->deviceid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_deviceid());
   }
 
   // string clientIp = 3;
-  if (this->clientip().size() > 0) {
+  if (!this->clientip().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_clientip());
   }
 
   // string appVersion = 4;
-  if (this->appversion().size() > 0) {
+  if (!this->appversion().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_appversion());
   }
 
   // string channel = 5;
-  if (this->channel().size() > 0) {
+  if (!this->channel().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_channel());
   }
 
   // string location = 10;
-  if (this->location().size() > 0) {
+  if (!this->location().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_location());
   }
 
   // string kpf = 11;
-  if (this->kpf().size() > 0) {
+  if (!this->kpf().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_kpf());
+  }
+
+  // string clientIpV6 = 12;
+  if (!this->clientipv6().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_clientipv6());
+  }
+
+  // string countryCode = 13;
+  if (!this->countrycode().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_countrycode());
   }
 
   // .AcFunDanmu.AppInfo appInfo = 6;
@@ -624,23 +693,29 @@ void RequestBasicInfo::MergeFrom(const RequestBasicInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.deviceid().size() > 0) {
+  if (!from.deviceid().empty()) {
     _internal_set_deviceid(from._internal_deviceid());
   }
-  if (from.clientip().size() > 0) {
+  if (!from.clientip().empty()) {
     _internal_set_clientip(from._internal_clientip());
   }
-  if (from.appversion().size() > 0) {
+  if (!from.appversion().empty()) {
     _internal_set_appversion(from._internal_appversion());
   }
-  if (from.channel().size() > 0) {
+  if (!from.channel().empty()) {
     _internal_set_channel(from._internal_channel());
   }
-  if (from.location().size() > 0) {
+  if (!from.location().empty()) {
     _internal_set_location(from._internal_location());
   }
-  if (from.kpf().size() > 0) {
+  if (!from.kpf().empty()) {
     _internal_set_kpf(from._internal_kpf());
+  }
+  if (!from.clientipv6().empty()) {
+    _internal_set_clientipv6(from._internal_clientipv6());
+  }
+  if (!from.countrycode().empty()) {
+    _internal_set_countrycode(from._internal_countrycode());
   }
   if (from.has_appinfo()) {
     _internal_mutable_appinfo()->::AcFunDanmu::AppInfo::MergeFrom(from._internal_appinfo());
@@ -679,13 +754,47 @@ bool RequestBasicInfo::IsInitialized() const {
 
 void RequestBasicInfo::InternalSwap(RequestBasicInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  deviceid_.Swap(&other->deviceid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  clientip_.Swap(&other->clientip_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  appversion_.Swap(&other->appversion_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  channel_.Swap(&other->channel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  location_.Swap(&other->location_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  kpf_.Swap(&other->kpf_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &deviceid_, GetArenaForAllocation(),
+      &other->deviceid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &clientip_, GetArenaForAllocation(),
+      &other->clientip_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &appversion_, GetArenaForAllocation(),
+      &other->appversion_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &channel_, GetArenaForAllocation(),
+      &other->channel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &location_, GetArenaForAllocation(),
+      &other->location_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &kpf_, GetArenaForAllocation(),
+      &other->kpf_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &clientipv6_, GetArenaForAllocation(),
+      &other->clientipv6_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &countrycode_, GetArenaForAllocation(),
+      &other->countrycode_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(RequestBasicInfo, clientport_)
       + sizeof(RequestBasicInfo::clientport_)
@@ -695,9 +804,10 @@ void RequestBasicInfo::InternalSwap(RequestBasicInfo* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RequestBasicInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_RequestBasicInfo_2eproto_getter, &descriptor_table_RequestBasicInfo_2eproto_once,
+      file_level_metadata_RequestBasicInfo_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

@@ -14,44 +14,39 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_ZtDrawGiftInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtDrawGiftInfo_ZtDrawPoint> _instance;
-} _ZtDrawGiftInfo_ZtDrawPoint_default_instance_;
-class ZtDrawGiftInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtDrawGiftInfo> _instance;
-} _ZtDrawGiftInfo_default_instance_;
+constexpr ZtDrawGiftInfo_ZtDrawPoint::ZtDrawGiftInfo_ZtDrawPoint(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : marginleft_(int64_t{0})
+  , margintop_(int64_t{0})
+  , scaleratio_(0)
+  , handup_(false){}
+struct ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal {
+  constexpr ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal() {}
+  union {
+    ZtDrawGiftInfo_ZtDrawPoint _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal _ZtDrawGiftInfo_ZtDrawPoint_default_instance_;
+constexpr ZtDrawGiftInfo::ZtDrawGiftInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : drawpoint_()
+  , screenwidth_(int64_t{0})
+  , screenheight_(int64_t{0}){}
+struct ZtDrawGiftInfoDefaultTypeInternal {
+  constexpr ZtDrawGiftInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtDrawGiftInfoDefaultTypeInternal() {}
+  union {
+    ZtDrawGiftInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtDrawGiftInfoDefaultTypeInternal _ZtDrawGiftInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtDrawGiftInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtDrawGiftInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto}, {
-      &scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto.base,}};
-
-static void InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtDrawGiftInfo_ZtDrawPoint_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtDrawGiftInfo_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtDrawGiftInfo_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtDrawGiftInfo_2eproto = nullptr;
@@ -94,22 +89,19 @@ const char descriptor_table_protodef_ZtDrawGiftInfo_2eproto[] PROTOBUF_SECTION_V
   "Top\030\002 \001(\003\022\022\n\nscaleRatio\030\003 \001(\001\022\016\n\006handup\030"
   "\004 \001(\010b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtDrawGiftInfo_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtDrawGiftInfo_2eproto_sccs[2] = {
-  &scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto.base,
-  &scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtDrawGiftInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtDrawGiftInfo_2eproto = {
-  false, false, descriptor_table_protodef_ZtDrawGiftInfo_2eproto, "ZtDrawGiftInfo.proto", 253,
-  &descriptor_table_ZtDrawGiftInfo_2eproto_once, descriptor_table_ZtDrawGiftInfo_2eproto_sccs, descriptor_table_ZtDrawGiftInfo_2eproto_deps, 2, 0,
+  false, false, 253, descriptor_table_protodef_ZtDrawGiftInfo_2eproto, "ZtDrawGiftInfo.proto", 
+  &descriptor_table_ZtDrawGiftInfo_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_ZtDrawGiftInfo_2eproto::offsets,
-  file_level_metadata_ZtDrawGiftInfo_2eproto, 2, file_level_enum_descriptors_ZtDrawGiftInfo_2eproto, file_level_service_descriptors_ZtDrawGiftInfo_2eproto,
+  file_level_metadata_ZtDrawGiftInfo_2eproto, file_level_enum_descriptors_ZtDrawGiftInfo_2eproto, file_level_service_descriptors_ZtDrawGiftInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtDrawGiftInfo_2eproto_getter() {
+  return &descriptor_table_ZtDrawGiftInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtDrawGiftInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtDrawGiftInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtDrawGiftInfo_2eproto(&descriptor_table_ZtDrawGiftInfo_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -134,10 +126,10 @@ ZtDrawGiftInfo_ZtDrawPoint::ZtDrawGiftInfo_ZtDrawPoint(const ZtDrawGiftInfo_ZtDr
 }
 
 void ZtDrawGiftInfo_ZtDrawPoint::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&marginleft_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&handup_) -
-      reinterpret_cast<char*>(&marginleft_)) + sizeof(handup_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&marginleft_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&handup_) -
+    reinterpret_cast<char*>(&marginleft_)) + sizeof(handup_));
 }
 
 ZtDrawGiftInfo_ZtDrawPoint::~ZtDrawGiftInfo_ZtDrawPoint() {
@@ -147,7 +139,7 @@ ZtDrawGiftInfo_ZtDrawPoint::~ZtDrawGiftInfo_ZtDrawPoint() {
 }
 
 void ZtDrawGiftInfo_ZtDrawPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void ZtDrawGiftInfo_ZtDrawPoint::ArenaDtor(void* object) {
@@ -159,11 +151,6 @@ void ZtDrawGiftInfo_ZtDrawPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void ZtDrawGiftInfo_ZtDrawPoint::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtDrawGiftInfo_ZtDrawPoint& ZtDrawGiftInfo_ZtDrawPoint::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtDrawGiftInfo_ZtDrawPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
@@ -182,7 +169,6 @@ const char* ZtDrawGiftInfo_ZtDrawPoint::_InternalParse(const char* ptr, ::PROTOB
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int64 marginLeft = 1;
       case 1:
@@ -214,7 +200,8 @@ const char* ZtDrawGiftInfo_ZtDrawPoint::_InternalParse(const char* ptr, ::PROTOB
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -369,7 +356,7 @@ bool ZtDrawGiftInfo_ZtDrawPoint::IsInitialized() const {
 
 void ZtDrawGiftInfo_ZtDrawPoint::InternalSwap(ZtDrawGiftInfo_ZtDrawPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo_ZtDrawPoint, handup_)
       + sizeof(ZtDrawGiftInfo_ZtDrawPoint::handup_)
@@ -379,9 +366,10 @@ void ZtDrawGiftInfo_ZtDrawPoint::InternalSwap(ZtDrawGiftInfo_ZtDrawPoint* other)
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtDrawGiftInfo_ZtDrawPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtDrawGiftInfo_2eproto_getter, &descriptor_table_ZtDrawGiftInfo_2eproto_once,
+      file_level_metadata_ZtDrawGiftInfo_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -407,11 +395,10 @@ ZtDrawGiftInfo::ZtDrawGiftInfo(const ZtDrawGiftInfo& from)
 }
 
 void ZtDrawGiftInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&screenwidth_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&screenheight_) -
-      reinterpret_cast<char*>(&screenwidth_)) + sizeof(screenheight_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&screenwidth_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&screenheight_) -
+    reinterpret_cast<char*>(&screenwidth_)) + sizeof(screenheight_));
 }
 
 ZtDrawGiftInfo::~ZtDrawGiftInfo() {
@@ -421,7 +408,7 @@ ZtDrawGiftInfo::~ZtDrawGiftInfo() {
 }
 
 void ZtDrawGiftInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void ZtDrawGiftInfo::ArenaDtor(void* object) {
@@ -433,11 +420,6 @@ void ZtDrawGiftInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtDrawGiftInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtDrawGiftInfo& ZtDrawGiftInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtDrawGiftInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtDrawGiftInfo)
@@ -457,7 +439,6 @@ const char* ZtDrawGiftInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int64 screenWidth = 1;
       case 1:
@@ -487,7 +468,8 @@ const char* ZtDrawGiftInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -630,7 +612,7 @@ bool ZtDrawGiftInfo::IsInitialized() const {
 
 void ZtDrawGiftInfo::InternalSwap(ZtDrawGiftInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   drawpoint_.InternalSwap(&other->drawpoint_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo, screenheight_)
@@ -641,9 +623,10 @@ void ZtDrawGiftInfo::InternalSwap(ZtDrawGiftInfo* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtDrawGiftInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtDrawGiftInfo_2eproto_getter, &descriptor_table_ZtDrawGiftInfo_2eproto_once,
+      file_level_metadata_ZtDrawGiftInfo_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

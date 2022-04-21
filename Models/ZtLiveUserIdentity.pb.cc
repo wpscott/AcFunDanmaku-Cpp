@@ -14,25 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtLiveUserIdentityDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveUserIdentity> _instance;
-} _ZtLiveUserIdentity_default_instance_;
+constexpr ZtLiveUserIdentity::ZtLiveUserIdentity(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : managertype_(0)
+{}
+struct ZtLiveUserIdentityDefaultTypeInternal {
+  constexpr ZtLiveUserIdentityDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveUserIdentityDefaultTypeInternal() {}
+  union {
+    ZtLiveUserIdentity _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveUserIdentityDefaultTypeInternal _ZtLiveUserIdentity_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveUserIdentity_ZtLiveUserIdentity_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveUserIdentity_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveUserIdentity();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveUserIdentity_ZtLiveUserIdentity_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveUserIdentity_ZtLiveUserIdentity_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveUserIdentity_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_ZtLiveUserIdentity_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveUserIdentity_2eproto = nullptr;
@@ -60,21 +58,19 @@ const char descriptor_table_protodef_ZtLiveUserIdentity_2eproto[] PROTOBUF_SECTI
   "erType\"3\n\013ManagerType\022\030\n\024UNKNOWN_MANAGER"
   "_TYPE\020\000\022\n\n\006NORMAL\020\001b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveUserIdentity_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveUserIdentity_2eproto_sccs[1] = {
-  &scc_info_ZtLiveUserIdentity_ZtLiveUserIdentity_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveUserIdentity_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveUserIdentity_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveUserIdentity_2eproto, "ZtLiveUserIdentity.proto", 187,
-  &descriptor_table_ZtLiveUserIdentity_2eproto_once, descriptor_table_ZtLiveUserIdentity_2eproto_sccs, descriptor_table_ZtLiveUserIdentity_2eproto_deps, 1, 0,
+  false, false, 187, descriptor_table_protodef_ZtLiveUserIdentity_2eproto, "ZtLiveUserIdentity.proto", 
+  &descriptor_table_ZtLiveUserIdentity_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_ZtLiveUserIdentity_2eproto::offsets,
-  file_level_metadata_ZtLiveUserIdentity_2eproto, 1, file_level_enum_descriptors_ZtLiveUserIdentity_2eproto, file_level_service_descriptors_ZtLiveUserIdentity_2eproto,
+  file_level_metadata_ZtLiveUserIdentity_2eproto, file_level_enum_descriptors_ZtLiveUserIdentity_2eproto, file_level_service_descriptors_ZtLiveUserIdentity_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtLiveUserIdentity_2eproto_getter() {
+  return &descriptor_table_ZtLiveUserIdentity_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveUserIdentity_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveUserIdentity_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtLiveUserIdentity_2eproto(&descriptor_table_ZtLiveUserIdentity_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ZtLiveUserIdentity_ManagerType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ZtLiveUserIdentity_2eproto);
@@ -118,7 +114,7 @@ ZtLiveUserIdentity::ZtLiveUserIdentity(const ZtLiveUserIdentity& from)
 }
 
 void ZtLiveUserIdentity::SharedCtor() {
-  managertype_ = 0;
+managertype_ = 0;
 }
 
 ZtLiveUserIdentity::~ZtLiveUserIdentity() {
@@ -128,7 +124,7 @@ ZtLiveUserIdentity::~ZtLiveUserIdentity() {
 }
 
 void ZtLiveUserIdentity::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void ZtLiveUserIdentity::ArenaDtor(void* object) {
@@ -140,11 +136,6 @@ void ZtLiveUserIdentity::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveUserIdentity::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveUserIdentity& ZtLiveUserIdentity::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveUserIdentity_ZtLiveUserIdentity_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveUserIdentity::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveUserIdentity)
@@ -161,7 +152,6 @@ const char* ZtLiveUserIdentity::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserIdentity.ManagerType managerType = 1;
       case 1:
@@ -173,7 +163,8 @@ const char* ZtLiveUserIdentity::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -284,14 +275,15 @@ bool ZtLiveUserIdentity::IsInitialized() const {
 
 void ZtLiveUserIdentity::InternalSwap(ZtLiveUserIdentity* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(managertype_, other->managertype_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveUserIdentity::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveUserIdentity_2eproto_getter, &descriptor_table_ZtLiveUserIdentity_2eproto_once,
+      file_level_metadata_ZtLiveUserIdentity_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

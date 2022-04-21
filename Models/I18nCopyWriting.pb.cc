@@ -14,25 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class I18nCopyWritingDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<I18nCopyWriting> _instance;
-} _I18nCopyWriting_default_instance_;
+constexpr I18nCopyWriting::I18nCopyWriting(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : formatparam_()
+  , formatkey_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct I18nCopyWritingDefaultTypeInternal {
+  constexpr I18nCopyWritingDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~I18nCopyWritingDefaultTypeInternal() {}
+  union {
+    I18nCopyWriting _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT I18nCopyWritingDefaultTypeInternal _I18nCopyWriting_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_I18nCopyWriting_I18nCopyWriting_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_I18nCopyWriting_default_instance_;
-    new (ptr) ::AcFunDanmu::I18nCopyWriting();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_I18nCopyWriting_I18nCopyWriting_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_I18nCopyWriting_I18nCopyWriting_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_I18nCopyWriting_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_I18nCopyWriting_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_I18nCopyWriting_2eproto = nullptr;
@@ -59,21 +57,19 @@ const char descriptor_table_protodef_I18nCopyWriting_2eproto[] PROTOBUF_SECTION_
   "18nCopyWriting\022\021\n\tformatKey\030\001 \001(\t\022\023\n\013for"
   "matParam\030\002 \003(\tb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_I18nCopyWriting_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_I18nCopyWriting_2eproto_sccs[1] = {
-  &scc_info_I18nCopyWriting_I18nCopyWriting_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_I18nCopyWriting_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_I18nCopyWriting_2eproto = {
-  false, false, descriptor_table_protodef_I18nCopyWriting_2eproto, "I18nCopyWriting.proto", 102,
-  &descriptor_table_I18nCopyWriting_2eproto_once, descriptor_table_I18nCopyWriting_2eproto_sccs, descriptor_table_I18nCopyWriting_2eproto_deps, 1, 0,
+  false, false, 102, descriptor_table_protodef_I18nCopyWriting_2eproto, "I18nCopyWriting.proto", 
+  &descriptor_table_I18nCopyWriting_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_I18nCopyWriting_2eproto::offsets,
-  file_level_metadata_I18nCopyWriting_2eproto, 1, file_level_enum_descriptors_I18nCopyWriting_2eproto, file_level_service_descriptors_I18nCopyWriting_2eproto,
+  file_level_metadata_I18nCopyWriting_2eproto, file_level_enum_descriptors_I18nCopyWriting_2eproto, file_level_service_descriptors_I18nCopyWriting_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_I18nCopyWriting_2eproto_getter() {
+  return &descriptor_table_I18nCopyWriting_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_I18nCopyWriting_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_I18nCopyWriting_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_I18nCopyWriting_2eproto(&descriptor_table_I18nCopyWriting_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -96,14 +92,13 @@ I18nCopyWriting::I18nCopyWriting(const I18nCopyWriting& from)
   formatkey_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_formatkey().empty()) {
     formatkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_formatkey(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.I18nCopyWriting)
 }
 
 void I18nCopyWriting::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_I18nCopyWriting_I18nCopyWriting_2eproto.base);
-  formatkey_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+formatkey_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 I18nCopyWriting::~I18nCopyWriting() {
@@ -113,7 +108,7 @@ I18nCopyWriting::~I18nCopyWriting() {
 }
 
 void I18nCopyWriting::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   formatkey_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -126,11 +121,6 @@ void I18nCopyWriting::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void I18nCopyWriting::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const I18nCopyWriting& I18nCopyWriting::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_I18nCopyWriting_I18nCopyWriting_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void I18nCopyWriting::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.I18nCopyWriting)
@@ -148,7 +138,6 @@ const char* I18nCopyWriting::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string formatKey = 1;
       case 1:
@@ -175,7 +164,8 @@ const char* I18nCopyWriting::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -202,7 +192,7 @@ failure:
   (void) cached_has_bits;
 
   // string formatKey = 1;
-  if (this->formatkey().size() > 0) {
+  if (!this->formatkey().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_formatkey().data(), static_cast<int>(this->_internal_formatkey().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -246,7 +236,7 @@ size_t I18nCopyWriting::ByteSizeLong() const {
   }
 
   // string formatKey = 1;
-  if (this->formatkey().size() > 0) {
+  if (!this->formatkey().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_formatkey());
@@ -284,7 +274,7 @@ void I18nCopyWriting::MergeFrom(const I18nCopyWriting& from) {
   (void) cached_has_bits;
 
   formatparam_.MergeFrom(from.formatparam_);
-  if (from.formatkey().size() > 0) {
+  if (!from.formatkey().empty()) {
     _internal_set_formatkey(from._internal_formatkey());
   }
 }
@@ -309,15 +299,20 @@ bool I18nCopyWriting::IsInitialized() const {
 
 void I18nCopyWriting::InternalSwap(I18nCopyWriting* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   formatparam_.InternalSwap(&other->formatparam_);
-  formatkey_.Swap(&other->formatkey_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &formatkey_, GetArenaForAllocation(),
+      &other->formatkey_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata I18nCopyWriting::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_I18nCopyWriting_2eproto_getter, &descriptor_table_I18nCopyWriting_2eproto_once,
+      file_level_metadata_I18nCopyWriting_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

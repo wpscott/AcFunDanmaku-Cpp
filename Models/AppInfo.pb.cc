@@ -14,43 +14,38 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_AppInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class AppInfo_ExtensionInfoEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppInfo_ExtensionInfoEntry_DoNotUse> _instance;
-} _AppInfo_ExtensionInfoEntry_DoNotUse_default_instance_;
-class AppInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppInfo> _instance;
-} _AppInfo_default_instance_;
+constexpr AppInfo_ExtensionInfoEntry_DoNotUse::AppInfo_ExtensionInfoEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct AppInfo_ExtensionInfoEntry_DoNotUseDefaultTypeInternal {
+  constexpr AppInfo_ExtensionInfoEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AppInfo_ExtensionInfoEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    AppInfo_ExtensionInfoEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppInfo_ExtensionInfoEntry_DoNotUseDefaultTypeInternal _AppInfo_ExtensionInfoEntry_DoNotUse_default_instance_;
+constexpr AppInfo::AppInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : extensioninfo_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , appname_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , appversion_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , appchannel_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , sdkversion_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , linkversion_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct AppInfoDefaultTypeInternal {
+  constexpr AppInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AppInfoDefaultTypeInternal() {}
+  union {
+    AppInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppInfoDefaultTypeInternal _AppInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_AppInfo_AppInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_AppInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::AppInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AppInfo_AppInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_AppInfo_AppInfo_2eproto}, {
-      &scc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2eproto.base,}};
-
-static void InitDefaultsscc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_AppInfo_ExtensionInfoEntry_DoNotUse_default_instance_;
-    new (ptr) ::AcFunDanmu::AppInfo_ExtensionInfoEntry_DoNotUse();
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AppInfo_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_AppInfo_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_AppInfo_2eproto = nullptr;
@@ -74,6 +69,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppInfo_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AppInfo, appversion_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AppInfo, appchannel_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AppInfo, sdkversion_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AppInfo, linkversion_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AppInfo, extensioninfo_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -87,30 +83,27 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AppInfo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rAppInfo.proto\022\nAcFunDanmu\"\313\001\n\007AppInfo\022"
+  "\n\rAppInfo.proto\022\nAcFunDanmu\"\340\001\n\007AppInfo\022"
   "\017\n\007appName\030\001 \001(\t\022\022\n\nappVersion\030\002 \001(\t\022\022\n\n"
-  "appChannel\030\003 \001(\t\022\022\n\nsdkVersion\030\004 \001(\t\022=\n\r"
-  "extensionInfo\030\013 \003(\0132&.AcFunDanmu.AppInfo"
-  ".ExtensionInfoEntry\0324\n\022ExtensionInfoEntr"
-  "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001b\006proto"
-  "3"
+  "appChannel\030\003 \001(\t\022\022\n\nsdkVersion\030\004 \001(\t\022\023\n\013"
+  "linkVersion\030\005 \001(\t\022=\n\rextensionInfo\030\013 \003(\013"
+  "2&.AcFunDanmu.AppInfo.ExtensionInfoEntry"
+  "\0324\n\022ExtensionInfoEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v"
+  "alue\030\002 \001(\t:\0028\001b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppInfo_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AppInfo_2eproto_sccs[2] = {
-  &scc_info_AppInfo_AppInfo_2eproto.base,
-  &scc_info_AppInfo_ExtensionInfoEntry_DoNotUse_AppInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppInfo_2eproto = {
-  false, false, descriptor_table_protodef_AppInfo_2eproto, "AppInfo.proto", 241,
-  &descriptor_table_AppInfo_2eproto_once, descriptor_table_AppInfo_2eproto_sccs, descriptor_table_AppInfo_2eproto_deps, 2, 0,
+  false, false, 262, descriptor_table_protodef_AppInfo_2eproto, "AppInfo.proto", 
+  &descriptor_table_AppInfo_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_AppInfo_2eproto::offsets,
-  file_level_metadata_AppInfo_2eproto, 2, file_level_enum_descriptors_AppInfo_2eproto, file_level_service_descriptors_AppInfo_2eproto,
+  file_level_metadata_AppInfo_2eproto, file_level_enum_descriptors_AppInfo_2eproto, file_level_service_descriptors_AppInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_AppInfo_2eproto_getter() {
+  return &descriptor_table_AppInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_AppInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_AppInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_AppInfo_2eproto(&descriptor_table_AppInfo_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -122,7 +115,9 @@ void AppInfo_ExtensionInfoEntry_DoNotUse::MergeFrom(const AppInfo_ExtensionInfoE
   MergeFromInternal(other);
 }
 ::PROTOBUF_NAMESPACE_ID::Metadata AppInfo_ExtensionInfoEntry_DoNotUse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_AppInfo_2eproto_getter, &descriptor_table_AppInfo_2eproto_once,
+      file_level_metadata_AppInfo_2eproto[0]);
 }
 void AppInfo_ExtensionInfoEntry_DoNotUse::MergeFrom(
     const ::PROTOBUF_NAMESPACE_ID::Message& other) {
@@ -150,32 +145,37 @@ AppInfo::AppInfo(const AppInfo& from)
   appname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appname().empty()) {
     appname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appname(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appversion().empty()) {
     appversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appversion(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   appchannel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appchannel().empty()) {
     appchannel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appchannel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   sdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sdkversion().empty()) {
     sdkversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sdkversion(), 
-      GetArena());
+      GetArenaForAllocation());
+  }
+  linkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_linkversion().empty()) {
+    linkversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_linkversion(), 
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AppInfo)
 }
 
 void AppInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppInfo_AppInfo_2eproto.base);
-  appname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  appchannel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+appname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+appversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+appchannel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+sdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+linkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 AppInfo::~AppInfo() {
@@ -185,27 +185,27 @@ AppInfo::~AppInfo() {
 }
 
 void AppInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   appname_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   appversion_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   appchannel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   sdkversion_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  linkversion_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void AppInfo::ArenaDtor(void* object) {
   AppInfo* _this = reinterpret_cast< AppInfo* >(object);
   (void)_this;
+  _this->extensioninfo_. ~MapField();
 }
-void AppInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+inline void AppInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena) {
+  if (arena != nullptr) {
+    arena->OwnCustomDestructor(this, &AppInfo::ArenaDtor);
+  }
 }
 void AppInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AppInfo& AppInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppInfo_AppInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void AppInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.AppInfo)
@@ -218,6 +218,7 @@ void AppInfo::Clear() {
   appversion_.ClearToEmpty();
   appchannel_.ClearToEmpty();
   sdkversion_.ClearToEmpty();
+  linkversion_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -226,7 +227,6 @@ const char* AppInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string appName = 1;
       case 1:
@@ -264,6 +264,15 @@ const char* AppInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // string linkVersion = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_linkversion();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.AppInfo.linkVersion"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // map<string, string> extensionInfo = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
@@ -278,7 +287,8 @@ const char* AppInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -305,7 +315,7 @@ failure:
   (void) cached_has_bits;
 
   // string appName = 1;
-  if (this->appname().size() > 0) {
+  if (!this->appname().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appname().data(), static_cast<int>(this->_internal_appname().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -315,7 +325,7 @@ failure:
   }
 
   // string appVersion = 2;
-  if (this->appversion().size() > 0) {
+  if (!this->appversion().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appversion().data(), static_cast<int>(this->_internal_appversion().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -325,7 +335,7 @@ failure:
   }
 
   // string appChannel = 3;
-  if (this->appchannel().size() > 0) {
+  if (!this->appchannel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appchannel().data(), static_cast<int>(this->_internal_appchannel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -335,13 +345,23 @@ failure:
   }
 
   // string sdkVersion = 4;
-  if (this->sdkversion().size() > 0) {
+  if (!this->sdkversion().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_sdkversion().data(), static_cast<int>(this->_internal_sdkversion().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "AcFunDanmu.AppInfo.sdkVersion");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_sdkversion(), target);
+  }
+
+  // string linkVersion = 5;
+  if (!this->linkversion().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_linkversion().data(), static_cast<int>(this->_internal_linkversion().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "AcFunDanmu.AppInfo.linkVersion");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_linkversion(), target);
   }
 
   // map<string, string> extensionInfo = 11;
@@ -352,6 +372,7 @@ failure:
     typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
     struct Utf8Check {
       static void Check(ConstPtr p) {
+        (void)p;
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
           ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -415,31 +436,38 @@ size_t AppInfo::ByteSizeLong() const {
   }
 
   // string appName = 1;
-  if (this->appname().size() > 0) {
+  if (!this->appname().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_appname());
   }
 
   // string appVersion = 2;
-  if (this->appversion().size() > 0) {
+  if (!this->appversion().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_appversion());
   }
 
   // string appChannel = 3;
-  if (this->appchannel().size() > 0) {
+  if (!this->appchannel().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_appchannel());
   }
 
   // string sdkVersion = 4;
-  if (this->sdkversion().size() > 0) {
+  if (!this->sdkversion().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_sdkversion());
+  }
+
+  // string linkVersion = 5;
+  if (!this->linkversion().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_linkversion());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -474,17 +502,20 @@ void AppInfo::MergeFrom(const AppInfo& from) {
   (void) cached_has_bits;
 
   extensioninfo_.MergeFrom(from.extensioninfo_);
-  if (from.appname().size() > 0) {
+  if (!from.appname().empty()) {
     _internal_set_appname(from._internal_appname());
   }
-  if (from.appversion().size() > 0) {
+  if (!from.appversion().empty()) {
     _internal_set_appversion(from._internal_appversion());
   }
-  if (from.appchannel().size() > 0) {
+  if (!from.appchannel().empty()) {
     _internal_set_appchannel(from._internal_appchannel());
   }
-  if (from.sdkversion().size() > 0) {
+  if (!from.sdkversion().empty()) {
     _internal_set_sdkversion(from._internal_sdkversion());
+  }
+  if (!from.linkversion().empty()) {
+    _internal_set_linkversion(from._internal_linkversion());
   }
 }
 
@@ -508,18 +539,40 @@ bool AppInfo::IsInitialized() const {
 
 void AppInfo::InternalSwap(AppInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  extensioninfo_.Swap(&other->extensioninfo_);
-  appname_.Swap(&other->appname_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  appversion_.Swap(&other->appversion_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  appchannel_.Swap(&other->appchannel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sdkversion_.Swap(&other->sdkversion_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  extensioninfo_.InternalSwap(&other->extensioninfo_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &appname_, GetArenaForAllocation(),
+      &other->appname_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &appversion_, GetArenaForAllocation(),
+      &other->appversion_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &appchannel_, GetArenaForAllocation(),
+      &other->appchannel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &sdkversion_, GetArenaForAllocation(),
+      &other->sdkversion_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &linkversion_, GetArenaForAllocation(),
+      &other->linkversion_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_AppInfo_2eproto_getter, &descriptor_table_AppInfo_2eproto_once,
+      file_level_metadata_AppInfo_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

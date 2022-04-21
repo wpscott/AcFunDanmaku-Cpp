@@ -14,25 +14,24 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class EnvInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<EnvInfo> _instance;
-} _EnvInfo_default_instance_;
+constexpr EnvInfo::EnvInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : appname_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , networktype_(0)
+{}
+struct EnvInfoDefaultTypeInternal {
+  constexpr EnvInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~EnvInfoDefaultTypeInternal() {}
+  union {
+    EnvInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EnvInfoDefaultTypeInternal _EnvInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_EnvInfo_EnvInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_EnvInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::EnvInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_EnvInfo_EnvInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_EnvInfo_EnvInfo_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_EnvInfo_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_EnvInfo_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_EnvInfo_2eproto = nullptr;
@@ -61,21 +60,19 @@ const char descriptor_table_protodef_EnvInfo_2eproto[] PROTOBUF_SECTION_VARIABLE
   "kType\022\014\n\010kInvalid\020\000\022\t\n\005kWIFI\020\001\022\r\n\tkCellu"
   "lar\020\002b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_EnvInfo_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_EnvInfo_2eproto_sccs[1] = {
-  &scc_info_EnvInfo_EnvInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_EnvInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_EnvInfo_2eproto = {
-  false, false, descriptor_table_protodef_EnvInfo_2eproto, "EnvInfo.proto", 173,
-  &descriptor_table_EnvInfo_2eproto_once, descriptor_table_EnvInfo_2eproto_sccs, descriptor_table_EnvInfo_2eproto_deps, 1, 0,
+  false, false, 173, descriptor_table_protodef_EnvInfo_2eproto, "EnvInfo.proto", 
+  &descriptor_table_EnvInfo_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_EnvInfo_2eproto::offsets,
-  file_level_metadata_EnvInfo_2eproto, 1, file_level_enum_descriptors_EnvInfo_2eproto, file_level_service_descriptors_EnvInfo_2eproto,
+  file_level_metadata_EnvInfo_2eproto, file_level_enum_descriptors_EnvInfo_2eproto, file_level_service_descriptors_EnvInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_EnvInfo_2eproto_getter() {
+  return &descriptor_table_EnvInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_EnvInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_EnvInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_EnvInfo_2eproto(&descriptor_table_EnvInfo_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* EnvInfo_NetworkType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_EnvInfo_2eproto);
@@ -119,16 +116,15 @@ EnvInfo::EnvInfo(const EnvInfo& from)
   appname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appname().empty()) {
     appname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appname(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   networktype_ = from.networktype_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.EnvInfo)
 }
 
 void EnvInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_EnvInfo_EnvInfo_2eproto.base);
-  appname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  networktype_ = 0;
+appname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+networktype_ = 0;
 }
 
 EnvInfo::~EnvInfo() {
@@ -138,7 +134,7 @@ EnvInfo::~EnvInfo() {
 }
 
 void EnvInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   appname_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -151,11 +147,6 @@ void EnvInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void EnvInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const EnvInfo& EnvInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_EnvInfo_EnvInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void EnvInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.EnvInfo)
@@ -173,7 +164,6 @@ const char* EnvInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.EnvInfo.NetworkType networkType = 1;
       case 1:
@@ -193,7 +183,8 @@ const char* EnvInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -227,7 +218,7 @@ failure:
   }
 
   // bytes appName = 2;
-  if (this->appname().size() > 0) {
+  if (!this->appname().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_appname(), target);
   }
@@ -249,7 +240,7 @@ size_t EnvInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // bytes appName = 2;
-  if (this->appname().size() > 0) {
+  if (!this->appname().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_appname());
@@ -292,7 +283,7 @@ void EnvInfo::MergeFrom(const EnvInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.appname().size() > 0) {
+  if (!from.appname().empty()) {
     _internal_set_appname(from._internal_appname());
   }
   if (from.networktype() != 0) {
@@ -320,15 +311,20 @@ bool EnvInfo::IsInitialized() const {
 
 void EnvInfo::InternalSwap(EnvInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  appname_.Swap(&other->appname_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &appname_, GetArenaForAllocation(),
+      &other->appname_, other->GetArenaForAllocation()
+  );
   swap(networktype_, other->networktype_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EnvInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_EnvInfo_2eproto_getter, &descriptor_table_EnvInfo_2eproto_once,
+      file_level_metadata_EnvInfo_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

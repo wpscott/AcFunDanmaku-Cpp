@@ -14,25 +14,28 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtLiveScMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveScMessage> _instance;
-} _ZtLiveScMessage_default_instance_;
+constexpr ZtLiveScMessage::ZtLiveScMessage(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : messagetype_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , payload_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , liveid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , ticket_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , servertimestampms_(int64_t{0})
+  , compressiontype_(0)
+{}
+struct ZtLiveScMessageDefaultTypeInternal {
+  constexpr ZtLiveScMessageDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveScMessageDefaultTypeInternal() {}
+  union {
+    ZtLiveScMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveScMessageDefaultTypeInternal _ZtLiveScMessage_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveScMessage_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveScMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveScMessage_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_ZtLiveScMessage_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveScMessage_2eproto = nullptr;
@@ -68,21 +71,19 @@ const char descriptor_table_protodef_ZtLiveScMessage_2eproto[] PROTOBUF_SECTION_
   "e\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE\020\001\022\010\n\004GZIP\020\002b\006prot"
   "o3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveScMessage_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveScMessage_2eproto_sccs[1] = {
-  &scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveScMessage_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveScMessage_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveScMessage_2eproto, "ZtLiveScMessage.proto", 282,
-  &descriptor_table_ZtLiveScMessage_2eproto_once, descriptor_table_ZtLiveScMessage_2eproto_sccs, descriptor_table_ZtLiveScMessage_2eproto_deps, 1, 0,
+  false, false, 282, descriptor_table_protodef_ZtLiveScMessage_2eproto, "ZtLiveScMessage.proto", 
+  &descriptor_table_ZtLiveScMessage_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_ZtLiveScMessage_2eproto::offsets,
-  file_level_metadata_ZtLiveScMessage_2eproto, 1, file_level_enum_descriptors_ZtLiveScMessage_2eproto, file_level_service_descriptors_ZtLiveScMessage_2eproto,
+  file_level_metadata_ZtLiveScMessage_2eproto, file_level_enum_descriptors_ZtLiveScMessage_2eproto, file_level_service_descriptors_ZtLiveScMessage_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtLiveScMessage_2eproto_getter() {
+  return &descriptor_table_ZtLiveScMessage_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveScMessage_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveScMessage_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtLiveScMessage_2eproto(&descriptor_table_ZtLiveScMessage_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ZtLiveScMessage_CompressionType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ZtLiveScMessage_2eproto);
@@ -126,22 +127,22 @@ ZtLiveScMessage::ZtLiveScMessage(const ZtLiveScMessage& from)
   messagetype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_messagetype().empty()) {
     messagetype_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_messagetype(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payload().empty()) {
     payload_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payload(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_liveid().empty()) {
     liveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_liveid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_ticket().empty()) {
     ticket_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ticket(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&servertimestampms_, &from.servertimestampms_,
     static_cast<size_t>(reinterpret_cast<char*>(&compressiontype_) -
@@ -150,15 +151,14 @@ ZtLiveScMessage::ZtLiveScMessage(const ZtLiveScMessage& from)
 }
 
 void ZtLiveScMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto.base);
-  messagetype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&servertimestampms_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&compressiontype_) -
-      reinterpret_cast<char*>(&servertimestampms_)) + sizeof(compressiontype_));
+messagetype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&servertimestampms_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&compressiontype_) -
+    reinterpret_cast<char*>(&servertimestampms_)) + sizeof(compressiontype_));
 }
 
 ZtLiveScMessage::~ZtLiveScMessage() {
@@ -168,7 +168,7 @@ ZtLiveScMessage::~ZtLiveScMessage() {
 }
 
 void ZtLiveScMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   messagetype_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   payload_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   liveid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -184,11 +184,6 @@ void ZtLiveScMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveScMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveScMessage& ZtLiveScMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveScMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveScMessage)
@@ -211,7 +206,6 @@ const char* ZtLiveScMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string messageType = 1;
       case 1:
@@ -265,7 +259,8 @@ const char* ZtLiveScMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -292,7 +287,7 @@ failure:
   (void) cached_has_bits;
 
   // string messageType = 1;
-  if (this->messagetype().size() > 0) {
+  if (!this->messagetype().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_messagetype().data(), static_cast<int>(this->_internal_messagetype().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -309,13 +304,13 @@ failure:
   }
 
   // bytes payload = 3;
-  if (this->payload().size() > 0) {
+  if (!this->payload().empty()) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_payload(), target);
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->liveid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_liveid().data(), static_cast<int>(this->_internal_liveid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -325,7 +320,7 @@ failure:
   }
 
   // string ticket = 5;
-  if (this->ticket().size() > 0) {
+  if (!this->ticket().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_ticket().data(), static_cast<int>(this->_internal_ticket().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -357,28 +352,28 @@ size_t ZtLiveScMessage::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string messageType = 1;
-  if (this->messagetype().size() > 0) {
+  if (!this->messagetype().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_messagetype());
   }
 
   // bytes payload = 3;
-  if (this->payload().size() > 0) {
+  if (!this->payload().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payload());
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->liveid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_liveid());
   }
 
   // string ticket = 5;
-  if (this->ticket().size() > 0) {
+  if (!this->ticket().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_ticket());
@@ -428,16 +423,16 @@ void ZtLiveScMessage::MergeFrom(const ZtLiveScMessage& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.messagetype().size() > 0) {
+  if (!from.messagetype().empty()) {
     _internal_set_messagetype(from._internal_messagetype());
   }
-  if (from.payload().size() > 0) {
+  if (!from.payload().empty()) {
     _internal_set_payload(from._internal_payload());
   }
-  if (from.liveid().size() > 0) {
+  if (!from.liveid().empty()) {
     _internal_set_liveid(from._internal_liveid());
   }
-  if (from.ticket().size() > 0) {
+  if (!from.ticket().empty()) {
     _internal_set_ticket(from._internal_ticket());
   }
   if (from.servertimestampms() != 0) {
@@ -468,11 +463,27 @@ bool ZtLiveScMessage::IsInitialized() const {
 
 void ZtLiveScMessage::InternalSwap(ZtLiveScMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  messagetype_.Swap(&other->messagetype_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payload_.Swap(&other->payload_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  liveid_.Swap(&other->liveid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ticket_.Swap(&other->ticket_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &messagetype_, GetArenaForAllocation(),
+      &other->messagetype_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &payload_, GetArenaForAllocation(),
+      &other->payload_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &liveid_, GetArenaForAllocation(),
+      &other->liveid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &ticket_, GetArenaForAllocation(),
+      &other->ticket_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ZtLiveScMessage, compressiontype_)
       + sizeof(ZtLiveScMessage::compressiontype_)
@@ -482,9 +493,10 @@ void ZtLiveScMessage::InternalSwap(ZtLiveScMessage* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveScMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveScMessage_2eproto_getter, &descriptor_table_ZtLiveScMessage_2eproto_once,
+      file_level_metadata_ZtLiveScMessage_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

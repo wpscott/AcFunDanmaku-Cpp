@@ -14,25 +14,29 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class AccessPointDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AccessPoint> _instance;
-} _AccessPoint_default_instance_;
+constexpr AccessPoint::AccessPoint(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : ipv6_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , domain_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , quicv6_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , addresstype_(0)
+
+  , port_(0u)
+  , ipv4_(0u)
+  , quic_(0u){}
+struct AccessPointDefaultTypeInternal {
+  constexpr AccessPointDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AccessPointDefaultTypeInternal() {}
+  union {
+    AccessPoint _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AccessPointDefaultTypeInternal _AccessPoint_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_AccessPoint_AccessPoint_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_AccessPoint_default_instance_;
-    new (ptr) ::AcFunDanmu::AccessPoint();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AccessPoint_AccessPoint_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AccessPoint_AccessPoint_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AccessPoint_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_AccessPoint_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_AccessPoint_2eproto = nullptr;
@@ -48,6 +52,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AccessPoint_2eproto::offsets[]
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AccessPoint, ipv4_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AccessPoint, ipv6_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AccessPoint, domain_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AccessPoint, quic_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::AccessPoint, quicv6_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::AccessPoint)},
@@ -58,28 +64,27 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AccessPoint_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\021AccessPoint.proto\022\nAcFunDanmu\"\263\001\n\013Acce"
+  "\n\021AccessPoint.proto\022\nAcFunDanmu\"\351\001\n\013Acce"
   "ssPoint\0228\n\013addressType\030\001 \001(\0162#.AcFunDanm"
   "u.AccessPoint.AddressType\022\014\n\004port\030\002 \001(\r\022"
   "\014\n\004ipV4\030\003 \001(\007\022\014\n\004ipV6\030\004 \001(\014\022\016\n\006domain\030\005 "
-  "\001(\t\"0\n\013AddressType\022\t\n\005kIPV4\020\000\022\t\n\005kIPV6\020\001"
-  "\022\013\n\007kDomain\020\002b\006proto3"
+  "\001(\t\022\014\n\004quic\030\006 \001(\007\022\016\n\006quicV6\030\007 \001(\014\"H\n\013Add"
+  "ressType\022\t\n\005kIPV4\020\000\022\t\n\005kIPV6\020\001\022\013\n\007kDomai"
+  "n\020\002\022\t\n\005kQuic\020\003\022\013\n\007kQuicV6\020\004b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AccessPoint_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AccessPoint_2eproto_sccs[1] = {
-  &scc_info_AccessPoint_AccessPoint_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AccessPoint_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AccessPoint_2eproto = {
-  false, false, descriptor_table_protodef_AccessPoint_2eproto, "AccessPoint.proto", 221,
-  &descriptor_table_AccessPoint_2eproto_once, descriptor_table_AccessPoint_2eproto_sccs, descriptor_table_AccessPoint_2eproto_deps, 1, 0,
+  false, false, 275, descriptor_table_protodef_AccessPoint_2eproto, "AccessPoint.proto", 
+  &descriptor_table_AccessPoint_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_AccessPoint_2eproto::offsets,
-  file_level_metadata_AccessPoint_2eproto, 1, file_level_enum_descriptors_AccessPoint_2eproto, file_level_service_descriptors_AccessPoint_2eproto,
+  file_level_metadata_AccessPoint_2eproto, file_level_enum_descriptors_AccessPoint_2eproto, file_level_service_descriptors_AccessPoint_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_AccessPoint_2eproto_getter() {
+  return &descriptor_table_AccessPoint_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_AccessPoint_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_AccessPoint_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_AccessPoint_2eproto(&descriptor_table_AccessPoint_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AccessPoint_AddressType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AccessPoint_2eproto);
@@ -90,6 +95,8 @@ bool AccessPoint_AddressType_IsValid(int value) {
     case 0:
     case 1:
     case 2:
+    case 3:
+    case 4:
       return true;
     default:
       return false;
@@ -100,6 +107,8 @@ bool AccessPoint_AddressType_IsValid(int value) {
 constexpr AccessPoint_AddressType AccessPoint::kIPV4;
 constexpr AccessPoint_AddressType AccessPoint::kIPV6;
 constexpr AccessPoint_AddressType AccessPoint::kDomain;
+constexpr AccessPoint_AddressType AccessPoint::kQuic;
+constexpr AccessPoint_AddressType AccessPoint::kQuicV6;
 constexpr AccessPoint_AddressType AccessPoint::AddressType_MIN;
 constexpr AccessPoint_AddressType AccessPoint::AddressType_MAX;
 constexpr int AccessPoint::AddressType_ARRAYSIZE;
@@ -123,27 +132,32 @@ AccessPoint::AccessPoint(const AccessPoint& from)
   ipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_ipv6().empty()) {
     ipv6_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ipv6(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   domain_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_domain().empty()) {
     domain_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_domain(), 
-      GetArena());
+      GetArenaForAllocation());
+  }
+  quicv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_quicv6().empty()) {
+    quicv6_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_quicv6(), 
+      GetArenaForAllocation());
   }
   ::memcpy(&addresstype_, &from.addresstype_,
-    static_cast<size_t>(reinterpret_cast<char*>(&ipv4_) -
-    reinterpret_cast<char*>(&addresstype_)) + sizeof(ipv4_));
+    static_cast<size_t>(reinterpret_cast<char*>(&quic_) -
+    reinterpret_cast<char*>(&addresstype_)) + sizeof(quic_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AccessPoint)
 }
 
 void AccessPoint::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AccessPoint_AccessPoint_2eproto.base);
-  ipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  domain_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&addresstype_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&ipv4_) -
-      reinterpret_cast<char*>(&addresstype_)) + sizeof(ipv4_));
+ipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+domain_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+quicv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&addresstype_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&quic_) -
+    reinterpret_cast<char*>(&addresstype_)) + sizeof(quic_));
 }
 
 AccessPoint::~AccessPoint() {
@@ -153,9 +167,10 @@ AccessPoint::~AccessPoint() {
 }
 
 void AccessPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   ipv6_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   domain_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  quicv6_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void AccessPoint::ArenaDtor(void* object) {
@@ -167,11 +182,6 @@ void AccessPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void AccessPoint::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AccessPoint& AccessPoint::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AccessPoint_AccessPoint_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void AccessPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.AccessPoint)
@@ -181,9 +191,10 @@ void AccessPoint::Clear() {
 
   ipv6_.ClearToEmpty();
   domain_.ClearToEmpty();
+  quicv6_.ClearToEmpty();
   ::memset(&addresstype_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ipv4_) -
-      reinterpret_cast<char*>(&addresstype_)) + sizeof(ipv4_));
+      reinterpret_cast<char*>(&quic_) -
+      reinterpret_cast<char*>(&addresstype_)) + sizeof(quic_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -192,7 +203,6 @@ const char* AccessPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.AccessPoint.AddressType addressType = 1;
       case 1:
@@ -233,9 +243,25 @@ const char* AccessPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // fixed32 quic = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 53)) {
+          quic_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint32>(ptr);
+          ptr += sizeof(::PROTOBUF_NAMESPACE_ID::uint32);
+        } else goto handle_unusual;
+        continue;
+      // bytes quicV6 = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          auto str = _internal_mutable_quicv6();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -281,19 +307,31 @@ failure:
   }
 
   // bytes ipV6 = 4;
-  if (this->ipv6().size() > 0) {
+  if (!this->ipv6().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_ipv6(), target);
   }
 
   // string domain = 5;
-  if (this->domain().size() > 0) {
+  if (!this->domain().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_domain().data(), static_cast<int>(this->_internal_domain().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "AcFunDanmu.AccessPoint.domain");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_domain(), target);
+  }
+
+  // fixed32 quic = 6;
+  if (this->quic() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFixed32ToArray(6, this->_internal_quic(), target);
+  }
+
+  // bytes quicV6 = 7;
+  if (!this->quicv6().empty()) {
+    target = stream->WriteBytesMaybeAliased(
+        7, this->_internal_quicv6(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -313,17 +351,24 @@ size_t AccessPoint::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // bytes ipV6 = 4;
-  if (this->ipv6().size() > 0) {
+  if (!this->ipv6().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ipv6());
   }
 
   // string domain = 5;
-  if (this->domain().size() > 0) {
+  if (!this->domain().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_domain());
+  }
+
+  // bytes quicV6 = 7;
+  if (!this->quicv6().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_quicv6());
   }
 
   // .AcFunDanmu.AccessPoint.AddressType addressType = 1;
@@ -341,6 +386,11 @@ size_t AccessPoint::ByteSizeLong() const {
 
   // fixed32 ipV4 = 3;
   if (this->ipv4() != 0) {
+    total_size += 1 + 4;
+  }
+
+  // fixed32 quic = 6;
+  if (this->quic() != 0) {
     total_size += 1 + 4;
   }
 
@@ -375,11 +425,14 @@ void AccessPoint::MergeFrom(const AccessPoint& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.ipv6().size() > 0) {
+  if (!from.ipv6().empty()) {
     _internal_set_ipv6(from._internal_ipv6());
   }
-  if (from.domain().size() > 0) {
+  if (!from.domain().empty()) {
     _internal_set_domain(from._internal_domain());
+  }
+  if (!from.quicv6().empty()) {
+    _internal_set_quicv6(from._internal_quicv6());
   }
   if (from.addresstype() != 0) {
     _internal_set_addresstype(from._internal_addresstype());
@@ -389,6 +442,9 @@ void AccessPoint::MergeFrom(const AccessPoint& from) {
   }
   if (from.ipv4() != 0) {
     _internal_set_ipv4(from._internal_ipv4());
+  }
+  if (from.quic() != 0) {
+    _internal_set_quic(from._internal_quic());
   }
 }
 
@@ -412,21 +468,35 @@ bool AccessPoint::IsInitialized() const {
 
 void AccessPoint::InternalSwap(AccessPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ipv6_.Swap(&other->ipv6_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  domain_.Swap(&other->domain_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &ipv6_, GetArenaForAllocation(),
+      &other->ipv6_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &domain_, GetArenaForAllocation(),
+      &other->domain_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &quicv6_, GetArenaForAllocation(),
+      &other->quicv6_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(AccessPoint, ipv4_)
-      + sizeof(AccessPoint::ipv4_)
+      PROTOBUF_FIELD_OFFSET(AccessPoint, quic_)
+      + sizeof(AccessPoint::quic_)
       - PROTOBUF_FIELD_OFFSET(AccessPoint, addresstype_)>(
           reinterpret_cast<char*>(&addresstype_),
           reinterpret_cast<char*>(&other->addresstype_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AccessPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_AccessPoint_2eproto_getter, &descriptor_table_AccessPoint_2eproto_once,
+      file_level_metadata_AccessPoint_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

@@ -14,31 +14,33 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_PkAudienceContributionInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PkAudienceContributionInfo_PkAudienceContributionInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_PkPlayerStatistic_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_PkRoundInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PkRoundInfo_PkRoundInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalPkStatisticDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalPkStatistic> _instance;
-} _CommonStateSignalPkStatistic_default_instance_;
+constexpr CommonStateSignalPkStatistic::CommonStateSignalPkStatistic(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : i_()
+  , j_()
+  , a_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , k_(nullptr)
+  , b_(int64_t{0})
+  , c_(int64_t{0})
+  , d_(int64_t{0})
+  , f_(int64_t{0})
+  , g_(int64_t{0})
+  , h_(int64_t{0})
+  , l_(int64_t{0})
+  , e_(false){}
+struct CommonStateSignalPkStatisticDefaultTypeInternal {
+  constexpr CommonStateSignalPkStatisticDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalPkStatisticDefaultTypeInternal() {}
+  union {
+    CommonStateSignalPkStatistic _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalPkStatisticDefaultTypeInternal _CommonStateSignalPkStatistic_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalPkStatistic_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalPkStatistic();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto}, {
-      &scc_info_PkAudienceContributionInfo_PkAudienceContributionInfo_2eproto.base,
-      &scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto.base,
-      &scc_info_PkRoundInfo_PkRoundInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalPkStatistic_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalPkStatistic_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalPkStatistic_2eproto = nullptr;
@@ -87,19 +89,19 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_PkPlayerStatistic_2eproto,
   &::descriptor_table_PkRoundInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalPkStatistic_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalPkStatistic_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalPkStatistic_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalPkStatistic_2eproto, "CommonStateSignalPkStatistic.proto", 395,
-  &descriptor_table_CommonStateSignalPkStatistic_2eproto_once, descriptor_table_CommonStateSignalPkStatistic_2eproto_sccs, descriptor_table_CommonStateSignalPkStatistic_2eproto_deps, 1, 3,
+  false, false, 395, descriptor_table_protodef_CommonStateSignalPkStatistic_2eproto, "CommonStateSignalPkStatistic.proto", 
+  &descriptor_table_CommonStateSignalPkStatistic_2eproto_once, descriptor_table_CommonStateSignalPkStatistic_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_CommonStateSignalPkStatistic_2eproto::offsets,
-  file_level_metadata_CommonStateSignalPkStatistic_2eproto, 1, file_level_enum_descriptors_CommonStateSignalPkStatistic_2eproto, file_level_service_descriptors_CommonStateSignalPkStatistic_2eproto,
+  file_level_metadata_CommonStateSignalPkStatistic_2eproto, file_level_enum_descriptors_CommonStateSignalPkStatistic_2eproto, file_level_service_descriptors_CommonStateSignalPkStatistic_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalPkStatistic_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalPkStatistic_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalPkStatistic_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalPkStatistic_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalPkStatistic_2eproto(&descriptor_table_CommonStateSignalPkStatistic_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -120,7 +122,7 @@ void CommonStateSignalPkStatistic::clear_j() {
   j_.Clear();
 }
 void CommonStateSignalPkStatistic::clear_k() {
-  if (GetArena() == nullptr && k_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && k_ != nullptr) {
     delete k_;
   }
   k_ = nullptr;
@@ -141,7 +143,7 @@ CommonStateSignalPkStatistic::CommonStateSignalPkStatistic(const CommonStateSign
   a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_a().empty()) {
     a_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_a(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_k()) {
     k_ = new ::AcFunDanmu::PkRoundInfo(*from.k_);
@@ -155,12 +157,11 @@ CommonStateSignalPkStatistic::CommonStateSignalPkStatistic(const CommonStateSign
 }
 
 void CommonStateSignalPkStatistic::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto.base);
-  a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&k_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&e_) -
-      reinterpret_cast<char*>(&k_)) + sizeof(e_));
+a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&k_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&e_) -
+    reinterpret_cast<char*>(&k_)) + sizeof(e_));
 }
 
 CommonStateSignalPkStatistic::~CommonStateSignalPkStatistic() {
@@ -170,7 +171,7 @@ CommonStateSignalPkStatistic::~CommonStateSignalPkStatistic() {
 }
 
 void CommonStateSignalPkStatistic::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   a_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete k_;
 }
@@ -184,11 +185,6 @@ void CommonStateSignalPkStatistic::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Ar
 void CommonStateSignalPkStatistic::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalPkStatistic& CommonStateSignalPkStatistic::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalPkStatistic::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalPkStatistic)
@@ -199,7 +195,7 @@ void CommonStateSignalPkStatistic::Clear() {
   i_.Clear();
   j_.Clear();
   a_.ClearToEmpty();
-  if (GetArena() == nullptr && k_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && k_ != nullptr) {
     delete k_;
   }
   k_ = nullptr;
@@ -214,7 +210,6 @@ const char* CommonStateSignalPkStatistic::_InternalParse(const char* ptr, ::PROT
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string a = 1;
       case 1:
@@ -314,7 +309,8 @@ const char* CommonStateSignalPkStatistic::_InternalParse(const char* ptr, ::PROT
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -341,7 +337,7 @@ failure:
   (void) cached_has_bits;
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->a().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_a().data(), static_cast<int>(this->_internal_a().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -453,7 +449,7 @@ size_t CommonStateSignalPkStatistic::ByteSizeLong() const {
   }
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->a().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a());
@@ -553,7 +549,7 @@ void CommonStateSignalPkStatistic::MergeFrom(const CommonStateSignalPkStatistic&
 
   i_.MergeFrom(from.i_);
   j_.MergeFrom(from.j_);
-  if (from.a().size() > 0) {
+  if (!from.a().empty()) {
     _internal_set_a(from._internal_a());
   }
   if (from.has_k()) {
@@ -605,10 +601,14 @@ bool CommonStateSignalPkStatistic::IsInitialized() const {
 
 void CommonStateSignalPkStatistic::InternalSwap(CommonStateSignalPkStatistic* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   i_.InternalSwap(&other->i_);
   j_.InternalSwap(&other->j_);
-  a_.Swap(&other->a_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &a_, GetArenaForAllocation(),
+      &other->a_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CommonStateSignalPkStatistic, e_)
       + sizeof(CommonStateSignalPkStatistic::e_)
@@ -618,9 +618,10 @@ void CommonStateSignalPkStatistic::InternalSwap(CommonStateSignalPkStatistic* ot
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalPkStatistic::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalPkStatistic_2eproto_getter, &descriptor_table_CommonStateSignalPkStatistic_2eproto_once,
+      file_level_metadata_CommonStateSignalPkStatistic_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

@@ -14,42 +14,32 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class UnregisterRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UnregisterRequest> _instance;
-} _UnregisterRequest_default_instance_;
-class UnregisterResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UnregisterResponse> _instance;
-} _UnregisterResponse_default_instance_;
+constexpr UnregisterRequest::UnregisterRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct UnregisterRequestDefaultTypeInternal {
+  constexpr UnregisterRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~UnregisterRequestDefaultTypeInternal() {}
+  union {
+    UnregisterRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT UnregisterRequestDefaultTypeInternal _UnregisterRequest_default_instance_;
+constexpr UnregisterResponse::UnregisterResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct UnregisterResponseDefaultTypeInternal {
+  constexpr UnregisterResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~UnregisterResponseDefaultTypeInternal() {}
+  union {
+    UnregisterResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT UnregisterResponseDefaultTypeInternal _UnregisterResponse_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_UnregisterRequest_Unregister_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_UnregisterRequest_default_instance_;
-    new (ptr) ::AcFunDanmu::UnregisterRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UnregisterRequest_Unregister_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UnregisterRequest_Unregister_2eproto}, {}};
-
-static void InitDefaultsscc_info_UnregisterResponse_Unregister_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_UnregisterResponse_default_instance_;
-    new (ptr) ::AcFunDanmu::UnregisterResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UnregisterResponse_Unregister_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UnregisterResponse_Unregister_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Unregister_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Unregister_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Unregister_2eproto = nullptr;
@@ -81,22 +71,19 @@ const char descriptor_table_protodef_Unregister_2eproto[] PROTOBUF_SECTION_VARIA
   "sterRequest\"\024\n\022UnregisterResponseb\006proto"
   "3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Unregister_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Unregister_2eproto_sccs[2] = {
-  &scc_info_UnregisterRequest_Unregister_2eproto.base,
-  &scc_info_UnregisterResponse_Unregister_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Unregister_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Unregister_2eproto = {
-  false, false, descriptor_table_protodef_Unregister_2eproto, "Unregister.proto", 81,
-  &descriptor_table_Unregister_2eproto_once, descriptor_table_Unregister_2eproto_sccs, descriptor_table_Unregister_2eproto_deps, 2, 0,
+  false, false, 81, descriptor_table_protodef_Unregister_2eproto, "Unregister.proto", 
+  &descriptor_table_Unregister_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_Unregister_2eproto::offsets,
-  file_level_metadata_Unregister_2eproto, 2, file_level_enum_descriptors_Unregister_2eproto, file_level_service_descriptors_Unregister_2eproto,
+  file_level_metadata_Unregister_2eproto, file_level_enum_descriptors_Unregister_2eproto, file_level_service_descriptors_Unregister_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_Unregister_2eproto_getter() {
+  return &descriptor_table_Unregister_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_Unregister_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Unregister_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_Unregister_2eproto(&descriptor_table_Unregister_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -127,7 +114,7 @@ UnregisterRequest::~UnregisterRequest() {
 }
 
 void UnregisterRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void UnregisterRequest::ArenaDtor(void* object) {
@@ -139,11 +126,6 @@ void UnregisterRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void UnregisterRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const UnregisterRequest& UnregisterRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UnregisterRequest_Unregister_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void UnregisterRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.UnregisterRequest)
@@ -159,8 +141,8 @@ const char* UnregisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -253,13 +235,14 @@ bool UnregisterRequest::IsInitialized() const {
 
 void UnregisterRequest::InternalSwap(UnregisterRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UnregisterRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Unregister_2eproto_getter, &descriptor_table_Unregister_2eproto_once,
+      file_level_metadata_Unregister_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -289,7 +272,7 @@ UnregisterResponse::~UnregisterResponse() {
 }
 
 void UnregisterResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void UnregisterResponse::ArenaDtor(void* object) {
@@ -301,11 +284,6 @@ void UnregisterResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void UnregisterResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const UnregisterResponse& UnregisterResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UnregisterResponse_Unregister_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void UnregisterResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.UnregisterResponse)
@@ -321,8 +299,8 @@ const char* UnregisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -415,13 +393,14 @@ bool UnregisterResponse::IsInitialized() const {
 
 void UnregisterResponse::InternalSwap(UnregisterResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UnregisterResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Unregister_2eproto_getter, &descriptor_table_Unregister_2eproto_once,
+      file_level_metadata_Unregister_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

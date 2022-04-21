@@ -14,43 +14,34 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_LocaleMessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LocaleMessage_ErrorMessageEntry_DoNotUse_LocaleMessage_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class LocaleMessage_ErrorMessageEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LocaleMessage_ErrorMessageEntry_DoNotUse> _instance;
-} _LocaleMessage_ErrorMessageEntry_DoNotUse_default_instance_;
-class LocaleMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LocaleMessage> _instance;
-} _LocaleMessage_default_instance_;
+constexpr LocaleMessage_ErrorMessageEntry_DoNotUse::LocaleMessage_ErrorMessageEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct LocaleMessage_ErrorMessageEntry_DoNotUseDefaultTypeInternal {
+  constexpr LocaleMessage_ErrorMessageEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~LocaleMessage_ErrorMessageEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    LocaleMessage_ErrorMessageEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LocaleMessage_ErrorMessageEntry_DoNotUseDefaultTypeInternal _LocaleMessage_ErrorMessageEntry_DoNotUse_default_instance_;
+constexpr LocaleMessage::LocaleMessage(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : errormessage_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , locale_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct LocaleMessageDefaultTypeInternal {
+  constexpr LocaleMessageDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~LocaleMessageDefaultTypeInternal() {}
+  union {
+    LocaleMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LocaleMessageDefaultTypeInternal _LocaleMessage_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_LocaleMessage_LocaleMessage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_LocaleMessage_default_instance_;
-    new (ptr) ::AcFunDanmu::LocaleMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LocaleMessage_LocaleMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LocaleMessage_LocaleMessage_2eproto}, {
-      &scc_info_LocaleMessage_ErrorMessageEntry_DoNotUse_LocaleMessage_2eproto.base,}};
-
-static void InitDefaultsscc_info_LocaleMessage_ErrorMessageEntry_DoNotUse_LocaleMessage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_LocaleMessage_ErrorMessageEntry_DoNotUse_default_instance_;
-    new (ptr) ::AcFunDanmu::LocaleMessage_ErrorMessageEntry_DoNotUse();
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LocaleMessage_ErrorMessageEntry_DoNotUse_LocaleMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LocaleMessage_ErrorMessageEntry_DoNotUse_LocaleMessage_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_LocaleMessage_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_LocaleMessage_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_LocaleMessage_2eproto = nullptr;
@@ -90,22 +81,19 @@ const char descriptor_table_protodef_LocaleMessage_2eproto[] PROTOBUF_SECTION_VA
   "orMessageEntry\0323\n\021ErrorMessageEntry\022\013\n\003k"
   "ey\030\001 \001(\005\022\r\n\005value\030\002 \001(\t:\0028\001b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_LocaleMessage_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_LocaleMessage_2eproto_sccs[2] = {
-  &scc_info_LocaleMessage_LocaleMessage_2eproto.base,
-  &scc_info_LocaleMessage_ErrorMessageEntry_DoNotUse_LocaleMessage_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_LocaleMessage_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_LocaleMessage_2eproto = {
-  false, false, descriptor_table_protodef_LocaleMessage_2eproto, "LocaleMessage.proto", 195,
-  &descriptor_table_LocaleMessage_2eproto_once, descriptor_table_LocaleMessage_2eproto_sccs, descriptor_table_LocaleMessage_2eproto_deps, 2, 0,
+  false, false, 195, descriptor_table_protodef_LocaleMessage_2eproto, "LocaleMessage.proto", 
+  &descriptor_table_LocaleMessage_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_LocaleMessage_2eproto::offsets,
-  file_level_metadata_LocaleMessage_2eproto, 2, file_level_enum_descriptors_LocaleMessage_2eproto, file_level_service_descriptors_LocaleMessage_2eproto,
+  file_level_metadata_LocaleMessage_2eproto, file_level_enum_descriptors_LocaleMessage_2eproto, file_level_service_descriptors_LocaleMessage_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_LocaleMessage_2eproto_getter() {
+  return &descriptor_table_LocaleMessage_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_LocaleMessage_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_LocaleMessage_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_LocaleMessage_2eproto(&descriptor_table_LocaleMessage_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -117,7 +105,9 @@ void LocaleMessage_ErrorMessageEntry_DoNotUse::MergeFrom(const LocaleMessage_Err
   MergeFromInternal(other);
 }
 ::PROTOBUF_NAMESPACE_ID::Metadata LocaleMessage_ErrorMessageEntry_DoNotUse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_LocaleMessage_2eproto_getter, &descriptor_table_LocaleMessage_2eproto_once,
+      file_level_metadata_LocaleMessage_2eproto[0]);
 }
 void LocaleMessage_ErrorMessageEntry_DoNotUse::MergeFrom(
     const ::PROTOBUF_NAMESPACE_ID::Message& other) {
@@ -145,14 +135,13 @@ LocaleMessage::LocaleMessage(const LocaleMessage& from)
   locale_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_locale().empty()) {
     locale_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_locale(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.LocaleMessage)
 }
 
 void LocaleMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LocaleMessage_LocaleMessage_2eproto.base);
-  locale_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+locale_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 LocaleMessage::~LocaleMessage() {
@@ -162,24 +151,23 @@ LocaleMessage::~LocaleMessage() {
 }
 
 void LocaleMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   locale_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void LocaleMessage::ArenaDtor(void* object) {
   LocaleMessage* _this = reinterpret_cast< LocaleMessage* >(object);
   (void)_this;
+  _this->errormessage_. ~MapField();
 }
-void LocaleMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+inline void LocaleMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena) {
+  if (arena != nullptr) {
+    arena->OwnCustomDestructor(this, &LocaleMessage::ArenaDtor);
+  }
 }
 void LocaleMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const LocaleMessage& LocaleMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LocaleMessage_LocaleMessage_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void LocaleMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.LocaleMessage)
@@ -197,7 +185,6 @@ const char* LocaleMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string locale = 1;
       case 1:
@@ -222,7 +209,8 @@ const char* LocaleMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -249,7 +237,7 @@ failure:
   (void) cached_has_bits;
 
   // string locale = 1;
-  if (this->locale().size() > 0) {
+  if (!this->locale().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_locale().data(), static_cast<int>(this->_internal_locale().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -266,6 +254,7 @@ failure:
     typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByFirstField<SortItem> Less;
     struct Utf8Check {
       static void Check(ConstPtr p) {
+        (void)p;
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
           ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -325,7 +314,7 @@ size_t LocaleMessage::ByteSizeLong() const {
   }
 
   // string locale = 1;
-  if (this->locale().size() > 0) {
+  if (!this->locale().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_locale());
@@ -363,7 +352,7 @@ void LocaleMessage::MergeFrom(const LocaleMessage& from) {
   (void) cached_has_bits;
 
   errormessage_.MergeFrom(from.errormessage_);
-  if (from.locale().size() > 0) {
+  if (!from.locale().empty()) {
     _internal_set_locale(from._internal_locale());
   }
 }
@@ -388,15 +377,20 @@ bool LocaleMessage::IsInitialized() const {
 
 void LocaleMessage::InternalSwap(LocaleMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  errormessage_.Swap(&other->errormessage_);
-  locale_.Swap(&other->locale_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  errormessage_.InternalSwap(&other->errormessage_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &locale_, GetArenaForAllocation(),
+      &other->locale_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LocaleMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_LocaleMessage_2eproto_getter, &descriptor_table_LocaleMessage_2eproto_once,
+      file_level_metadata_LocaleMessage_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

@@ -14,27 +14,35 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_TokenInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenInfo_TokenInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class PacketHeaderDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PacketHeader> _instance;
-} _PacketHeader_default_instance_;
+constexpr PacketHeader::PacketHeader(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : features_()
+  , _features_cached_byte_size_()
+  , kpn_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , tokeninfo_(nullptr)
+  , uid_(int64_t{0})
+  , instanceid_(int64_t{0})
+  , appid_(0)
+  , flags_(0u)
+  , encodingtype_(0)
+
+  , decodedpayloadlen_(0u)
+  , seqid_(int64_t{0})
+  , encryptionmode_(0)
+{}
+struct PacketHeaderDefaultTypeInternal {
+  constexpr PacketHeaderDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PacketHeaderDefaultTypeInternal() {}
+  union {
+    PacketHeader _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PacketHeaderDefaultTypeInternal _PacketHeader_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_PacketHeader_PacketHeader_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_PacketHeader_default_instance_;
-    new (ptr) ::AcFunDanmu::PacketHeader();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PacketHeader_PacketHeader_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PacketHeader_PacketHeader_2eproto}, {
-      &scc_info_TokenInfo_TokenInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_PacketHeader_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_PacketHeader_2eproto[4];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_PacketHeader_2eproto = nullptr;
@@ -87,19 +95,19 @@ const char descriptor_table_protodef_PacketHeader_2eproto[] PROTOBUF_SECTION_VAR
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_PacketHeader_2eproto_deps[1] = {
   &::descriptor_table_TokenInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_PacketHeader_2eproto_sccs[1] = {
-  &scc_info_PacketHeader_PacketHeader_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_PacketHeader_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PacketHeader_2eproto = {
-  false, false, descriptor_table_protodef_PacketHeader_2eproto, "PacketHeader.proto", 668,
-  &descriptor_table_PacketHeader_2eproto_once, descriptor_table_PacketHeader_2eproto_sccs, descriptor_table_PacketHeader_2eproto_deps, 1, 1,
+  false, false, 668, descriptor_table_protodef_PacketHeader_2eproto, "PacketHeader.proto", 
+  &descriptor_table_PacketHeader_2eproto_once, descriptor_table_PacketHeader_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_PacketHeader_2eproto::offsets,
-  file_level_metadata_PacketHeader_2eproto, 1, file_level_enum_descriptors_PacketHeader_2eproto, file_level_service_descriptors_PacketHeader_2eproto,
+  file_level_metadata_PacketHeader_2eproto, file_level_enum_descriptors_PacketHeader_2eproto, file_level_service_descriptors_PacketHeader_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_PacketHeader_2eproto_getter() {
+  return &descriptor_table_PacketHeader_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_PacketHeader_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_PacketHeader_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_PacketHeader_2eproto(&descriptor_table_PacketHeader_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PacketHeader_Flags_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_PacketHeader_2eproto);
@@ -201,7 +209,7 @@ PacketHeader::_Internal::tokeninfo(const PacketHeader* msg) {
   return *msg->tokeninfo_;
 }
 void PacketHeader::clear_tokeninfo() {
-  if (GetArena() == nullptr && tokeninfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && tokeninfo_ != nullptr) {
     delete tokeninfo_;
   }
   tokeninfo_ = nullptr;
@@ -220,7 +228,7 @@ PacketHeader::PacketHeader(const PacketHeader& from)
   kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpn().empty()) {
     kpn_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpn(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_tokeninfo()) {
     tokeninfo_ = new ::AcFunDanmu::TokenInfo(*from.tokeninfo_);
@@ -234,12 +242,11 @@ PacketHeader::PacketHeader(const PacketHeader& from)
 }
 
 void PacketHeader::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PacketHeader_PacketHeader_2eproto.base);
-  kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&tokeninfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&encryptionmode_) -
-      reinterpret_cast<char*>(&tokeninfo_)) + sizeof(encryptionmode_));
+kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&tokeninfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&encryptionmode_) -
+    reinterpret_cast<char*>(&tokeninfo_)) + sizeof(encryptionmode_));
 }
 
 PacketHeader::~PacketHeader() {
@@ -249,7 +256,7 @@ PacketHeader::~PacketHeader() {
 }
 
 void PacketHeader::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   kpn_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete tokeninfo_;
 }
@@ -263,11 +270,6 @@ void PacketHeader::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void PacketHeader::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PacketHeader& PacketHeader::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PacketHeader_PacketHeader_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PacketHeader::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.PacketHeader)
@@ -277,7 +279,7 @@ void PacketHeader::Clear() {
 
   features_.Clear();
   kpn_.ClearToEmpty();
-  if (GetArena() == nullptr && tokeninfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && tokeninfo_ != nullptr) {
     delete tokeninfo_;
   }
   tokeninfo_ = nullptr;
@@ -292,7 +294,6 @@ const char* PacketHeader::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 appId = 1;
       case 1:
@@ -381,7 +382,8 @@ const char* PacketHeader::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -475,7 +477,7 @@ failure:
   }
 
   // string kpn = 12;
-  if (this->kpn().size() > 0) {
+  if (!this->kpn().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_kpn().data(), static_cast<int>(this->_internal_kpn().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -519,7 +521,7 @@ size_t PacketHeader::ByteSizeLong() const {
   }
 
   // string kpn = 12;
-  if (this->kpn().size() > 0) {
+  if (!this->kpn().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_kpn());
@@ -618,7 +620,7 @@ void PacketHeader::MergeFrom(const PacketHeader& from) {
   (void) cached_has_bits;
 
   features_.MergeFrom(from.features_);
-  if (from.kpn().size() > 0) {
+  if (!from.kpn().empty()) {
     _internal_set_kpn(from._internal_kpn());
   }
   if (from.has_tokeninfo()) {
@@ -670,9 +672,13 @@ bool PacketHeader::IsInitialized() const {
 
 void PacketHeader::InternalSwap(PacketHeader* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   features_.InternalSwap(&other->features_);
-  kpn_.Swap(&other->kpn_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &kpn_, GetArenaForAllocation(),
+      &other->kpn_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(PacketHeader, encryptionmode_)
       + sizeof(PacketHeader::encryptionmode_)
@@ -682,9 +688,10 @@ void PacketHeader::InternalSwap(PacketHeader* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PacketHeader::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_PacketHeader_2eproto_getter, &descriptor_table_PacketHeader_2eproto_once,
+      file_level_metadata_PacketHeader_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

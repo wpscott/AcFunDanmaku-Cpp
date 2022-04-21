@@ -14,25 +14,24 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class TokenInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TokenInfo> _instance;
-} _TokenInfo_default_instance_;
+constexpr TokenInfo::TokenInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , tokentype_(0)
+{}
+struct TokenInfoDefaultTypeInternal {
+  constexpr TokenInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TokenInfoDefaultTypeInternal() {}
+  union {
+    TokenInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TokenInfoDefaultTypeInternal _TokenInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_TokenInfo_TokenInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_TokenInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::TokenInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenInfo_TokenInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TokenInfo_TokenInfo_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_TokenInfo_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_TokenInfo_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_TokenInfo_2eproto = nullptr;
@@ -61,21 +60,19 @@ const char descriptor_table_protodef_TokenInfo_2eproto[] PROTOBUF_SECTION_VARIAB
   "pe\022\014\n\010kInvalid\020\000\022\021\n\rkServiceToken\020\001b\006pro"
   "to3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_TokenInfo_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_TokenInfo_2eproto_sccs[1] = {
-  &scc_info_TokenInfo_TokenInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_TokenInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_TokenInfo_2eproto = {
-  false, false, descriptor_table_protodef_TokenInfo_2eproto, "TokenInfo.proto", 163,
-  &descriptor_table_TokenInfo_2eproto_once, descriptor_table_TokenInfo_2eproto_sccs, descriptor_table_TokenInfo_2eproto_deps, 1, 0,
+  false, false, 163, descriptor_table_protodef_TokenInfo_2eproto, "TokenInfo.proto", 
+  &descriptor_table_TokenInfo_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_TokenInfo_2eproto::offsets,
-  file_level_metadata_TokenInfo_2eproto, 1, file_level_enum_descriptors_TokenInfo_2eproto, file_level_service_descriptors_TokenInfo_2eproto,
+  file_level_metadata_TokenInfo_2eproto, file_level_enum_descriptors_TokenInfo_2eproto, file_level_service_descriptors_TokenInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_TokenInfo_2eproto_getter() {
+  return &descriptor_table_TokenInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_TokenInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_TokenInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_TokenInfo_2eproto(&descriptor_table_TokenInfo_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TokenInfo_TokenType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_TokenInfo_2eproto);
@@ -117,16 +114,15 @@ TokenInfo::TokenInfo(const TokenInfo& from)
   token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_token().empty()) {
     token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_token(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   tokentype_ = from.tokentype_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.TokenInfo)
 }
 
 void TokenInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TokenInfo_TokenInfo_2eproto.base);
-  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  tokentype_ = 0;
+token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+tokentype_ = 0;
 }
 
 TokenInfo::~TokenInfo() {
@@ -136,7 +132,7 @@ TokenInfo::~TokenInfo() {
 }
 
 void TokenInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -149,11 +145,6 @@ void TokenInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void TokenInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const TokenInfo& TokenInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TokenInfo_TokenInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TokenInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.TokenInfo)
@@ -171,7 +162,6 @@ const char* TokenInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.TokenInfo.TokenType tokenType = 1;
       case 1:
@@ -191,7 +181,8 @@ const char* TokenInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -225,7 +216,7 @@ failure:
   }
 
   // bytes token = 2;
-  if (this->token().size() > 0) {
+  if (!this->token().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_token(), target);
   }
@@ -247,7 +238,7 @@ size_t TokenInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // bytes token = 2;
-  if (this->token().size() > 0) {
+  if (!this->token().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_token());
@@ -290,7 +281,7 @@ void TokenInfo::MergeFrom(const TokenInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.token().size() > 0) {
+  if (!from.token().empty()) {
     _internal_set_token(from._internal_token());
   }
   if (from.tokentype() != 0) {
@@ -318,15 +309,20 @@ bool TokenInfo::IsInitialized() const {
 
 void TokenInfo::InternalSwap(TokenInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  token_.Swap(&other->token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &token_, GetArenaForAllocation(),
+      &other->token_, other->GetArenaForAllocation()
+  );
   swap(tokentype_, other->tokentype_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TokenInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_TokenInfo_2eproto_getter, &descriptor_table_TokenInfo_2eproto_once,
+      file_level_metadata_TokenInfo_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

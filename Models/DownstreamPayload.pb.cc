@@ -14,25 +14,29 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class DownstreamPayloadDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DownstreamPayload> _instance;
-} _DownstreamPayload_default_instance_;
+constexpr DownstreamPayload::DownstreamPayload(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : command_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , payloaddata_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , errormsg_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , errordata_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , subbiz_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , seqid_(int64_t{0})
+  , klinkpushid_(int64_t{0})
+  , errorcode_(0){}
+struct DownstreamPayloadDefaultTypeInternal {
+  constexpr DownstreamPayloadDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DownstreamPayloadDefaultTypeInternal() {}
+  union {
+    DownstreamPayload _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DownstreamPayloadDefaultTypeInternal _DownstreamPayload_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_DownstreamPayload_DownstreamPayload_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_DownstreamPayload_default_instance_;
-    new (ptr) ::AcFunDanmu::DownstreamPayload();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DownstreamPayload_DownstreamPayload_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_DownstreamPayload_DownstreamPayload_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_DownstreamPayload_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_DownstreamPayload_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_DownstreamPayload_2eproto = nullptr;
@@ -50,6 +54,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_DownstreamPayload_2eproto::off
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::DownstreamPayload, errormsg_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::DownstreamPayload, errordata_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::DownstreamPayload, subbiz_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::DownstreamPayload, klinkpushid_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::DownstreamPayload)},
@@ -60,27 +65,26 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_DownstreamPayload_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\027DownstreamPayload.proto\022\nAcFunDanmu\"\220\001"
+  "\n\027DownstreamPayload.proto\022\nAcFunDanmu\"\245\001"
   "\n\021DownstreamPayload\022\017\n\007command\030\001 \001(\t\022\r\n\005"
   "seqId\030\002 \001(\003\022\021\n\terrorCode\030\003 \001(\005\022\023\n\013payloa"
   "dData\030\004 \001(\014\022\020\n\010errorMsg\030\005 \001(\t\022\021\n\terrorDa"
-  "ta\030\006 \001(\014\022\016\n\006subBiz\030\007 \001(\tb\006proto3"
+  "ta\030\006 \001(\014\022\016\n\006subBiz\030\007 \001(\t\022\023\n\013klinkPushId\030"
+  "\010 \001(\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_DownstreamPayload_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_DownstreamPayload_2eproto_sccs[1] = {
-  &scc_info_DownstreamPayload_DownstreamPayload_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_DownstreamPayload_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_DownstreamPayload_2eproto = {
-  false, false, descriptor_table_protodef_DownstreamPayload_2eproto, "DownstreamPayload.proto", 192,
-  &descriptor_table_DownstreamPayload_2eproto_once, descriptor_table_DownstreamPayload_2eproto_sccs, descriptor_table_DownstreamPayload_2eproto_deps, 1, 0,
+  false, false, 213, descriptor_table_protodef_DownstreamPayload_2eproto, "DownstreamPayload.proto", 
+  &descriptor_table_DownstreamPayload_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_DownstreamPayload_2eproto::offsets,
-  file_level_metadata_DownstreamPayload_2eproto, 1, file_level_enum_descriptors_DownstreamPayload_2eproto, file_level_service_descriptors_DownstreamPayload_2eproto,
+  file_level_metadata_DownstreamPayload_2eproto, file_level_enum_descriptors_DownstreamPayload_2eproto, file_level_service_descriptors_DownstreamPayload_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_DownstreamPayload_2eproto_getter() {
+  return &descriptor_table_DownstreamPayload_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_DownstreamPayload_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_DownstreamPayload_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_DownstreamPayload_2eproto(&descriptor_table_DownstreamPayload_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -101,27 +105,27 @@ DownstreamPayload::DownstreamPayload(const DownstreamPayload& from)
   command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_command().empty()) {
     command_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_command(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_payloaddata().empty()) {
     payloaddata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payloaddata(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_errormsg().empty()) {
     errormsg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_errormsg(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   errordata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_errordata().empty()) {
     errordata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_errordata(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_subbiz().empty()) {
     subbiz_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_subbiz(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&seqid_, &from.seqid_,
     static_cast<size_t>(reinterpret_cast<char*>(&errorcode_) -
@@ -130,16 +134,15 @@ DownstreamPayload::DownstreamPayload(const DownstreamPayload& from)
 }
 
 void DownstreamPayload::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_DownstreamPayload_DownstreamPayload_2eproto.base);
-  command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  errordata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&seqid_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&errorcode_) -
-      reinterpret_cast<char*>(&seqid_)) + sizeof(errorcode_));
+command_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+payloaddata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+errordata_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&seqid_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&errorcode_) -
+    reinterpret_cast<char*>(&seqid_)) + sizeof(errorcode_));
 }
 
 DownstreamPayload::~DownstreamPayload() {
@@ -149,7 +152,7 @@ DownstreamPayload::~DownstreamPayload() {
 }
 
 void DownstreamPayload::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   command_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   payloaddata_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   errormsg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -166,11 +169,6 @@ void DownstreamPayload::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void DownstreamPayload::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const DownstreamPayload& DownstreamPayload::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DownstreamPayload_DownstreamPayload_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void DownstreamPayload::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.DownstreamPayload)
@@ -194,7 +192,6 @@ const char* DownstreamPayload::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string command = 1;
       case 1:
@@ -253,9 +250,17 @@ const char* DownstreamPayload::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // int64 klinkPushId = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
+          klinkpushid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -282,7 +287,7 @@ failure:
   (void) cached_has_bits;
 
   // string command = 1;
-  if (this->command().size() > 0) {
+  if (!this->command().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_command().data(), static_cast<int>(this->_internal_command().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -304,13 +309,13 @@ failure:
   }
 
   // bytes payloadData = 4;
-  if (this->payloaddata().size() > 0) {
+  if (!this->payloaddata().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_payloaddata(), target);
   }
 
   // string errorMsg = 5;
-  if (this->errormsg().size() > 0) {
+  if (!this->errormsg().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -320,19 +325,25 @@ failure:
   }
 
   // bytes errorData = 6;
-  if (this->errordata().size() > 0) {
+  if (!this->errordata().empty()) {
     target = stream->WriteBytesMaybeAliased(
         6, this->_internal_errordata(), target);
   }
 
   // string subBiz = 7;
-  if (this->subbiz().size() > 0) {
+  if (!this->subbiz().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_subbiz().data(), static_cast<int>(this->_internal_subbiz().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "AcFunDanmu.DownstreamPayload.subBiz");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_subbiz(), target);
+  }
+
+  // int64 klinkPushId = 8;
+  if (this->klinkpushid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(8, this->_internal_klinkpushid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -352,35 +363,35 @@ size_t DownstreamPayload::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string command = 1;
-  if (this->command().size() > 0) {
+  if (!this->command().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_command());
   }
 
   // bytes payloadData = 4;
-  if (this->payloaddata().size() > 0) {
+  if (!this->payloaddata().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payloaddata());
   }
 
   // string errorMsg = 5;
-  if (this->errormsg().size() > 0) {
+  if (!this->errormsg().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_errormsg());
   }
 
   // bytes errorData = 6;
-  if (this->errordata().size() > 0) {
+  if (!this->errordata().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_errordata());
   }
 
   // string subBiz = 7;
-  if (this->subbiz().size() > 0) {
+  if (!this->subbiz().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_subbiz());
@@ -391,6 +402,13 @@ size_t DownstreamPayload::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_seqid());
+  }
+
+  // int64 klinkPushId = 8;
+  if (this->klinkpushid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_klinkpushid());
   }
 
   // int32 errorCode = 3;
@@ -431,23 +449,26 @@ void DownstreamPayload::MergeFrom(const DownstreamPayload& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.command().size() > 0) {
+  if (!from.command().empty()) {
     _internal_set_command(from._internal_command());
   }
-  if (from.payloaddata().size() > 0) {
+  if (!from.payloaddata().empty()) {
     _internal_set_payloaddata(from._internal_payloaddata());
   }
-  if (from.errormsg().size() > 0) {
+  if (!from.errormsg().empty()) {
     _internal_set_errormsg(from._internal_errormsg());
   }
-  if (from.errordata().size() > 0) {
+  if (!from.errordata().empty()) {
     _internal_set_errordata(from._internal_errordata());
   }
-  if (from.subbiz().size() > 0) {
+  if (!from.subbiz().empty()) {
     _internal_set_subbiz(from._internal_subbiz());
   }
   if (from.seqid() != 0) {
     _internal_set_seqid(from._internal_seqid());
+  }
+  if (from.klinkpushid() != 0) {
+    _internal_set_klinkpushid(from._internal_klinkpushid());
   }
   if (from.errorcode() != 0) {
     _internal_set_errorcode(from._internal_errorcode());
@@ -474,12 +495,32 @@ bool DownstreamPayload::IsInitialized() const {
 
 void DownstreamPayload::InternalSwap(DownstreamPayload* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  command_.Swap(&other->command_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payloaddata_.Swap(&other->payloaddata_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  errormsg_.Swap(&other->errormsg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  errordata_.Swap(&other->errordata_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  subbiz_.Swap(&other->subbiz_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &command_, GetArenaForAllocation(),
+      &other->command_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &payloaddata_, GetArenaForAllocation(),
+      &other->payloaddata_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &errormsg_, GetArenaForAllocation(),
+      &other->errormsg_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &errordata_, GetArenaForAllocation(),
+      &other->errordata_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &subbiz_, GetArenaForAllocation(),
+      &other->subbiz_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(DownstreamPayload, errorcode_)
       + sizeof(DownstreamPayload::errorcode_)
@@ -489,9 +530,10 @@ void DownstreamPayload::InternalSwap(DownstreamPayload* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DownstreamPayload::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_DownstreamPayload_2eproto_getter, &descriptor_table_DownstreamPayload_2eproto_once,
+      file_level_metadata_DownstreamPayload_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

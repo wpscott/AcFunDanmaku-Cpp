@@ -14,25 +14,22 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonNotifySignalKickedOutDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonNotifySignalKickedOut> _instance;
-} _CommonNotifySignalKickedOut_default_instance_;
+constexpr CommonNotifySignalKickedOut::CommonNotifySignalKickedOut(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : reason_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct CommonNotifySignalKickedOutDefaultTypeInternal {
+  constexpr CommonNotifySignalKickedOutDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonNotifySignalKickedOutDefaultTypeInternal() {}
+  union {
+    CommonNotifySignalKickedOut _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonNotifySignalKickedOutDefaultTypeInternal _CommonNotifySignalKickedOut_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonNotifySignalKickedOut_CommonNotifySignalKickedOut_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonNotifySignalKickedOut_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonNotifySignalKickedOut();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonNotifySignalKickedOut_CommonNotifySignalKickedOut_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonNotifySignalKickedOut_CommonNotifySignalKickedOut_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonNotifySignalKickedOut_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonNotifySignalKickedOut_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonNotifySignalKickedOut_2eproto = nullptr;
@@ -58,21 +55,19 @@ const char descriptor_table_protodef_CommonNotifySignalKickedOut_2eproto[] PROTO
   "unDanmu\"-\n\033CommonNotifySignalKickedOut\022\016"
   "\n\006reason\030\001 \001(\tb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonNotifySignalKickedOut_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonNotifySignalKickedOut_2eproto_sccs[1] = {
-  &scc_info_CommonNotifySignalKickedOut_CommonNotifySignalKickedOut_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonNotifySignalKickedOut_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonNotifySignalKickedOut_2eproto = {
-  false, false, descriptor_table_protodef_CommonNotifySignalKickedOut_2eproto, "CommonNotifySignalKickedOut.proto", 102,
-  &descriptor_table_CommonNotifySignalKickedOut_2eproto_once, descriptor_table_CommonNotifySignalKickedOut_2eproto_sccs, descriptor_table_CommonNotifySignalKickedOut_2eproto_deps, 1, 0,
+  false, false, 102, descriptor_table_protodef_CommonNotifySignalKickedOut_2eproto, "CommonNotifySignalKickedOut.proto", 
+  &descriptor_table_CommonNotifySignalKickedOut_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_CommonNotifySignalKickedOut_2eproto::offsets,
-  file_level_metadata_CommonNotifySignalKickedOut_2eproto, 1, file_level_enum_descriptors_CommonNotifySignalKickedOut_2eproto, file_level_service_descriptors_CommonNotifySignalKickedOut_2eproto,
+  file_level_metadata_CommonNotifySignalKickedOut_2eproto, file_level_enum_descriptors_CommonNotifySignalKickedOut_2eproto, file_level_service_descriptors_CommonNotifySignalKickedOut_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonNotifySignalKickedOut_2eproto_getter() {
+  return &descriptor_table_CommonNotifySignalKickedOut_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonNotifySignalKickedOut_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonNotifySignalKickedOut_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonNotifySignalKickedOut_2eproto(&descriptor_table_CommonNotifySignalKickedOut_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -93,14 +88,13 @@ CommonNotifySignalKickedOut::CommonNotifySignalKickedOut(const CommonNotifySigna
   reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reason().empty()) {
     reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reason(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonNotifySignalKickedOut)
 }
 
 void CommonNotifySignalKickedOut::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonNotifySignalKickedOut_CommonNotifySignalKickedOut_2eproto.base);
-  reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CommonNotifySignalKickedOut::~CommonNotifySignalKickedOut() {
@@ -110,7 +104,7 @@ CommonNotifySignalKickedOut::~CommonNotifySignalKickedOut() {
 }
 
 void CommonNotifySignalKickedOut::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -123,11 +117,6 @@ void CommonNotifySignalKickedOut::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void CommonNotifySignalKickedOut::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonNotifySignalKickedOut& CommonNotifySignalKickedOut::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonNotifySignalKickedOut_CommonNotifySignalKickedOut_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonNotifySignalKickedOut::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonNotifySignalKickedOut)
@@ -144,7 +133,6 @@ const char* CommonNotifySignalKickedOut::_InternalParse(const char* ptr, ::PROTO
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string reason = 1;
       case 1:
@@ -157,7 +145,8 @@ const char* CommonNotifySignalKickedOut::_InternalParse(const char* ptr, ::PROTO
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -184,7 +173,7 @@ failure:
   (void) cached_has_bits;
 
   // string reason = 1;
-  if (this->reason().size() > 0) {
+  if (!this->reason().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -210,7 +199,7 @@ size_t CommonNotifySignalKickedOut::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string reason = 1;
-  if (this->reason().size() > 0) {
+  if (!this->reason().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_reason());
@@ -247,7 +236,7 @@ void CommonNotifySignalKickedOut::MergeFrom(const CommonNotifySignalKickedOut& f
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.reason().size() > 0) {
+  if (!from.reason().empty()) {
     _internal_set_reason(from._internal_reason());
   }
 }
@@ -272,14 +261,19 @@ bool CommonNotifySignalKickedOut::IsInitialized() const {
 
 void CommonNotifySignalKickedOut::InternalSwap(CommonNotifySignalKickedOut* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  reason_.Swap(&other->reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &reason_, GetArenaForAllocation(),
+      &other->reason_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonNotifySignalKickedOut::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonNotifySignalKickedOut_2eproto_getter, &descriptor_table_CommonNotifySignalKickedOut_2eproto_once,
+      file_level_metadata_CommonNotifySignalKickedOut_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

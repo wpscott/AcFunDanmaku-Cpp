@@ -14,25 +14,31 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class DeviceInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeviceInfo> _instance;
-} _DeviceInfo_default_instance_;
+constexpr DeviceInfo::DeviceInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : osversion_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , devicemodel_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , imeimd5_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , deviceid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , softdid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , kwaidid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , manufacturer_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , devicename_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , platformtype_(0)
+{}
+struct DeviceInfoDefaultTypeInternal {
+  constexpr DeviceInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DeviceInfoDefaultTypeInternal() {}
+  union {
+    DeviceInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DeviceInfoDefaultTypeInternal _DeviceInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_DeviceInfo_DeviceInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_DeviceInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::DeviceInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeviceInfo_DeviceInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_DeviceInfo_DeviceInfo_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_DeviceInfo_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_DeviceInfo_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_DeviceInfo_2eproto = nullptr;
@@ -75,21 +81,19 @@ const char descriptor_table_protodef_DeviceInfo_2eproto[] PROTOBUF_SECTION_VARIA
   "H5_WINDOWS\020\t\022\n\n\006H5_MAC\020\n\022\020\n\014kPlatformNum"
   "\020\013b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_DeviceInfo_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_DeviceInfo_2eproto_sccs[1] = {
-  &scc_info_DeviceInfo_DeviceInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_DeviceInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_DeviceInfo_2eproto = {
-  false, false, descriptor_table_protodef_DeviceInfo_2eproto, "DeviceInfo.proto", 450,
-  &descriptor_table_DeviceInfo_2eproto_once, descriptor_table_DeviceInfo_2eproto_sccs, descriptor_table_DeviceInfo_2eproto_deps, 1, 0,
+  false, false, 450, descriptor_table_protodef_DeviceInfo_2eproto, "DeviceInfo.proto", 
+  &descriptor_table_DeviceInfo_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_DeviceInfo_2eproto::offsets,
-  file_level_metadata_DeviceInfo_2eproto, 1, file_level_enum_descriptors_DeviceInfo_2eproto, file_level_service_descriptors_DeviceInfo_2eproto,
+  file_level_metadata_DeviceInfo_2eproto, file_level_enum_descriptors_DeviceInfo_2eproto, file_level_service_descriptors_DeviceInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_DeviceInfo_2eproto_getter() {
+  return &descriptor_table_DeviceInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_DeviceInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_DeviceInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_DeviceInfo_2eproto(&descriptor_table_DeviceInfo_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DeviceInfo_PlatformType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_DeviceInfo_2eproto);
@@ -151,58 +155,57 @@ DeviceInfo::DeviceInfo(const DeviceInfo& from)
   osversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_osversion().empty()) {
     osversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_osversion(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   devicemodel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_devicemodel().empty()) {
     devicemodel_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_devicemodel(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   imeimd5_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_imeimd5().empty()) {
     imeimd5_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_imeimd5(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   deviceid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_deviceid().empty()) {
     deviceid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_deviceid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   softdid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_softdid().empty()) {
     softdid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_softdid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   kwaidid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kwaidid().empty()) {
     kwaidid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kwaidid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   manufacturer_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_manufacturer().empty()) {
     manufacturer_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_manufacturer(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   devicename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_devicename().empty()) {
     devicename_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_devicename(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   platformtype_ = from.platformtype_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.DeviceInfo)
 }
 
 void DeviceInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_DeviceInfo_DeviceInfo_2eproto.base);
-  osversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  devicemodel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  imeimd5_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  deviceid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  softdid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  kwaidid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  manufacturer_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  devicename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  platformtype_ = 0;
+osversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+devicemodel_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+imeimd5_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+deviceid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+softdid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+kwaidid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+manufacturer_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+devicename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+platformtype_ = 0;
 }
 
 DeviceInfo::~DeviceInfo() {
@@ -212,7 +215,7 @@ DeviceInfo::~DeviceInfo() {
 }
 
 void DeviceInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   osversion_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   devicemodel_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   imeimd5_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -232,11 +235,6 @@ void DeviceInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void DeviceInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const DeviceInfo& DeviceInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DeviceInfo_DeviceInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void DeviceInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.DeviceInfo)
@@ -261,7 +259,6 @@ const char* DeviceInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.DeviceInfo.PlatformType platformType = 1;
       case 1:
@@ -344,7 +341,8 @@ const char* DeviceInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -378,7 +376,7 @@ failure:
   }
 
   // string osVersion = 2;
-  if (this->osversion().size() > 0) {
+  if (!this->osversion().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_osversion().data(), static_cast<int>(this->_internal_osversion().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -388,7 +386,7 @@ failure:
   }
 
   // string deviceModel = 3;
-  if (this->devicemodel().size() > 0) {
+  if (!this->devicemodel().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_devicemodel().data(), static_cast<int>(this->_internal_devicemodel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -398,13 +396,13 @@ failure:
   }
 
   // bytes imeiMd5 = 4;
-  if (this->imeimd5().size() > 0) {
+  if (!this->imeimd5().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_imeimd5(), target);
   }
 
   // string deviceId = 5;
-  if (this->deviceid().size() > 0) {
+  if (!this->deviceid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_deviceid().data(), static_cast<int>(this->_internal_deviceid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -414,7 +412,7 @@ failure:
   }
 
   // string softDid = 6;
-  if (this->softdid().size() > 0) {
+  if (!this->softdid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_softdid().data(), static_cast<int>(this->_internal_softdid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -424,7 +422,7 @@ failure:
   }
 
   // string kwaiDid = 7;
-  if (this->kwaidid().size() > 0) {
+  if (!this->kwaidid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_kwaidid().data(), static_cast<int>(this->_internal_kwaidid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -434,7 +432,7 @@ failure:
   }
 
   // string manufacturer = 8;
-  if (this->manufacturer().size() > 0) {
+  if (!this->manufacturer().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_manufacturer().data(), static_cast<int>(this->_internal_manufacturer().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -444,7 +442,7 @@ failure:
   }
 
   // string deviceName = 9;
-  if (this->devicename().size() > 0) {
+  if (!this->devicename().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_devicename().data(), static_cast<int>(this->_internal_devicename().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -470,56 +468,56 @@ size_t DeviceInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string osVersion = 2;
-  if (this->osversion().size() > 0) {
+  if (!this->osversion().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_osversion());
   }
 
   // string deviceModel = 3;
-  if (this->devicemodel().size() > 0) {
+  if (!this->devicemodel().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_devicemodel());
   }
 
   // bytes imeiMd5 = 4;
-  if (this->imeimd5().size() > 0) {
+  if (!this->imeimd5().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_imeimd5());
   }
 
   // string deviceId = 5;
-  if (this->deviceid().size() > 0) {
+  if (!this->deviceid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_deviceid());
   }
 
   // string softDid = 6;
-  if (this->softdid().size() > 0) {
+  if (!this->softdid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_softdid());
   }
 
   // string kwaiDid = 7;
-  if (this->kwaidid().size() > 0) {
+  if (!this->kwaidid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_kwaidid());
   }
 
   // string manufacturer = 8;
-  if (this->manufacturer().size() > 0) {
+  if (!this->manufacturer().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_manufacturer());
   }
 
   // string deviceName = 9;
-  if (this->devicename().size() > 0) {
+  if (!this->devicename().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_devicename());
@@ -562,28 +560,28 @@ void DeviceInfo::MergeFrom(const DeviceInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.osversion().size() > 0) {
+  if (!from.osversion().empty()) {
     _internal_set_osversion(from._internal_osversion());
   }
-  if (from.devicemodel().size() > 0) {
+  if (!from.devicemodel().empty()) {
     _internal_set_devicemodel(from._internal_devicemodel());
   }
-  if (from.imeimd5().size() > 0) {
+  if (!from.imeimd5().empty()) {
     _internal_set_imeimd5(from._internal_imeimd5());
   }
-  if (from.deviceid().size() > 0) {
+  if (!from.deviceid().empty()) {
     _internal_set_deviceid(from._internal_deviceid());
   }
-  if (from.softdid().size() > 0) {
+  if (!from.softdid().empty()) {
     _internal_set_softdid(from._internal_softdid());
   }
-  if (from.kwaidid().size() > 0) {
+  if (!from.kwaidid().empty()) {
     _internal_set_kwaidid(from._internal_kwaidid());
   }
-  if (from.manufacturer().size() > 0) {
+  if (!from.manufacturer().empty()) {
     _internal_set_manufacturer(from._internal_manufacturer());
   }
-  if (from.devicename().size() > 0) {
+  if (!from.devicename().empty()) {
     _internal_set_devicename(from._internal_devicename());
   }
   if (from.platformtype() != 0) {
@@ -611,22 +609,55 @@ bool DeviceInfo::IsInitialized() const {
 
 void DeviceInfo::InternalSwap(DeviceInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  osversion_.Swap(&other->osversion_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  devicemodel_.Swap(&other->devicemodel_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  imeimd5_.Swap(&other->imeimd5_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  deviceid_.Swap(&other->deviceid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  softdid_.Swap(&other->softdid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  kwaidid_.Swap(&other->kwaidid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  manufacturer_.Swap(&other->manufacturer_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  devicename_.Swap(&other->devicename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &osversion_, GetArenaForAllocation(),
+      &other->osversion_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &devicemodel_, GetArenaForAllocation(),
+      &other->devicemodel_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &imeimd5_, GetArenaForAllocation(),
+      &other->imeimd5_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &deviceid_, GetArenaForAllocation(),
+      &other->deviceid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &softdid_, GetArenaForAllocation(),
+      &other->softdid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &kwaidid_, GetArenaForAllocation(),
+      &other->kwaidid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &manufacturer_, GetArenaForAllocation(),
+      &other->manufacturer_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &devicename_, GetArenaForAllocation(),
+      &other->devicename_, other->GetArenaForAllocation()
+  );
   swap(platformtype_, other->platformtype_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeviceInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_DeviceInfo_2eproto_getter, &descriptor_table_DeviceInfo_2eproto_once,
+      file_level_metadata_DeviceInfo_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

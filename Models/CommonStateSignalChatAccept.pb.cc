@@ -14,25 +14,25 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalChatAcceptDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalChatAccept> _instance;
-} _CommonStateSignalChatAccept_default_instance_;
+constexpr CommonStateSignalChatAccept::CommonStateSignalChatAccept(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : chatid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , aryasignalinfo_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , mediatype_(0)
+{}
+struct CommonStateSignalChatAcceptDefaultTypeInternal {
+  constexpr CommonStateSignalChatAcceptDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalChatAcceptDefaultTypeInternal() {}
+  union {
+    CommonStateSignalChatAccept _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalChatAcceptDefaultTypeInternal _CommonStateSignalChatAccept_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalChatAccept_CommonStateSignalChatAccept_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalChatAccept_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalChatAccept();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalChatAccept_CommonStateSignalChatAccept_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonStateSignalChatAccept_CommonStateSignalChatAccept_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalChatAccept_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalChatAccept_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalChatAccept_2eproto = nullptr;
@@ -45,7 +45,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonStateSignalChatAccept_2e
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatAccept, chatid_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatAccept, mediatype_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatAccept, arraysignalinfo_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatAccept, aryasignalinfo_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::CommonStateSignalChatAccept)},
@@ -57,27 +57,27 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_CommonStateSignalChatAccept_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n!CommonStateSignalChatAccept.proto\022\nAcF"
-  "unDanmu\032\023ChatMediaType.proto\"t\n\033CommonSt"
+  "unDanmu\032\023ChatMediaType.proto\"s\n\033CommonSt"
   "ateSignalChatAccept\022\016\n\006chatId\030\001 \001(\t\022,\n\tm"
   "ediaType\030\002 \001(\0162\031.AcFunDanmu.ChatMediaTyp"
-  "e\022\027\n\017arraySignalInfo\030\003 \001(\tb\006proto3"
+  "e\022\026\n\016aryaSignalInfo\030\003 \001(\tb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalChatAccept_2eproto_deps[1] = {
   &::descriptor_table_ChatMediaType_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalChatAccept_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalChatAccept_CommonStateSignalChatAccept_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalChatAccept_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalChatAccept_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalChatAccept_2eproto, "CommonStateSignalChatAccept.proto", 194,
-  &descriptor_table_CommonStateSignalChatAccept_2eproto_once, descriptor_table_CommonStateSignalChatAccept_2eproto_sccs, descriptor_table_CommonStateSignalChatAccept_2eproto_deps, 1, 1,
+  false, false, 193, descriptor_table_protodef_CommonStateSignalChatAccept_2eproto, "CommonStateSignalChatAccept.proto", 
+  &descriptor_table_CommonStateSignalChatAccept_2eproto_once, descriptor_table_CommonStateSignalChatAccept_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_CommonStateSignalChatAccept_2eproto::offsets,
-  file_level_metadata_CommonStateSignalChatAccept_2eproto, 1, file_level_enum_descriptors_CommonStateSignalChatAccept_2eproto, file_level_service_descriptors_CommonStateSignalChatAccept_2eproto,
+  file_level_metadata_CommonStateSignalChatAccept_2eproto, file_level_enum_descriptors_CommonStateSignalChatAccept_2eproto, file_level_service_descriptors_CommonStateSignalChatAccept_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalChatAccept_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalChatAccept_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalChatAccept_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalChatAccept_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalChatAccept_2eproto(&descriptor_table_CommonStateSignalChatAccept_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -98,22 +98,21 @@ CommonStateSignalChatAccept::CommonStateSignalChatAccept(const CommonStateSignal
   chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_chatid().empty()) {
     chatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_chatid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
-  arraysignalinfo_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_arraysignalinfo().empty()) {
-    arraysignalinfo_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_arraysignalinfo(), 
-      GetArena());
+  aryasignalinfo_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_aryasignalinfo().empty()) {
+    aryasignalinfo_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_aryasignalinfo(), 
+      GetArenaForAllocation());
   }
   mediatype_ = from.mediatype_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalChatAccept)
 }
 
 void CommonStateSignalChatAccept::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalChatAccept_CommonStateSignalChatAccept_2eproto.base);
-  chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  arraysignalinfo_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  mediatype_ = 0;
+chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+aryasignalinfo_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+mediatype_ = 0;
 }
 
 CommonStateSignalChatAccept::~CommonStateSignalChatAccept() {
@@ -123,9 +122,9 @@ CommonStateSignalChatAccept::~CommonStateSignalChatAccept() {
 }
 
 void CommonStateSignalChatAccept::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   chatid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  arraysignalinfo_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  aryasignalinfo_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void CommonStateSignalChatAccept::ArenaDtor(void* object) {
@@ -137,11 +136,6 @@ void CommonStateSignalChatAccept::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void CommonStateSignalChatAccept::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalChatAccept& CommonStateSignalChatAccept::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalChatAccept_CommonStateSignalChatAccept_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalChatAccept::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalChatAccept)
@@ -150,7 +144,7 @@ void CommonStateSignalChatAccept::Clear() {
   (void) cached_has_bits;
 
   chatid_.ClearToEmpty();
-  arraysignalinfo_.ClearToEmpty();
+  aryasignalinfo_.ClearToEmpty();
   mediatype_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -160,7 +154,6 @@ const char* CommonStateSignalChatAccept::_InternalParse(const char* ptr, ::PROTO
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string chatId = 1;
       case 1:
@@ -179,18 +172,19 @@ const char* CommonStateSignalChatAccept::_InternalParse(const char* ptr, ::PROTO
           _internal_set_mediatype(static_cast<::AcFunDanmu::ChatMediaType>(val));
         } else goto handle_unusual;
         continue;
-      // string arraySignalInfo = 3;
+      // string aryaSignalInfo = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_arraysignalinfo();
+          auto str = _internal_mutable_aryasignalinfo();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalChatAccept.arraySignalInfo"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalChatAccept.aryaSignalInfo"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -217,7 +211,7 @@ failure:
   (void) cached_has_bits;
 
   // string chatId = 1;
-  if (this->chatid().size() > 0) {
+  if (!this->chatid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chatid().data(), static_cast<int>(this->_internal_chatid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -233,14 +227,14 @@ failure:
       2, this->_internal_mediatype(), target);
   }
 
-  // string arraySignalInfo = 3;
-  if (this->arraysignalinfo().size() > 0) {
+  // string aryaSignalInfo = 3;
+  if (!this->aryasignalinfo().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_arraysignalinfo().data(), static_cast<int>(this->_internal_arraysignalinfo().length()),
+      this->_internal_aryasignalinfo().data(), static_cast<int>(this->_internal_aryasignalinfo().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "AcFunDanmu.CommonStateSignalChatAccept.arraySignalInfo");
+      "AcFunDanmu.CommonStateSignalChatAccept.aryaSignalInfo");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_arraysignalinfo(), target);
+        3, this->_internal_aryasignalinfo(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -260,17 +254,17 @@ size_t CommonStateSignalChatAccept::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string chatId = 1;
-  if (this->chatid().size() > 0) {
+  if (!this->chatid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_chatid());
   }
 
-  // string arraySignalInfo = 3;
-  if (this->arraysignalinfo().size() > 0) {
+  // string aryaSignalInfo = 3;
+  if (!this->aryasignalinfo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_arraysignalinfo());
+        this->_internal_aryasignalinfo());
   }
 
   // .AcFunDanmu.ChatMediaType mediaType = 2;
@@ -310,11 +304,11 @@ void CommonStateSignalChatAccept::MergeFrom(const CommonStateSignalChatAccept& f
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.chatid().size() > 0) {
+  if (!from.chatid().empty()) {
     _internal_set_chatid(from._internal_chatid());
   }
-  if (from.arraysignalinfo().size() > 0) {
-    _internal_set_arraysignalinfo(from._internal_arraysignalinfo());
+  if (!from.aryasignalinfo().empty()) {
+    _internal_set_aryasignalinfo(from._internal_aryasignalinfo());
   }
   if (from.mediatype() != 0) {
     _internal_set_mediatype(from._internal_mediatype());
@@ -341,16 +335,25 @@ bool CommonStateSignalChatAccept::IsInitialized() const {
 
 void CommonStateSignalChatAccept::InternalSwap(CommonStateSignalChatAccept* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  chatid_.Swap(&other->chatid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  arraysignalinfo_.Swap(&other->arraysignalinfo_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &chatid_, GetArenaForAllocation(),
+      &other->chatid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &aryasignalinfo_, GetArenaForAllocation(),
+      &other->aryasignalinfo_, other->GetArenaForAllocation()
+  );
   swap(mediatype_, other->mediatype_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalChatAccept::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalChatAccept_2eproto_getter, &descriptor_table_CommonStateSignalChatAccept_2eproto_once,
+      file_level_metadata_CommonStateSignalChatAccept_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

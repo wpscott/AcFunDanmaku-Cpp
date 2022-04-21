@@ -14,56 +14,57 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_AccessPointsConfig_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AccessPointsConfig_AccessPointsConfig_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AppInfo_AppInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_DeviceInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeviceInfo_DeviceInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_EnvInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_EnvInfo_EnvInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_PushServiceToken_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PushServiceToken_PushServiceToken_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_SdkOption_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SdkOption_SdkOption_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ZtCommonInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtCommonInfo_ZtCommonInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class RegisterRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RegisterRequest> _instance;
-} _RegisterRequest_default_instance_;
-class RegisterResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RegisterResponse> _instance;
-} _RegisterResponse_default_instance_;
+constexpr RegisterRequest::RegisterRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : pushservicetokenlist_()
+  , appcustomstatus_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , appinfo_(nullptr)
+  , deviceinfo_(nullptr)
+  , envinfo_(nullptr)
+  , pushservicetoken_(nullptr)
+  , ztcommoninfo_(nullptr)
+  , presencestatus_(0)
+
+  , appactivestatus_(0)
+
+  , instanceid_(int64_t{0})
+  , keepaliveintervalsec_(0)
+  , ipv6available_(false){}
+struct RegisterRequestDefaultTypeInternal {
+  constexpr RegisterRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~RegisterRequestDefaultTypeInternal() {}
+  union {
+    RegisterRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegisterRequestDefaultTypeInternal _RegisterRequest_default_instance_;
+constexpr RegisterResponse::RegisterResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : sesskey_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , accesspointsconfig_(nullptr)
+  , sdkoption_(nullptr)
+  , accesspointsconfigipv6_(nullptr)
+  , accesspointsconfigquic_(nullptr)
+  , accesspointsconfigquicipv6_(nullptr)
+  , accesspointsconfigws_(nullptr)
+  , instanceid_(int64_t{0})
+  , cleanaccesspoint_(false)
+  , flowcostsamplerate_(0)
+  , commandsamplerate_(0){}
+struct RegisterResponseDefaultTypeInternal {
+  constexpr RegisterResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~RegisterResponseDefaultTypeInternal() {}
+  union {
+    RegisterResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegisterResponseDefaultTypeInternal _RegisterResponse_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_RegisterRequest_Register_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_RegisterRequest_default_instance_;
-    new (ptr) ::AcFunDanmu::RegisterRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_RegisterRequest_Register_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_RegisterRequest_Register_2eproto}, {
-      &scc_info_AppInfo_AppInfo_2eproto.base,
-      &scc_info_DeviceInfo_DeviceInfo_2eproto.base,
-      &scc_info_EnvInfo_EnvInfo_2eproto.base,
-      &scc_info_PushServiceToken_PushServiceToken_2eproto.base,
-      &scc_info_ZtCommonInfo_ZtCommonInfo_2eproto.base,}};
-
-static void InitDefaultsscc_info_RegisterResponse_Register_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_RegisterResponse_default_instance_;
-    new (ptr) ::AcFunDanmu::RegisterResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_RegisterResponse_Register_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_RegisterResponse_Register_2eproto}, {
-      &scc_info_AccessPointsConfig_AccessPointsConfig_2eproto.base,
-      &scc_info_SdkOption_SdkOption_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Register_2eproto[2];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Register_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Register_2eproto = nullptr;
@@ -85,6 +86,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Register_2eproto::offsets[] PR
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterRequest, pushservicetokenlist_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterRequest, keepaliveintervalsec_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterRequest, ztcommoninfo_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterRequest, ipv6available_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -95,10 +97,16 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Register_2eproto::offsets[] PR
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, instanceid_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, sdkoption_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, accesspointsconfigipv6_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, accesspointsconfigquic_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, accesspointsconfigquicipv6_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, cleanaccesspoint_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, flowcostsamplerate_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, commandsamplerate_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::RegisterResponse, accesspointsconfigws_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::RegisterRequest)},
-  { 16, -1, sizeof(::AcFunDanmu::RegisterResponse)},
+  { 17, -1, sizeof(::AcFunDanmu::RegisterResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -111,7 +119,7 @@ const char descriptor_table_protodef_Register_2eproto[] PROTOBUF_SECTION_VARIABL
   "oto\032\020DeviceInfo.proto\032\rEnvInfo.proto\032\022Zt"
   "CommonInfo.proto\032\030AccessPointsConfig.pro"
   "to\032\026PushServiceToken.proto\032\017SdkOption.pr"
-  "oto\"\206\005\n\017RegisterRequest\022$\n\007appInfo\030\001 \001(\013"
+  "oto\"\235\005\n\017RegisterRequest\022$\n\007appInfo\030\001 \001(\013"
   "2\023.AcFunDanmu.AppInfo\022*\n\ndeviceInfo\030\002 \001("
   "\0132\026.AcFunDanmu.DeviceInfo\022$\n\007envInfo\030\003 \001"
   "(\0132\023.AcFunDanmu.EnvInfo\022B\n\016presenceStatu"
@@ -123,17 +131,24 @@ const char descriptor_table_protodef_Register_2eproto[] PROTOBUF_SECTION_VARIABL
   "\022\n\ninstanceId\030\010 \001(\003\022:\n\024pushServiceTokenL"
   "ist\030\t \003(\0132\034.AcFunDanmu.PushServiceToken\022"
   "\034\n\024keepaliveIntervalSec\030\n \001(\005\022.\n\014ztCommo"
-  "nInfo\030\013 \001(\0132\030.AcFunDanmu.ZtCommonInfo\";\n"
-  "\016PresenceStatus\022\024\n\020kPresenceOffline\020\000\022\023\n"
-  "\017kPresenceOnline\020\001\"H\n\014ActiveStatus\022\014\n\010kI"
-  "nvalid\020\000\022\024\n\020kAppInForeground\020\001\022\024\n\020kAppIn"
-  "Background\020\002\"\335\001\n\020RegisterResponse\022:\n\022acc"
-  "essPointsConfig\030\001 \001(\0132\036.AcFunDanmu.Acces"
-  "sPointsConfig\022\017\n\007sessKey\030\002 \001(\014\022\022\n\ninstan"
-  "ceId\030\003 \001(\003\022(\n\tsdkOption\030\004 \001(\0132\025.AcFunDan"
-  "mu.SdkOption\022>\n\026accessPointsCOnfigIpv6\030\005"
-  " \001(\0132\036.AcFunDanmu.AccessPointsConfigb\006pr"
-  "oto3"
+  "nInfo\030\013 \001(\0132\030.AcFunDanmu.ZtCommonInfo\022\025\n"
+  "\ripv6Available\030\014 \001(\010\";\n\016PresenceStatus\022\024"
+  "\n\020kPresenceOffline\020\000\022\023\n\017kPresenceOnline\020"
+  "\001\"H\n\014ActiveStatus\022\014\n\010kInvalid\020\000\022\024\n\020kAppI"
+  "nForeground\020\001\022\024\n\020kAppInBackground\020\002\"\360\003\n\020"
+  "RegisterResponse\022:\n\022accessPointsConfig\030\001"
+  " \001(\0132\036.AcFunDanmu.AccessPointsConfig\022\017\n\007"
+  "sessKey\030\002 \001(\014\022\022\n\ninstanceId\030\003 \001(\003\022(\n\tsdk"
+  "Option\030\004 \001(\0132\025.AcFunDanmu.SdkOption\022>\n\026a"
+  "ccessPointsConfigIpv6\030\005 \001(\0132\036.AcFunDanmu"
+  ".AccessPointsConfig\022>\n\026accessPointsConfi"
+  "gQUic\030\006 \001(\0132\036.AcFunDanmu.AccessPointsCon"
+  "fig\022B\n\032accessPointsConfigQuicIpv6\030\007 \001(\0132"
+  "\036.AcFunDanmu.AccessPointsConfig\022\030\n\020clean"
+  "AccessPoint\030\010 \001(\010\022\032\n\022flowCostSampleRate\030"
+  "\t \001(\002\022\031\n\021commandSampleRate\030\n \001(\002\022<\n\024acce"
+  "ssPointsConfigWs\030\013 \001(\0132\036.AcFunDanmu.Acce"
+  "ssPointsConfigb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Register_2eproto_deps[7] = {
   &::descriptor_table_AccessPointsConfig_2eproto,
@@ -144,20 +159,19 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_SdkOption_2eproto,
   &::descriptor_table_ZtCommonInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Register_2eproto_sccs[2] = {
-  &scc_info_RegisterRequest_Register_2eproto.base,
-  &scc_info_RegisterResponse_Register_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Register_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Register_2eproto = {
-  false, false, descriptor_table_protodef_Register_2eproto, "Register.proto", 1044,
-  &descriptor_table_Register_2eproto_once, descriptor_table_Register_2eproto_sccs, descriptor_table_Register_2eproto_deps, 2, 7,
+  false, false, 1342, descriptor_table_protodef_Register_2eproto, "Register.proto", 
+  &descriptor_table_Register_2eproto_once, descriptor_table_Register_2eproto_deps, 7, 2,
   schemas, file_default_instances, TableStruct_Register_2eproto::offsets,
-  file_level_metadata_Register_2eproto, 2, file_level_enum_descriptors_Register_2eproto, file_level_service_descriptors_Register_2eproto,
+  file_level_metadata_Register_2eproto, file_level_enum_descriptors_Register_2eproto, file_level_service_descriptors_Register_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_Register_2eproto_getter() {
+  return &descriptor_table_Register_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_Register_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Register_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_Register_2eproto(&descriptor_table_Register_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* RegisterRequest_PresenceStatus_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Register_2eproto);
@@ -236,25 +250,25 @@ RegisterRequest::_Internal::ztcommoninfo(const RegisterRequest* msg) {
   return *msg->ztcommoninfo_;
 }
 void RegisterRequest::clear_appinfo() {
-  if (GetArena() == nullptr && appinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && appinfo_ != nullptr) {
     delete appinfo_;
   }
   appinfo_ = nullptr;
 }
 void RegisterRequest::clear_deviceinfo() {
-  if (GetArena() == nullptr && deviceinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && deviceinfo_ != nullptr) {
     delete deviceinfo_;
   }
   deviceinfo_ = nullptr;
 }
 void RegisterRequest::clear_envinfo() {
-  if (GetArena() == nullptr && envinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && envinfo_ != nullptr) {
     delete envinfo_;
   }
   envinfo_ = nullptr;
 }
 void RegisterRequest::clear_pushservicetoken() {
-  if (GetArena() == nullptr && pushservicetoken_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && pushservicetoken_ != nullptr) {
     delete pushservicetoken_;
   }
   pushservicetoken_ = nullptr;
@@ -263,7 +277,7 @@ void RegisterRequest::clear_pushservicetokenlist() {
   pushservicetokenlist_.Clear();
 }
 void RegisterRequest::clear_ztcommoninfo() {
-  if (GetArena() == nullptr && ztcommoninfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && ztcommoninfo_ != nullptr) {
     delete ztcommoninfo_;
   }
   ztcommoninfo_ = nullptr;
@@ -282,7 +296,7 @@ RegisterRequest::RegisterRequest(const RegisterRequest& from)
   appcustomstatus_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appcustomstatus().empty()) {
     appcustomstatus_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appcustomstatus(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_appinfo()) {
     appinfo_ = new ::AcFunDanmu::AppInfo(*from.appinfo_);
@@ -310,18 +324,17 @@ RegisterRequest::RegisterRequest(const RegisterRequest& from)
     ztcommoninfo_ = nullptr;
   }
   ::memcpy(&presencestatus_, &from.presencestatus_,
-    static_cast<size_t>(reinterpret_cast<char*>(&keepaliveintervalsec_) -
-    reinterpret_cast<char*>(&presencestatus_)) + sizeof(keepaliveintervalsec_));
+    static_cast<size_t>(reinterpret_cast<char*>(&ipv6available_) -
+    reinterpret_cast<char*>(&presencestatus_)) + sizeof(ipv6available_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.RegisterRequest)
 }
 
 void RegisterRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RegisterRequest_Register_2eproto.base);
-  appcustomstatus_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&appinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&keepaliveintervalsec_) -
-      reinterpret_cast<char*>(&appinfo_)) + sizeof(keepaliveintervalsec_));
+appcustomstatus_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&appinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&ipv6available_) -
+    reinterpret_cast<char*>(&appinfo_)) + sizeof(ipv6available_));
 }
 
 RegisterRequest::~RegisterRequest() {
@@ -331,7 +344,7 @@ RegisterRequest::~RegisterRequest() {
 }
 
 void RegisterRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   appcustomstatus_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete appinfo_;
   if (this != internal_default_instance()) delete deviceinfo_;
@@ -349,11 +362,6 @@ void RegisterRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void RegisterRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const RegisterRequest& RegisterRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RegisterRequest_Register_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void RegisterRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.RegisterRequest)
@@ -363,29 +371,29 @@ void RegisterRequest::Clear() {
 
   pushservicetokenlist_.Clear();
   appcustomstatus_.ClearToEmpty();
-  if (GetArena() == nullptr && appinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && appinfo_ != nullptr) {
     delete appinfo_;
   }
   appinfo_ = nullptr;
-  if (GetArena() == nullptr && deviceinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && deviceinfo_ != nullptr) {
     delete deviceinfo_;
   }
   deviceinfo_ = nullptr;
-  if (GetArena() == nullptr && envinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && envinfo_ != nullptr) {
     delete envinfo_;
   }
   envinfo_ = nullptr;
-  if (GetArena() == nullptr && pushservicetoken_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && pushservicetoken_ != nullptr) {
     delete pushservicetoken_;
   }
   pushservicetoken_ = nullptr;
-  if (GetArena() == nullptr && ztcommoninfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && ztcommoninfo_ != nullptr) {
     delete ztcommoninfo_;
   }
   ztcommoninfo_ = nullptr;
   ::memset(&presencestatus_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keepaliveintervalsec_) -
-      reinterpret_cast<char*>(&presencestatus_)) + sizeof(keepaliveintervalsec_));
+      reinterpret_cast<char*>(&ipv6available_) -
+      reinterpret_cast<char*>(&presencestatus_)) + sizeof(ipv6available_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -394,7 +402,6 @@ const char* RegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.AppInfo appInfo = 1;
       case 1:
@@ -481,9 +488,17 @@ const char* RegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // bool ipv6Available = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 96)) {
+          ipv6available_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -548,7 +563,7 @@ failure:
   }
 
   // bytes appCustomStatus = 6;
-  if (this->appcustomstatus().size() > 0) {
+  if (!this->appcustomstatus().empty()) {
     target = stream->WriteBytesMaybeAliased(
         6, this->_internal_appcustomstatus(), target);
   }
@@ -589,6 +604,12 @@ failure:
         11, _Internal::ztcommoninfo(this), target, stream);
   }
 
+  // bool ipv6Available = 12;
+  if (this->ipv6available() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(12, this->_internal_ipv6available(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -613,7 +634,7 @@ size_t RegisterRequest::ByteSizeLong() const {
   }
 
   // bytes appCustomStatus = 6;
-  if (this->appcustomstatus().size() > 0) {
+  if (!this->appcustomstatus().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_appcustomstatus());
@@ -680,6 +701,11 @@ size_t RegisterRequest::ByteSizeLong() const {
         this->_internal_keepaliveintervalsec());
   }
 
+  // bool ipv6Available = 12;
+  if (this->ipv6available() != 0) {
+    total_size += 1 + 1;
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -712,7 +738,7 @@ void RegisterRequest::MergeFrom(const RegisterRequest& from) {
   (void) cached_has_bits;
 
   pushservicetokenlist_.MergeFrom(from.pushservicetokenlist_);
-  if (from.appcustomstatus().size() > 0) {
+  if (!from.appcustomstatus().empty()) {
     _internal_set_appcustomstatus(from._internal_appcustomstatus());
   }
   if (from.has_appinfo()) {
@@ -742,6 +768,9 @@ void RegisterRequest::MergeFrom(const RegisterRequest& from) {
   if (from.keepaliveintervalsec() != 0) {
     _internal_set_keepaliveintervalsec(from._internal_keepaliveintervalsec());
   }
+  if (from.ipv6available() != 0) {
+    _internal_set_ipv6available(from._internal_ipv6available());
+  }
 }
 
 void RegisterRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -764,21 +793,26 @@ bool RegisterRequest::IsInitialized() const {
 
 void RegisterRequest::InternalSwap(RegisterRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   pushservicetokenlist_.InternalSwap(&other->pushservicetokenlist_);
-  appcustomstatus_.Swap(&other->appcustomstatus_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &appcustomstatus_, GetArenaForAllocation(),
+      &other->appcustomstatus_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegisterRequest, keepaliveintervalsec_)
-      + sizeof(RegisterRequest::keepaliveintervalsec_)
+      PROTOBUF_FIELD_OFFSET(RegisterRequest, ipv6available_)
+      + sizeof(RegisterRequest::ipv6available_)
       - PROTOBUF_FIELD_OFFSET(RegisterRequest, appinfo_)>(
           reinterpret_cast<char*>(&appinfo_),
           reinterpret_cast<char*>(&other->appinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegisterRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Register_2eproto_getter, &descriptor_table_Register_2eproto_once,
+      file_level_metadata_Register_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -787,6 +821,9 @@ class RegisterResponse::_Internal {
   static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfig(const RegisterResponse* msg);
   static const ::AcFunDanmu::SdkOption& sdkoption(const RegisterResponse* msg);
   static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigipv6(const RegisterResponse* msg);
+  static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigquic(const RegisterResponse* msg);
+  static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigquicipv6(const RegisterResponse* msg);
+  static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigws(const RegisterResponse* msg);
 };
 
 const ::AcFunDanmu::AccessPointsConfig&
@@ -801,23 +838,53 @@ const ::AcFunDanmu::AccessPointsConfig&
 RegisterResponse::_Internal::accesspointsconfigipv6(const RegisterResponse* msg) {
   return *msg->accesspointsconfigipv6_;
 }
+const ::AcFunDanmu::AccessPointsConfig&
+RegisterResponse::_Internal::accesspointsconfigquic(const RegisterResponse* msg) {
+  return *msg->accesspointsconfigquic_;
+}
+const ::AcFunDanmu::AccessPointsConfig&
+RegisterResponse::_Internal::accesspointsconfigquicipv6(const RegisterResponse* msg) {
+  return *msg->accesspointsconfigquicipv6_;
+}
+const ::AcFunDanmu::AccessPointsConfig&
+RegisterResponse::_Internal::accesspointsconfigws(const RegisterResponse* msg) {
+  return *msg->accesspointsconfigws_;
+}
 void RegisterResponse::clear_accesspointsconfig() {
-  if (GetArena() == nullptr && accesspointsconfig_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfig_ != nullptr) {
     delete accesspointsconfig_;
   }
   accesspointsconfig_ = nullptr;
 }
 void RegisterResponse::clear_sdkoption() {
-  if (GetArena() == nullptr && sdkoption_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && sdkoption_ != nullptr) {
     delete sdkoption_;
   }
   sdkoption_ = nullptr;
 }
 void RegisterResponse::clear_accesspointsconfigipv6() {
-  if (GetArena() == nullptr && accesspointsconfigipv6_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigipv6_ != nullptr) {
     delete accesspointsconfigipv6_;
   }
   accesspointsconfigipv6_ = nullptr;
+}
+void RegisterResponse::clear_accesspointsconfigquic() {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquic_ != nullptr) {
+    delete accesspointsconfigquic_;
+  }
+  accesspointsconfigquic_ = nullptr;
+}
+void RegisterResponse::clear_accesspointsconfigquicipv6() {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquicipv6_ != nullptr) {
+    delete accesspointsconfigquicipv6_;
+  }
+  accesspointsconfigquicipv6_ = nullptr;
+}
+void RegisterResponse::clear_accesspointsconfigws() {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigws_ != nullptr) {
+    delete accesspointsconfigws_;
+  }
+  accesspointsconfigws_ = nullptr;
 }
 RegisterResponse::RegisterResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
@@ -831,7 +898,7 @@ RegisterResponse::RegisterResponse(const RegisterResponse& from)
   sesskey_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sesskey().empty()) {
     sesskey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sesskey(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_accesspointsconfig()) {
     accesspointsconfig_ = new ::AcFunDanmu::AccessPointsConfig(*from.accesspointsconfig_);
@@ -848,17 +915,33 @@ RegisterResponse::RegisterResponse(const RegisterResponse& from)
   } else {
     accesspointsconfigipv6_ = nullptr;
   }
-  instanceid_ = from.instanceid_;
+  if (from._internal_has_accesspointsconfigquic()) {
+    accesspointsconfigquic_ = new ::AcFunDanmu::AccessPointsConfig(*from.accesspointsconfigquic_);
+  } else {
+    accesspointsconfigquic_ = nullptr;
+  }
+  if (from._internal_has_accesspointsconfigquicipv6()) {
+    accesspointsconfigquicipv6_ = new ::AcFunDanmu::AccessPointsConfig(*from.accesspointsconfigquicipv6_);
+  } else {
+    accesspointsconfigquicipv6_ = nullptr;
+  }
+  if (from._internal_has_accesspointsconfigws()) {
+    accesspointsconfigws_ = new ::AcFunDanmu::AccessPointsConfig(*from.accesspointsconfigws_);
+  } else {
+    accesspointsconfigws_ = nullptr;
+  }
+  ::memcpy(&instanceid_, &from.instanceid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&commandsamplerate_) -
+    reinterpret_cast<char*>(&instanceid_)) + sizeof(commandsamplerate_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.RegisterResponse)
 }
 
 void RegisterResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RegisterResponse_Register_2eproto.base);
-  sesskey_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&accesspointsconfig_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&instanceid_) -
-      reinterpret_cast<char*>(&accesspointsconfig_)) + sizeof(instanceid_));
+sesskey_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&accesspointsconfig_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&commandsamplerate_) -
+    reinterpret_cast<char*>(&accesspointsconfig_)) + sizeof(commandsamplerate_));
 }
 
 RegisterResponse::~RegisterResponse() {
@@ -868,11 +951,14 @@ RegisterResponse::~RegisterResponse() {
 }
 
 void RegisterResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   sesskey_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete accesspointsconfig_;
   if (this != internal_default_instance()) delete sdkoption_;
   if (this != internal_default_instance()) delete accesspointsconfigipv6_;
+  if (this != internal_default_instance()) delete accesspointsconfigquic_;
+  if (this != internal_default_instance()) delete accesspointsconfigquicipv6_;
+  if (this != internal_default_instance()) delete accesspointsconfigws_;
 }
 
 void RegisterResponse::ArenaDtor(void* object) {
@@ -884,11 +970,6 @@ void RegisterResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void RegisterResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const RegisterResponse& RegisterResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RegisterResponse_Register_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void RegisterResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.RegisterResponse)
@@ -897,19 +978,33 @@ void RegisterResponse::Clear() {
   (void) cached_has_bits;
 
   sesskey_.ClearToEmpty();
-  if (GetArena() == nullptr && accesspointsconfig_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfig_ != nullptr) {
     delete accesspointsconfig_;
   }
   accesspointsconfig_ = nullptr;
-  if (GetArena() == nullptr && sdkoption_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && sdkoption_ != nullptr) {
     delete sdkoption_;
   }
   sdkoption_ = nullptr;
-  if (GetArena() == nullptr && accesspointsconfigipv6_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigipv6_ != nullptr) {
     delete accesspointsconfigipv6_;
   }
   accesspointsconfigipv6_ = nullptr;
-  instanceid_ = PROTOBUF_LONGLONG(0);
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquic_ != nullptr) {
+    delete accesspointsconfigquic_;
+  }
+  accesspointsconfigquic_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquicipv6_ != nullptr) {
+    delete accesspointsconfigquicipv6_;
+  }
+  accesspointsconfigquicipv6_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigws_ != nullptr) {
+    delete accesspointsconfigws_;
+  }
+  accesspointsconfigws_ = nullptr;
+  ::memset(&instanceid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&commandsamplerate_) -
+      reinterpret_cast<char*>(&instanceid_)) + sizeof(commandsamplerate_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -918,7 +1013,6 @@ const char* RegisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.AccessPointsConfig accessPointsConfig = 1;
       case 1:
@@ -949,16 +1043,59 @@ const char* RegisterResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .AcFunDanmu.AccessPointsConfig accessPointsCOnfigIpv6 = 5;
+      // .AcFunDanmu.AccessPointsConfig accessPointsConfigIpv6 = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_accesspointsconfigipv6(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // .AcFunDanmu.AccessPointsConfig accessPointsConfigQUic = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accesspointsconfigquic(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .AcFunDanmu.AccessPointsConfig accessPointsConfigQuicIpv6 = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accesspointsconfigquicipv6(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool cleanAccessPoint = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
+          cleanaccesspoint_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // float flowCostSampleRate = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 77)) {
+          flowcostsamplerate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float commandSampleRate = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 85)) {
+          commandsamplerate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // .AcFunDanmu.AccessPointsConfig accessPointsConfigWs = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accesspointsconfigws(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -993,7 +1130,7 @@ failure:
   }
 
   // bytes sessKey = 2;
-  if (this->sesskey().size() > 0) {
+  if (!this->sesskey().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_sesskey(), target);
   }
@@ -1012,12 +1149,54 @@ failure:
         4, _Internal::sdkoption(this), target, stream);
   }
 
-  // .AcFunDanmu.AccessPointsConfig accessPointsCOnfigIpv6 = 5;
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigIpv6 = 5;
   if (this->has_accesspointsconfigipv6()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
         5, _Internal::accesspointsconfigipv6(this), target, stream);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQUic = 6;
+  if (this->has_accesspointsconfigquic()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::accesspointsconfigquic(this), target, stream);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQuicIpv6 = 7;
+  if (this->has_accesspointsconfigquicipv6()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::accesspointsconfigquicipv6(this), target, stream);
+  }
+
+  // bool cleanAccessPoint = 8;
+  if (this->cleanaccesspoint() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->_internal_cleanaccesspoint(), target);
+  }
+
+  // float flowCostSampleRate = 9;
+  if (!(this->flowcostsamplerate() <= 0 && this->flowcostsamplerate() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(9, this->_internal_flowcostsamplerate(), target);
+  }
+
+  // float commandSampleRate = 10;
+  if (!(this->commandsamplerate() <= 0 && this->commandsamplerate() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(10, this->_internal_commandsamplerate(), target);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigWs = 11;
+  if (this->has_accesspointsconfigws()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        11, _Internal::accesspointsconfigws(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1037,7 +1216,7 @@ size_t RegisterResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // bytes sessKey = 2;
-  if (this->sesskey().size() > 0) {
+  if (!this->sesskey().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_sesskey());
@@ -1057,11 +1236,32 @@ size_t RegisterResponse::ByteSizeLong() const {
         *sdkoption_);
   }
 
-  // .AcFunDanmu.AccessPointsConfig accessPointsCOnfigIpv6 = 5;
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigIpv6 = 5;
   if (this->has_accesspointsconfigipv6()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *accesspointsconfigipv6_);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQUic = 6;
+  if (this->has_accesspointsconfigquic()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accesspointsconfigquic_);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQuicIpv6 = 7;
+  if (this->has_accesspointsconfigquicipv6()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accesspointsconfigquicipv6_);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigWs = 11;
+  if (this->has_accesspointsconfigws()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accesspointsconfigws_);
   }
 
   // int64 instanceId = 3;
@@ -1069,6 +1269,21 @@ size_t RegisterResponse::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_instanceid());
+  }
+
+  // bool cleanAccessPoint = 8;
+  if (this->cleanaccesspoint() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // float flowCostSampleRate = 9;
+  if (!(this->flowcostsamplerate() <= 0 && this->flowcostsamplerate() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float commandSampleRate = 10;
+  if (!(this->commandsamplerate() <= 0 && this->commandsamplerate() >= 0)) {
+    total_size += 1 + 4;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1102,7 +1317,7 @@ void RegisterResponse::MergeFrom(const RegisterResponse& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.sesskey().size() > 0) {
+  if (!from.sesskey().empty()) {
     _internal_set_sesskey(from._internal_sesskey());
   }
   if (from.has_accesspointsconfig()) {
@@ -1114,8 +1329,26 @@ void RegisterResponse::MergeFrom(const RegisterResponse& from) {
   if (from.has_accesspointsconfigipv6()) {
     _internal_mutable_accesspointsconfigipv6()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigipv6());
   }
+  if (from.has_accesspointsconfigquic()) {
+    _internal_mutable_accesspointsconfigquic()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigquic());
+  }
+  if (from.has_accesspointsconfigquicipv6()) {
+    _internal_mutable_accesspointsconfigquicipv6()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigquicipv6());
+  }
+  if (from.has_accesspointsconfigws()) {
+    _internal_mutable_accesspointsconfigws()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigws());
+  }
   if (from.instanceid() != 0) {
     _internal_set_instanceid(from._internal_instanceid());
+  }
+  if (from.cleanaccesspoint() != 0) {
+    _internal_set_cleanaccesspoint(from._internal_cleanaccesspoint());
+  }
+  if (!(from.flowcostsamplerate() <= 0 && from.flowcostsamplerate() >= 0)) {
+    _internal_set_flowcostsamplerate(from._internal_flowcostsamplerate());
+  }
+  if (!(from.commandsamplerate() <= 0 && from.commandsamplerate() >= 0)) {
+    _internal_set_commandsamplerate(from._internal_commandsamplerate());
   }
 }
 
@@ -1139,20 +1372,25 @@ bool RegisterResponse::IsInitialized() const {
 
 void RegisterResponse::InternalSwap(RegisterResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  sesskey_.Swap(&other->sesskey_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &sesskey_, GetArenaForAllocation(),
+      &other->sesskey_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegisterResponse, instanceid_)
-      + sizeof(RegisterResponse::instanceid_)
+      PROTOBUF_FIELD_OFFSET(RegisterResponse, commandsamplerate_)
+      + sizeof(RegisterResponse::commandsamplerate_)
       - PROTOBUF_FIELD_OFFSET(RegisterResponse, accesspointsconfig_)>(
           reinterpret_cast<char*>(&accesspointsconfig_),
           reinterpret_cast<char*>(&other->accesspointsconfig_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegisterResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Register_2eproto_getter, &descriptor_table_Register_2eproto_once,
+      file_level_metadata_Register_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

@@ -14,27 +14,25 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalChatReadyDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalChatReady> _instance;
-} _CommonStateSignalChatReady_default_instance_;
+constexpr CommonStateSignalChatReady::CommonStateSignalChatReady(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : chatid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , guestuserinfo_(nullptr)
+  , mediatype_(0)
+{}
+struct CommonStateSignalChatReadyDefaultTypeInternal {
+  constexpr CommonStateSignalChatReadyDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalChatReadyDefaultTypeInternal() {}
+  union {
+    CommonStateSignalChatReady _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalChatReadyDefaultTypeInternal _CommonStateSignalChatReady_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalChatReady_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalChatReady();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalChatReady_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalChatReady_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalChatReady_2eproto = nullptr;
@@ -70,19 +68,19 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_ChatMediaType_2eproto,
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalChatReady_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalChatReady_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalChatReady_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalChatReady_2eproto, "CommonStateSignalChatReady.proto", 241,
-  &descriptor_table_CommonStateSignalChatReady_2eproto_once, descriptor_table_CommonStateSignalChatReady_2eproto_sccs, descriptor_table_CommonStateSignalChatReady_2eproto_deps, 1, 2,
+  false, false, 241, descriptor_table_protodef_CommonStateSignalChatReady_2eproto, "CommonStateSignalChatReady.proto", 
+  &descriptor_table_CommonStateSignalChatReady_2eproto_once, descriptor_table_CommonStateSignalChatReady_2eproto_deps, 2, 1,
   schemas, file_default_instances, TableStruct_CommonStateSignalChatReady_2eproto::offsets,
-  file_level_metadata_CommonStateSignalChatReady_2eproto, 1, file_level_enum_descriptors_CommonStateSignalChatReady_2eproto, file_level_service_descriptors_CommonStateSignalChatReady_2eproto,
+  file_level_metadata_CommonStateSignalChatReady_2eproto, file_level_enum_descriptors_CommonStateSignalChatReady_2eproto, file_level_service_descriptors_CommonStateSignalChatReady_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalChatReady_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalChatReady_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalChatReady_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalChatReady_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalChatReady_2eproto(&descriptor_table_CommonStateSignalChatReady_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -97,7 +95,7 @@ CommonStateSignalChatReady::_Internal::guestuserinfo(const CommonStateSignalChat
   return *msg->guestuserinfo_;
 }
 void CommonStateSignalChatReady::clear_guestuserinfo() {
-  if (GetArena() == nullptr && guestuserinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && guestuserinfo_ != nullptr) {
     delete guestuserinfo_;
   }
   guestuserinfo_ = nullptr;
@@ -114,7 +112,7 @@ CommonStateSignalChatReady::CommonStateSignalChatReady(const CommonStateSignalCh
   chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_chatid().empty()) {
     chatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_chatid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_guestuserinfo()) {
     guestuserinfo_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.guestuserinfo_);
@@ -126,12 +124,11 @@ CommonStateSignalChatReady::CommonStateSignalChatReady(const CommonStateSignalCh
 }
 
 void CommonStateSignalChatReady::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto.base);
-  chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&guestuserinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&mediatype_) -
-      reinterpret_cast<char*>(&guestuserinfo_)) + sizeof(mediatype_));
+chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&guestuserinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&mediatype_) -
+    reinterpret_cast<char*>(&guestuserinfo_)) + sizeof(mediatype_));
 }
 
 CommonStateSignalChatReady::~CommonStateSignalChatReady() {
@@ -141,7 +138,7 @@ CommonStateSignalChatReady::~CommonStateSignalChatReady() {
 }
 
 void CommonStateSignalChatReady::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   chatid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete guestuserinfo_;
 }
@@ -155,11 +152,6 @@ void CommonStateSignalChatReady::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void CommonStateSignalChatReady::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalChatReady& CommonStateSignalChatReady::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalChatReady_CommonStateSignalChatReady_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalChatReady::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalChatReady)
@@ -168,7 +160,7 @@ void CommonStateSignalChatReady::Clear() {
   (void) cached_has_bits;
 
   chatid_.ClearToEmpty();
-  if (GetArena() == nullptr && guestuserinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && guestuserinfo_ != nullptr) {
     delete guestuserinfo_;
   }
   guestuserinfo_ = nullptr;
@@ -181,7 +173,6 @@ const char* CommonStateSignalChatReady::_InternalParse(const char* ptr, ::PROTOB
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string chatId = 1;
       case 1:
@@ -209,7 +200,8 @@ const char* CommonStateSignalChatReady::_InternalParse(const char* ptr, ::PROTOB
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -236,7 +228,7 @@ failure:
   (void) cached_has_bits;
 
   // string chatId = 1;
-  if (this->chatid().size() > 0) {
+  if (!this->chatid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chatid().data(), static_cast<int>(this->_internal_chatid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -277,7 +269,7 @@ size_t CommonStateSignalChatReady::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string chatId = 1;
-  if (this->chatid().size() > 0) {
+  if (!this->chatid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_chatid());
@@ -327,7 +319,7 @@ void CommonStateSignalChatReady::MergeFrom(const CommonStateSignalChatReady& fro
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.chatid().size() > 0) {
+  if (!from.chatid().empty()) {
     _internal_set_chatid(from._internal_chatid());
   }
   if (from.has_guestuserinfo()) {
@@ -358,8 +350,12 @@ bool CommonStateSignalChatReady::IsInitialized() const {
 
 void CommonStateSignalChatReady::InternalSwap(CommonStateSignalChatReady* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  chatid_.Swap(&other->chatid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &chatid_, GetArenaForAllocation(),
+      &other->chatid_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CommonStateSignalChatReady, mediatype_)
       + sizeof(CommonStateSignalChatReady::mediatype_)
@@ -369,9 +365,10 @@ void CommonStateSignalChatReady::InternalSwap(CommonStateSignalChatReady* other)
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalChatReady::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalChatReady_2eproto_getter, &descriptor_table_CommonStateSignalChatReady_2eproto_once,
+      file_level_metadata_CommonStateSignalChatReady_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

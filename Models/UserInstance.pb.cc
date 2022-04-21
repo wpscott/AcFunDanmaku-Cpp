@@ -14,27 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_User_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_User_User_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class UserInstanceDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserInstance> _instance;
-} _UserInstance_default_instance_;
+constexpr UserInstance::UserInstance(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : user_(nullptr)
+  , instanceid_(int64_t{0}){}
+struct UserInstanceDefaultTypeInternal {
+  constexpr UserInstanceDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~UserInstanceDefaultTypeInternal() {}
+  union {
+    UserInstance _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT UserInstanceDefaultTypeInternal _UserInstance_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_UserInstance_UserInstance_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_UserInstance_default_instance_;
-    new (ptr) ::AcFunDanmu::UserInstance();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_UserInstance_UserInstance_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_UserInstance_UserInstance_2eproto}, {
-      &scc_info_User_User_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_UserInstance_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_UserInstance_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_UserInstance_2eproto = nullptr;
@@ -64,19 +60,19 @@ const char descriptor_table_protodef_UserInstance_2eproto[] PROTOBUF_SECTION_VAR
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_UserInstance_2eproto_deps[1] = {
   &::descriptor_table_User_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_UserInstance_2eproto_sccs[1] = {
-  &scc_info_UserInstance_UserInstance_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_UserInstance_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_UserInstance_2eproto = {
-  false, false, descriptor_table_protodef_UserInstance_2eproto, "UserInstance.proto", 120,
-  &descriptor_table_UserInstance_2eproto_once, descriptor_table_UserInstance_2eproto_sccs, descriptor_table_UserInstance_2eproto_deps, 1, 1,
+  false, false, 120, descriptor_table_protodef_UserInstance_2eproto, "UserInstance.proto", 
+  &descriptor_table_UserInstance_2eproto_once, descriptor_table_UserInstance_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_UserInstance_2eproto::offsets,
-  file_level_metadata_UserInstance_2eproto, 1, file_level_enum_descriptors_UserInstance_2eproto, file_level_service_descriptors_UserInstance_2eproto,
+  file_level_metadata_UserInstance_2eproto, file_level_enum_descriptors_UserInstance_2eproto, file_level_service_descriptors_UserInstance_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_UserInstance_2eproto_getter() {
+  return &descriptor_table_UserInstance_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_UserInstance_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_UserInstance_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_UserInstance_2eproto(&descriptor_table_UserInstance_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -91,7 +87,7 @@ UserInstance::_Internal::user(const UserInstance* msg) {
   return *msg->user_;
 }
 void UserInstance::clear_user() {
-  if (GetArena() == nullptr && user_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && user_ != nullptr) {
     delete user_;
   }
   user_ = nullptr;
@@ -115,11 +111,10 @@ UserInstance::UserInstance(const UserInstance& from)
 }
 
 void UserInstance::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UserInstance_UserInstance_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&user_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&instanceid_) -
-      reinterpret_cast<char*>(&user_)) + sizeof(instanceid_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&user_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&instanceid_) -
+    reinterpret_cast<char*>(&user_)) + sizeof(instanceid_));
 }
 
 UserInstance::~UserInstance() {
@@ -129,7 +124,7 @@ UserInstance::~UserInstance() {
 }
 
 void UserInstance::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete user_;
 }
 
@@ -142,11 +137,6 @@ void UserInstance::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void UserInstance::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const UserInstance& UserInstance::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UserInstance_UserInstance_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void UserInstance::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.UserInstance)
@@ -154,11 +144,11 @@ void UserInstance::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && user_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && user_ != nullptr) {
     delete user_;
   }
   user_ = nullptr;
-  instanceid_ = PROTOBUF_LONGLONG(0);
+  instanceid_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -167,7 +157,6 @@ const char* UserInstance::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.User user = 1;
       case 1:
@@ -185,7 +174,8 @@ const char* UserInstance::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -314,7 +304,7 @@ bool UserInstance::IsInitialized() const {
 
 void UserInstance::InternalSwap(UserInstance* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(UserInstance, instanceid_)
       + sizeof(UserInstance::instanceid_)
@@ -324,9 +314,10 @@ void UserInstance::InternalSwap(UserInstance* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UserInstance::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_UserInstance_2eproto_getter, &descriptor_table_UserInstance_2eproto_once,
+      file_level_metadata_UserInstance_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

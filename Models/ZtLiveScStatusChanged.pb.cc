@@ -14,44 +14,37 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveScStatusChanged_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtLiveScStatusChanged_BannedInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveScStatusChanged_BannedInfo> _instance;
-} _ZtLiveScStatusChanged_BannedInfo_default_instance_;
-class ZtLiveScStatusChangedDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveScStatusChanged> _instance;
-} _ZtLiveScStatusChanged_default_instance_;
+constexpr ZtLiveScStatusChanged_BannedInfo::ZtLiveScStatusChanged_BannedInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : banreason_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ZtLiveScStatusChanged_BannedInfoDefaultTypeInternal {
+  constexpr ZtLiveScStatusChanged_BannedInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveScStatusChanged_BannedInfoDefaultTypeInternal() {}
+  union {
+    ZtLiveScStatusChanged_BannedInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveScStatusChanged_BannedInfoDefaultTypeInternal _ZtLiveScStatusChanged_BannedInfo_default_instance_;
+constexpr ZtLiveScStatusChanged::ZtLiveScStatusChanged(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : bannedinfo_(nullptr)
+  , maxrandomdelayms_(int64_t{0})
+  , type_(0)
+{}
+struct ZtLiveScStatusChangedDefaultTypeInternal {
+  constexpr ZtLiveScStatusChangedDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtLiveScStatusChangedDefaultTypeInternal() {}
+  union {
+    ZtLiveScStatusChanged _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtLiveScStatusChangedDefaultTypeInternal _ZtLiveScStatusChanged_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveScStatusChanged_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveScStatusChanged();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto}, {
-      &scc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto.base,}};
-
-static void InitDefaultsscc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveScStatusChanged_BannedInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveScStatusChanged_BannedInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveScStatusChanged_2eproto[2];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_ZtLiveScStatusChanged_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveScStatusChanged_2eproto = nullptr;
@@ -93,22 +86,19 @@ const char descriptor_table_protodef_ZtLiveScStatusChanged_2eproto[] PROTOBUF_SE
   "ED\020\001\022\023\n\017NEW_LIVE_OPENED\020\002\022\024\n\020LIVE_URL_CH"
   "ANGED\020\003\022\017\n\013LIVE_BANNED\020\004b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveScStatusChanged_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveScStatusChanged_2eproto_sccs[2] = {
-  &scc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto.base,
-  &scc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveScStatusChanged_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveScStatusChanged_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveScStatusChanged_2eproto, "ZtLiveScStatusChanged.proto", 352,
-  &descriptor_table_ZtLiveScStatusChanged_2eproto_once, descriptor_table_ZtLiveScStatusChanged_2eproto_sccs, descriptor_table_ZtLiveScStatusChanged_2eproto_deps, 2, 0,
+  false, false, 352, descriptor_table_protodef_ZtLiveScStatusChanged_2eproto, "ZtLiveScStatusChanged.proto", 
+  &descriptor_table_ZtLiveScStatusChanged_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_ZtLiveScStatusChanged_2eproto::offsets,
-  file_level_metadata_ZtLiveScStatusChanged_2eproto, 2, file_level_enum_descriptors_ZtLiveScStatusChanged_2eproto, file_level_service_descriptors_ZtLiveScStatusChanged_2eproto,
+  file_level_metadata_ZtLiveScStatusChanged_2eproto, file_level_enum_descriptors_ZtLiveScStatusChanged_2eproto, file_level_service_descriptors_ZtLiveScStatusChanged_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtLiveScStatusChanged_2eproto_getter() {
+  return &descriptor_table_ZtLiveScStatusChanged_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveScStatusChanged_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveScStatusChanged_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtLiveScStatusChanged_2eproto(&descriptor_table_ZtLiveScStatusChanged_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ZtLiveScStatusChanged_Type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ZtLiveScStatusChanged_2eproto);
@@ -156,14 +146,13 @@ ZtLiveScStatusChanged_BannedInfo::ZtLiveScStatusChanged_BannedInfo(const ZtLiveS
   banreason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_banreason().empty()) {
     banreason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_banreason(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveScStatusChanged.BannedInfo)
 }
 
 void ZtLiveScStatusChanged_BannedInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto.base);
-  banreason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+banreason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ZtLiveScStatusChanged_BannedInfo::~ZtLiveScStatusChanged_BannedInfo() {
@@ -173,7 +162,7 @@ ZtLiveScStatusChanged_BannedInfo::~ZtLiveScStatusChanged_BannedInfo() {
 }
 
 void ZtLiveScStatusChanged_BannedInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   banreason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -186,11 +175,6 @@ void ZtLiveScStatusChanged_BannedInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID
 void ZtLiveScStatusChanged_BannedInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveScStatusChanged_BannedInfo& ZtLiveScStatusChanged_BannedInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveScStatusChanged_BannedInfo_ZtLiveScStatusChanged_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveScStatusChanged_BannedInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveScStatusChanged.BannedInfo)
@@ -207,7 +191,6 @@ const char* ZtLiveScStatusChanged_BannedInfo::_InternalParse(const char* ptr, ::
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string banReason = 1;
       case 1:
@@ -220,7 +203,8 @@ const char* ZtLiveScStatusChanged_BannedInfo::_InternalParse(const char* ptr, ::
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -247,7 +231,7 @@ failure:
   (void) cached_has_bits;
 
   // string banReason = 1;
-  if (this->banreason().size() > 0) {
+  if (!this->banreason().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_banreason().data(), static_cast<int>(this->_internal_banreason().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -273,7 +257,7 @@ size_t ZtLiveScStatusChanged_BannedInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string banReason = 1;
-  if (this->banreason().size() > 0) {
+  if (!this->banreason().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_banreason());
@@ -310,7 +294,7 @@ void ZtLiveScStatusChanged_BannedInfo::MergeFrom(const ZtLiveScStatusChanged_Ban
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.banreason().size() > 0) {
+  if (!from.banreason().empty()) {
     _internal_set_banreason(from._internal_banreason());
   }
 }
@@ -335,14 +319,19 @@ bool ZtLiveScStatusChanged_BannedInfo::IsInitialized() const {
 
 void ZtLiveScStatusChanged_BannedInfo::InternalSwap(ZtLiveScStatusChanged_BannedInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  banreason_.Swap(&other->banreason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &banreason_, GetArenaForAllocation(),
+      &other->banreason_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveScStatusChanged_BannedInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveScStatusChanged_2eproto_getter, &descriptor_table_ZtLiveScStatusChanged_2eproto_once,
+      file_level_metadata_ZtLiveScStatusChanged_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -376,11 +365,10 @@ ZtLiveScStatusChanged::ZtLiveScStatusChanged(const ZtLiveScStatusChanged& from)
 }
 
 void ZtLiveScStatusChanged::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&bannedinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&type_) -
-      reinterpret_cast<char*>(&bannedinfo_)) + sizeof(type_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&bannedinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&type_) -
+    reinterpret_cast<char*>(&bannedinfo_)) + sizeof(type_));
 }
 
 ZtLiveScStatusChanged::~ZtLiveScStatusChanged() {
@@ -390,7 +378,7 @@ ZtLiveScStatusChanged::~ZtLiveScStatusChanged() {
 }
 
 void ZtLiveScStatusChanged::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete bannedinfo_;
 }
 
@@ -403,11 +391,6 @@ void ZtLiveScStatusChanged::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtLiveScStatusChanged::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtLiveScStatusChanged& ZtLiveScStatusChanged::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveScStatusChanged_ZtLiveScStatusChanged_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveScStatusChanged::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveScStatusChanged)
@@ -415,7 +398,7 @@ void ZtLiveScStatusChanged::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && bannedinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && bannedinfo_ != nullptr) {
     delete bannedinfo_;
   }
   bannedinfo_ = nullptr;
@@ -430,7 +413,6 @@ const char* ZtLiveScStatusChanged::_InternalParse(const char* ptr, ::PROTOBUF_NA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveScStatusChanged.Type type = 1;
       case 1:
@@ -456,7 +438,8 @@ const char* ZtLiveScStatusChanged::_InternalParse(const char* ptr, ::PROTOBUF_NA
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -601,7 +584,7 @@ bool ZtLiveScStatusChanged::IsInitialized() const {
 
 void ZtLiveScStatusChanged::InternalSwap(ZtLiveScStatusChanged* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ZtLiveScStatusChanged, type_)
       + sizeof(ZtLiveScStatusChanged::type_)
@@ -611,9 +594,10 @@ void ZtLiveScStatusChanged::InternalSwap(ZtLiveScStatusChanged* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveScStatusChanged::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtLiveScStatusChanged_2eproto_getter, &descriptor_table_ZtLiveScStatusChanged_2eproto_once,
+      file_level_metadata_ZtLiveScStatusChanged_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

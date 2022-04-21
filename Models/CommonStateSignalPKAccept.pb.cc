@@ -14,25 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalPKAcceptDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalPKAccept> _instance;
-} _CommonStateSignalPKAccept_default_instance_;
+constexpr CommonStateSignalPKAccept::CommonStateSignalPKAccept(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : a_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , b_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct CommonStateSignalPKAcceptDefaultTypeInternal {
+  constexpr CommonStateSignalPKAcceptDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalPKAcceptDefaultTypeInternal() {}
+  union {
+    CommonStateSignalPKAccept _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalPKAcceptDefaultTypeInternal _CommonStateSignalPKAccept_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalPKAccept_CommonStateSignalPKAccept_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalPKAccept_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalPKAccept();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalPKAccept_CommonStateSignalPKAccept_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonStateSignalPKAccept_CommonStateSignalPKAccept_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalPKAccept_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalPKAccept_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalPKAccept_2eproto = nullptr;
@@ -59,21 +57,19 @@ const char descriptor_table_protodef_CommonStateSignalPKAccept_2eproto[] PROTOBU
   "Danmu\"1\n\031CommonStateSignalPKAccept\022\t\n\001a\030"
   "\001 \001(\t\022\t\n\001b\030\002 \001(\tb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalPKAccept_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalPKAccept_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalPKAccept_CommonStateSignalPKAccept_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalPKAccept_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalPKAccept_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalPKAccept_2eproto, "CommonStateSignalPKAccept.proto", 104,
-  &descriptor_table_CommonStateSignalPKAccept_2eproto_once, descriptor_table_CommonStateSignalPKAccept_2eproto_sccs, descriptor_table_CommonStateSignalPKAccept_2eproto_deps, 1, 0,
+  false, false, 104, descriptor_table_protodef_CommonStateSignalPKAccept_2eproto, "CommonStateSignalPKAccept.proto", 
+  &descriptor_table_CommonStateSignalPKAccept_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_CommonStateSignalPKAccept_2eproto::offsets,
-  file_level_metadata_CommonStateSignalPKAccept_2eproto, 1, file_level_enum_descriptors_CommonStateSignalPKAccept_2eproto, file_level_service_descriptors_CommonStateSignalPKAccept_2eproto,
+  file_level_metadata_CommonStateSignalPKAccept_2eproto, file_level_enum_descriptors_CommonStateSignalPKAccept_2eproto, file_level_service_descriptors_CommonStateSignalPKAccept_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalPKAccept_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalPKAccept_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalPKAccept_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalPKAccept_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalPKAccept_2eproto(&descriptor_table_CommonStateSignalPKAccept_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -94,20 +90,19 @@ CommonStateSignalPKAccept::CommonStateSignalPKAccept(const CommonStateSignalPKAc
   a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_a().empty()) {
     a_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_a(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   b_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_b().empty()) {
     b_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_b(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalPKAccept)
 }
 
 void CommonStateSignalPKAccept::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalPKAccept_CommonStateSignalPKAccept_2eproto.base);
-  a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  b_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+b_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CommonStateSignalPKAccept::~CommonStateSignalPKAccept() {
@@ -117,7 +112,7 @@ CommonStateSignalPKAccept::~CommonStateSignalPKAccept() {
 }
 
 void CommonStateSignalPKAccept::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   a_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   b_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -131,11 +126,6 @@ void CommonStateSignalPKAccept::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void CommonStateSignalPKAccept::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalPKAccept& CommonStateSignalPKAccept::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalPKAccept_CommonStateSignalPKAccept_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalPKAccept::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalPKAccept)
@@ -153,7 +143,6 @@ const char* CommonStateSignalPKAccept::_InternalParse(const char* ptr, ::PROTOBU
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string a = 1;
       case 1:
@@ -175,7 +164,8 @@ const char* CommonStateSignalPKAccept::_InternalParse(const char* ptr, ::PROTOBU
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -202,7 +192,7 @@ failure:
   (void) cached_has_bits;
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->a().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_a().data(), static_cast<int>(this->_internal_a().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -212,7 +202,7 @@ failure:
   }
 
   // string b = 2;
-  if (this->b().size() > 0) {
+  if (!this->b().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_b().data(), static_cast<int>(this->_internal_b().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -238,14 +228,14 @@ size_t CommonStateSignalPKAccept::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->a().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a());
   }
 
   // string b = 2;
-  if (this->b().size() > 0) {
+  if (!this->b().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_b());
@@ -282,10 +272,10 @@ void CommonStateSignalPKAccept::MergeFrom(const CommonStateSignalPKAccept& from)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.a().size() > 0) {
+  if (!from.a().empty()) {
     _internal_set_a(from._internal_a());
   }
-  if (from.b().size() > 0) {
+  if (!from.b().empty()) {
     _internal_set_b(from._internal_b());
   }
 }
@@ -310,15 +300,24 @@ bool CommonStateSignalPKAccept::IsInitialized() const {
 
 void CommonStateSignalPKAccept::InternalSwap(CommonStateSignalPKAccept* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  a_.Swap(&other->a_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  b_.Swap(&other->b_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &a_, GetArenaForAllocation(),
+      &other->a_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &b_, GetArenaForAllocation(),
+      &other->b_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalPKAccept::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalPKAccept_2eproto_getter, &descriptor_table_CommonStateSignalPKAccept_2eproto_once,
+      file_level_metadata_CommonStateSignalPKAccept_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

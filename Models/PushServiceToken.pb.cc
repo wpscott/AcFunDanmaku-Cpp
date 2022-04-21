@@ -14,25 +14,25 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class PushServiceTokenDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PushServiceToken> _instance;
-} _PushServiceToken_default_instance_;
+constexpr PushServiceToken::PushServiceToken(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , pushtype_(0)
+
+  , ispassthrough_(false){}
+struct PushServiceTokenDefaultTypeInternal {
+  constexpr PushServiceTokenDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PushServiceTokenDefaultTypeInternal() {}
+  union {
+    PushServiceToken _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PushServiceTokenDefaultTypeInternal _PushServiceToken_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_PushServiceToken_PushServiceToken_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_PushServiceToken_default_instance_;
-    new (ptr) ::AcFunDanmu::PushServiceToken();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PushServiceToken_PushServiceToken_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PushServiceToken_PushServiceToken_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_PushServiceToken_2eproto[1];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_PushServiceToken_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_PushServiceToken_2eproto = nullptr;
@@ -66,21 +66,19 @@ const char descriptor_table_protodef_PushServiceToken_2eproto[] PROTOBUF_SECTION
   "peOpPush\020\005\022\023\n\017kPushTYpeVvPush\020\006\022\023\n\017kPush"
   "TypeHwPush\020\007\022\020\n\014kPushTYpeFcm\020\010b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_PushServiceToken_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_PushServiceToken_2eproto_sccs[1] = {
-  &scc_info_PushServiceToken_PushServiceToken_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_PushServiceToken_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PushServiceToken_2eproto = {
-  false, false, descriptor_table_protodef_PushServiceToken_2eproto, "PushServiceToken.proto", 358,
-  &descriptor_table_PushServiceToken_2eproto_once, descriptor_table_PushServiceToken_2eproto_sccs, descriptor_table_PushServiceToken_2eproto_deps, 1, 0,
+  false, false, 358, descriptor_table_protodef_PushServiceToken_2eproto, "PushServiceToken.proto", 
+  &descriptor_table_PushServiceToken_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_PushServiceToken_2eproto::offsets,
-  file_level_metadata_PushServiceToken_2eproto, 1, file_level_enum_descriptors_PushServiceToken_2eproto, file_level_service_descriptors_PushServiceToken_2eproto,
+  file_level_metadata_PushServiceToken_2eproto, file_level_enum_descriptors_PushServiceToken_2eproto, file_level_service_descriptors_PushServiceToken_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_PushServiceToken_2eproto_getter() {
+  return &descriptor_table_PushServiceToken_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_PushServiceToken_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_PushServiceToken_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_PushServiceToken_2eproto(&descriptor_table_PushServiceToken_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PushServiceToken_PushType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_PushServiceToken_2eproto);
@@ -136,7 +134,7 @@ PushServiceToken::PushServiceToken(const PushServiceToken& from)
   token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_token().empty()) {
     token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_token(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&pushtype_, &from.pushtype_,
     static_cast<size_t>(reinterpret_cast<char*>(&ispassthrough_) -
@@ -145,12 +143,11 @@ PushServiceToken::PushServiceToken(const PushServiceToken& from)
 }
 
 void PushServiceToken::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PushServiceToken_PushServiceToken_2eproto.base);
-  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&pushtype_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&ispassthrough_) -
-      reinterpret_cast<char*>(&pushtype_)) + sizeof(ispassthrough_));
+token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&pushtype_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&ispassthrough_) -
+    reinterpret_cast<char*>(&pushtype_)) + sizeof(ispassthrough_));
 }
 
 PushServiceToken::~PushServiceToken() {
@@ -160,7 +157,7 @@ PushServiceToken::~PushServiceToken() {
 }
 
 void PushServiceToken::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -173,11 +170,6 @@ void PushServiceToken::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void PushServiceToken::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PushServiceToken& PushServiceToken::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PushServiceToken_PushServiceToken_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PushServiceToken::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.PushServiceToken)
@@ -197,7 +189,6 @@ const char* PushServiceToken::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.PushServiceToken.PushType pushType = 1;
       case 1:
@@ -224,7 +215,8 @@ const char* PushServiceToken::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -258,7 +250,7 @@ failure:
   }
 
   // bytes token = 2;
-  if (this->token().size() > 0) {
+  if (!this->token().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_token(), target);
   }
@@ -286,7 +278,7 @@ size_t PushServiceToken::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // bytes token = 2;
-  if (this->token().size() > 0) {
+  if (!this->token().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_token());
@@ -334,7 +326,7 @@ void PushServiceToken::MergeFrom(const PushServiceToken& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.token().size() > 0) {
+  if (!from.token().empty()) {
     _internal_set_token(from._internal_token());
   }
   if (from.pushtype() != 0) {
@@ -365,8 +357,12 @@ bool PushServiceToken::IsInitialized() const {
 
 void PushServiceToken::InternalSwap(PushServiceToken* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  token_.Swap(&other->token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &token_, GetArenaForAllocation(),
+      &other->token_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(PushServiceToken, ispassthrough_)
       + sizeof(PushServiceToken::ispassthrough_)
@@ -376,9 +372,10 @@ void PushServiceToken::InternalSwap(PushServiceToken* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PushServiceToken::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_PushServiceToken_2eproto_getter, &descriptor_table_PushServiceToken_2eproto_once,
+      file_level_metadata_PushServiceToken_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

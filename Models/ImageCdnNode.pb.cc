@@ -14,25 +14,24 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ImageCdnNodeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ImageCdnNode> _instance;
-} _ImageCdnNode_default_instance_;
+constexpr ImageCdnNode::ImageCdnNode(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : cdn_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , url_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , urlpattern_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ImageCdnNodeDefaultTypeInternal {
+  constexpr ImageCdnNodeDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ImageCdnNodeDefaultTypeInternal() {}
+  union {
+    ImageCdnNode _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ImageCdnNodeDefaultTypeInternal _ImageCdnNode_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ImageCdnNode_ImageCdnNode_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ImageCdnNode_default_instance_;
-    new (ptr) ::AcFunDanmu::ImageCdnNode();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ImageCdnNode_ImageCdnNode_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ImageCdnNode_ImageCdnNode_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ImageCdnNode_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ImageCdnNode_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ImageCdnNode_2eproto = nullptr;
@@ -60,21 +59,19 @@ const char descriptor_table_protodef_ImageCdnNode_2eproto[] PROTOBUF_SECTION_VAR
   "eCdnNode\022\013\n\003cdn\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\022\022\n\nur"
   "lPattern\030\003 \001(\tb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ImageCdnNode_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ImageCdnNode_2eproto_sccs[1] = {
-  &scc_info_ImageCdnNode_ImageCdnNode_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ImageCdnNode_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ImageCdnNode_2eproto = {
-  false, false, descriptor_table_protodef_ImageCdnNode_2eproto, "ImageCdnNode.proto", 102,
-  &descriptor_table_ImageCdnNode_2eproto_once, descriptor_table_ImageCdnNode_2eproto_sccs, descriptor_table_ImageCdnNode_2eproto_deps, 1, 0,
+  false, false, 102, descriptor_table_protodef_ImageCdnNode_2eproto, "ImageCdnNode.proto", 
+  &descriptor_table_ImageCdnNode_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_ImageCdnNode_2eproto::offsets,
-  file_level_metadata_ImageCdnNode_2eproto, 1, file_level_enum_descriptors_ImageCdnNode_2eproto, file_level_service_descriptors_ImageCdnNode_2eproto,
+  file_level_metadata_ImageCdnNode_2eproto, file_level_enum_descriptors_ImageCdnNode_2eproto, file_level_service_descriptors_ImageCdnNode_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ImageCdnNode_2eproto_getter() {
+  return &descriptor_table_ImageCdnNode_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ImageCdnNode_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ImageCdnNode_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ImageCdnNode_2eproto(&descriptor_table_ImageCdnNode_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -95,26 +92,25 @@ ImageCdnNode::ImageCdnNode(const ImageCdnNode& from)
   cdn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_cdn().empty()) {
     cdn_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cdn(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_url().empty()) {
     url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_url(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   urlpattern_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_urlpattern().empty()) {
     urlpattern_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_urlpattern(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ImageCdnNode)
 }
 
 void ImageCdnNode::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ImageCdnNode_ImageCdnNode_2eproto.base);
-  cdn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  urlpattern_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+cdn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+urlpattern_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ImageCdnNode::~ImageCdnNode() {
@@ -124,7 +120,7 @@ ImageCdnNode::~ImageCdnNode() {
 }
 
 void ImageCdnNode::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   cdn_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   urlpattern_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -139,11 +135,6 @@ void ImageCdnNode::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ImageCdnNode::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ImageCdnNode& ImageCdnNode::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ImageCdnNode_ImageCdnNode_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ImageCdnNode::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ImageCdnNode)
@@ -162,7 +153,6 @@ const char* ImageCdnNode::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string cdn = 1;
       case 1:
@@ -193,7 +183,8 @@ const char* ImageCdnNode::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -220,7 +211,7 @@ failure:
   (void) cached_has_bits;
 
   // string cdn = 1;
-  if (this->cdn().size() > 0) {
+  if (!this->cdn().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cdn().data(), static_cast<int>(this->_internal_cdn().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -230,7 +221,7 @@ failure:
   }
 
   // string url = 2;
-  if (this->url().size() > 0) {
+  if (!this->url().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_url().data(), static_cast<int>(this->_internal_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -240,7 +231,7 @@ failure:
   }
 
   // string urlPattern = 3;
-  if (this->urlpattern().size() > 0) {
+  if (!this->urlpattern().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_urlpattern().data(), static_cast<int>(this->_internal_urlpattern().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -266,21 +257,21 @@ size_t ImageCdnNode::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string cdn = 1;
-  if (this->cdn().size() > 0) {
+  if (!this->cdn().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_cdn());
   }
 
   // string url = 2;
-  if (this->url().size() > 0) {
+  if (!this->url().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_url());
   }
 
   // string urlPattern = 3;
-  if (this->urlpattern().size() > 0) {
+  if (!this->urlpattern().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_urlpattern());
@@ -317,13 +308,13 @@ void ImageCdnNode::MergeFrom(const ImageCdnNode& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.cdn().size() > 0) {
+  if (!from.cdn().empty()) {
     _internal_set_cdn(from._internal_cdn());
   }
-  if (from.url().size() > 0) {
+  if (!from.url().empty()) {
     _internal_set_url(from._internal_url());
   }
-  if (from.urlpattern().size() > 0) {
+  if (!from.urlpattern().empty()) {
     _internal_set_urlpattern(from._internal_urlpattern());
   }
 }
@@ -348,16 +339,29 @@ bool ImageCdnNode::IsInitialized() const {
 
 void ImageCdnNode::InternalSwap(ImageCdnNode* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  cdn_.Swap(&other->cdn_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  url_.Swap(&other->url_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  urlpattern_.Swap(&other->urlpattern_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &cdn_, GetArenaForAllocation(),
+      &other->cdn_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &url_, GetArenaForAllocation(),
+      &other->url_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &urlpattern_, GetArenaForAllocation(),
+      &other->urlpattern_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ImageCdnNode::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ImageCdnNode_2eproto_getter, &descriptor_table_ImageCdnNode_2eproto_once,
+      file_level_metadata_ImageCdnNode_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

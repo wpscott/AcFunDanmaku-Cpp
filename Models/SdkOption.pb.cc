@@ -14,25 +14,25 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class SdkOptionDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SdkOption> _instance;
-} _SdkOption_default_instance_;
+constexpr SdkOption::SdkOption(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : netcheckservers_()
+  , reportsecurity_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , reportintervalseconds_(0)
+  , lz4compressionthresholdbytes_(0){}
+struct SdkOptionDefaultTypeInternal {
+  constexpr SdkOptionDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SdkOptionDefaultTypeInternal() {}
+  union {
+    SdkOption _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SdkOptionDefaultTypeInternal _SdkOption_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_SdkOption_SdkOption_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_SdkOption_default_instance_;
-    new (ptr) ::AcFunDanmu::SdkOption();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SdkOption_SdkOption_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SdkOption_SdkOption_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_SdkOption_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_SdkOption_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_SdkOption_2eproto = nullptr;
@@ -63,21 +63,19 @@ const char descriptor_table_protodef_SdkOption_2eproto[] PROTOBUF_SECTION_VARIAB
   "sholdBytes\030\003 \001(\005\022\027\n\017netCheckServers\030\004 \003("
   "\tb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_SdkOption_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_SdkOption_2eproto_sccs[1] = {
-  &scc_info_SdkOption_SdkOption_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_SdkOption_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_SdkOption_2eproto = {
-  false, false, descriptor_table_protodef_SdkOption_2eproto, "SdkOption.proto", 169,
-  &descriptor_table_SdkOption_2eproto_once, descriptor_table_SdkOption_2eproto_sccs, descriptor_table_SdkOption_2eproto_deps, 1, 0,
+  false, false, 169, descriptor_table_protodef_SdkOption_2eproto, "SdkOption.proto", 
+  &descriptor_table_SdkOption_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_SdkOption_2eproto::offsets,
-  file_level_metadata_SdkOption_2eproto, 1, file_level_enum_descriptors_SdkOption_2eproto, file_level_service_descriptors_SdkOption_2eproto,
+  file_level_metadata_SdkOption_2eproto, file_level_enum_descriptors_SdkOption_2eproto, file_level_service_descriptors_SdkOption_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_SdkOption_2eproto_getter() {
+  return &descriptor_table_SdkOption_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_SdkOption_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_SdkOption_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_SdkOption_2eproto(&descriptor_table_SdkOption_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -100,7 +98,7 @@ SdkOption::SdkOption(const SdkOption& from)
   reportsecurity_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_reportsecurity().empty()) {
     reportsecurity_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_reportsecurity(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&reportintervalseconds_, &from.reportintervalseconds_,
     static_cast<size_t>(reinterpret_cast<char*>(&lz4compressionthresholdbytes_) -
@@ -109,12 +107,11 @@ SdkOption::SdkOption(const SdkOption& from)
 }
 
 void SdkOption::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SdkOption_SdkOption_2eproto.base);
-  reportsecurity_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&reportintervalseconds_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&lz4compressionthresholdbytes_) -
-      reinterpret_cast<char*>(&reportintervalseconds_)) + sizeof(lz4compressionthresholdbytes_));
+reportsecurity_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&reportintervalseconds_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&lz4compressionthresholdbytes_) -
+    reinterpret_cast<char*>(&reportintervalseconds_)) + sizeof(lz4compressionthresholdbytes_));
 }
 
 SdkOption::~SdkOption() {
@@ -124,7 +121,7 @@ SdkOption::~SdkOption() {
 }
 
 void SdkOption::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   reportsecurity_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -137,11 +134,6 @@ void SdkOption::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void SdkOption::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SdkOption& SdkOption::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SdkOption_SdkOption_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SdkOption::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.SdkOption)
@@ -162,7 +154,6 @@ const char* SdkOption::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int32 reportIntervalSeconds = 1;
       case 1:
@@ -203,7 +194,8 @@ const char* SdkOption::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -236,7 +228,7 @@ failure:
   }
 
   // string reportSecurity = 2;
-  if (this->reportsecurity().size() > 0) {
+  if (!this->reportsecurity().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reportsecurity().data(), static_cast<int>(this->_internal_reportsecurity().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -286,7 +278,7 @@ size_t SdkOption::ByteSizeLong() const {
   }
 
   // string reportSecurity = 2;
-  if (this->reportsecurity().size() > 0) {
+  if (!this->reportsecurity().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_reportsecurity());
@@ -338,7 +330,7 @@ void SdkOption::MergeFrom(const SdkOption& from) {
   (void) cached_has_bits;
 
   netcheckservers_.MergeFrom(from.netcheckservers_);
-  if (from.reportsecurity().size() > 0) {
+  if (!from.reportsecurity().empty()) {
     _internal_set_reportsecurity(from._internal_reportsecurity());
   }
   if (from.reportintervalseconds() != 0) {
@@ -369,9 +361,13 @@ bool SdkOption::IsInitialized() const {
 
 void SdkOption::InternalSwap(SdkOption* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   netcheckservers_.InternalSwap(&other->netcheckservers_);
-  reportsecurity_.Swap(&other->reportsecurity_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &reportsecurity_, GetArenaForAllocation(),
+      &other->reportsecurity_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SdkOption, lz4compressionthresholdbytes_)
       + sizeof(SdkOption::lz4compressionthresholdbytes_)
@@ -381,9 +377,10 @@ void SdkOption::InternalSwap(SdkOption* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SdkOption::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_SdkOption_2eproto_getter, &descriptor_table_SdkOption_2eproto_once,
+      file_level_metadata_SdkOption_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

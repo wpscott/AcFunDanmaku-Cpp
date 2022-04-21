@@ -14,25 +14,37 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ZtCommonInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtCommonInfo> _instance;
-} _ZtCommonInfo_default_instance_;
+constexpr ZtCommonInfo::ZtCommonInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : kpn_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , kpf_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , subbiz_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , did_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , appver_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , ver_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , lat_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , lon_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , mod_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , net_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , sys_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , c_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , language_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , countrycode_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , uid_(int64_t{0})
+  , clientip_(int64_t{0}){}
+struct ZtCommonInfoDefaultTypeInternal {
+  constexpr ZtCommonInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ZtCommonInfoDefaultTypeInternal() {}
+  union {
+    ZtCommonInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ZtCommonInfoDefaultTypeInternal _ZtCommonInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtCommonInfo_ZtCommonInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtCommonInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtCommonInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtCommonInfo_ZtCommonInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtCommonInfo_ZtCommonInfo_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtCommonInfo_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtCommonInfo_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtCommonInfo_2eproto = nullptr;
@@ -78,21 +90,19 @@ const char descriptor_table_protodef_ZtCommonInfo_2eproto[] PROTOBUF_SECTION_VAR
   "\022\020\n\010language\030\017 \001(\t\022\023\n\013countryCode\030\020 \001(\tb"
   "\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtCommonInfo_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtCommonInfo_2eproto_sccs[1] = {
-  &scc_info_ZtCommonInfo_ZtCommonInfo_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtCommonInfo_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtCommonInfo_2eproto = {
-  false, false, descriptor_table_protodef_ZtCommonInfo_2eproto, "ZtCommonInfo.proto", 287,
-  &descriptor_table_ZtCommonInfo_2eproto_once, descriptor_table_ZtCommonInfo_2eproto_sccs, descriptor_table_ZtCommonInfo_2eproto_deps, 1, 0,
+  false, false, 287, descriptor_table_protodef_ZtCommonInfo_2eproto, "ZtCommonInfo.proto", 
+  &descriptor_table_ZtCommonInfo_2eproto_once, nullptr, 0, 1,
   schemas, file_default_instances, TableStruct_ZtCommonInfo_2eproto::offsets,
-  file_level_metadata_ZtCommonInfo_2eproto, 1, file_level_enum_descriptors_ZtCommonInfo_2eproto, file_level_service_descriptors_ZtCommonInfo_2eproto,
+  file_level_metadata_ZtCommonInfo_2eproto, file_level_enum_descriptors_ZtCommonInfo_2eproto, file_level_service_descriptors_ZtCommonInfo_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ZtCommonInfo_2eproto_getter() {
+  return &descriptor_table_ZtCommonInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtCommonInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtCommonInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ZtCommonInfo_2eproto(&descriptor_table_ZtCommonInfo_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -113,72 +123,72 @@ ZtCommonInfo::ZtCommonInfo(const ZtCommonInfo& from)
   kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpn().empty()) {
     kpn_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpn(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_kpf().empty()) {
     kpf_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_kpf(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_subbiz().empty()) {
     subbiz_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_subbiz(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   did_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_did().empty()) {
     did_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_did(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   appver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_appver().empty()) {
     appver_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appver(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_ver().empty()) {
     ver_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ver(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   lat_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_lat().empty()) {
     lat_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_lat(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   lon_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_lon().empty()) {
     lon_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_lon(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   mod_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_mod().empty()) {
     mod_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_mod(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   net_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_net().empty()) {
     net_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_net(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   sys_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_sys().empty()) {
     sys_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sys(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   c_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_c().empty()) {
     c_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_c(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   language_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_language().empty()) {
     language_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_language(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   countrycode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_countrycode().empty()) {
     countrycode_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_countrycode(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   ::memcpy(&uid_, &from.uid_,
     static_cast<size_t>(reinterpret_cast<char*>(&clientip_) -
@@ -187,25 +197,24 @@ ZtCommonInfo::ZtCommonInfo(const ZtCommonInfo& from)
 }
 
 void ZtCommonInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtCommonInfo_ZtCommonInfo_2eproto.base);
-  kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  did_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  appver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  lat_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  lon_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  mod_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  net_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sys_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  c_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  language_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  countrycode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&uid_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&clientip_) -
-      reinterpret_cast<char*>(&uid_)) + sizeof(clientip_));
+kpn_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+kpf_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+subbiz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+did_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+appver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+ver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+lat_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+lon_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+mod_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+net_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+sys_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+c_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+language_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+countrycode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&uid_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&clientip_) -
+    reinterpret_cast<char*>(&uid_)) + sizeof(clientip_));
 }
 
 ZtCommonInfo::~ZtCommonInfo() {
@@ -215,7 +224,7 @@ ZtCommonInfo::~ZtCommonInfo() {
 }
 
 void ZtCommonInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   kpn_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   kpf_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   subbiz_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -241,11 +250,6 @@ void ZtCommonInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ZtCommonInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ZtCommonInfo& ZtCommonInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtCommonInfo_ZtCommonInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtCommonInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtCommonInfo)
@@ -278,7 +282,6 @@ const char* ZtCommonInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string kpn = 1;
       case 1:
@@ -422,7 +425,8 @@ const char* ZtCommonInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -449,7 +453,7 @@ failure:
   (void) cached_has_bits;
 
   // string kpn = 1;
-  if (this->kpn().size() > 0) {
+  if (!this->kpn().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_kpn().data(), static_cast<int>(this->_internal_kpn().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -459,7 +463,7 @@ failure:
   }
 
   // string kpf = 2;
-  if (this->kpf().size() > 0) {
+  if (!this->kpf().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_kpf().data(), static_cast<int>(this->_internal_kpf().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -469,7 +473,7 @@ failure:
   }
 
   // string subBiz = 3;
-  if (this->subbiz().size() > 0) {
+  if (!this->subbiz().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_subbiz().data(), static_cast<int>(this->_internal_subbiz().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -485,7 +489,7 @@ failure:
   }
 
   // string did = 5;
-  if (this->did().size() > 0) {
+  if (!this->did().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_did().data(), static_cast<int>(this->_internal_did().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -501,7 +505,7 @@ failure:
   }
 
   // string appVer = 7;
-  if (this->appver().size() > 0) {
+  if (!this->appver().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appver().data(), static_cast<int>(this->_internal_appver().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -511,7 +515,7 @@ failure:
   }
 
   // string ver = 8;
-  if (this->ver().size() > 0) {
+  if (!this->ver().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_ver().data(), static_cast<int>(this->_internal_ver().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -521,7 +525,7 @@ failure:
   }
 
   // string lat = 9;
-  if (this->lat().size() > 0) {
+  if (!this->lat().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_lat().data(), static_cast<int>(this->_internal_lat().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -531,7 +535,7 @@ failure:
   }
 
   // string lon = 10;
-  if (this->lon().size() > 0) {
+  if (!this->lon().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_lon().data(), static_cast<int>(this->_internal_lon().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -541,7 +545,7 @@ failure:
   }
 
   // string mod = 11;
-  if (this->mod().size() > 0) {
+  if (!this->mod().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_mod().data(), static_cast<int>(this->_internal_mod().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -551,7 +555,7 @@ failure:
   }
 
   // string net = 12;
-  if (this->net().size() > 0) {
+  if (!this->net().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_net().data(), static_cast<int>(this->_internal_net().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -561,7 +565,7 @@ failure:
   }
 
   // string sys = 13;
-  if (this->sys().size() > 0) {
+  if (!this->sys().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_sys().data(), static_cast<int>(this->_internal_sys().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -571,7 +575,7 @@ failure:
   }
 
   // string c = 14;
-  if (this->c().size() > 0) {
+  if (!this->c().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_c().data(), static_cast<int>(this->_internal_c().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -581,7 +585,7 @@ failure:
   }
 
   // string language = 15;
-  if (this->language().size() > 0) {
+  if (!this->language().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_language().data(), static_cast<int>(this->_internal_language().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -591,7 +595,7 @@ failure:
   }
 
   // string countryCode = 16;
-  if (this->countrycode().size() > 0) {
+  if (!this->countrycode().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_countrycode().data(), static_cast<int>(this->_internal_countrycode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -617,98 +621,98 @@ size_t ZtCommonInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string kpn = 1;
-  if (this->kpn().size() > 0) {
+  if (!this->kpn().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_kpn());
   }
 
   // string kpf = 2;
-  if (this->kpf().size() > 0) {
+  if (!this->kpf().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_kpf());
   }
 
   // string subBiz = 3;
-  if (this->subbiz().size() > 0) {
+  if (!this->subbiz().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_subbiz());
   }
 
   // string did = 5;
-  if (this->did().size() > 0) {
+  if (!this->did().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_did());
   }
 
   // string appVer = 7;
-  if (this->appver().size() > 0) {
+  if (!this->appver().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_appver());
   }
 
   // string ver = 8;
-  if (this->ver().size() > 0) {
+  if (!this->ver().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_ver());
   }
 
   // string lat = 9;
-  if (this->lat().size() > 0) {
+  if (!this->lat().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_lat());
   }
 
   // string lon = 10;
-  if (this->lon().size() > 0) {
+  if (!this->lon().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_lon());
   }
 
   // string mod = 11;
-  if (this->mod().size() > 0) {
+  if (!this->mod().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_mod());
   }
 
   // string net = 12;
-  if (this->net().size() > 0) {
+  if (!this->net().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_net());
   }
 
   // string sys = 13;
-  if (this->sys().size() > 0) {
+  if (!this->sys().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_sys());
   }
 
   // string c = 14;
-  if (this->c().size() > 0) {
+  if (!this->c().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_c());
   }
 
   // string language = 15;
-  if (this->language().size() > 0) {
+  if (!this->language().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_language());
   }
 
   // string countryCode = 16;
-  if (this->countrycode().size() > 0) {
+  if (!this->countrycode().empty()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_countrycode());
@@ -759,46 +763,46 @@ void ZtCommonInfo::MergeFrom(const ZtCommonInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.kpn().size() > 0) {
+  if (!from.kpn().empty()) {
     _internal_set_kpn(from._internal_kpn());
   }
-  if (from.kpf().size() > 0) {
+  if (!from.kpf().empty()) {
     _internal_set_kpf(from._internal_kpf());
   }
-  if (from.subbiz().size() > 0) {
+  if (!from.subbiz().empty()) {
     _internal_set_subbiz(from._internal_subbiz());
   }
-  if (from.did().size() > 0) {
+  if (!from.did().empty()) {
     _internal_set_did(from._internal_did());
   }
-  if (from.appver().size() > 0) {
+  if (!from.appver().empty()) {
     _internal_set_appver(from._internal_appver());
   }
-  if (from.ver().size() > 0) {
+  if (!from.ver().empty()) {
     _internal_set_ver(from._internal_ver());
   }
-  if (from.lat().size() > 0) {
+  if (!from.lat().empty()) {
     _internal_set_lat(from._internal_lat());
   }
-  if (from.lon().size() > 0) {
+  if (!from.lon().empty()) {
     _internal_set_lon(from._internal_lon());
   }
-  if (from.mod().size() > 0) {
+  if (!from.mod().empty()) {
     _internal_set_mod(from._internal_mod());
   }
-  if (from.net().size() > 0) {
+  if (!from.net().empty()) {
     _internal_set_net(from._internal_net());
   }
-  if (from.sys().size() > 0) {
+  if (!from.sys().empty()) {
     _internal_set_sys(from._internal_sys());
   }
-  if (from.c().size() > 0) {
+  if (!from.c().empty()) {
     _internal_set_c(from._internal_c());
   }
-  if (from.language().size() > 0) {
+  if (!from.language().empty()) {
     _internal_set_language(from._internal_language());
   }
-  if (from.countrycode().size() > 0) {
+  if (!from.countrycode().empty()) {
     _internal_set_countrycode(from._internal_countrycode());
   }
   if (from.uid() != 0) {
@@ -829,21 +833,77 @@ bool ZtCommonInfo::IsInitialized() const {
 
 void ZtCommonInfo::InternalSwap(ZtCommonInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  kpn_.Swap(&other->kpn_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  kpf_.Swap(&other->kpf_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  subbiz_.Swap(&other->subbiz_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  did_.Swap(&other->did_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  appver_.Swap(&other->appver_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ver_.Swap(&other->ver_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  lat_.Swap(&other->lat_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  lon_.Swap(&other->lon_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  mod_.Swap(&other->mod_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  net_.Swap(&other->net_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sys_.Swap(&other->sys_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  c_.Swap(&other->c_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  language_.Swap(&other->language_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  countrycode_.Swap(&other->countrycode_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &kpn_, GetArenaForAllocation(),
+      &other->kpn_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &kpf_, GetArenaForAllocation(),
+      &other->kpf_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &subbiz_, GetArenaForAllocation(),
+      &other->subbiz_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &did_, GetArenaForAllocation(),
+      &other->did_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &appver_, GetArenaForAllocation(),
+      &other->appver_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &ver_, GetArenaForAllocation(),
+      &other->ver_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &lat_, GetArenaForAllocation(),
+      &other->lat_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &lon_, GetArenaForAllocation(),
+      &other->lon_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &mod_, GetArenaForAllocation(),
+      &other->mod_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &net_, GetArenaForAllocation(),
+      &other->net_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &sys_, GetArenaForAllocation(),
+      &other->sys_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &c_, GetArenaForAllocation(),
+      &other->c_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &language_, GetArenaForAllocation(),
+      &other->language_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &countrycode_, GetArenaForAllocation(),
+      &other->countrycode_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ZtCommonInfo, clientip_)
       + sizeof(ZtCommonInfo::clientip_)
@@ -853,9 +913,10 @@ void ZtCommonInfo::InternalSwap(ZtCommonInfo* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtCommonInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ZtCommonInfo_2eproto_getter, &descriptor_table_ZtCommonInfo_2eproto_once,
+      file_level_metadata_ZtCommonInfo_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

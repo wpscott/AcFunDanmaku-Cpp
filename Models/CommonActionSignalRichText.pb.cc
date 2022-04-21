@@ -14,105 +14,75 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ImageCdnNode_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ImageCdnNode_ImageCdnNode_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonActionSignalRichText_ImageSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_ImageSegment> _instance;
-} _CommonActionSignalRichText_ImageSegment_default_instance_;
-class CommonActionSignalRichText_PlainSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_PlainSegment> _instance;
-} _CommonActionSignalRichText_PlainSegment_default_instance_;
-class CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_RichTextSegment> _instance;
-} _CommonActionSignalRichText_RichTextSegment_default_instance_;
-class CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_UserInfoSegment> _instance;
-} _CommonActionSignalRichText_UserInfoSegment_default_instance_;
-class CommonActionSignalRichTextDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText> _instance;
-} _CommonActionSignalRichText_default_instance_;
+constexpr CommonActionSignalRichText_ImageSegment::CommonActionSignalRichText_ImageSegment(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : pictures_()
+  , alternativetext_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , alternativecolor_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct CommonActionSignalRichText_ImageSegmentDefaultTypeInternal {
+  constexpr CommonActionSignalRichText_ImageSegmentDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_ImageSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_ImageSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonActionSignalRichText_ImageSegmentDefaultTypeInternal _CommonActionSignalRichText_ImageSegment_default_instance_;
+constexpr CommonActionSignalRichText_PlainSegment::CommonActionSignalRichText_PlainSegment(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : text_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , color_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct CommonActionSignalRichText_PlainSegmentDefaultTypeInternal {
+  constexpr CommonActionSignalRichText_PlainSegmentDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_PlainSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_PlainSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonActionSignalRichText_PlainSegmentDefaultTypeInternal _CommonActionSignalRichText_PlainSegment_default_instance_;
+constexpr CommonActionSignalRichText_RichTextSegment::CommonActionSignalRichText_RichTextSegment(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : _oneof_case_{}{}
+struct CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal {
+  constexpr CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_RichTextSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal _CommonActionSignalRichText_RichTextSegment_default_instance_;
+constexpr CommonActionSignalRichText_UserInfoSegment::CommonActionSignalRichText_UserInfoSegment(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : color_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , user_(nullptr){}
+struct CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal {
+  constexpr CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_UserInfoSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal _CommonActionSignalRichText_UserInfoSegment_default_instance_;
+constexpr CommonActionSignalRichText::CommonActionSignalRichText(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : segments_()
+  , sendtimems_(int64_t{0}){}
+struct CommonActionSignalRichTextDefaultTypeInternal {
+  constexpr CommonActionSignalRichTextDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonActionSignalRichTextDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonActionSignalRichTextDefaultTypeInternal _CommonActionSignalRichText_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto}, {
-      &scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_ImageSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_ImageSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto}, {
-      &scc_info_ImageCdnNode_ImageCdnNode_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_PlainSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_PlainSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto}, {}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_RichTextSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_RichTextSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto}, {
-      &scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base,
-      &scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base,
-      &scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_UserInfoSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonActionSignalRichText_2eproto[5];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonActionSignalRichText_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonActionSignalRichText_2eproto = nullptr;
@@ -197,23 +167,19 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_ImageCdnNode_2eproto,
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonActionSignalRichText_2eproto_sccs[5] = {
-  &scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonActionSignalRichText_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonActionSignalRichText_2eproto = {
-  false, false, descriptor_table_protodef_CommonActionSignalRichText_2eproto, "CommonActionSignalRichText.proto", 700,
-  &descriptor_table_CommonActionSignalRichText_2eproto_once, descriptor_table_CommonActionSignalRichText_2eproto_sccs, descriptor_table_CommonActionSignalRichText_2eproto_deps, 5, 2,
+  false, false, 700, descriptor_table_protodef_CommonActionSignalRichText_2eproto, "CommonActionSignalRichText.proto", 
+  &descriptor_table_CommonActionSignalRichText_2eproto_once, descriptor_table_CommonActionSignalRichText_2eproto_deps, 2, 5,
   schemas, file_default_instances, TableStruct_CommonActionSignalRichText_2eproto::offsets,
-  file_level_metadata_CommonActionSignalRichText_2eproto, 5, file_level_enum_descriptors_CommonActionSignalRichText_2eproto, file_level_service_descriptors_CommonActionSignalRichText_2eproto,
+  file_level_metadata_CommonActionSignalRichText_2eproto, file_level_enum_descriptors_CommonActionSignalRichText_2eproto, file_level_service_descriptors_CommonActionSignalRichText_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonActionSignalRichText_2eproto_getter() {
+  return &descriptor_table_CommonActionSignalRichText_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonActionSignalRichText_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonActionSignalRichText_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonActionSignalRichText_2eproto(&descriptor_table_CommonActionSignalRichText_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -239,20 +205,19 @@ CommonActionSignalRichText_ImageSegment::CommonActionSignalRichText_ImageSegment
   alternativetext_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_alternativetext().empty()) {
     alternativetext_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_alternativetext(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   alternativecolor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_alternativecolor().empty()) {
     alternativecolor_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_alternativecolor(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
 }
 
 void CommonActionSignalRichText_ImageSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base);
-  alternativetext_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  alternativecolor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+alternativetext_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+alternativecolor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CommonActionSignalRichText_ImageSegment::~CommonActionSignalRichText_ImageSegment() {
@@ -262,7 +227,7 @@ CommonActionSignalRichText_ImageSegment::~CommonActionSignalRichText_ImageSegmen
 }
 
 void CommonActionSignalRichText_ImageSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   alternativetext_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   alternativecolor_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -276,11 +241,6 @@ void CommonActionSignalRichText_ImageSegment::RegisterArenaDtor(::PROTOBUF_NAMES
 void CommonActionSignalRichText_ImageSegment::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonActionSignalRichText_ImageSegment& CommonActionSignalRichText_ImageSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_ImageSegment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
@@ -299,7 +259,6 @@ const char* CommonActionSignalRichText_ImageSegment::_InternalParse(const char* 
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.ImageCdnNode pictures = 1;
       case 1:
@@ -333,7 +292,8 @@ const char* CommonActionSignalRichText_ImageSegment::_InternalParse(const char* 
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -368,7 +328,7 @@ failure:
   }
 
   // string alternativeText = 2;
-  if (this->alternativetext().size() > 0) {
+  if (!this->alternativetext().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_alternativetext().data(), static_cast<int>(this->_internal_alternativetext().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -378,7 +338,7 @@ failure:
   }
 
   // string alternativeColor = 3;
-  if (this->alternativecolor().size() > 0) {
+  if (!this->alternativecolor().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_alternativecolor().data(), static_cast<int>(this->_internal_alternativecolor().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -411,14 +371,14 @@ size_t CommonActionSignalRichText_ImageSegment::ByteSizeLong() const {
   }
 
   // string alternativeText = 2;
-  if (this->alternativetext().size() > 0) {
+  if (!this->alternativetext().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_alternativetext());
   }
 
   // string alternativeColor = 3;
-  if (this->alternativecolor().size() > 0) {
+  if (!this->alternativecolor().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_alternativecolor());
@@ -456,10 +416,10 @@ void CommonActionSignalRichText_ImageSegment::MergeFrom(const CommonActionSignal
   (void) cached_has_bits;
 
   pictures_.MergeFrom(from.pictures_);
-  if (from.alternativetext().size() > 0) {
+  if (!from.alternativetext().empty()) {
     _internal_set_alternativetext(from._internal_alternativetext());
   }
-  if (from.alternativecolor().size() > 0) {
+  if (!from.alternativecolor().empty()) {
     _internal_set_alternativecolor(from._internal_alternativecolor());
   }
 }
@@ -484,16 +444,25 @@ bool CommonActionSignalRichText_ImageSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_ImageSegment::InternalSwap(CommonActionSignalRichText_ImageSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   pictures_.InternalSwap(&other->pictures_);
-  alternativetext_.Swap(&other->alternativetext_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  alternativecolor_.Swap(&other->alternativecolor_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &alternativetext_, GetArenaForAllocation(),
+      &other->alternativetext_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &alternativecolor_, GetArenaForAllocation(),
+      &other->alternativecolor_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_ImageSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -513,20 +482,19 @@ CommonActionSignalRichText_PlainSegment::CommonActionSignalRichText_PlainSegment
   text_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_text().empty()) {
     text_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_text(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_color().empty()) {
     color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_color(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
 }
 
 void CommonActionSignalRichText_PlainSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base);
-  text_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+text_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CommonActionSignalRichText_PlainSegment::~CommonActionSignalRichText_PlainSegment() {
@@ -536,7 +504,7 @@ CommonActionSignalRichText_PlainSegment::~CommonActionSignalRichText_PlainSegmen
 }
 
 void CommonActionSignalRichText_PlainSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   text_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   color_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -550,11 +518,6 @@ void CommonActionSignalRichText_PlainSegment::RegisterArenaDtor(::PROTOBUF_NAMES
 void CommonActionSignalRichText_PlainSegment::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonActionSignalRichText_PlainSegment& CommonActionSignalRichText_PlainSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_PlainSegment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
@@ -572,7 +535,6 @@ const char* CommonActionSignalRichText_PlainSegment::_InternalParse(const char* 
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string text = 1;
       case 1:
@@ -594,7 +556,8 @@ const char* CommonActionSignalRichText_PlainSegment::_InternalParse(const char* 
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -621,7 +584,7 @@ failure:
   (void) cached_has_bits;
 
   // string text = 1;
-  if (this->text().size() > 0) {
+  if (!this->text().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_text().data(), static_cast<int>(this->_internal_text().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -631,7 +594,7 @@ failure:
   }
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->color().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_color().data(), static_cast<int>(this->_internal_color().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -657,14 +620,14 @@ size_t CommonActionSignalRichText_PlainSegment::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string text = 1;
-  if (this->text().size() > 0) {
+  if (!this->text().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_text());
   }
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->color().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_color());
@@ -701,10 +664,10 @@ void CommonActionSignalRichText_PlainSegment::MergeFrom(const CommonActionSignal
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.text().size() > 0) {
+  if (!from.text().empty()) {
     _internal_set_text(from._internal_text());
   }
-  if (from.color().size() > 0) {
+  if (!from.color().empty()) {
     _internal_set_color(from._internal_color());
   }
 }
@@ -729,15 +692,24 @@ bool CommonActionSignalRichText_PlainSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_PlainSegment::InternalSwap(CommonActionSignalRichText_PlainSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  text_.Swap(&other->text_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  color_.Swap(&other->color_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &text_, GetArenaForAllocation(),
+      &other->text_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &color_, GetArenaForAllocation(),
+      &other->color_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_PlainSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -761,11 +733,11 @@ CommonActionSignalRichText_RichTextSegment::_Internal::image(const CommonActionS
   return *msg->segment_.image_;
 }
 void CommonActionSignalRichText_RichTextSegment::set_allocated_userinfo(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment* userinfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_segment();
   if (userinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(userinfo);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment>::GetOwningArena(userinfo);
     if (message_arena != submessage_arena) {
       userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, userinfo, submessage_arena);
@@ -776,11 +748,11 @@ void CommonActionSignalRichText_RichTextSegment::set_allocated_userinfo(::AcFunD
   // @@protoc_insertion_point(field_set_allocated:AcFunDanmu.CommonActionSignalRichText.RichTextSegment.userInfo)
 }
 void CommonActionSignalRichText_RichTextSegment::set_allocated_plain(::AcFunDanmu::CommonActionSignalRichText_PlainSegment* plain) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_segment();
   if (plain) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(plain);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::AcFunDanmu::CommonActionSignalRichText_PlainSegment>::GetOwningArena(plain);
     if (message_arena != submessage_arena) {
       plain = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, plain, submessage_arena);
@@ -791,11 +763,11 @@ void CommonActionSignalRichText_RichTextSegment::set_allocated_plain(::AcFunDanm
   // @@protoc_insertion_point(field_set_allocated:AcFunDanmu.CommonActionSignalRichText.RichTextSegment.plain)
 }
 void CommonActionSignalRichText_RichTextSegment::set_allocated_image(::AcFunDanmu::CommonActionSignalRichText_ImageSegment* image) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_segment();
   if (image) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(image);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::AcFunDanmu::CommonActionSignalRichText_ImageSegment>::GetOwningArena(image);
     if (message_arena != submessage_arena) {
       image = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, image, submessage_arena);
@@ -836,8 +808,7 @@ CommonActionSignalRichText_RichTextSegment::CommonActionSignalRichText_RichTextS
 }
 
 void CommonActionSignalRichText_RichTextSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base);
-  clear_has_segment();
+clear_has_segment();
 }
 
 CommonActionSignalRichText_RichTextSegment::~CommonActionSignalRichText_RichTextSegment() {
@@ -847,7 +818,7 @@ CommonActionSignalRichText_RichTextSegment::~CommonActionSignalRichText_RichText
 }
 
 void CommonActionSignalRichText_RichTextSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (has_segment()) {
     clear_segment();
   }
@@ -862,29 +833,24 @@ void CommonActionSignalRichText_RichTextSegment::RegisterArenaDtor(::PROTOBUF_NA
 void CommonActionSignalRichText_RichTextSegment::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonActionSignalRichText_RichTextSegment& CommonActionSignalRichText_RichTextSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_RichTextSegment::clear_segment() {
 // @@protoc_insertion_point(one_of_clear_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
   switch (segment_case()) {
     case kUserInfo: {
-      if (GetArena() == nullptr) {
+      if (GetArenaForAllocation() == nullptr) {
         delete segment_.userinfo_;
       }
       break;
     }
     case kPlain: {
-      if (GetArena() == nullptr) {
+      if (GetArenaForAllocation() == nullptr) {
         delete segment_.plain_;
       }
       break;
     }
     case kImage: {
-      if (GetArena() == nullptr) {
+      if (GetArenaForAllocation() == nullptr) {
         delete segment_.image_;
       }
       break;
@@ -912,7 +878,6 @@ const char* CommonActionSignalRichText_RichTextSegment::_InternalParse(const cha
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.CommonActionSignalRichText.UserInfoSegment userInfo = 1;
       case 1:
@@ -937,7 +902,8 @@ const char* CommonActionSignalRichText_RichTextSegment::_InternalParse(const cha
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1099,15 +1065,16 @@ bool CommonActionSignalRichText_RichTextSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_RichTextSegment::InternalSwap(CommonActionSignalRichText_RichTextSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(segment_, other->segment_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_RichTextSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -1121,7 +1088,7 @@ CommonActionSignalRichText_UserInfoSegment::_Internal::user(const CommonActionSi
   return *msg->user_;
 }
 void CommonActionSignalRichText_UserInfoSegment::clear_user() {
-  if (GetArena() == nullptr && user_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && user_ != nullptr) {
     delete user_;
   }
   user_ = nullptr;
@@ -1138,7 +1105,7 @@ CommonActionSignalRichText_UserInfoSegment::CommonActionSignalRichText_UserInfoS
   color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_color().empty()) {
     color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_color(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_user()) {
     user_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.user_);
@@ -1149,9 +1116,8 @@ CommonActionSignalRichText_UserInfoSegment::CommonActionSignalRichText_UserInfoS
 }
 
 void CommonActionSignalRichText_UserInfoSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base);
-  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  user_ = nullptr;
+color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+user_ = nullptr;
 }
 
 CommonActionSignalRichText_UserInfoSegment::~CommonActionSignalRichText_UserInfoSegment() {
@@ -1161,7 +1127,7 @@ CommonActionSignalRichText_UserInfoSegment::~CommonActionSignalRichText_UserInfo
 }
 
 void CommonActionSignalRichText_UserInfoSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   color_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete user_;
 }
@@ -1175,11 +1141,6 @@ void CommonActionSignalRichText_UserInfoSegment::RegisterArenaDtor(::PROTOBUF_NA
 void CommonActionSignalRichText_UserInfoSegment::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonActionSignalRichText_UserInfoSegment& CommonActionSignalRichText_UserInfoSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_UserInfoSegment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
@@ -1188,7 +1149,7 @@ void CommonActionSignalRichText_UserInfoSegment::Clear() {
   (void) cached_has_bits;
 
   color_.ClearToEmpty();
-  if (GetArena() == nullptr && user_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && user_ != nullptr) {
     delete user_;
   }
   user_ = nullptr;
@@ -1200,7 +1161,6 @@ const char* CommonActionSignalRichText_UserInfoSegment::_InternalParse(const cha
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserInfo user = 1;
       case 1:
@@ -1220,7 +1180,8 @@ const char* CommonActionSignalRichText_UserInfoSegment::_InternalParse(const cha
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1255,7 +1216,7 @@ failure:
   }
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->color().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_color().data(), static_cast<int>(this->_internal_color().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1281,7 +1242,7 @@ size_t CommonActionSignalRichText_UserInfoSegment::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->color().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_color());
@@ -1325,7 +1286,7 @@ void CommonActionSignalRichText_UserInfoSegment::MergeFrom(const CommonActionSig
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.color().size() > 0) {
+  if (!from.color().empty()) {
     _internal_set_color(from._internal_color());
   }
   if (from.has_user()) {
@@ -1353,15 +1314,20 @@ bool CommonActionSignalRichText_UserInfoSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_UserInfoSegment::InternalSwap(CommonActionSignalRichText_UserInfoSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  color_.Swap(&other->color_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &color_, GetArenaForAllocation(),
+      &other->color_, other->GetArenaForAllocation()
+  );
   swap(user_, other->user_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_UserInfoSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[3]);
 }
-
 
 // ===================================================================
 
@@ -1385,8 +1351,7 @@ CommonActionSignalRichText::CommonActionSignalRichText(const CommonActionSignalR
 }
 
 void CommonActionSignalRichText::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto.base);
-  sendtimems_ = PROTOBUF_LONGLONG(0);
+sendtimems_ = int64_t{0};
 }
 
 CommonActionSignalRichText::~CommonActionSignalRichText() {
@@ -1396,7 +1361,7 @@ CommonActionSignalRichText::~CommonActionSignalRichText() {
 }
 
 void CommonActionSignalRichText::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void CommonActionSignalRichText::ArenaDtor(void* object) {
@@ -1408,11 +1373,6 @@ void CommonActionSignalRichText::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void CommonActionSignalRichText::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonActionSignalRichText& CommonActionSignalRichText::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText)
@@ -1421,7 +1381,7 @@ void CommonActionSignalRichText::Clear() {
   (void) cached_has_bits;
 
   segments_.Clear();
-  sendtimems_ = PROTOBUF_LONGLONG(0);
+  sendtimems_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1430,7 +1390,6 @@ const char* CommonActionSignalRichText::_InternalParse(const char* ptr, ::PROTOB
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.CommonActionSignalRichText.RichTextSegment segments = 1;
       case 1:
@@ -1453,7 +1412,8 @@ const char* CommonActionSignalRichText::_InternalParse(const char* ptr, ::PROTOB
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1580,15 +1540,16 @@ bool CommonActionSignalRichText::IsInitialized() const {
 
 void CommonActionSignalRichText::InternalSwap(CommonActionSignalRichText* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   segments_.InternalSwap(&other->segments_);
   swap(sendtimems_, other->sendtimems_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[4]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

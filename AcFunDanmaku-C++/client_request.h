@@ -37,9 +37,9 @@ class client_request {
     auto app = reg.mutable_appinfo();
     auto dev = reg.mutable_deviceinfo();
     auto common = reg.mutable_ztcommoninfo();
-    app->set_appname(AppName);
-    app->set_sdkversion(SdkVersion);
-    dev->set_platformtype(AcFunDanmu::DeviceInfo::H5);
+    app->set_sdkversion(ClientLiveSdkVersion);
+    app->set_linkversion(LinkVersion);
+    dev->set_platformtype(AcFunDanmu::DeviceInfo::H5_WINDOWS);
     dev->set_devicemodel("h5");
     common->set_kpn(KPN);
     common->set_kpf(KPF);
@@ -223,5 +223,6 @@ class client_request {
   inline static const std::string KPF = "PC_WEB";
   inline static const std::string SubBiz = "mainApp";
   inline static const std::string ClientLiveSdkVersion = "kwai-acfun-live-link";
+  inline static const std::string LinkVersion = "2.13.8";
 };
 }  // namespace AcFunDanmu

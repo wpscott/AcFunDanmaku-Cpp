@@ -14,79 +14,63 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_acfun_2elive_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AcFunUserInfo_acfun_2elive_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class AcFunUserInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AcFunUserInfo> _instance;
-} _AcFunUserInfo_default_instance_;
-class AcfunActionSignalThrowBananaDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AcfunActionSignalThrowBanana> _instance;
-} _AcfunActionSignalThrowBanana_default_instance_;
-class AcfunStateSignalDisplayInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AcfunStateSignalDisplayInfo> _instance;
-} _AcfunStateSignalDisplayInfo_default_instance_;
-class AcfunActionSignalJoinClubDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AcfunActionSignalJoinClub> _instance;
-} _AcfunActionSignalJoinClub_default_instance_;
+constexpr AcFunUserInfo::AcFunUserInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , userid_(int64_t{0}){}
+struct AcFunUserInfoDefaultTypeInternal {
+  constexpr AcFunUserInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AcFunUserInfoDefaultTypeInternal() {}
+  union {
+    AcFunUserInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AcFunUserInfoDefaultTypeInternal _AcFunUserInfo_default_instance_;
+constexpr AcfunActionSignalThrowBanana::AcfunActionSignalThrowBanana(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : visitor_(nullptr)
+  , sendtimems_(int64_t{0})
+  , count_(0){}
+struct AcfunActionSignalThrowBananaDefaultTypeInternal {
+  constexpr AcfunActionSignalThrowBananaDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AcfunActionSignalThrowBananaDefaultTypeInternal() {}
+  union {
+    AcfunActionSignalThrowBanana _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AcfunActionSignalThrowBananaDefaultTypeInternal _AcfunActionSignalThrowBanana_default_instance_;
+constexpr AcfunStateSignalDisplayInfo::AcfunStateSignalDisplayInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : bananacount_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct AcfunStateSignalDisplayInfoDefaultTypeInternal {
+  constexpr AcfunStateSignalDisplayInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AcfunStateSignalDisplayInfoDefaultTypeInternal() {}
+  union {
+    AcfunStateSignalDisplayInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AcfunStateSignalDisplayInfoDefaultTypeInternal _AcfunStateSignalDisplayInfo_default_instance_;
+constexpr AcfunActionSignalJoinClub::AcfunActionSignalJoinClub(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : fansinfo_(nullptr)
+  , uperinfo_(nullptr)
+  , jointimems_(int64_t{0}){}
+struct AcfunActionSignalJoinClubDefaultTypeInternal {
+  constexpr AcfunActionSignalJoinClubDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AcfunActionSignalJoinClubDefaultTypeInternal() {}
+  union {
+    AcfunActionSignalJoinClub _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AcfunActionSignalJoinClubDefaultTypeInternal _AcfunActionSignalJoinClub_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_AcFunUserInfo_acfun_2elive_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_AcFunUserInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::AcFunUserInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AcFunUserInfo_acfun_2elive_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AcFunUserInfo_acfun_2elive_2eproto}, {}};
-
-static void InitDefaultsscc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_AcfunActionSignalJoinClub_default_instance_;
-    new (ptr) ::AcFunDanmu::AcfunActionSignalJoinClub();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto}, {
-      &scc_info_AcFunUserInfo_acfun_2elive_2eproto.base,}};
-
-static void InitDefaultsscc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_AcfunActionSignalThrowBanana_default_instance_;
-    new (ptr) ::AcFunDanmu::AcfunActionSignalThrowBanana();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto}, {
-      &scc_info_AcFunUserInfo_acfun_2elive_2eproto.base,}};
-
-static void InitDefaultsscc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_AcfunStateSignalDisplayInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::AcfunStateSignalDisplayInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_acfun_2elive_2eproto[4];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_acfun_2elive_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_acfun_2elive_2eproto = nullptr;
@@ -148,24 +132,19 @@ const char descriptor_table_protodef_acfun_2elive_2eproto[] PROTOBUF_SECTION_VAR
   "perInfo\030\002 \001(\0132\031.AcFunDanmu.AcFunUserInfo"
   "\022\022\n\njoinTimeMs\030\003 \001(\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_acfun_2elive_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_acfun_2elive_2eproto_sccs[4] = {
-  &scc_info_AcFunUserInfo_acfun_2elive_2eproto.base,
-  &scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto.base,
-  &scc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto.base,
-  &scc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_acfun_2elive_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_acfun_2elive_2eproto = {
-  false, false, descriptor_table_protodef_acfun_2elive_2eproto, "acfun.live.proto", 388,
-  &descriptor_table_acfun_2elive_2eproto_once, descriptor_table_acfun_2elive_2eproto_sccs, descriptor_table_acfun_2elive_2eproto_deps, 4, 0,
+  false, false, 388, descriptor_table_protodef_acfun_2elive_2eproto, "acfun.live.proto", 
+  &descriptor_table_acfun_2elive_2eproto_once, nullptr, 0, 4,
   schemas, file_default_instances, TableStruct_acfun_2elive_2eproto::offsets,
-  file_level_metadata_acfun_2elive_2eproto, 4, file_level_enum_descriptors_acfun_2elive_2eproto, file_level_service_descriptors_acfun_2elive_2eproto,
+  file_level_metadata_acfun_2elive_2eproto, file_level_enum_descriptors_acfun_2elive_2eproto, file_level_service_descriptors_acfun_2elive_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_acfun_2elive_2eproto_getter() {
+  return &descriptor_table_acfun_2elive_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_acfun_2elive_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_acfun_2elive_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_acfun_2elive_2eproto(&descriptor_table_acfun_2elive_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -186,16 +165,15 @@ AcFunUserInfo::AcFunUserInfo(const AcFunUserInfo& from)
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
     name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   userid_ = from.userid_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AcFunUserInfo)
 }
 
 void AcFunUserInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AcFunUserInfo_acfun_2elive_2eproto.base);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  userid_ = PROTOBUF_LONGLONG(0);
+name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+userid_ = int64_t{0};
 }
 
 AcFunUserInfo::~AcFunUserInfo() {
@@ -205,7 +183,7 @@ AcFunUserInfo::~AcFunUserInfo() {
 }
 
 void AcFunUserInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -218,11 +196,6 @@ void AcFunUserInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void AcFunUserInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AcFunUserInfo& AcFunUserInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AcFunUserInfo_acfun_2elive_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void AcFunUserInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.AcFunUserInfo)
@@ -231,7 +204,7 @@ void AcFunUserInfo::Clear() {
   (void) cached_has_bits;
 
   name_.ClearToEmpty();
-  userid_ = PROTOBUF_LONGLONG(0);
+  userid_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -240,7 +213,6 @@ const char* AcFunUserInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // int64 userId = 1;
       case 1:
@@ -260,7 +232,8 @@ const char* AcFunUserInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -293,7 +266,7 @@ failure:
   }
 
   // string name = 2;
-  if (this->name().size() > 0) {
+  if (!this->name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -319,7 +292,7 @@ size_t AcFunUserInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string name = 2;
-  if (this->name().size() > 0) {
+  if (!this->name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
@@ -363,7 +336,7 @@ void AcFunUserInfo::MergeFrom(const AcFunUserInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.name().size() > 0) {
+  if (!from.name().empty()) {
     _internal_set_name(from._internal_name());
   }
   if (from.userid() != 0) {
@@ -391,15 +364,20 @@ bool AcFunUserInfo::IsInitialized() const {
 
 void AcFunUserInfo::InternalSwap(AcFunUserInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &name_, GetArenaForAllocation(),
+      &other->name_, other->GetArenaForAllocation()
+  );
   swap(userid_, other->userid_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AcFunUserInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_acfun_2elive_2eproto_getter, &descriptor_table_acfun_2elive_2eproto_once,
+      file_level_metadata_acfun_2elive_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -433,11 +411,10 @@ AcfunActionSignalThrowBanana::AcfunActionSignalThrowBanana(const AcfunActionSign
 }
 
 void AcfunActionSignalThrowBanana::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&visitor_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&count_) -
-      reinterpret_cast<char*>(&visitor_)) + sizeof(count_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&visitor_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&count_) -
+    reinterpret_cast<char*>(&visitor_)) + sizeof(count_));
 }
 
 AcfunActionSignalThrowBanana::~AcfunActionSignalThrowBanana() {
@@ -447,7 +424,7 @@ AcfunActionSignalThrowBanana::~AcfunActionSignalThrowBanana() {
 }
 
 void AcfunActionSignalThrowBanana::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete visitor_;
 }
 
@@ -460,11 +437,6 @@ void AcfunActionSignalThrowBanana::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Ar
 void AcfunActionSignalThrowBanana::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AcfunActionSignalThrowBanana& AcfunActionSignalThrowBanana::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AcfunActionSignalThrowBanana_acfun_2elive_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void AcfunActionSignalThrowBanana::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.AcfunActionSignalThrowBanana)
@@ -472,7 +444,7 @@ void AcfunActionSignalThrowBanana::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && visitor_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && visitor_ != nullptr) {
     delete visitor_;
   }
   visitor_ = nullptr;
@@ -487,7 +459,6 @@ const char* AcfunActionSignalThrowBanana::_InternalParse(const char* ptr, ::PROT
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.AcFunUserInfo visitor = 1;
       case 1:
@@ -512,7 +483,8 @@ const char* AcfunActionSignalThrowBanana::_InternalParse(const char* ptr, ::PROT
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -657,7 +629,7 @@ bool AcfunActionSignalThrowBanana::IsInitialized() const {
 
 void AcfunActionSignalThrowBanana::InternalSwap(AcfunActionSignalThrowBanana* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(AcfunActionSignalThrowBanana, count_)
       + sizeof(AcfunActionSignalThrowBanana::count_)
@@ -667,9 +639,10 @@ void AcfunActionSignalThrowBanana::InternalSwap(AcfunActionSignalThrowBanana* ot
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AcfunActionSignalThrowBanana::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_acfun_2elive_2eproto_getter, &descriptor_table_acfun_2elive_2eproto_once,
+      file_level_metadata_acfun_2elive_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -689,14 +662,13 @@ AcfunStateSignalDisplayInfo::AcfunStateSignalDisplayInfo(const AcfunStateSignalD
   bananacount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_bananacount().empty()) {
     bananacount_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_bananacount(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.AcfunStateSignalDisplayInfo)
 }
 
 void AcfunStateSignalDisplayInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto.base);
-  bananacount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+bananacount_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 AcfunStateSignalDisplayInfo::~AcfunStateSignalDisplayInfo() {
@@ -706,7 +678,7 @@ AcfunStateSignalDisplayInfo::~AcfunStateSignalDisplayInfo() {
 }
 
 void AcfunStateSignalDisplayInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   bananacount_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -719,11 +691,6 @@ void AcfunStateSignalDisplayInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void AcfunStateSignalDisplayInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AcfunStateSignalDisplayInfo& AcfunStateSignalDisplayInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AcfunStateSignalDisplayInfo_acfun_2elive_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void AcfunStateSignalDisplayInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.AcfunStateSignalDisplayInfo)
@@ -740,7 +707,6 @@ const char* AcfunStateSignalDisplayInfo::_InternalParse(const char* ptr, ::PROTO
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string bananaCount = 1;
       case 1:
@@ -753,7 +719,8 @@ const char* AcfunStateSignalDisplayInfo::_InternalParse(const char* ptr, ::PROTO
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -780,7 +747,7 @@ failure:
   (void) cached_has_bits;
 
   // string bananaCount = 1;
-  if (this->bananacount().size() > 0) {
+  if (!this->bananacount().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_bananacount().data(), static_cast<int>(this->_internal_bananacount().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -806,7 +773,7 @@ size_t AcfunStateSignalDisplayInfo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string bananaCount = 1;
-  if (this->bananacount().size() > 0) {
+  if (!this->bananacount().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_bananacount());
@@ -843,7 +810,7 @@ void AcfunStateSignalDisplayInfo::MergeFrom(const AcfunStateSignalDisplayInfo& f
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.bananacount().size() > 0) {
+  if (!from.bananacount().empty()) {
     _internal_set_bananacount(from._internal_bananacount());
   }
 }
@@ -868,14 +835,19 @@ bool AcfunStateSignalDisplayInfo::IsInitialized() const {
 
 void AcfunStateSignalDisplayInfo::InternalSwap(AcfunStateSignalDisplayInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  bananacount_.Swap(&other->bananacount_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &bananacount_, GetArenaForAllocation(),
+      &other->bananacount_, other->GetArenaForAllocation()
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AcfunStateSignalDisplayInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_acfun_2elive_2eproto_getter, &descriptor_table_acfun_2elive_2eproto_once,
+      file_level_metadata_acfun_2elive_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -917,11 +889,10 @@ AcfunActionSignalJoinClub::AcfunActionSignalJoinClub(const AcfunActionSignalJoin
 }
 
 void AcfunActionSignalJoinClub::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&fansinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&jointimems_) -
-      reinterpret_cast<char*>(&fansinfo_)) + sizeof(jointimems_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&fansinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&jointimems_) -
+    reinterpret_cast<char*>(&fansinfo_)) + sizeof(jointimems_));
 }
 
 AcfunActionSignalJoinClub::~AcfunActionSignalJoinClub() {
@@ -931,7 +902,7 @@ AcfunActionSignalJoinClub::~AcfunActionSignalJoinClub() {
 }
 
 void AcfunActionSignalJoinClub::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete fansinfo_;
   if (this != internal_default_instance()) delete uperinfo_;
 }
@@ -945,11 +916,6 @@ void AcfunActionSignalJoinClub::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void AcfunActionSignalJoinClub::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AcfunActionSignalJoinClub& AcfunActionSignalJoinClub::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AcfunActionSignalJoinClub_acfun_2elive_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void AcfunActionSignalJoinClub::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.AcfunActionSignalJoinClub)
@@ -957,15 +923,15 @@ void AcfunActionSignalJoinClub::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && fansinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && fansinfo_ != nullptr) {
     delete fansinfo_;
   }
   fansinfo_ = nullptr;
-  if (GetArena() == nullptr && uperinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && uperinfo_ != nullptr) {
     delete uperinfo_;
   }
   uperinfo_ = nullptr;
-  jointimems_ = PROTOBUF_LONGLONG(0);
+  jointimems_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -974,7 +940,6 @@ const char* AcfunActionSignalJoinClub::_InternalParse(const char* ptr, ::PROTOBU
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.AcFunUserInfo fansInfo = 1;
       case 1:
@@ -999,7 +964,8 @@ const char* AcfunActionSignalJoinClub::_InternalParse(const char* ptr, ::PROTOBU
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -1146,7 +1112,7 @@ bool AcfunActionSignalJoinClub::IsInitialized() const {
 
 void AcfunActionSignalJoinClub::InternalSwap(AcfunActionSignalJoinClub* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(AcfunActionSignalJoinClub, jointimems_)
       + sizeof(AcfunActionSignalJoinClub::jointimems_)
@@ -1156,9 +1122,10 @@ void AcfunActionSignalJoinClub::InternalSwap(AcfunActionSignalJoinClub* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AcfunActionSignalJoinClub::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_acfun_2elive_2eproto_getter, &descriptor_table_acfun_2elive_2eproto_once,
+      file_level_metadata_acfun_2elive_2eproto[3]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

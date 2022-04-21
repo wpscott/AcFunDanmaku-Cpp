@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OBSPlugin", "OBSPlugin\OBSP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AcFunDanmakuHelper", "AcFunDanmakuHelper\AcFunDanmakuHelper.vcxproj", "{2399AED8-FD51-4115-B639-7EB12EA67097}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Danmaku-Beast", "Danmaku-Beast\Danmaku-Beast.vcxproj", "{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AcFunDanmakuProtos", "AcFunDanmakuProtos\AcFunDanmakuProtos.vcxproj", "{BD868783-1D7E-43AA-A79A-A5089DC8163E}"
 EndProject
 Global
@@ -43,6 +45,14 @@ Global
 		{2399AED8-FD51-4115-B639-7EB12EA67097}.Release|x64.Build.0 = Release|x64
 		{2399AED8-FD51-4115-B639-7EB12EA67097}.Release|x86.ActiveCfg = Release|Win32
 		{2399AED8-FD51-4115-B639-7EB12EA67097}.Release|x86.Build.0 = Release|Win32
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Debug|x64.ActiveCfg = Debug|x64
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Debug|x64.Build.0 = Debug|x64
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Debug|x86.ActiveCfg = Debug|Win32
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Debug|x86.Build.0 = Debug|Win32
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Release|x64.ActiveCfg = Release|x64
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Release|x64.Build.0 = Release|x64
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Release|x86.ActiveCfg = Release|Win32
+		{67CFEC7D-3E45-45C0-AAF3-0EE5D4EA78D3}.Release|x86.Build.0 = Release|Win32
 		{BD868783-1D7E-43AA-A79A-A5089DC8163E}.Debug|x64.ActiveCfg = Debug|x64
 		{BD868783-1D7E-43AA-A79A-A5089DC8163E}.Debug|x64.Build.0 = Debug|x64
 		{BD868783-1D7E-43AA-A79A-A5089DC8163E}.Debug|x86.ActiveCfg = Debug|Win32

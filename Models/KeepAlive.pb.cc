@@ -14,46 +14,48 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_AccessPointsConfig_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AccessPointsConfig_AccessPointsConfig_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_PushServiceToken_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PushServiceToken_PushServiceToken_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class KeepAliveRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<KeepAliveRequest> _instance;
-} _KeepAliveRequest_default_instance_;
-class KeepAliveResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<KeepAliveResponse> _instance;
-} _KeepAliveResponse_default_instance_;
+constexpr KeepAliveRequest::KeepAliveRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : pushservicetokenlist_()
+  , pushservicetoken_(nullptr)
+  , presencestatus_(0)
+
+  , appactivestatus_(0)
+
+  , keepaliveintervalsec_(0)
+  , ipv6available_(false){}
+struct KeepAliveRequestDefaultTypeInternal {
+  constexpr KeepAliveRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~KeepAliveRequestDefaultTypeInternal() {}
+  union {
+    KeepAliveRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT KeepAliveRequestDefaultTypeInternal _KeepAliveRequest_default_instance_;
+constexpr KeepAliveResponse::KeepAliveResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : accesspointsconfig_(nullptr)
+  , accesspointsconfigipv6_(nullptr)
+  , accesspointsconfigquic_(nullptr)
+  , accesspointsconfigquicipv6_(nullptr)
+  , accesspointsconfigws_(nullptr)
+  , servermsec_(int64_t{0})
+  , flowcostsamplerate_(0)
+  , commandsamplerate_(0){}
+struct KeepAliveResponseDefaultTypeInternal {
+  constexpr KeepAliveResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~KeepAliveResponseDefaultTypeInternal() {}
+  union {
+    KeepAliveResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT KeepAliveResponseDefaultTypeInternal _KeepAliveResponse_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_KeepAliveRequest_KeepAlive_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_KeepAliveRequest_default_instance_;
-    new (ptr) ::AcFunDanmu::KeepAliveRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_KeepAliveRequest_KeepAlive_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_KeepAliveRequest_KeepAlive_2eproto}, {
-      &scc_info_PushServiceToken_PushServiceToken_2eproto.base,}};
-
-static void InitDefaultsscc_info_KeepAliveResponse_KeepAlive_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_KeepAliveResponse_default_instance_;
-    new (ptr) ::AcFunDanmu::KeepAliveResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_KeepAliveResponse_KeepAlive_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_KeepAliveResponse_KeepAlive_2eproto}, {
-      &scc_info_AccessPointsConfig_AccessPointsConfig_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_KeepAlive_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_KeepAlive_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_KeepAlive_2eproto = nullptr;
@@ -69,6 +71,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_KeepAlive_2eproto::offsets[] P
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveRequest, pushservicetoken_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveRequest, pushservicetokenlist_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveRequest, keepaliveintervalsec_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveRequest, ipv6available_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -77,10 +80,15 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_KeepAlive_2eproto::offsets[] P
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, accesspointsconfig_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, servermsec_),
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, accesspointsconfigipv6_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, accesspointsconfigquic_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, accesspointsconfigquicipv6_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, flowcostsamplerate_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, commandsamplerate_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::KeepAliveResponse, accesspointsconfigws_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AcFunDanmu::KeepAliveRequest)},
-  { 10, -1, sizeof(::AcFunDanmu::KeepAliveResponse)},
+  { 11, -1, sizeof(::AcFunDanmu::KeepAliveResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -91,39 +99,45 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_KeepAlive_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\017KeepAlive.proto\022\nAcFunDanmu\032\016Register."
   "proto\032\026PushServiceToken.proto\032\030AccessPoi"
-  "ntsConfig.proto\"\253\002\n\020KeepAliveRequest\022B\n\016"
+  "ntsConfig.proto\"\302\002\n\020KeepAliveRequest\022B\n\016"
   "presenceStatus\030\001 \001(\0162*.AcFunDanmu.Regist"
   "erRequest.PresenceStatus\022A\n\017appActiveSta"
   "tus\030\002 \001(\0162(.AcFunDanmu.RegisterRequest.A"
   "ctiveStatus\0226\n\020pushServiceToken\030\003 \001(\0132\034."
   "AcFunDanmu.PushServiceToken\022:\n\024pushServi"
   "ceTokenList\030\004 \003(\0132\034.AcFunDanmu.PushServi"
-  "ceToken\022\034\n\024keepaliveIntervalSec\030\005 \001(\005\"\243\001"
-  "\n\021KeepAliveResponse\022:\n\022accessPointsConfi"
-  "g\030\001 \001(\0132\036.AcFunDanmu.AccessPointsConfig\022"
-  "\022\n\nserverMsec\030\002 \001(\003\022>\n\026accessPointsConfi"
-  "gIpv6\030\003 \001(\0132\036.AcFunDanmu.AccessPointsCon"
-  "figb\006proto3"
+  "ceToken\022\034\n\024keepaliveIntervalSec\030\005 \001(\005\022\025\n"
+  "\ripv6Available\030\006 \001(\010\"\234\003\n\021KeepAliveRespon"
+  "se\022:\n\022accessPointsConfig\030\001 \001(\0132\036.AcFunDa"
+  "nmu.AccessPointsConfig\022\022\n\nserverMsec\030\002 \001"
+  "(\003\022>\n\026accessPointsConfigIpv6\030\003 \001(\0132\036.AcF"
+  "unDanmu.AccessPointsConfig\022>\n\026accessPoin"
+  "tsConfigQUic\030\006 \001(\0132\036.AcFunDanmu.AccessPo"
+  "intsConfig\022B\n\032accessPointsConfigQuicIpv6"
+  "\030\007 \001(\0132\036.AcFunDanmu.AccessPointsConfig\022\032"
+  "\n\022flowCostSampleRate\030\010 \001(\002\022\031\n\021commandSam"
+  "pleRate\030\t \001(\002\022<\n\024accessPointsConfigWs\030\n "
+  "\001(\0132\036.AcFunDanmu.AccessPointsConfigb\006pro"
+  "to3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_KeepAlive_2eproto_deps[3] = {
   &::descriptor_table_AccessPointsConfig_2eproto,
   &::descriptor_table_PushServiceToken_2eproto,
   &::descriptor_table_Register_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_KeepAlive_2eproto_sccs[2] = {
-  &scc_info_KeepAliveRequest_KeepAlive_2eproto.base,
-  &scc_info_KeepAliveResponse_KeepAlive_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_KeepAlive_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_KeepAlive_2eproto = {
-  false, false, descriptor_table_protodef_KeepAlive_2eproto, "KeepAlive.proto", 571,
-  &descriptor_table_KeepAlive_2eproto_once, descriptor_table_KeepAlive_2eproto_sccs, descriptor_table_KeepAlive_2eproto_deps, 2, 3,
+  false, false, 843, descriptor_table_protodef_KeepAlive_2eproto, "KeepAlive.proto", 
+  &descriptor_table_KeepAlive_2eproto_once, descriptor_table_KeepAlive_2eproto_deps, 3, 2,
   schemas, file_default_instances, TableStruct_KeepAlive_2eproto::offsets,
-  file_level_metadata_KeepAlive_2eproto, 2, file_level_enum_descriptors_KeepAlive_2eproto, file_level_service_descriptors_KeepAlive_2eproto,
+  file_level_metadata_KeepAlive_2eproto, file_level_enum_descriptors_KeepAlive_2eproto, file_level_service_descriptors_KeepAlive_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_KeepAlive_2eproto_getter() {
+  return &descriptor_table_KeepAlive_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_KeepAlive_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_KeepAlive_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_KeepAlive_2eproto(&descriptor_table_KeepAlive_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -138,7 +152,7 @@ KeepAliveRequest::_Internal::pushservicetoken(const KeepAliveRequest* msg) {
   return *msg->pushservicetoken_;
 }
 void KeepAliveRequest::clear_pushservicetoken() {
-  if (GetArena() == nullptr && pushservicetoken_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && pushservicetoken_ != nullptr) {
     delete pushservicetoken_;
   }
   pushservicetoken_ = nullptr;
@@ -163,17 +177,16 @@ KeepAliveRequest::KeepAliveRequest(const KeepAliveRequest& from)
     pushservicetoken_ = nullptr;
   }
   ::memcpy(&presencestatus_, &from.presencestatus_,
-    static_cast<size_t>(reinterpret_cast<char*>(&keepaliveintervalsec_) -
-    reinterpret_cast<char*>(&presencestatus_)) + sizeof(keepaliveintervalsec_));
+    static_cast<size_t>(reinterpret_cast<char*>(&ipv6available_) -
+    reinterpret_cast<char*>(&presencestatus_)) + sizeof(ipv6available_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.KeepAliveRequest)
 }
 
 void KeepAliveRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_KeepAliveRequest_KeepAlive_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&pushservicetoken_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&keepaliveintervalsec_) -
-      reinterpret_cast<char*>(&pushservicetoken_)) + sizeof(keepaliveintervalsec_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&pushservicetoken_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&ipv6available_) -
+    reinterpret_cast<char*>(&pushservicetoken_)) + sizeof(ipv6available_));
 }
 
 KeepAliveRequest::~KeepAliveRequest() {
@@ -183,7 +196,7 @@ KeepAliveRequest::~KeepAliveRequest() {
 }
 
 void KeepAliveRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete pushservicetoken_;
 }
 
@@ -196,11 +209,6 @@ void KeepAliveRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void KeepAliveRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const KeepAliveRequest& KeepAliveRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_KeepAliveRequest_KeepAlive_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void KeepAliveRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.KeepAliveRequest)
@@ -209,13 +217,13 @@ void KeepAliveRequest::Clear() {
   (void) cached_has_bits;
 
   pushservicetokenlist_.Clear();
-  if (GetArena() == nullptr && pushservicetoken_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && pushservicetoken_ != nullptr) {
     delete pushservicetoken_;
   }
   pushservicetoken_ = nullptr;
   ::memset(&presencestatus_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keepaliveintervalsec_) -
-      reinterpret_cast<char*>(&presencestatus_)) + sizeof(keepaliveintervalsec_));
+      reinterpret_cast<char*>(&ipv6available_) -
+      reinterpret_cast<char*>(&presencestatus_)) + sizeof(ipv6available_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -224,7 +232,6 @@ const char* KeepAliveRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.RegisterRequest.PresenceStatus presenceStatus = 1;
       case 1:
@@ -268,9 +275,17 @@ const char* KeepAliveRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // bool ipv6Available = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          ipv6available_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -332,6 +347,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_keepaliveintervalsec(), target);
   }
 
+  // bool ipv6Available = 6;
+  if (this->ipv6available() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->_internal_ipv6available(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -381,6 +402,11 @@ size_t KeepAliveRequest::ByteSizeLong() const {
         this->_internal_keepaliveintervalsec());
   }
 
+  // bool ipv6Available = 6;
+  if (this->ipv6available() != 0) {
+    total_size += 1 + 1;
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -425,6 +451,9 @@ void KeepAliveRequest::MergeFrom(const KeepAliveRequest& from) {
   if (from.keepaliveintervalsec() != 0) {
     _internal_set_keepaliveintervalsec(from._internal_keepaliveintervalsec());
   }
+  if (from.ipv6available() != 0) {
+    _internal_set_ipv6available(from._internal_ipv6available());
+  }
 }
 
 void KeepAliveRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -447,20 +476,21 @@ bool KeepAliveRequest::IsInitialized() const {
 
 void KeepAliveRequest::InternalSwap(KeepAliveRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   pushservicetokenlist_.InternalSwap(&other->pushservicetokenlist_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(KeepAliveRequest, keepaliveintervalsec_)
-      + sizeof(KeepAliveRequest::keepaliveintervalsec_)
+      PROTOBUF_FIELD_OFFSET(KeepAliveRequest, ipv6available_)
+      + sizeof(KeepAliveRequest::ipv6available_)
       - PROTOBUF_FIELD_OFFSET(KeepAliveRequest, pushservicetoken_)>(
           reinterpret_cast<char*>(&pushservicetoken_),
           reinterpret_cast<char*>(&other->pushservicetoken_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata KeepAliveRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_KeepAlive_2eproto_getter, &descriptor_table_KeepAlive_2eproto_once,
+      file_level_metadata_KeepAlive_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -468,6 +498,9 @@ class KeepAliveResponse::_Internal {
  public:
   static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfig(const KeepAliveResponse* msg);
   static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigipv6(const KeepAliveResponse* msg);
+  static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigquic(const KeepAliveResponse* msg);
+  static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigquicipv6(const KeepAliveResponse* msg);
+  static const ::AcFunDanmu::AccessPointsConfig& accesspointsconfigws(const KeepAliveResponse* msg);
 };
 
 const ::AcFunDanmu::AccessPointsConfig&
@@ -478,17 +511,47 @@ const ::AcFunDanmu::AccessPointsConfig&
 KeepAliveResponse::_Internal::accesspointsconfigipv6(const KeepAliveResponse* msg) {
   return *msg->accesspointsconfigipv6_;
 }
+const ::AcFunDanmu::AccessPointsConfig&
+KeepAliveResponse::_Internal::accesspointsconfigquic(const KeepAliveResponse* msg) {
+  return *msg->accesspointsconfigquic_;
+}
+const ::AcFunDanmu::AccessPointsConfig&
+KeepAliveResponse::_Internal::accesspointsconfigquicipv6(const KeepAliveResponse* msg) {
+  return *msg->accesspointsconfigquicipv6_;
+}
+const ::AcFunDanmu::AccessPointsConfig&
+KeepAliveResponse::_Internal::accesspointsconfigws(const KeepAliveResponse* msg) {
+  return *msg->accesspointsconfigws_;
+}
 void KeepAliveResponse::clear_accesspointsconfig() {
-  if (GetArena() == nullptr && accesspointsconfig_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfig_ != nullptr) {
     delete accesspointsconfig_;
   }
   accesspointsconfig_ = nullptr;
 }
 void KeepAliveResponse::clear_accesspointsconfigipv6() {
-  if (GetArena() == nullptr && accesspointsconfigipv6_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigipv6_ != nullptr) {
     delete accesspointsconfigipv6_;
   }
   accesspointsconfigipv6_ = nullptr;
+}
+void KeepAliveResponse::clear_accesspointsconfigquic() {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquic_ != nullptr) {
+    delete accesspointsconfigquic_;
+  }
+  accesspointsconfigquic_ = nullptr;
+}
+void KeepAliveResponse::clear_accesspointsconfigquicipv6() {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquicipv6_ != nullptr) {
+    delete accesspointsconfigquicipv6_;
+  }
+  accesspointsconfigquicipv6_ = nullptr;
+}
+void KeepAliveResponse::clear_accesspointsconfigws() {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigws_ != nullptr) {
+    delete accesspointsconfigws_;
+  }
+  accesspointsconfigws_ = nullptr;
 }
 KeepAliveResponse::KeepAliveResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
@@ -509,16 +572,32 @@ KeepAliveResponse::KeepAliveResponse(const KeepAliveResponse& from)
   } else {
     accesspointsconfigipv6_ = nullptr;
   }
-  servermsec_ = from.servermsec_;
+  if (from._internal_has_accesspointsconfigquic()) {
+    accesspointsconfigquic_ = new ::AcFunDanmu::AccessPointsConfig(*from.accesspointsconfigquic_);
+  } else {
+    accesspointsconfigquic_ = nullptr;
+  }
+  if (from._internal_has_accesspointsconfigquicipv6()) {
+    accesspointsconfigquicipv6_ = new ::AcFunDanmu::AccessPointsConfig(*from.accesspointsconfigquicipv6_);
+  } else {
+    accesspointsconfigquicipv6_ = nullptr;
+  }
+  if (from._internal_has_accesspointsconfigws()) {
+    accesspointsconfigws_ = new ::AcFunDanmu::AccessPointsConfig(*from.accesspointsconfigws_);
+  } else {
+    accesspointsconfigws_ = nullptr;
+  }
+  ::memcpy(&servermsec_, &from.servermsec_,
+    static_cast<size_t>(reinterpret_cast<char*>(&commandsamplerate_) -
+    reinterpret_cast<char*>(&servermsec_)) + sizeof(commandsamplerate_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.KeepAliveResponse)
 }
 
 void KeepAliveResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_KeepAliveResponse_KeepAlive_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&accesspointsconfig_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&servermsec_) -
-      reinterpret_cast<char*>(&accesspointsconfig_)) + sizeof(servermsec_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&accesspointsconfig_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&commandsamplerate_) -
+    reinterpret_cast<char*>(&accesspointsconfig_)) + sizeof(commandsamplerate_));
 }
 
 KeepAliveResponse::~KeepAliveResponse() {
@@ -528,9 +607,12 @@ KeepAliveResponse::~KeepAliveResponse() {
 }
 
 void KeepAliveResponse::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete accesspointsconfig_;
   if (this != internal_default_instance()) delete accesspointsconfigipv6_;
+  if (this != internal_default_instance()) delete accesspointsconfigquic_;
+  if (this != internal_default_instance()) delete accesspointsconfigquicipv6_;
+  if (this != internal_default_instance()) delete accesspointsconfigws_;
 }
 
 void KeepAliveResponse::ArenaDtor(void* object) {
@@ -542,11 +624,6 @@ void KeepAliveResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void KeepAliveResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const KeepAliveResponse& KeepAliveResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_KeepAliveResponse_KeepAlive_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void KeepAliveResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.KeepAliveResponse)
@@ -554,15 +631,29 @@ void KeepAliveResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && accesspointsconfig_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfig_ != nullptr) {
     delete accesspointsconfig_;
   }
   accesspointsconfig_ = nullptr;
-  if (GetArena() == nullptr && accesspointsconfigipv6_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigipv6_ != nullptr) {
     delete accesspointsconfigipv6_;
   }
   accesspointsconfigipv6_ = nullptr;
-  servermsec_ = PROTOBUF_LONGLONG(0);
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquic_ != nullptr) {
+    delete accesspointsconfigquic_;
+  }
+  accesspointsconfigquic_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigquicipv6_ != nullptr) {
+    delete accesspointsconfigquicipv6_;
+  }
+  accesspointsconfigquicipv6_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && accesspointsconfigws_ != nullptr) {
+    delete accesspointsconfigws_;
+  }
+  accesspointsconfigws_ = nullptr;
+  ::memset(&servermsec_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&commandsamplerate_) -
+      reinterpret_cast<char*>(&servermsec_)) + sizeof(commandsamplerate_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -571,7 +662,6 @@ const char* KeepAliveResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.AccessPointsConfig accessPointsConfig = 1;
       case 1:
@@ -594,9 +684,45 @@ const char* KeepAliveResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // .AcFunDanmu.AccessPointsConfig accessPointsConfigQUic = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accesspointsconfigquic(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .AcFunDanmu.AccessPointsConfig accessPointsConfigQuicIpv6 = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accesspointsconfigquicipv6(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // float flowCostSampleRate = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 69)) {
+          flowcostsamplerate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float commandSampleRate = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 77)) {
+          commandsamplerate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // .AcFunDanmu.AccessPointsConfig accessPointsConfigWs = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_accesspointsconfigws(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -644,6 +770,42 @@ failure:
         3, _Internal::accesspointsconfigipv6(this), target, stream);
   }
 
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQUic = 6;
+  if (this->has_accesspointsconfigquic()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::accesspointsconfigquic(this), target, stream);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQuicIpv6 = 7;
+  if (this->has_accesspointsconfigquicipv6()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::accesspointsconfigquicipv6(this), target, stream);
+  }
+
+  // float flowCostSampleRate = 8;
+  if (!(this->flowcostsamplerate() <= 0 && this->flowcostsamplerate() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(8, this->_internal_flowcostsamplerate(), target);
+  }
+
+  // float commandSampleRate = 9;
+  if (!(this->commandsamplerate() <= 0 && this->commandsamplerate() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(9, this->_internal_commandsamplerate(), target);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigWs = 10;
+  if (this->has_accesspointsconfigws()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        10, _Internal::accesspointsconfigws(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -674,11 +836,42 @@ size_t KeepAliveResponse::ByteSizeLong() const {
         *accesspointsconfigipv6_);
   }
 
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQUic = 6;
+  if (this->has_accesspointsconfigquic()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accesspointsconfigquic_);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigQuicIpv6 = 7;
+  if (this->has_accesspointsconfigquicipv6()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accesspointsconfigquicipv6_);
+  }
+
+  // .AcFunDanmu.AccessPointsConfig accessPointsConfigWs = 10;
+  if (this->has_accesspointsconfigws()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *accesspointsconfigws_);
+  }
+
   // int64 serverMsec = 2;
   if (this->servermsec() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_servermsec());
+  }
+
+  // float flowCostSampleRate = 8;
+  if (!(this->flowcostsamplerate() <= 0 && this->flowcostsamplerate() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float commandSampleRate = 9;
+  if (!(this->commandsamplerate() <= 0 && this->commandsamplerate() >= 0)) {
+    total_size += 1 + 4;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -718,8 +911,23 @@ void KeepAliveResponse::MergeFrom(const KeepAliveResponse& from) {
   if (from.has_accesspointsconfigipv6()) {
     _internal_mutable_accesspointsconfigipv6()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigipv6());
   }
+  if (from.has_accesspointsconfigquic()) {
+    _internal_mutable_accesspointsconfigquic()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigquic());
+  }
+  if (from.has_accesspointsconfigquicipv6()) {
+    _internal_mutable_accesspointsconfigquicipv6()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigquicipv6());
+  }
+  if (from.has_accesspointsconfigws()) {
+    _internal_mutable_accesspointsconfigws()->::AcFunDanmu::AccessPointsConfig::MergeFrom(from._internal_accesspointsconfigws());
+  }
   if (from.servermsec() != 0) {
     _internal_set_servermsec(from._internal_servermsec());
+  }
+  if (!(from.flowcostsamplerate() <= 0 && from.flowcostsamplerate() >= 0)) {
+    _internal_set_flowcostsamplerate(from._internal_flowcostsamplerate());
+  }
+  if (!(from.commandsamplerate() <= 0 && from.commandsamplerate() >= 0)) {
+    _internal_set_commandsamplerate(from._internal_commandsamplerate());
   }
 }
 
@@ -743,19 +951,20 @@ bool KeepAliveResponse::IsInitialized() const {
 
 void KeepAliveResponse::InternalSwap(KeepAliveResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(KeepAliveResponse, servermsec_)
-      + sizeof(KeepAliveResponse::servermsec_)
+      PROTOBUF_FIELD_OFFSET(KeepAliveResponse, commandsamplerate_)
+      + sizeof(KeepAliveResponse::commandsamplerate_)
       - PROTOBUF_FIELD_OFFSET(KeepAliveResponse, accesspointsconfig_)>(
           reinterpret_cast<char*>(&accesspointsconfig_),
           reinterpret_cast<char*>(&other->accesspointsconfig_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata KeepAliveResponse::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_KeepAlive_2eproto_getter, &descriptor_table_KeepAlive_2eproto_once,
+      file_level_metadata_KeepAlive_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

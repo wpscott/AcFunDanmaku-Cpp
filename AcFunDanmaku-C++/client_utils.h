@@ -77,7 +77,7 @@ using namespace web::websockets::client;            // WebSockets client
 using namespace web::json;                          // JSON library
 
 namespace ClientUtils {
-static const int HeaderOffset = 12;
+static constexpr int HeaderOffset = 12;
 
 const static inline std::string Encrypt(const std::vector<CryptoPP::byte>& key,
                                         const std::string& body) {

@@ -14,46 +14,42 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_CommonStateSignalCurrentRedpackList_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalCurrentRedpackList_Redpack> _instance;
-} _CommonStateSignalCurrentRedpackList_Redpack_default_instance_;
-class CommonStateSignalCurrentRedpackListDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalCurrentRedpackList> _instance;
-} _CommonStateSignalCurrentRedpackList_default_instance_;
+constexpr CommonStateSignalCurrentRedpackList_Redpack::CommonStateSignalCurrentRedpackList_Redpack(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : redpackid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , redpackbizunit_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , sender_(nullptr)
+  , grabbegintimems_(int64_t{0})
+  , gettokenlatesttimems_(int64_t{0})
+  , redpackamount_(int64_t{0})
+  , settlebegintime_(int64_t{0})
+  , displaystatus_(0)
+{}
+struct CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal {
+  constexpr CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal() {}
+  union {
+    CommonStateSignalCurrentRedpackList_Redpack _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal _CommonStateSignalCurrentRedpackList_Redpack_default_instance_;
+constexpr CommonStateSignalCurrentRedpackList::CommonStateSignalCurrentRedpackList(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : redpacks_(){}
+struct CommonStateSignalCurrentRedpackListDefaultTypeInternal {
+  constexpr CommonStateSignalCurrentRedpackListDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonStateSignalCurrentRedpackListDefaultTypeInternal() {}
+  union {
+    CommonStateSignalCurrentRedpackList _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonStateSignalCurrentRedpackListDefaultTypeInternal _CommonStateSignalCurrentRedpackList_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalCurrentRedpackList_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalCurrentRedpackList();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto}, {
-      &scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalCurrentRedpackList_Redpack_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto[2];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_CommonStateSignalCurrentRedpackList_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalCurrentRedpackList_2eproto = nullptr;
@@ -108,20 +104,19 @@ const char descriptor_table_protodef_CommonStateSignalCurrentRedpackList_2eproto
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_deps[1] = {
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_sccs[2] = {
-  &scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto.base,
-  &scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalCurrentRedpackList_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalCurrentRedpackList_2eproto, "CommonStateSignalCurrentRedpackList.proto", 554,
-  &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once, descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_sccs, descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_deps, 2, 1,
+  false, false, 554, descriptor_table_protodef_CommonStateSignalCurrentRedpackList_2eproto, "CommonStateSignalCurrentRedpackList.proto", 
+  &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once, descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_deps, 1, 2,
   schemas, file_default_instances, TableStruct_CommonStateSignalCurrentRedpackList_2eproto::offsets,
-  file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto, 2, file_level_enum_descriptors_CommonStateSignalCurrentRedpackList_2eproto, file_level_service_descriptors_CommonStateSignalCurrentRedpackList_2eproto,
+  file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto, file_level_enum_descriptors_CommonStateSignalCurrentRedpackList_2eproto, file_level_service_descriptors_CommonStateSignalCurrentRedpackList_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalCurrentRedpackList_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalCurrentRedpackList_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalCurrentRedpackList_2eproto(&descriptor_table_CommonStateSignalCurrentRedpackList_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CommonStateSignalCurrentRedpackList_RedpackDisplayStatus_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_CommonStateSignalCurrentRedpackList_2eproto);
@@ -159,7 +154,7 @@ CommonStateSignalCurrentRedpackList_Redpack::_Internal::sender(const CommonState
   return *msg->sender_;
 }
 void CommonStateSignalCurrentRedpackList_Redpack::clear_sender() {
-  if (GetArena() == nullptr && sender_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && sender_ != nullptr) {
     delete sender_;
   }
   sender_ = nullptr;
@@ -176,12 +171,12 @@ CommonStateSignalCurrentRedpackList_Redpack::CommonStateSignalCurrentRedpackList
   redpackid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_redpackid().empty()) {
     redpackid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_redpackid(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   redpackbizunit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_redpackbizunit().empty()) {
     redpackbizunit_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_redpackbizunit(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_sender()) {
     sender_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.sender_);
@@ -195,13 +190,12 @@ CommonStateSignalCurrentRedpackList_Redpack::CommonStateSignalCurrentRedpackList
 }
 
 void CommonStateSignalCurrentRedpackList_Redpack::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base);
-  redpackid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  redpackbizunit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&sender_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&displaystatus_) -
-      reinterpret_cast<char*>(&sender_)) + sizeof(displaystatus_));
+redpackid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+redpackbizunit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&sender_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&displaystatus_) -
+    reinterpret_cast<char*>(&sender_)) + sizeof(displaystatus_));
 }
 
 CommonStateSignalCurrentRedpackList_Redpack::~CommonStateSignalCurrentRedpackList_Redpack() {
@@ -211,7 +205,7 @@ CommonStateSignalCurrentRedpackList_Redpack::~CommonStateSignalCurrentRedpackLis
 }
 
 void CommonStateSignalCurrentRedpackList_Redpack::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   redpackid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   redpackbizunit_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete sender_;
@@ -226,11 +220,6 @@ void CommonStateSignalCurrentRedpackList_Redpack::RegisterArenaDtor(::PROTOBUF_N
 void CommonStateSignalCurrentRedpackList_Redpack::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalCurrentRedpackList_Redpack& CommonStateSignalCurrentRedpackList_Redpack::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalCurrentRedpackList_Redpack::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
@@ -240,7 +229,7 @@ void CommonStateSignalCurrentRedpackList_Redpack::Clear() {
 
   redpackid_.ClearToEmpty();
   redpackbizunit_.ClearToEmpty();
-  if (GetArena() == nullptr && sender_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && sender_ != nullptr) {
     delete sender_;
   }
   sender_ = nullptr;
@@ -255,7 +244,6 @@ const char* CommonStateSignalCurrentRedpackList_Redpack::_InternalParse(const ch
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserInfo sender = 1;
       case 1:
@@ -320,7 +308,8 @@ const char* CommonStateSignalCurrentRedpackList_Redpack::_InternalParse(const ch
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -374,7 +363,7 @@ failure:
   }
 
   // string redPackId = 5;
-  if (this->redpackid().size() > 0) {
+  if (!this->redpackid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_redpackid().data(), static_cast<int>(this->_internal_redpackid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -384,7 +373,7 @@ failure:
   }
 
   // string redpackBizUnit = 6;
-  if (this->redpackbizunit().size() > 0) {
+  if (!this->redpackbizunit().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_redpackbizunit().data(), static_cast<int>(this->_internal_redpackbizunit().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -422,14 +411,14 @@ size_t CommonStateSignalCurrentRedpackList_Redpack::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string redPackId = 5;
-  if (this->redpackid().size() > 0) {
+  if (!this->redpackid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_redpackid());
   }
 
   // string redpackBizUnit = 6;
-  if (this->redpackbizunit().size() > 0) {
+  if (!this->redpackbizunit().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_redpackbizunit());
@@ -507,10 +496,10 @@ void CommonStateSignalCurrentRedpackList_Redpack::MergeFrom(const CommonStateSig
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.redpackid().size() > 0) {
+  if (!from.redpackid().empty()) {
     _internal_set_redpackid(from._internal_redpackid());
   }
-  if (from.redpackbizunit().size() > 0) {
+  if (!from.redpackbizunit().empty()) {
     _internal_set_redpackbizunit(from._internal_redpackbizunit());
   }
   if (from.has_sender()) {
@@ -553,9 +542,17 @@ bool CommonStateSignalCurrentRedpackList_Redpack::IsInitialized() const {
 
 void CommonStateSignalCurrentRedpackList_Redpack::InternalSwap(CommonStateSignalCurrentRedpackList_Redpack* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  redpackid_.Swap(&other->redpackid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  redpackbizunit_.Swap(&other->redpackbizunit_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &redpackid_, GetArenaForAllocation(),
+      &other->redpackid_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &redpackbizunit_, GetArenaForAllocation(),
+      &other->redpackbizunit_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CommonStateSignalCurrentRedpackList_Redpack, displaystatus_)
       + sizeof(CommonStateSignalCurrentRedpackList_Redpack::displaystatus_)
@@ -565,9 +562,10 @@ void CommonStateSignalCurrentRedpackList_Redpack::InternalSwap(CommonStateSignal
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalCurrentRedpackList_Redpack::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_getter, &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once,
+      file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -590,7 +588,6 @@ CommonStateSignalCurrentRedpackList::CommonStateSignalCurrentRedpackList(const C
 }
 
 void CommonStateSignalCurrentRedpackList::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto.base);
 }
 
 CommonStateSignalCurrentRedpackList::~CommonStateSignalCurrentRedpackList() {
@@ -600,7 +597,7 @@ CommonStateSignalCurrentRedpackList::~CommonStateSignalCurrentRedpackList() {
 }
 
 void CommonStateSignalCurrentRedpackList::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void CommonStateSignalCurrentRedpackList::ArenaDtor(void* object) {
@@ -612,11 +609,6 @@ void CommonStateSignalCurrentRedpackList::RegisterArenaDtor(::PROTOBUF_NAMESPACE
 void CommonStateSignalCurrentRedpackList::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonStateSignalCurrentRedpackList& CommonStateSignalCurrentRedpackList::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalCurrentRedpackList::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
@@ -633,7 +625,6 @@ const char* CommonStateSignalCurrentRedpackList::_InternalParse(const char* ptr,
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack redpacks = 1;
       case 1:
@@ -649,7 +640,8 @@ const char* CommonStateSignalCurrentRedpackList::_InternalParse(const char* ptr,
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -760,14 +752,15 @@ bool CommonStateSignalCurrentRedpackList::IsInitialized() const {
 
 void CommonStateSignalCurrentRedpackList::InternalSwap(CommonStateSignalCurrentRedpackList* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   redpacks_.InternalSwap(&other->redpacks_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalCurrentRedpackList::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_getter, &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once,
+      file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

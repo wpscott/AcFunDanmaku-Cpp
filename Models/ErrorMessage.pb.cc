@@ -14,27 +14,22 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_LocaleMessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LocaleMessage_LocaleMessage_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class ErrorMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ErrorMessage> _instance;
-} _ErrorMessage_default_instance_;
+constexpr ErrorMessage::ErrorMessage(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : localemessages_(){}
+struct ErrorMessageDefaultTypeInternal {
+  constexpr ErrorMessageDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ErrorMessageDefaultTypeInternal() {}
+  union {
+    ErrorMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ErrorMessageDefaultTypeInternal _ErrorMessage_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ErrorMessage_ErrorMessage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ErrorMessage_default_instance_;
-    new (ptr) ::AcFunDanmu::ErrorMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ErrorMessage_ErrorMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ErrorMessage_ErrorMessage_2eproto}, {
-      &scc_info_LocaleMessage_LocaleMessage_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ErrorMessage_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ErrorMessage_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ErrorMessage_2eproto = nullptr;
@@ -64,19 +59,19 @@ const char descriptor_table_protodef_ErrorMessage_2eproto[] PROTOBUF_SECTION_VAR
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ErrorMessage_2eproto_deps[1] = {
   &::descriptor_table_LocaleMessage_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ErrorMessage_2eproto_sccs[1] = {
-  &scc_info_ErrorMessage_ErrorMessage_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ErrorMessage_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ErrorMessage_2eproto = {
-  false, false, descriptor_table_protodef_ErrorMessage_2eproto, "ErrorMessage.proto", 128,
-  &descriptor_table_ErrorMessage_2eproto_once, descriptor_table_ErrorMessage_2eproto_sccs, descriptor_table_ErrorMessage_2eproto_deps, 1, 1,
+  false, false, 128, descriptor_table_protodef_ErrorMessage_2eproto, "ErrorMessage.proto", 
+  &descriptor_table_ErrorMessage_2eproto_once, descriptor_table_ErrorMessage_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_ErrorMessage_2eproto::offsets,
-  file_level_metadata_ErrorMessage_2eproto, 1, file_level_enum_descriptors_ErrorMessage_2eproto, file_level_service_descriptors_ErrorMessage_2eproto,
+  file_level_metadata_ErrorMessage_2eproto, file_level_enum_descriptors_ErrorMessage_2eproto, file_level_service_descriptors_ErrorMessage_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_ErrorMessage_2eproto_getter() {
+  return &descriptor_table_ErrorMessage_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ErrorMessage_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ErrorMessage_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ErrorMessage_2eproto(&descriptor_table_ErrorMessage_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -103,7 +98,6 @@ ErrorMessage::ErrorMessage(const ErrorMessage& from)
 }
 
 void ErrorMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ErrorMessage_ErrorMessage_2eproto.base);
 }
 
 ErrorMessage::~ErrorMessage() {
@@ -113,7 +107,7 @@ ErrorMessage::~ErrorMessage() {
 }
 
 void ErrorMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
 void ErrorMessage::ArenaDtor(void* object) {
@@ -125,11 +119,6 @@ void ErrorMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ErrorMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ErrorMessage& ErrorMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ErrorMessage_ErrorMessage_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ErrorMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ErrorMessage)
@@ -146,7 +135,6 @@ const char* ErrorMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.LocaleMessage localeMessages = 1;
       case 1:
@@ -162,7 +150,8 @@ const char* ErrorMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -273,14 +262,15 @@ bool ErrorMessage::IsInitialized() const {
 
 void ErrorMessage::InternalSwap(ErrorMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   localemessages_.InternalSwap(&other->localemessages_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ErrorMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_ErrorMessage_2eproto_getter, &descriptor_table_ErrorMessage_2eproto_once,
+      file_level_metadata_ErrorMessage_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu

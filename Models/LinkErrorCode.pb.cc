@@ -14,9 +14,10 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
 }  // namespace AcFunDanmu
-static constexpr ::PROTOBUF_NAMESPACE_ID::Metadata* file_level_metadata_LinkErrorCode_2eproto = nullptr;
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_LinkErrorCode_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_LinkErrorCode_2eproto = nullptr;
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_LinkErrorCode_2eproto::offsets[1] = {};
@@ -24,7 +25,7 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema* schemas = n
 static constexpr ::PROTOBUF_NAMESPACE_ID::Message* const* file_default_instances = nullptr;
 
 const char descriptor_table_protodef_LinkErrorCode_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\023LinkErrorCode.proto\022\nAcFunDanmu*\213\007\n\rLi"
+  "\n\023LinkErrorCode.proto\022\nAcFunDanmu*\315\007\n\rLi"
   "nkErrorCode\022\010\n\004SUCC\020\000\022\016\n\tBASIC_MIN\020\220N\022\023\n"
   "\016INTERNEL_ERROR\020\221N\022\030\n\023SERVICE_UNAVAILABL"
   "E\020\222N\022\024\n\017SERVICE_TIMEOUT\020\223N\022\022\n\rINVALID_TO"
@@ -47,22 +48,23 @@ const char descriptor_table_protodef_LinkErrorCode_2eproto[] PROTOBUF_SECTION_VA
   "NVALID_ARGUMENT\020\257N\022\031\n\024INVALID_FORMAT_TOK"
   "EN\020\260N\022\022\n\rEMPTY_PAYLOAD\020\261N\022\022\n\rCOMPRESS_FA"
   "IL\020\262N\022\024\n\017DECOMPRESS_FAIL\020\263N\022\021\n\014OUT_OF_OR"
-  "DER\020\264N\022\017\n\tBASIC_MAX\020\237\234\001b\006proto3"
+  "DER\020\264N\022\021\n\014OUT_OF_LIMIT\020\265N\022\026\n\021TOO_LARGE_P"
+  "AYLOAD\020\266N\022\025\n\020ANONYMOUSE_ERROR\020\267N\022\017\n\tBASI"
+  "C_MAX\020\237\234\001b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_LinkErrorCode_2eproto_deps[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_LinkErrorCode_2eproto_sccs[1] = {
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_LinkErrorCode_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_LinkErrorCode_2eproto = {
-  false, false, descriptor_table_protodef_LinkErrorCode_2eproto, "LinkErrorCode.proto", 951,
-  &descriptor_table_LinkErrorCode_2eproto_once, descriptor_table_LinkErrorCode_2eproto_sccs, descriptor_table_LinkErrorCode_2eproto_deps, 0, 0,
+  false, false, 1017, descriptor_table_protodef_LinkErrorCode_2eproto, "LinkErrorCode.proto", 
+  &descriptor_table_LinkErrorCode_2eproto_once, nullptr, 0, 0,
   schemas, file_default_instances, TableStruct_LinkErrorCode_2eproto::offsets,
-  file_level_metadata_LinkErrorCode_2eproto, 0, file_level_enum_descriptors_LinkErrorCode_2eproto, file_level_service_descriptors_LinkErrorCode_2eproto,
+  nullptr, file_level_enum_descriptors_LinkErrorCode_2eproto, file_level_service_descriptors_LinkErrorCode_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_LinkErrorCode_2eproto_getter() {
+  return &descriptor_table_LinkErrorCode_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_LinkErrorCode_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_LinkErrorCode_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_LinkErrorCode_2eproto(&descriptor_table_LinkErrorCode_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* LinkErrorCode_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_LinkErrorCode_2eproto);
@@ -107,6 +109,9 @@ bool LinkErrorCode_IsValid(int value) {
     case 10034:
     case 10035:
     case 10036:
+    case 10037:
+    case 10038:
+    case 10039:
     case 19999:
       return true;
     default:

@@ -14,27 +14,24 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace AcFunDanmu {
-class CommonActionSignalCommentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalComment> _instance;
-} _CommonActionSignalComment_default_instance_;
+constexpr CommonActionSignalComment::CommonActionSignalComment(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : content_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , userinfo_(nullptr)
+  , sendtimems_(int64_t{0}){}
+struct CommonActionSignalCommentDefaultTypeInternal {
+  constexpr CommonActionSignalCommentDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CommonActionSignalCommentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalComment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CommonActionSignalCommentDefaultTypeInternal _CommonActionSignalComment_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalComment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalComment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonActionSignalComment_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonActionSignalComment_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonActionSignalComment_2eproto = nullptr;
@@ -67,19 +64,19 @@ const char descriptor_table_protodef_CommonActionSignalComment_2eproto[] PROTOBU
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonActionSignalComment_2eproto_deps[1] = {
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonActionSignalComment_2eproto_sccs[1] = {
-  &scc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonActionSignalComment_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonActionSignalComment_2eproto = {
-  false, false, descriptor_table_protodef_CommonActionSignalComment_2eproto, "CommonActionSignalComment.proto", 187,
-  &descriptor_table_CommonActionSignalComment_2eproto_once, descriptor_table_CommonActionSignalComment_2eproto_sccs, descriptor_table_CommonActionSignalComment_2eproto_deps, 1, 1,
+  false, false, 187, descriptor_table_protodef_CommonActionSignalComment_2eproto, "CommonActionSignalComment.proto", 
+  &descriptor_table_CommonActionSignalComment_2eproto_once, descriptor_table_CommonActionSignalComment_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_CommonActionSignalComment_2eproto::offsets,
-  file_level_metadata_CommonActionSignalComment_2eproto, 1, file_level_enum_descriptors_CommonActionSignalComment_2eproto, file_level_service_descriptors_CommonActionSignalComment_2eproto,
+  file_level_metadata_CommonActionSignalComment_2eproto, file_level_enum_descriptors_CommonActionSignalComment_2eproto, file_level_service_descriptors_CommonActionSignalComment_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_CommonActionSignalComment_2eproto_getter() {
+  return &descriptor_table_CommonActionSignalComment_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonActionSignalComment_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonActionSignalComment_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_CommonActionSignalComment_2eproto(&descriptor_table_CommonActionSignalComment_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -94,7 +91,7 @@ CommonActionSignalComment::_Internal::userinfo(const CommonActionSignalComment* 
   return *msg->userinfo_;
 }
 void CommonActionSignalComment::clear_userinfo() {
-  if (GetArena() == nullptr && userinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && userinfo_ != nullptr) {
     delete userinfo_;
   }
   userinfo_ = nullptr;
@@ -111,7 +108,7 @@ CommonActionSignalComment::CommonActionSignalComment(const CommonActionSignalCom
   content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_content().empty()) {
     content_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_content(), 
-      GetArena());
+      GetArenaForAllocation());
   }
   if (from._internal_has_userinfo()) {
     userinfo_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.userinfo_);
@@ -123,12 +120,11 @@ CommonActionSignalComment::CommonActionSignalComment(const CommonActionSignalCom
 }
 
 void CommonActionSignalComment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto.base);
-  content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&userinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&sendtimems_) -
-      reinterpret_cast<char*>(&userinfo_)) + sizeof(sendtimems_));
+content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&userinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&sendtimems_) -
+    reinterpret_cast<char*>(&userinfo_)) + sizeof(sendtimems_));
 }
 
 CommonActionSignalComment::~CommonActionSignalComment() {
@@ -138,7 +134,7 @@ CommonActionSignalComment::~CommonActionSignalComment() {
 }
 
 void CommonActionSignalComment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   content_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete userinfo_;
 }
@@ -152,11 +148,6 @@ void CommonActionSignalComment::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void CommonActionSignalComment::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CommonActionSignalComment& CommonActionSignalComment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalComment_CommonActionSignalComment_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalComment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalComment)
@@ -165,11 +156,11 @@ void CommonActionSignalComment::Clear() {
   (void) cached_has_bits;
 
   content_.ClearToEmpty();
-  if (GetArena() == nullptr && userinfo_ != nullptr) {
+  if (GetArenaForAllocation() == nullptr && userinfo_ != nullptr) {
     delete userinfo_;
   }
   userinfo_ = nullptr;
-  sendtimems_ = PROTOBUF_LONGLONG(0);
+  sendtimems_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -178,7 +169,6 @@ const char* CommonActionSignalComment::_InternalParse(const char* ptr, ::PROTOBU
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
     switch (tag >> 3) {
       // string content = 1;
       case 1:
@@ -205,7 +195,8 @@ const char* CommonActionSignalComment::_InternalParse(const char* ptr, ::PROTOBU
         continue;
       default: {
       handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
           ctx->SetLastTag(tag);
           goto success;
         }
@@ -232,7 +223,7 @@ failure:
   (void) cached_has_bits;
 
   // string content = 1;
-  if (this->content().size() > 0) {
+  if (!this->content().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_content().data(), static_cast<int>(this->_internal_content().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -272,7 +263,7 @@ size_t CommonActionSignalComment::ByteSizeLong() const {
   (void) cached_has_bits;
 
   // string content = 1;
-  if (this->content().size() > 0) {
+  if (!this->content().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_content());
@@ -323,7 +314,7 @@ void CommonActionSignalComment::MergeFrom(const CommonActionSignalComment& from)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.content().size() > 0) {
+  if (!from.content().empty()) {
     _internal_set_content(from._internal_content());
   }
   if (from.has_userinfo()) {
@@ -354,8 +345,12 @@ bool CommonActionSignalComment::IsInitialized() const {
 
 void CommonActionSignalComment::InternalSwap(CommonActionSignalComment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  content_.Swap(&other->content_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &content_, GetArenaForAllocation(),
+      &other->content_, other->GetArenaForAllocation()
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CommonActionSignalComment, sendtimems_)
       + sizeof(CommonActionSignalComment::sendtimems_)
@@ -365,9 +360,10 @@ void CommonActionSignalComment::InternalSwap(CommonActionSignalComment* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalComment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_CommonActionSignalComment_2eproto_getter, &descriptor_table_CommonActionSignalComment_2eproto_once,
+      file_level_metadata_CommonActionSignalComment_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
