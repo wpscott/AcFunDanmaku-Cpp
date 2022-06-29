@@ -14,45 +14,46 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_LiveFeatureState_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LiveFeatureState_LiveFeatureState_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class CommonStateSignalFeatureStateSyncDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalFeatureStateSync> _instance;
-} _CommonStateSignalFeatureStateSync_default_instance_;
+PROTOBUF_CONSTEXPR CommonStateSignalFeatureStateSync::CommonStateSignalFeatureStateSync(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.featurestate_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonStateSignalFeatureStateSyncDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonStateSignalFeatureStateSyncDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonStateSignalFeatureStateSyncDefaultTypeInternal() {}
+  union {
+    CommonStateSignalFeatureStateSync _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonStateSignalFeatureStateSyncDefaultTypeInternal _CommonStateSignalFeatureStateSync_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalFeatureStateSync_CommonStateSignalFeatureStateSync_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_CommonStateSignalFeatureStateSync_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalFeatureStateSync_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalFeatureStateSync_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalFeatureStateSync_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalFeatureStateSync();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalFeatureStateSync_CommonStateSignalFeatureStateSync_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalFeatureStateSync_CommonStateSignalFeatureStateSync_2eproto}, {
-      &scc_info_LiveFeatureState_LiveFeatureState_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalFeatureStateSync_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalFeatureStateSync_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalFeatureStateSync_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonStateSignalFeatureStateSync_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_CommonStateSignalFeatureStateSync_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalFeatureStateSync, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalFeatureStateSync, featurestate_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalFeatureStateSync, _impl_.featurestate_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::CommonStateSignalFeatureStateSync)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::CommonStateSignalFeatureStateSync)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonStateSignalFeatureStateSync_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_CommonStateSignalFeatureStateSync_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_CommonStateSignalFeatureStateSync_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -62,22 +63,24 @@ const char descriptor_table_protodef_CommonStateSignalFeatureStateSync_2eproto[]
   "atureState\030\001 \003(\0132\034.AcFunDanmu.LiveFeatur"
   "eStateb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalFeatureStateSync_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_CommonStateSignalFeatureStateSync_2eproto_deps[1] = {
   &::descriptor_table_LiveFeatureState_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalFeatureStateSync_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalFeatureStateSync_CommonStateSignalFeatureStateSync_2eproto.base,
+static ::_pbi::once_flag descriptor_table_CommonStateSignalFeatureStateSync_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_CommonStateSignalFeatureStateSync_2eproto = {
+    false, false, 174, descriptor_table_protodef_CommonStateSignalFeatureStateSync_2eproto,
+    "CommonStateSignalFeatureStateSync.proto",
+    &descriptor_table_CommonStateSignalFeatureStateSync_2eproto_once, descriptor_table_CommonStateSignalFeatureStateSync_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_CommonStateSignalFeatureStateSync_2eproto::offsets,
+    file_level_metadata_CommonStateSignalFeatureStateSync_2eproto, file_level_enum_descriptors_CommonStateSignalFeatureStateSync_2eproto,
+    file_level_service_descriptors_CommonStateSignalFeatureStateSync_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalFeatureStateSync_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalFeatureStateSync_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalFeatureStateSync_2eproto, "CommonStateSignalFeatureStateSync.proto", 174,
-  &descriptor_table_CommonStateSignalFeatureStateSync_2eproto_once, descriptor_table_CommonStateSignalFeatureStateSync_2eproto_sccs, descriptor_table_CommonStateSignalFeatureStateSync_2eproto_deps, 1, 1,
-  schemas, file_default_instances, TableStruct_CommonStateSignalFeatureStateSync_2eproto::offsets,
-  file_level_metadata_CommonStateSignalFeatureStateSync_2eproto, 1, file_level_enum_descriptors_CommonStateSignalFeatureStateSync_2eproto, file_level_service_descriptors_CommonStateSignalFeatureStateSync_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_CommonStateSignalFeatureStateSync_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalFeatureStateSync_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalFeatureStateSync_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalFeatureStateSync_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalFeatureStateSync_2eproto(&descriptor_table_CommonStateSignalFeatureStateSync_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -87,71 +90,72 @@ class CommonStateSignalFeatureStateSync::_Internal {
 };
 
 void CommonStateSignalFeatureStateSync::clear_featurestate() {
-  featurestate_.Clear();
+  _impl_.featurestate_.Clear();
 }
-CommonStateSignalFeatureStateSync::CommonStateSignalFeatureStateSync(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  featurestate_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonStateSignalFeatureStateSync::CommonStateSignalFeatureStateSync(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonStateSignalFeatureStateSync)
 }
 CommonStateSignalFeatureStateSync::CommonStateSignalFeatureStateSync(const CommonStateSignalFeatureStateSync& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      featurestate_(from.featurestate_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonStateSignalFeatureStateSync* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.featurestate_){from._impl_.featurestate_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalFeatureStateSync)
 }
 
-void CommonStateSignalFeatureStateSync::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalFeatureStateSync_CommonStateSignalFeatureStateSync_2eproto.base);
+inline void CommonStateSignalFeatureStateSync::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.featurestate_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CommonStateSignalFeatureStateSync::~CommonStateSignalFeatureStateSync() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonStateSignalFeatureStateSync)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonStateSignalFeatureStateSync::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CommonStateSignalFeatureStateSync::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.featurestate_.~RepeatedPtrField();
 }
 
-void CommonStateSignalFeatureStateSync::ArenaDtor(void* object) {
-  CommonStateSignalFeatureStateSync* _this = reinterpret_cast< CommonStateSignalFeatureStateSync* >(object);
-  (void)_this;
-}
-void CommonStateSignalFeatureStateSync::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonStateSignalFeatureStateSync::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonStateSignalFeatureStateSync& CommonStateSignalFeatureStateSync::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalFeatureStateSync_CommonStateSignalFeatureStateSync_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalFeatureStateSync::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalFeatureStateSync)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  featurestate_.Clear();
+  _impl_.featurestate_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonStateSignalFeatureStateSync::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonStateSignalFeatureStateSync::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.LiveFeatureState featureState = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -159,46 +163,48 @@ const char* CommonStateSignalFeatureStateSync::_InternalParse(const char* ptr, :
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonStateSignalFeatureStateSync::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonStateSignalFeatureStateSync::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonStateSignalFeatureStateSync)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.LiveFeatureState featureState = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_featurestate_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_featurestate_size()); i < n; i++) {
+    const auto& repfield = this->_internal_featurestate(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_featurestate(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonStateSignalFeatureStateSync)
@@ -209,56 +215,37 @@ size_t CommonStateSignalFeatureStateSync::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonStateSignalFeatureStateSync)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.LiveFeatureState featureState = 1;
   total_size += 1UL * this->_internal_featurestate_size();
-  for (const auto& msg : this->featurestate_) {
+  for (const auto& msg : this->_impl_.featurestate_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonStateSignalFeatureStateSync::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonStateSignalFeatureStateSync)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonStateSignalFeatureStateSync* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonStateSignalFeatureStateSync>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonStateSignalFeatureStateSync)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonStateSignalFeatureStateSync)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonStateSignalFeatureStateSync::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonStateSignalFeatureStateSync::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonStateSignalFeatureStateSync::GetClassData() const { return &_class_data_; }
 
-void CommonStateSignalFeatureStateSync::MergeFrom(const CommonStateSignalFeatureStateSync& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalFeatureStateSync)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonStateSignalFeatureStateSync::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonStateSignalFeatureStateSync*>(&to_msg);
+  auto& from = static_cast<const CommonStateSignalFeatureStateSync&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalFeatureStateSync)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  featurestate_.MergeFrom(from.featurestate_);
-}
-
-void CommonStateSignalFeatureStateSync::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonStateSignalFeatureStateSync)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.featurestate_.MergeFrom(from._impl_.featurestate_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonStateSignalFeatureStateSync::CopyFrom(const CommonStateSignalFeatureStateSync& from) {
@@ -274,19 +261,21 @@ bool CommonStateSignalFeatureStateSync::IsInitialized() const {
 
 void CommonStateSignalFeatureStateSync::InternalSwap(CommonStateSignalFeatureStateSync* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  featurestate_.InternalSwap(&other->featurestate_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.featurestate_.InternalSwap(&other->_impl_.featurestate_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalFeatureStateSync::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonStateSignalFeatureStateSync_2eproto_getter, &descriptor_table_CommonStateSignalFeatureStateSync_2eproto_once,
+      file_level_metadata_CommonStateSignalFeatureStateSync_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalFeatureStateSync* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalFeatureStateSync >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalFeatureStateSync*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalFeatureStateSync >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonStateSignalFeatureStateSync >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

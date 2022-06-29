@@ -14,60 +14,68 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_PkAudienceContributionInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PkAudienceContributionInfo_PkAudienceContributionInfo_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_PkPlayerStatistic_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_PkRoundInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PkRoundInfo_PkRoundInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class CommonStateSignalPkStatisticDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalPkStatistic> _instance;
-} _CommonStateSignalPkStatistic_default_instance_;
+PROTOBUF_CONSTEXPR CommonStateSignalPkStatistic::CommonStateSignalPkStatistic(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.i_)*/{}
+  , /*decltype(_impl_.j_)*/{}
+  , /*decltype(_impl_.a_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.k_)*/nullptr
+  , /*decltype(_impl_.b_)*/int64_t{0}
+  , /*decltype(_impl_.c_)*/int64_t{0}
+  , /*decltype(_impl_.d_)*/int64_t{0}
+  , /*decltype(_impl_.f_)*/int64_t{0}
+  , /*decltype(_impl_.g_)*/int64_t{0}
+  , /*decltype(_impl_.h_)*/int64_t{0}
+  , /*decltype(_impl_.l_)*/int64_t{0}
+  , /*decltype(_impl_.e_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonStateSignalPkStatisticDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonStateSignalPkStatisticDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonStateSignalPkStatisticDefaultTypeInternal() {}
+  union {
+    CommonStateSignalPkStatistic _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonStateSignalPkStatisticDefaultTypeInternal _CommonStateSignalPkStatistic_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_CommonStateSignalPkStatistic_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalPkStatistic_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalPkStatistic_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalPkStatistic_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalPkStatistic();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto}, {
-      &scc_info_PkAudienceContributionInfo_PkAudienceContributionInfo_2eproto.base,
-      &scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto.base,
-      &scc_info_PkRoundInfo_PkRoundInfo_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalPkStatistic_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalPkStatistic_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalPkStatistic_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonStateSignalPkStatistic_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_CommonStateSignalPkStatistic_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, a_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, b_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, c_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, d_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, e_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, f_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, g_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, h_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, i_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, j_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, k_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, l_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.a_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.b_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.c_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.d_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.e_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.f_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.g_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.h_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.i_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.j_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.k_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalPkStatistic, _impl_.l_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::CommonStateSignalPkStatistic)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::CommonStateSignalPkStatistic)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonStateSignalPkStatistic_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_CommonStateSignalPkStatistic_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_CommonStateSignalPkStatistic_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -82,24 +90,26 @@ const char descriptor_table_protodef_CommonStateSignalPkStatistic_2eproto[] PROT
   "mu.PkPlayerStatistic\022\"\n\001k\030\013 \001(\0132\027.AcFunD"
   "anmu.PkRoundInfo\022\t\n\001l\030\014 \001(\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalPkStatistic_2eproto_deps[3] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_CommonStateSignalPkStatistic_2eproto_deps[3] = {
   &::descriptor_table_PkAudienceContributionInfo_2eproto,
   &::descriptor_table_PkPlayerStatistic_2eproto,
   &::descriptor_table_PkRoundInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalPkStatistic_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto.base,
+static ::_pbi::once_flag descriptor_table_CommonStateSignalPkStatistic_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_CommonStateSignalPkStatistic_2eproto = {
+    false, false, 395, descriptor_table_protodef_CommonStateSignalPkStatistic_2eproto,
+    "CommonStateSignalPkStatistic.proto",
+    &descriptor_table_CommonStateSignalPkStatistic_2eproto_once, descriptor_table_CommonStateSignalPkStatistic_2eproto_deps, 3, 1,
+    schemas, file_default_instances, TableStruct_CommonStateSignalPkStatistic_2eproto::offsets,
+    file_level_metadata_CommonStateSignalPkStatistic_2eproto, file_level_enum_descriptors_CommonStateSignalPkStatistic_2eproto,
+    file_level_service_descriptors_CommonStateSignalPkStatistic_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalPkStatistic_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalPkStatistic_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalPkStatistic_2eproto, "CommonStateSignalPkStatistic.proto", 395,
-  &descriptor_table_CommonStateSignalPkStatistic_2eproto_once, descriptor_table_CommonStateSignalPkStatistic_2eproto_sccs, descriptor_table_CommonStateSignalPkStatistic_2eproto_deps, 1, 3,
-  schemas, file_default_instances, TableStruct_CommonStateSignalPkStatistic_2eproto::offsets,
-  file_level_metadata_CommonStateSignalPkStatistic_2eproto, 1, file_level_enum_descriptors_CommonStateSignalPkStatistic_2eproto, file_level_service_descriptors_CommonStateSignalPkStatistic_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_CommonStateSignalPkStatistic_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalPkStatistic_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalPkStatistic_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalPkStatistic_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalPkStatistic_2eproto(&descriptor_table_CommonStateSignalPkStatistic_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -111,172 +121,202 @@ class CommonStateSignalPkStatistic::_Internal {
 
 const ::AcFunDanmu::PkRoundInfo&
 CommonStateSignalPkStatistic::_Internal::k(const CommonStateSignalPkStatistic* msg) {
-  return *msg->k_;
+  return *msg->_impl_.k_;
 }
 void CommonStateSignalPkStatistic::clear_i() {
-  i_.Clear();
+  _impl_.i_.Clear();
 }
 void CommonStateSignalPkStatistic::clear_j() {
-  j_.Clear();
+  _impl_.j_.Clear();
 }
 void CommonStateSignalPkStatistic::clear_k() {
-  if (GetArena() == nullptr && k_ != nullptr) {
-    delete k_;
+  if (GetArenaForAllocation() == nullptr && _impl_.k_ != nullptr) {
+    delete _impl_.k_;
   }
-  k_ = nullptr;
+  _impl_.k_ = nullptr;
 }
-CommonStateSignalPkStatistic::CommonStateSignalPkStatistic(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  i_(arena),
-  j_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonStateSignalPkStatistic::CommonStateSignalPkStatistic(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonStateSignalPkStatistic)
 }
 CommonStateSignalPkStatistic::CommonStateSignalPkStatistic(const CommonStateSignalPkStatistic& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      i_(from.i_),
-      j_(from.j_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonStateSignalPkStatistic* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.i_){from._impl_.i_}
+    , decltype(_impl_.j_){from._impl_.j_}
+    , decltype(_impl_.a_){}
+    , decltype(_impl_.k_){nullptr}
+    , decltype(_impl_.b_){}
+    , decltype(_impl_.c_){}
+    , decltype(_impl_.d_){}
+    , decltype(_impl_.f_){}
+    , decltype(_impl_.g_){}
+    , decltype(_impl_.h_){}
+    , decltype(_impl_.l_){}
+    , decltype(_impl_.e_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.a_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.a_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_a().empty()) {
-    a_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_a(), 
-      GetArena());
+    _this->_impl_.a_.Set(from._internal_a(), 
+      _this->GetArenaForAllocation());
   }
   if (from._internal_has_k()) {
-    k_ = new ::AcFunDanmu::PkRoundInfo(*from.k_);
-  } else {
-    k_ = nullptr;
+    _this->_impl_.k_ = new ::AcFunDanmu::PkRoundInfo(*from._impl_.k_);
   }
-  ::memcpy(&b_, &from.b_,
-    static_cast<size_t>(reinterpret_cast<char*>(&e_) -
-    reinterpret_cast<char*>(&b_)) + sizeof(e_));
+  ::memcpy(&_impl_.b_, &from._impl_.b_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.e_) -
+    reinterpret_cast<char*>(&_impl_.b_)) + sizeof(_impl_.e_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalPkStatistic)
 }
 
-void CommonStateSignalPkStatistic::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto.base);
-  a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&k_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&e_) -
-      reinterpret_cast<char*>(&k_)) + sizeof(e_));
+inline void CommonStateSignalPkStatistic::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.i_){arena}
+    , decltype(_impl_.j_){arena}
+    , decltype(_impl_.a_){}
+    , decltype(_impl_.k_){nullptr}
+    , decltype(_impl_.b_){int64_t{0}}
+    , decltype(_impl_.c_){int64_t{0}}
+    , decltype(_impl_.d_){int64_t{0}}
+    , decltype(_impl_.f_){int64_t{0}}
+    , decltype(_impl_.g_){int64_t{0}}
+    , decltype(_impl_.h_){int64_t{0}}
+    , decltype(_impl_.l_){int64_t{0}}
+    , decltype(_impl_.e_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.a_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.a_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CommonStateSignalPkStatistic::~CommonStateSignalPkStatistic() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonStateSignalPkStatistic)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonStateSignalPkStatistic::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  a_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete k_;
+inline void CommonStateSignalPkStatistic::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.i_.~RepeatedPtrField();
+  _impl_.j_.~RepeatedPtrField();
+  _impl_.a_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.k_;
 }
 
-void CommonStateSignalPkStatistic::ArenaDtor(void* object) {
-  CommonStateSignalPkStatistic* _this = reinterpret_cast< CommonStateSignalPkStatistic* >(object);
-  (void)_this;
-}
-void CommonStateSignalPkStatistic::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonStateSignalPkStatistic::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonStateSignalPkStatistic& CommonStateSignalPkStatistic::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalPkStatistic_CommonStateSignalPkStatistic_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalPkStatistic::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalPkStatistic)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  i_.Clear();
-  j_.Clear();
-  a_.ClearToEmpty();
-  if (GetArena() == nullptr && k_ != nullptr) {
-    delete k_;
+  _impl_.i_.Clear();
+  _impl_.j_.Clear();
+  _impl_.a_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.k_ != nullptr) {
+    delete _impl_.k_;
   }
-  k_ = nullptr;
-  ::memset(&b_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&e_) -
-      reinterpret_cast<char*>(&b_)) + sizeof(e_));
+  _impl_.k_ = nullptr;
+  ::memset(&_impl_.b_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.e_) -
+      reinterpret_cast<char*>(&_impl_.b_)) + sizeof(_impl_.e_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonStateSignalPkStatistic::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonStateSignalPkStatistic::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string a = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalPkStatistic.a"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalPkStatistic.a"));
+        } else
+          goto handle_unusual;
         continue;
       // int64 b = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          b_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.b_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 c = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          c_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.c_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 d = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          d_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.d_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // bool e = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          e_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.e_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 f = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
-          f_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _impl_.f_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 g = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
-          g_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _impl_.g_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 h = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
-          h_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.h_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .AcFunDanmu.PkAudienceContributionInfo i = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -284,11 +324,12 @@ const char* CommonStateSignalPkStatistic::_InternalParse(const char* ptr, ::PROT
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .AcFunDanmu.PkPlayerStatistic j = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -296,52 +337,56 @@ const char* CommonStateSignalPkStatistic::_InternalParse(const char* ptr, ::PROT
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<82>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .AcFunDanmu.PkRoundInfo k = 11;
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_k(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 l = 12;
       case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 96)) {
-          l_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _impl_.l_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonStateSignalPkStatistic::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonStateSignalPkStatistic::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonStateSignalPkStatistic)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->_internal_a().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_a().data(), static_cast<int>(this->_internal_a().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -351,79 +396,78 @@ failure:
   }
 
   // int64 b = 2;
-  if (this->b() != 0) {
+  if (this->_internal_b() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_b(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_b(), target);
   }
 
   // int64 c = 3;
-  if (this->c() != 0) {
+  if (this->_internal_c() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_c(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_c(), target);
   }
 
   // int64 d = 4;
-  if (this->d() != 0) {
+  if (this->_internal_d() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(4, this->_internal_d(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_d(), target);
   }
 
   // bool e = 5;
-  if (this->e() != 0) {
+  if (this->_internal_e() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_e(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_e(), target);
   }
 
   // int64 f = 6;
-  if (this->f() != 0) {
+  if (this->_internal_f() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(6, this->_internal_f(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_f(), target);
   }
 
   // int64 g = 7;
-  if (this->g() != 0) {
+  if (this->_internal_g() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(7, this->_internal_g(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_g(), target);
   }
 
   // int64 h = 8;
-  if (this->h() != 0) {
+  if (this->_internal_h() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(8, this->_internal_h(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_h(), target);
   }
 
   // repeated .AcFunDanmu.PkAudienceContributionInfo i = 9;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_i_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_i_size()); i < n; i++) {
+    const auto& repfield = this->_internal_i(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(9, this->_internal_i(i), target, stream);
+        InternalWriteMessage(9, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .AcFunDanmu.PkPlayerStatistic j = 10;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_j_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_j_size()); i < n; i++) {
+    const auto& repfield = this->_internal_j(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(10, this->_internal_j(i), target, stream);
+        InternalWriteMessage(10, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .AcFunDanmu.PkRoundInfo k = 11;
-  if (this->has_k()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_k()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::k(this), target, stream);
+      InternalWriteMessage(11, _Internal::k(this),
+        _Internal::k(this).GetCachedSize(), target, stream);
   }
 
   // int64 l = 12;
-  if (this->l() != 0) {
+  if (this->_internal_l() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(12, this->_internal_l(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(12, this->_internal_l(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonStateSignalPkStatistic)
@@ -434,162 +478,130 @@ size_t CommonStateSignalPkStatistic::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonStateSignalPkStatistic)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.PkAudienceContributionInfo i = 9;
   total_size += 1UL * this->_internal_i_size();
-  for (const auto& msg : this->i_) {
+  for (const auto& msg : this->_impl_.i_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .AcFunDanmu.PkPlayerStatistic j = 10;
   total_size += 1UL * this->_internal_j_size();
-  for (const auto& msg : this->j_) {
+  for (const auto& msg : this->_impl_.j_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string a = 1;
-  if (this->a().size() > 0) {
+  if (!this->_internal_a().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a());
   }
 
   // .AcFunDanmu.PkRoundInfo k = 11;
-  if (this->has_k()) {
+  if (this->_internal_has_k()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *k_);
+        *_impl_.k_);
   }
 
   // int64 b = 2;
-  if (this->b() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_b());
+  if (this->_internal_b() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_b());
   }
 
   // int64 c = 3;
-  if (this->c() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_c());
+  if (this->_internal_c() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_c());
   }
 
   // int64 d = 4;
-  if (this->d() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_d());
+  if (this->_internal_d() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_d());
   }
 
   // int64 f = 6;
-  if (this->f() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_f());
+  if (this->_internal_f() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_f());
   }
 
   // int64 g = 7;
-  if (this->g() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_g());
+  if (this->_internal_g() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_g());
   }
 
   // int64 h = 8;
-  if (this->h() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_h());
+  if (this->_internal_h() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_h());
   }
 
   // int64 l = 12;
-  if (this->l() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_l());
+  if (this->_internal_l() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_l());
   }
 
   // bool e = 5;
-  if (this->e() != 0) {
+  if (this->_internal_e() != 0) {
     total_size += 1 + 1;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonStateSignalPkStatistic::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonStateSignalPkStatistic)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonStateSignalPkStatistic* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonStateSignalPkStatistic>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonStateSignalPkStatistic)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonStateSignalPkStatistic)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonStateSignalPkStatistic::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonStateSignalPkStatistic::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonStateSignalPkStatistic::GetClassData() const { return &_class_data_; }
 
-void CommonStateSignalPkStatistic::MergeFrom(const CommonStateSignalPkStatistic& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalPkStatistic)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonStateSignalPkStatistic::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonStateSignalPkStatistic*>(&to_msg);
+  auto& from = static_cast<const CommonStateSignalPkStatistic&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalPkStatistic)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  i_.MergeFrom(from.i_);
-  j_.MergeFrom(from.j_);
-  if (from.a().size() > 0) {
-    _internal_set_a(from._internal_a());
+  _this->_impl_.i_.MergeFrom(from._impl_.i_);
+  _this->_impl_.j_.MergeFrom(from._impl_.j_);
+  if (!from._internal_a().empty()) {
+    _this->_internal_set_a(from._internal_a());
   }
-  if (from.has_k()) {
-    _internal_mutable_k()->::AcFunDanmu::PkRoundInfo::MergeFrom(from._internal_k());
+  if (from._internal_has_k()) {
+    _this->_internal_mutable_k()->::AcFunDanmu::PkRoundInfo::MergeFrom(
+        from._internal_k());
   }
-  if (from.b() != 0) {
-    _internal_set_b(from._internal_b());
+  if (from._internal_b() != 0) {
+    _this->_internal_set_b(from._internal_b());
   }
-  if (from.c() != 0) {
-    _internal_set_c(from._internal_c());
+  if (from._internal_c() != 0) {
+    _this->_internal_set_c(from._internal_c());
   }
-  if (from.d() != 0) {
-    _internal_set_d(from._internal_d());
+  if (from._internal_d() != 0) {
+    _this->_internal_set_d(from._internal_d());
   }
-  if (from.f() != 0) {
-    _internal_set_f(from._internal_f());
+  if (from._internal_f() != 0) {
+    _this->_internal_set_f(from._internal_f());
   }
-  if (from.g() != 0) {
-    _internal_set_g(from._internal_g());
+  if (from._internal_g() != 0) {
+    _this->_internal_set_g(from._internal_g());
   }
-  if (from.h() != 0) {
-    _internal_set_h(from._internal_h());
+  if (from._internal_h() != 0) {
+    _this->_internal_set_h(from._internal_h());
   }
-  if (from.l() != 0) {
-    _internal_set_l(from._internal_l());
+  if (from._internal_l() != 0) {
+    _this->_internal_set_l(from._internal_l());
   }
-  if (from.e() != 0) {
-    _internal_set_e(from._internal_e());
+  if (from._internal_e() != 0) {
+    _this->_internal_set_e(from._internal_e());
   }
-}
-
-void CommonStateSignalPkStatistic::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonStateSignalPkStatistic)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonStateSignalPkStatistic::CopyFrom(const CommonStateSignalPkStatistic& from) {
@@ -605,27 +617,34 @@ bool CommonStateSignalPkStatistic::IsInitialized() const {
 
 void CommonStateSignalPkStatistic::InternalSwap(CommonStateSignalPkStatistic* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  i_.InternalSwap(&other->i_);
-  j_.InternalSwap(&other->j_);
-  a_.Swap(&other->a_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.i_.InternalSwap(&other->_impl_.i_);
+  _impl_.j_.InternalSwap(&other->_impl_.j_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.a_, lhs_arena,
+      &other->_impl_.a_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CommonStateSignalPkStatistic, e_)
-      + sizeof(CommonStateSignalPkStatistic::e_)
-      - PROTOBUF_FIELD_OFFSET(CommonStateSignalPkStatistic, k_)>(
-          reinterpret_cast<char*>(&k_),
-          reinterpret_cast<char*>(&other->k_));
+      PROTOBUF_FIELD_OFFSET(CommonStateSignalPkStatistic, _impl_.e_)
+      + sizeof(CommonStateSignalPkStatistic::_impl_.e_)
+      - PROTOBUF_FIELD_OFFSET(CommonStateSignalPkStatistic, _impl_.k_)>(
+          reinterpret_cast<char*>(&_impl_.k_),
+          reinterpret_cast<char*>(&other->_impl_.k_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalPkStatistic::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonStateSignalPkStatistic_2eproto_getter, &descriptor_table_CommonStateSignalPkStatistic_2eproto_once,
+      file_level_metadata_CommonStateSignalPkStatistic_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalPkStatistic* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalPkStatistic >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalPkStatistic*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalPkStatistic >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonStateSignalPkStatistic >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

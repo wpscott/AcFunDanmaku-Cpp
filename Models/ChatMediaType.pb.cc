@@ -14,34 +14,40 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
 }  // namespace AcFunDanmu
-static constexpr ::PROTOBUF_NAMESPACE_ID::Metadata* file_level_metadata_ChatMediaType_2eproto = nullptr;
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_ChatMediaType_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ChatMediaType_2eproto = nullptr;
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ChatMediaType_2eproto::offsets[1] = {};
-static constexpr ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema* schemas = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::Message* const* file_default_instances = nullptr;
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_ChatMediaType_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ChatMediaType_2eproto = nullptr;
+const uint32_t TableStruct_ChatMediaType_2eproto::offsets[1] = {};
+static constexpr ::_pbi::MigrationSchema* schemas = nullptr;
+static constexpr ::_pb::Message* const* file_default_instances = nullptr;
 
 const char descriptor_table_protodef_ChatMediaType_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\023ChatMediaType.proto\022\nAcFunDanmu*2\n\rCha"
   "tMediaType\022\013\n\007UNKNOWN\020\000\022\t\n\005AUDIO\020\001\022\t\n\005VI"
   "DEO\020\002b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ChatMediaType_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_ChatMediaType_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_ChatMediaType_2eproto = {
+    false, false, 93, descriptor_table_protodef_ChatMediaType_2eproto,
+    "ChatMediaType.proto",
+    &descriptor_table_ChatMediaType_2eproto_once, nullptr, 0, 0,
+    schemas, file_default_instances, TableStruct_ChatMediaType_2eproto::offsets,
+    nullptr, file_level_enum_descriptors_ChatMediaType_2eproto,
+    file_level_service_descriptors_ChatMediaType_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ChatMediaType_2eproto_sccs[1] = {
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ChatMediaType_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ChatMediaType_2eproto = {
-  false, false, descriptor_table_protodef_ChatMediaType_2eproto, "ChatMediaType.proto", 93,
-  &descriptor_table_ChatMediaType_2eproto_once, descriptor_table_ChatMediaType_2eproto_sccs, descriptor_table_ChatMediaType_2eproto_deps, 0, 0,
-  schemas, file_default_instances, TableStruct_ChatMediaType_2eproto::offsets,
-  file_level_metadata_ChatMediaType_2eproto, 0, file_level_enum_descriptors_ChatMediaType_2eproto, file_level_service_descriptors_ChatMediaType_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_ChatMediaType_2eproto_getter() {
+  return &descriptor_table_ChatMediaType_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ChatMediaType_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ChatMediaType_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_ChatMediaType_2eproto(&descriptor_table_ChatMediaType_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ChatMediaType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ChatMediaType_2eproto);

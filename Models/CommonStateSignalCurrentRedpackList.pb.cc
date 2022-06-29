@@ -14,87 +14,92 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_CommonStateSignalCurrentRedpackList_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalCurrentRedpackList_Redpack> _instance;
-} _CommonStateSignalCurrentRedpackList_Redpack_default_instance_;
-class CommonStateSignalCurrentRedpackListDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalCurrentRedpackList> _instance;
-} _CommonStateSignalCurrentRedpackList_default_instance_;
+PROTOBUF_CONSTEXPR CommonStateSignalCurrentRedpackList_Redpack::CommonStateSignalCurrentRedpackList_Redpack(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.redpackid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.redpackbizunit_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.sender_)*/nullptr
+  , /*decltype(_impl_.grabbegintimems_)*/int64_t{0}
+  , /*decltype(_impl_.gettokenlatesttimems_)*/int64_t{0}
+  , /*decltype(_impl_.redpackamount_)*/int64_t{0}
+  , /*decltype(_impl_.settlebegintime_)*/int64_t{0}
+  , /*decltype(_impl_.i_)*/int64_t{0}
+  , /*decltype(_impl_.displaystatus_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal() {}
+  union {
+    CommonStateSignalCurrentRedpackList_Redpack _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonStateSignalCurrentRedpackList_RedpackDefaultTypeInternal _CommonStateSignalCurrentRedpackList_Redpack_default_instance_;
+PROTOBUF_CONSTEXPR CommonStateSignalCurrentRedpackList::CommonStateSignalCurrentRedpackList(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.redpacks_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonStateSignalCurrentRedpackListDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonStateSignalCurrentRedpackListDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonStateSignalCurrentRedpackListDefaultTypeInternal() {}
+  union {
+    CommonStateSignalCurrentRedpackList _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonStateSignalCurrentRedpackListDefaultTypeInternal _CommonStateSignalCurrentRedpackList_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto[2];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_CommonStateSignalCurrentRedpackList_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalCurrentRedpackList_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalCurrentRedpackList_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalCurrentRedpackList();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto}, {
-      &scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalCurrentRedpackList_Redpack_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto[2];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_CommonStateSignalCurrentRedpackList_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalCurrentRedpackList_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonStateSignalCurrentRedpackList_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_CommonStateSignalCurrentRedpackList_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, sender_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, displaystatus_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, grabbegintimems_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, gettokenlatesttimems_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, redpackid_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, redpackbizunit_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, redpackamount_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, settlebegintime_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.sender_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.displaystatus_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.grabbegintimems_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.gettokenlatesttimems_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.redpackid_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.redpackbizunit_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.redpackamount_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.settlebegintime_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack, _impl_.i_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList, redpacks_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalCurrentRedpackList, _impl_.redpacks_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack)},
-  { 13, -1, sizeof(::AcFunDanmu::CommonStateSignalCurrentRedpackList)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack)},
+  { 15, -1, -1, sizeof(::AcFunDanmu::CommonStateSignalCurrentRedpackList)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonStateSignalCurrentRedpackList_Redpack_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonStateSignalCurrentRedpackList_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_CommonStateSignalCurrentRedpackList_Redpack_default_instance_._instance,
+  &::AcFunDanmu::_CommonStateSignalCurrentRedpackList_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_CommonStateSignalCurrentRedpackList_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n)CommonStateSignalCurrentRedpackList.pr"
-  "oto\022\nAcFunDanmu\032\024ZtLiveUserInfo.proto\"\322\003"
+  "oto\022\nAcFunDanmu\032\024ZtLiveUserInfo.proto\"\344\003"
   "\n#CommonStateSignalCurrentRedpackList\022I\n"
   "\010redpacks\030\001 \003(\01327.AcFunDanmu.CommonState"
-  "SignalCurrentRedpackList.Redpack\032\244\002\n\007Red"
+  "SignalCurrentRedpackList.Redpack\032\257\002\n\007Red"
   "pack\022*\n\006sender\030\001 \001(\0132\032.AcFunDanmu.ZtLive"
   "UserInfo\022[\n\rdisplayStatus\030\002 \001(\0162D.AcFunD"
   "anmu.CommonStateSignalCurrentRedpackList"
@@ -102,26 +107,28 @@ const char descriptor_table_protodef_CommonStateSignalCurrentRedpackList_2eproto
   "\030\003 \001(\003\022\034\n\024getTokenLatestTimeMs\030\004 \001(\003\022\021\n\t"
   "redPackId\030\005 \001(\t\022\026\n\016redpackBizUnit\030\006 \001(\t\022"
   "\025\n\rredpackAmount\030\007 \001(\003\022\027\n\017settleBeginTim"
-  "e\030\010 \001(\003\"9\n\024RedpackDisplayStatus\022\010\n\004SHOW\020"
-  "\000\022\r\n\tGET_TOKEN\020\001\022\010\n\004GRAB\020\002b\006proto3"
+  "e\030\010 \001(\003\022\t\n\001i\030\t \001(\003\"@\n\024RedpackDisplayStat"
+  "us\022\010\n\004SHOW\020\000\022\r\n\tGET_TOKEN\020\001\022\010\n\004GRAB\020\002\022\005\n"
+  "\001e\020\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_deps[1] = {
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_sccs[2] = {
-  &scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto.base,
-  &scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base,
+static ::_pbi::once_flag descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_CommonStateSignalCurrentRedpackList_2eproto = {
+    false, false, 572, descriptor_table_protodef_CommonStateSignalCurrentRedpackList_2eproto,
+    "CommonStateSignalCurrentRedpackList.proto",
+    &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once, descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_deps, 1, 2,
+    schemas, file_default_instances, TableStruct_CommonStateSignalCurrentRedpackList_2eproto::offsets,
+    file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto, file_level_enum_descriptors_CommonStateSignalCurrentRedpackList_2eproto,
+    file_level_service_descriptors_CommonStateSignalCurrentRedpackList_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalCurrentRedpackList_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalCurrentRedpackList_2eproto, "CommonStateSignalCurrentRedpackList.proto", 554,
-  &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once, descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_sccs, descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_deps, 2, 1,
-  schemas, file_default_instances, TableStruct_CommonStateSignalCurrentRedpackList_2eproto::offsets,
-  file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto, 2, file_level_enum_descriptors_CommonStateSignalCurrentRedpackList_2eproto, file_level_service_descriptors_CommonStateSignalCurrentRedpackList_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalCurrentRedpackList_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalCurrentRedpackList_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalCurrentRedpackList_2eproto(&descriptor_table_CommonStateSignalCurrentRedpackList_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CommonStateSignalCurrentRedpackList_RedpackDisplayStatus_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_CommonStateSignalCurrentRedpackList_2eproto);
@@ -132,20 +139,22 @@ bool CommonStateSignalCurrentRedpackList_RedpackDisplayStatus_IsValid(int value)
     case 0:
     case 1:
     case 2:
+    case 3:
       return true;
     default:
       return false;
   }
 }
 
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 constexpr CommonStateSignalCurrentRedpackList_RedpackDisplayStatus CommonStateSignalCurrentRedpackList::SHOW;
 constexpr CommonStateSignalCurrentRedpackList_RedpackDisplayStatus CommonStateSignalCurrentRedpackList::GET_TOKEN;
 constexpr CommonStateSignalCurrentRedpackList_RedpackDisplayStatus CommonStateSignalCurrentRedpackList::GRAB;
+constexpr CommonStateSignalCurrentRedpackList_RedpackDisplayStatus CommonStateSignalCurrentRedpackList::e;
 constexpr CommonStateSignalCurrentRedpackList_RedpackDisplayStatus CommonStateSignalCurrentRedpackList::RedpackDisplayStatus_MIN;
 constexpr CommonStateSignalCurrentRedpackList_RedpackDisplayStatus CommonStateSignalCurrentRedpackList::RedpackDisplayStatus_MAX;
 constexpr int CommonStateSignalCurrentRedpackList::RedpackDisplayStatus_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
@@ -156,225 +165,265 @@ class CommonStateSignalCurrentRedpackList_Redpack::_Internal {
 
 const ::AcFunDanmu::ZtLiveUserInfo&
 CommonStateSignalCurrentRedpackList_Redpack::_Internal::sender(const CommonStateSignalCurrentRedpackList_Redpack* msg) {
-  return *msg->sender_;
+  return *msg->_impl_.sender_;
 }
 void CommonStateSignalCurrentRedpackList_Redpack::clear_sender() {
-  if (GetArena() == nullptr && sender_ != nullptr) {
-    delete sender_;
+  if (GetArenaForAllocation() == nullptr && _impl_.sender_ != nullptr) {
+    delete _impl_.sender_;
   }
-  sender_ = nullptr;
+  _impl_.sender_ = nullptr;
 }
-CommonStateSignalCurrentRedpackList_Redpack::CommonStateSignalCurrentRedpackList_Redpack(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonStateSignalCurrentRedpackList_Redpack::CommonStateSignalCurrentRedpackList_Redpack(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
 }
 CommonStateSignalCurrentRedpackList_Redpack::CommonStateSignalCurrentRedpackList_Redpack(const CommonStateSignalCurrentRedpackList_Redpack& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonStateSignalCurrentRedpackList_Redpack* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.redpackid_){}
+    , decltype(_impl_.redpackbizunit_){}
+    , decltype(_impl_.sender_){nullptr}
+    , decltype(_impl_.grabbegintimems_){}
+    , decltype(_impl_.gettokenlatesttimems_){}
+    , decltype(_impl_.redpackamount_){}
+    , decltype(_impl_.settlebegintime_){}
+    , decltype(_impl_.i_){}
+    , decltype(_impl_.displaystatus_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  redpackid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.redpackid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.redpackid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_redpackid().empty()) {
-    redpackid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_redpackid(), 
-      GetArena());
+    _this->_impl_.redpackid_.Set(from._internal_redpackid(), 
+      _this->GetArenaForAllocation());
   }
-  redpackbizunit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.redpackbizunit_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.redpackbizunit_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_redpackbizunit().empty()) {
-    redpackbizunit_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_redpackbizunit(), 
-      GetArena());
+    _this->_impl_.redpackbizunit_.Set(from._internal_redpackbizunit(), 
+      _this->GetArenaForAllocation());
   }
   if (from._internal_has_sender()) {
-    sender_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.sender_);
-  } else {
-    sender_ = nullptr;
+    _this->_impl_.sender_ = new ::AcFunDanmu::ZtLiveUserInfo(*from._impl_.sender_);
   }
-  ::memcpy(&grabbegintimems_, &from.grabbegintimems_,
-    static_cast<size_t>(reinterpret_cast<char*>(&displaystatus_) -
-    reinterpret_cast<char*>(&grabbegintimems_)) + sizeof(displaystatus_));
+  ::memcpy(&_impl_.grabbegintimems_, &from._impl_.grabbegintimems_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.displaystatus_) -
+    reinterpret_cast<char*>(&_impl_.grabbegintimems_)) + sizeof(_impl_.displaystatus_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
 }
 
-void CommonStateSignalCurrentRedpackList_Redpack::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base);
-  redpackid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  redpackbizunit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&sender_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&displaystatus_) -
-      reinterpret_cast<char*>(&sender_)) + sizeof(displaystatus_));
+inline void CommonStateSignalCurrentRedpackList_Redpack::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.redpackid_){}
+    , decltype(_impl_.redpackbizunit_){}
+    , decltype(_impl_.sender_){nullptr}
+    , decltype(_impl_.grabbegintimems_){int64_t{0}}
+    , decltype(_impl_.gettokenlatesttimems_){int64_t{0}}
+    , decltype(_impl_.redpackamount_){int64_t{0}}
+    , decltype(_impl_.settlebegintime_){int64_t{0}}
+    , decltype(_impl_.i_){int64_t{0}}
+    , decltype(_impl_.displaystatus_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.redpackid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.redpackid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.redpackbizunit_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.redpackbizunit_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CommonStateSignalCurrentRedpackList_Redpack::~CommonStateSignalCurrentRedpackList_Redpack() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonStateSignalCurrentRedpackList_Redpack::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  redpackid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  redpackbizunit_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete sender_;
+inline void CommonStateSignalCurrentRedpackList_Redpack::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.redpackid_.Destroy();
+  _impl_.redpackbizunit_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.sender_;
 }
 
-void CommonStateSignalCurrentRedpackList_Redpack::ArenaDtor(void* object) {
-  CommonStateSignalCurrentRedpackList_Redpack* _this = reinterpret_cast< CommonStateSignalCurrentRedpackList_Redpack* >(object);
-  (void)_this;
-}
-void CommonStateSignalCurrentRedpackList_Redpack::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonStateSignalCurrentRedpackList_Redpack::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonStateSignalCurrentRedpackList_Redpack& CommonStateSignalCurrentRedpackList_Redpack::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalCurrentRedpackList_Redpack_CommonStateSignalCurrentRedpackList_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalCurrentRedpackList_Redpack::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  redpackid_.ClearToEmpty();
-  redpackbizunit_.ClearToEmpty();
-  if (GetArena() == nullptr && sender_ != nullptr) {
-    delete sender_;
+  _impl_.redpackid_.ClearToEmpty();
+  _impl_.redpackbizunit_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.sender_ != nullptr) {
+    delete _impl_.sender_;
   }
-  sender_ = nullptr;
-  ::memset(&grabbegintimems_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&displaystatus_) -
-      reinterpret_cast<char*>(&grabbegintimems_)) + sizeof(displaystatus_));
+  _impl_.sender_ = nullptr;
+  ::memset(&_impl_.grabbegintimems_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.displaystatus_) -
+      reinterpret_cast<char*>(&_impl_.grabbegintimems_)) + sizeof(_impl_.displaystatus_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonStateSignalCurrentRedpackList_Redpack::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonStateSignalCurrentRedpackList_Redpack::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserInfo sender = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_sender(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .AcFunDanmu.CommonStateSignalCurrentRedpackList.RedpackDisplayStatus displayStatus = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_displaystatus(static_cast<::AcFunDanmu::CommonStateSignalCurrentRedpackList_RedpackDisplayStatus>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 grabBeginTimeMs = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          grabbegintimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.grabbegintimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 getTokenLatestTimeMs = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          gettokenlatesttimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.gettokenlatesttimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string redPackId = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_redpackid();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack.redPackId"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack.redPackId"));
+        } else
+          goto handle_unusual;
         continue;
       // string redpackBizUnit = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_redpackbizunit();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack.redpackBizUnit"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack.redpackBizUnit"));
+        } else
+          goto handle_unusual;
         continue;
       // int64 redpackAmount = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
-          redpackamount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _impl_.redpackamount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 settleBeginTime = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
-          settlebegintime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.settlebegintime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
+      // int64 i = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonStateSignalCurrentRedpackList_Redpack::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonStateSignalCurrentRedpackList_Redpack::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .AcFunDanmu.ZtLiveUserInfo sender = 1;
-  if (this->has_sender()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_sender()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::sender(this), target, stream);
+      InternalWriteMessage(1, _Internal::sender(this),
+        _Internal::sender(this).GetCachedSize(), target, stream);
   }
 
   // .AcFunDanmu.CommonStateSignalCurrentRedpackList.RedpackDisplayStatus displayStatus = 2;
-  if (this->displaystatus() != 0) {
+  if (this->_internal_displaystatus() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       2, this->_internal_displaystatus(), target);
   }
 
   // int64 grabBeginTimeMs = 3;
-  if (this->grabbegintimems() != 0) {
+  if (this->_internal_grabbegintimems() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_grabbegintimems(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_grabbegintimems(), target);
   }
 
   // int64 getTokenLatestTimeMs = 4;
-  if (this->gettokenlatesttimems() != 0) {
+  if (this->_internal_gettokenlatesttimems() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(4, this->_internal_gettokenlatesttimems(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_gettokenlatesttimems(), target);
   }
 
   // string redPackId = 5;
-  if (this->redpackid().size() > 0) {
+  if (!this->_internal_redpackid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_redpackid().data(), static_cast<int>(this->_internal_redpackid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -384,7 +433,7 @@ failure:
   }
 
   // string redpackBizUnit = 6;
-  if (this->redpackbizunit().size() > 0) {
+  if (!this->_internal_redpackbizunit().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_redpackbizunit().data(), static_cast<int>(this->_internal_redpackbizunit().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -394,19 +443,25 @@ failure:
   }
 
   // int64 redpackAmount = 7;
-  if (this->redpackamount() != 0) {
+  if (this->_internal_redpackamount() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(7, this->_internal_redpackamount(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_redpackamount(), target);
   }
 
   // int64 settleBeginTime = 8;
-  if (this->settlebegintime() != 0) {
+  if (this->_internal_settlebegintime() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(8, this->_internal_settlebegintime(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_settlebegintime(), target);
+  }
+
+  // int64 i = 9;
+  if (this->_internal_i() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(9, this->_internal_i(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
@@ -417,127 +472,109 @@ size_t CommonStateSignalCurrentRedpackList_Redpack::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string redPackId = 5;
-  if (this->redpackid().size() > 0) {
+  if (!this->_internal_redpackid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_redpackid());
   }
 
   // string redpackBizUnit = 6;
-  if (this->redpackbizunit().size() > 0) {
+  if (!this->_internal_redpackbizunit().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_redpackbizunit());
   }
 
   // .AcFunDanmu.ZtLiveUserInfo sender = 1;
-  if (this->has_sender()) {
+  if (this->_internal_has_sender()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *sender_);
+        *_impl_.sender_);
   }
 
   // int64 grabBeginTimeMs = 3;
-  if (this->grabbegintimems() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_grabbegintimems());
+  if (this->_internal_grabbegintimems() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_grabbegintimems());
   }
 
   // int64 getTokenLatestTimeMs = 4;
-  if (this->gettokenlatesttimems() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_gettokenlatesttimems());
+  if (this->_internal_gettokenlatesttimems() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_gettokenlatesttimems());
   }
 
   // int64 redpackAmount = 7;
-  if (this->redpackamount() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_redpackamount());
+  if (this->_internal_redpackamount() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_redpackamount());
   }
 
   // int64 settleBeginTime = 8;
-  if (this->settlebegintime() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_settlebegintime());
+  if (this->_internal_settlebegintime() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_settlebegintime());
+  }
+
+  // int64 i = 9;
+  if (this->_internal_i() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_i());
   }
 
   // .AcFunDanmu.CommonStateSignalCurrentRedpackList.RedpackDisplayStatus displayStatus = 2;
-  if (this->displaystatus() != 0) {
+  if (this->_internal_displaystatus() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_displaystatus());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_displaystatus());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonStateSignalCurrentRedpackList_Redpack::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonStateSignalCurrentRedpackList_Redpack* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonStateSignalCurrentRedpackList_Redpack>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonStateSignalCurrentRedpackList_Redpack::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonStateSignalCurrentRedpackList_Redpack::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonStateSignalCurrentRedpackList_Redpack::GetClassData() const { return &_class_data_; }
 
-void CommonStateSignalCurrentRedpackList_Redpack::MergeFrom(const CommonStateSignalCurrentRedpackList_Redpack& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonStateSignalCurrentRedpackList_Redpack::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonStateSignalCurrentRedpackList_Redpack*>(&to_msg);
+  auto& from = static_cast<const CommonStateSignalCurrentRedpackList_Redpack&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.redpackid().size() > 0) {
-    _internal_set_redpackid(from._internal_redpackid());
+  if (!from._internal_redpackid().empty()) {
+    _this->_internal_set_redpackid(from._internal_redpackid());
   }
-  if (from.redpackbizunit().size() > 0) {
-    _internal_set_redpackbizunit(from._internal_redpackbizunit());
+  if (!from._internal_redpackbizunit().empty()) {
+    _this->_internal_set_redpackbizunit(from._internal_redpackbizunit());
   }
-  if (from.has_sender()) {
-    _internal_mutable_sender()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(from._internal_sender());
+  if (from._internal_has_sender()) {
+    _this->_internal_mutable_sender()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(
+        from._internal_sender());
   }
-  if (from.grabbegintimems() != 0) {
-    _internal_set_grabbegintimems(from._internal_grabbegintimems());
+  if (from._internal_grabbegintimems() != 0) {
+    _this->_internal_set_grabbegintimems(from._internal_grabbegintimems());
   }
-  if (from.gettokenlatesttimems() != 0) {
-    _internal_set_gettokenlatesttimems(from._internal_gettokenlatesttimems());
+  if (from._internal_gettokenlatesttimems() != 0) {
+    _this->_internal_set_gettokenlatesttimems(from._internal_gettokenlatesttimems());
   }
-  if (from.redpackamount() != 0) {
-    _internal_set_redpackamount(from._internal_redpackamount());
+  if (from._internal_redpackamount() != 0) {
+    _this->_internal_set_redpackamount(from._internal_redpackamount());
   }
-  if (from.settlebegintime() != 0) {
-    _internal_set_settlebegintime(from._internal_settlebegintime());
+  if (from._internal_settlebegintime() != 0) {
+    _this->_internal_set_settlebegintime(from._internal_settlebegintime());
   }
-  if (from.displaystatus() != 0) {
-    _internal_set_displaystatus(from._internal_displaystatus());
+  if (from._internal_i() != 0) {
+    _this->_internal_set_i(from._internal_i());
   }
-}
-
-void CommonStateSignalCurrentRedpackList_Redpack::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (from._internal_displaystatus() != 0) {
+    _this->_internal_set_displaystatus(from._internal_displaystatus());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonStateSignalCurrentRedpackList_Redpack::CopyFrom(const CommonStateSignalCurrentRedpackList_Redpack& from) {
@@ -553,21 +590,30 @@ bool CommonStateSignalCurrentRedpackList_Redpack::IsInitialized() const {
 
 void CommonStateSignalCurrentRedpackList_Redpack::InternalSwap(CommonStateSignalCurrentRedpackList_Redpack* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  redpackid_.Swap(&other->redpackid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  redpackbizunit_.Swap(&other->redpackbizunit_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.redpackid_, lhs_arena,
+      &other->_impl_.redpackid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.redpackbizunit_, lhs_arena,
+      &other->_impl_.redpackbizunit_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CommonStateSignalCurrentRedpackList_Redpack, displaystatus_)
-      + sizeof(CommonStateSignalCurrentRedpackList_Redpack::displaystatus_)
-      - PROTOBUF_FIELD_OFFSET(CommonStateSignalCurrentRedpackList_Redpack, sender_)>(
-          reinterpret_cast<char*>(&sender_),
-          reinterpret_cast<char*>(&other->sender_));
+      PROTOBUF_FIELD_OFFSET(CommonStateSignalCurrentRedpackList_Redpack, _impl_.displaystatus_)
+      + sizeof(CommonStateSignalCurrentRedpackList_Redpack::_impl_.displaystatus_)
+      - PROTOBUF_FIELD_OFFSET(CommonStateSignalCurrentRedpackList_Redpack, _impl_.sender_)>(
+          reinterpret_cast<char*>(&_impl_.sender_),
+          reinterpret_cast<char*>(&other->_impl_.sender_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalCurrentRedpackList_Redpack::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_getter, &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once,
+      file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -575,69 +621,70 @@ class CommonStateSignalCurrentRedpackList::_Internal {
  public:
 };
 
-CommonStateSignalCurrentRedpackList::CommonStateSignalCurrentRedpackList(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  redpacks_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonStateSignalCurrentRedpackList::CommonStateSignalCurrentRedpackList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonStateSignalCurrentRedpackList)
 }
 CommonStateSignalCurrentRedpackList::CommonStateSignalCurrentRedpackList(const CommonStateSignalCurrentRedpackList& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      redpacks_(from.redpacks_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonStateSignalCurrentRedpackList* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.redpacks_){from._impl_.redpacks_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalCurrentRedpackList)
 }
 
-void CommonStateSignalCurrentRedpackList::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto.base);
+inline void CommonStateSignalCurrentRedpackList::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.redpacks_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CommonStateSignalCurrentRedpackList::~CommonStateSignalCurrentRedpackList() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonStateSignalCurrentRedpackList)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonStateSignalCurrentRedpackList::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CommonStateSignalCurrentRedpackList::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.redpacks_.~RepeatedPtrField();
 }
 
-void CommonStateSignalCurrentRedpackList::ArenaDtor(void* object) {
-  CommonStateSignalCurrentRedpackList* _this = reinterpret_cast< CommonStateSignalCurrentRedpackList* >(object);
-  (void)_this;
-}
-void CommonStateSignalCurrentRedpackList::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonStateSignalCurrentRedpackList::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonStateSignalCurrentRedpackList& CommonStateSignalCurrentRedpackList::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalCurrentRedpackList_CommonStateSignalCurrentRedpackList_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalCurrentRedpackList::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  redpacks_.Clear();
+  _impl_.redpacks_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonStateSignalCurrentRedpackList::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonStateSignalCurrentRedpackList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack redpacks = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -645,46 +692,48 @@ const char* CommonStateSignalCurrentRedpackList::_InternalParse(const char* ptr,
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonStateSignalCurrentRedpackList::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonStateSignalCurrentRedpackList::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack redpacks = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_redpacks_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_redpacks_size()); i < n; i++) {
+    const auto& repfield = this->_internal_redpacks(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_redpacks(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonStateSignalCurrentRedpackList)
@@ -695,56 +744,37 @@ size_t CommonStateSignalCurrentRedpackList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.CommonStateSignalCurrentRedpackList.Redpack redpacks = 1;
   total_size += 1UL * this->_internal_redpacks_size();
-  for (const auto& msg : this->redpacks_) {
+  for (const auto& msg : this->_impl_.redpacks_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonStateSignalCurrentRedpackList::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonStateSignalCurrentRedpackList* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonStateSignalCurrentRedpackList>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonStateSignalCurrentRedpackList)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonStateSignalCurrentRedpackList)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonStateSignalCurrentRedpackList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonStateSignalCurrentRedpackList::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonStateSignalCurrentRedpackList::GetClassData() const { return &_class_data_; }
 
-void CommonStateSignalCurrentRedpackList::MergeFrom(const CommonStateSignalCurrentRedpackList& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonStateSignalCurrentRedpackList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonStateSignalCurrentRedpackList*>(&to_msg);
+  auto& from = static_cast<const CommonStateSignalCurrentRedpackList&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  redpacks_.MergeFrom(from.redpacks_);
-}
-
-void CommonStateSignalCurrentRedpackList::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonStateSignalCurrentRedpackList)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.redpacks_.MergeFrom(from._impl_.redpacks_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonStateSignalCurrentRedpackList::CopyFrom(const CommonStateSignalCurrentRedpackList& from) {
@@ -760,22 +790,25 @@ bool CommonStateSignalCurrentRedpackList::IsInitialized() const {
 
 void CommonStateSignalCurrentRedpackList::InternalSwap(CommonStateSignalCurrentRedpackList* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  redpacks_.InternalSwap(&other->redpacks_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.redpacks_.InternalSwap(&other->_impl_.redpacks_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalCurrentRedpackList::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_getter, &descriptor_table_CommonStateSignalCurrentRedpackList_2eproto_once,
+      file_level_metadata_CommonStateSignalCurrentRedpackList_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonStateSignalCurrentRedpackList_Redpack >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalCurrentRedpackList* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalCurrentRedpackList >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalCurrentRedpackList*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalCurrentRedpackList >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonStateSignalCurrentRedpackList >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

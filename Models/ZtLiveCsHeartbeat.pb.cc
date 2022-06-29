@@ -14,71 +14,74 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class ZtLiveCsHeartbeatDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsHeartbeat> _instance;
-} _ZtLiveCsHeartbeat_default_instance_;
-class ZtLiveCsHeartbeatAckDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsHeartbeatAck> _instance;
-} _ZtLiveCsHeartbeatAck_default_instance_;
+PROTOBUF_CONSTEXPR ZtLiveCsHeartbeat::ZtLiveCsHeartbeat(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.clienttimestampms_)*/int64_t{0}
+  , /*decltype(_impl_.sequence_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtLiveCsHeartbeatDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtLiveCsHeartbeatDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtLiveCsHeartbeatDefaultTypeInternal() {}
+  union {
+    ZtLiveCsHeartbeat _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtLiveCsHeartbeatDefaultTypeInternal _ZtLiveCsHeartbeat_default_instance_;
+PROTOBUF_CONSTEXPR ZtLiveCsHeartbeatAck::ZtLiveCsHeartbeatAck(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.servertimestampms_)*/int64_t{0}
+  , /*decltype(_impl_.clienttimestampms_)*/int64_t{0}
+  , /*decltype(_impl_.clientsequence_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtLiveCsHeartbeatAckDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtLiveCsHeartbeatAckDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtLiveCsHeartbeatAckDefaultTypeInternal() {}
+  union {
+    ZtLiveCsHeartbeatAck _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtLiveCsHeartbeatAckDefaultTypeInternal _ZtLiveCsHeartbeatAck_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveCsHeartbeat_ZtLiveCsHeartbeat_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_ZtLiveCsHeartbeat_2eproto[2];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsHeartbeat_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsHeartbeat_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsHeartbeat_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsHeartbeat();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsHeartbeat_ZtLiveCsHeartbeat_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsHeartbeat_ZtLiveCsHeartbeat_2eproto}, {}};
-
-static void InitDefaultsscc_info_ZtLiveCsHeartbeatAck_ZtLiveCsHeartbeat_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsHeartbeatAck_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsHeartbeatAck();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsHeartbeatAck_ZtLiveCsHeartbeat_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsHeartbeatAck_ZtLiveCsHeartbeat_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveCsHeartbeat_2eproto[2];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsHeartbeat_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsHeartbeat_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ZtLiveCsHeartbeat_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_ZtLiveCsHeartbeat_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeat, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeat, clienttimestampms_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeat, sequence_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeat, _impl_.clienttimestampms_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeat, _impl_.sequence_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeatAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeatAck, servertimestampms_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeatAck, clienttimestampms_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeatAck, clientsequence_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeatAck, _impl_.servertimestampms_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeatAck, _impl_.clienttimestampms_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsHeartbeatAck, _impl_.clientsequence_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::ZtLiveCsHeartbeat)},
-  { 7, -1, sizeof(::AcFunDanmu::ZtLiveCsHeartbeatAck)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::ZtLiveCsHeartbeat)},
+  { 8, -1, -1, sizeof(::AcFunDanmu::ZtLiveCsHeartbeatAck)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtLiveCsHeartbeat_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtLiveCsHeartbeatAck_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_ZtLiveCsHeartbeat_default_instance_._instance,
+  &::AcFunDanmu::_ZtLiveCsHeartbeatAck_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_ZtLiveCsHeartbeat_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -89,22 +92,21 @@ const char descriptor_table_protodef_ZtLiveCsHeartbeat_2eproto[] PROTOBUF_SECTIO
   "ientTimestampMs\030\002 \001(\003\022\026\n\016clientSequence\030"
   "\003 \001(\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveCsHeartbeat_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_ZtLiveCsHeartbeat_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_ZtLiveCsHeartbeat_2eproto = {
+    false, false, 213, descriptor_table_protodef_ZtLiveCsHeartbeat_2eproto,
+    "ZtLiveCsHeartbeat.proto",
+    &descriptor_table_ZtLiveCsHeartbeat_2eproto_once, nullptr, 0, 2,
+    schemas, file_default_instances, TableStruct_ZtLiveCsHeartbeat_2eproto::offsets,
+    file_level_metadata_ZtLiveCsHeartbeat_2eproto, file_level_enum_descriptors_ZtLiveCsHeartbeat_2eproto,
+    file_level_service_descriptors_ZtLiveCsHeartbeat_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveCsHeartbeat_2eproto_sccs[2] = {
-  &scc_info_ZtLiveCsHeartbeat_ZtLiveCsHeartbeat_2eproto.base,
-  &scc_info_ZtLiveCsHeartbeatAck_ZtLiveCsHeartbeat_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveCsHeartbeat_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveCsHeartbeat_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveCsHeartbeat_2eproto, "ZtLiveCsHeartbeat.proto", 213,
-  &descriptor_table_ZtLiveCsHeartbeat_2eproto_once, descriptor_table_ZtLiveCsHeartbeat_2eproto_sccs, descriptor_table_ZtLiveCsHeartbeat_2eproto_deps, 2, 0,
-  schemas, file_default_instances, TableStruct_ZtLiveCsHeartbeat_2eproto::offsets,
-  file_level_metadata_ZtLiveCsHeartbeat_2eproto, 2, file_level_enum_descriptors_ZtLiveCsHeartbeat_2eproto, file_level_service_descriptors_ZtLiveCsHeartbeat_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_ZtLiveCsHeartbeat_2eproto_getter() {
+  return &descriptor_table_ZtLiveCsHeartbeat_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveCsHeartbeat_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveCsHeartbeat_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_ZtLiveCsHeartbeat_2eproto(&descriptor_table_ZtLiveCsHeartbeat_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -113,128 +115,132 @@ class ZtLiveCsHeartbeat::_Internal {
  public:
 };
 
-ZtLiveCsHeartbeat::ZtLiveCsHeartbeat(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtLiveCsHeartbeat::ZtLiveCsHeartbeat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtLiveCsHeartbeat)
 }
 ZtLiveCsHeartbeat::ZtLiveCsHeartbeat(const ZtLiveCsHeartbeat& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtLiveCsHeartbeat* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.clienttimestampms_){}
+    , decltype(_impl_.sequence_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&clienttimestampms_, &from.clienttimestampms_,
-    static_cast<size_t>(reinterpret_cast<char*>(&sequence_) -
-    reinterpret_cast<char*>(&clienttimestampms_)) + sizeof(sequence_));
+  ::memcpy(&_impl_.clienttimestampms_, &from._impl_.clienttimestampms_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.sequence_) -
+    reinterpret_cast<char*>(&_impl_.clienttimestampms_)) + sizeof(_impl_.sequence_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsHeartbeat)
 }
 
-void ZtLiveCsHeartbeat::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&clienttimestampms_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&sequence_) -
-      reinterpret_cast<char*>(&clienttimestampms_)) + sizeof(sequence_));
+inline void ZtLiveCsHeartbeat::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.clienttimestampms_){int64_t{0}}
+    , decltype(_impl_.sequence_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ZtLiveCsHeartbeat::~ZtLiveCsHeartbeat() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtLiveCsHeartbeat)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtLiveCsHeartbeat::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void ZtLiveCsHeartbeat::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void ZtLiveCsHeartbeat::ArenaDtor(void* object) {
-  ZtLiveCsHeartbeat* _this = reinterpret_cast< ZtLiveCsHeartbeat* >(object);
-  (void)_this;
-}
-void ZtLiveCsHeartbeat::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtLiveCsHeartbeat::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtLiveCsHeartbeat& ZtLiveCsHeartbeat::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsHeartbeat_ZtLiveCsHeartbeat_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsHeartbeat::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsHeartbeat)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&clienttimestampms_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&sequence_) -
-      reinterpret_cast<char*>(&clienttimestampms_)) + sizeof(sequence_));
+  ::memset(&_impl_.clienttimestampms_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.sequence_) -
+      reinterpret_cast<char*>(&_impl_.clienttimestampms_)) + sizeof(_impl_.sequence_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtLiveCsHeartbeat::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtLiveCsHeartbeat::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int64 clientTimestampMs = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          clienttimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.clienttimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 sequence = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          sequence_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.sequence_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtLiveCsHeartbeat::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtLiveCsHeartbeat::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtLiveCsHeartbeat)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 clientTimestampMs = 1;
-  if (this->clienttimestampms() != 0) {
+  if (this->_internal_clienttimestampms() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_clienttimestampms(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_clienttimestampms(), target);
   }
 
   // int64 sequence = 2;
-  if (this->sequence() != 0) {
+  if (this->_internal_sequence() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_sequence(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_sequence(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtLiveCsHeartbeat)
@@ -245,68 +251,45 @@ size_t ZtLiveCsHeartbeat::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtLiveCsHeartbeat)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int64 clientTimestampMs = 1;
-  if (this->clienttimestampms() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_clienttimestampms());
+  if (this->_internal_clienttimestampms() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_clienttimestampms());
   }
 
   // int64 sequence = 2;
-  if (this->sequence() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_sequence());
+  if (this->_internal_sequence() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_sequence());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtLiveCsHeartbeat::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtLiveCsHeartbeat)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtLiveCsHeartbeat* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtLiveCsHeartbeat>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtLiveCsHeartbeat)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtLiveCsHeartbeat)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtLiveCsHeartbeat::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtLiveCsHeartbeat::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtLiveCsHeartbeat::GetClassData() const { return &_class_data_; }
 
-void ZtLiveCsHeartbeat::MergeFrom(const ZtLiveCsHeartbeat& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsHeartbeat)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtLiveCsHeartbeat::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtLiveCsHeartbeat*>(&to_msg);
+  auto& from = static_cast<const ZtLiveCsHeartbeat&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsHeartbeat)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.clienttimestampms() != 0) {
-    _internal_set_clienttimestampms(from._internal_clienttimestampms());
+  if (from._internal_clienttimestampms() != 0) {
+    _this->_internal_set_clienttimestampms(from._internal_clienttimestampms());
   }
-  if (from.sequence() != 0) {
-    _internal_set_sequence(from._internal_sequence());
+  if (from._internal_sequence() != 0) {
+    _this->_internal_set_sequence(from._internal_sequence());
   }
-}
-
-void ZtLiveCsHeartbeat::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtLiveCsHeartbeat)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtLiveCsHeartbeat::CopyFrom(const ZtLiveCsHeartbeat& from) {
@@ -322,19 +305,20 @@ bool ZtLiveCsHeartbeat::IsInitialized() const {
 
 void ZtLiveCsHeartbeat::InternalSwap(ZtLiveCsHeartbeat* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeat, sequence_)
-      + sizeof(ZtLiveCsHeartbeat::sequence_)
-      - PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeat, clienttimestampms_)>(
-          reinterpret_cast<char*>(&clienttimestampms_),
-          reinterpret_cast<char*>(&other->clienttimestampms_));
+      PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeat, _impl_.sequence_)
+      + sizeof(ZtLiveCsHeartbeat::_impl_.sequence_)
+      - PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeat, _impl_.clienttimestampms_)>(
+          reinterpret_cast<char*>(&_impl_.clienttimestampms_),
+          reinterpret_cast<char*>(&other->_impl_.clienttimestampms_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsHeartbeat::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtLiveCsHeartbeat_2eproto_getter, &descriptor_table_ZtLiveCsHeartbeat_2eproto_once,
+      file_level_metadata_ZtLiveCsHeartbeat_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -342,141 +326,148 @@ class ZtLiveCsHeartbeatAck::_Internal {
  public:
 };
 
-ZtLiveCsHeartbeatAck::ZtLiveCsHeartbeatAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtLiveCsHeartbeatAck::ZtLiveCsHeartbeatAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtLiveCsHeartbeatAck)
 }
 ZtLiveCsHeartbeatAck::ZtLiveCsHeartbeatAck(const ZtLiveCsHeartbeatAck& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtLiveCsHeartbeatAck* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.servertimestampms_){}
+    , decltype(_impl_.clienttimestampms_){}
+    , decltype(_impl_.clientsequence_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&servertimestampms_, &from.servertimestampms_,
-    static_cast<size_t>(reinterpret_cast<char*>(&clientsequence_) -
-    reinterpret_cast<char*>(&servertimestampms_)) + sizeof(clientsequence_));
+  ::memcpy(&_impl_.servertimestampms_, &from._impl_.servertimestampms_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.clientsequence_) -
+    reinterpret_cast<char*>(&_impl_.servertimestampms_)) + sizeof(_impl_.clientsequence_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsHeartbeatAck)
 }
 
-void ZtLiveCsHeartbeatAck::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&servertimestampms_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&clientsequence_) -
-      reinterpret_cast<char*>(&servertimestampms_)) + sizeof(clientsequence_));
+inline void ZtLiveCsHeartbeatAck::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.servertimestampms_){int64_t{0}}
+    , decltype(_impl_.clienttimestampms_){int64_t{0}}
+    , decltype(_impl_.clientsequence_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ZtLiveCsHeartbeatAck::~ZtLiveCsHeartbeatAck() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtLiveCsHeartbeatAck)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtLiveCsHeartbeatAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void ZtLiveCsHeartbeatAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void ZtLiveCsHeartbeatAck::ArenaDtor(void* object) {
-  ZtLiveCsHeartbeatAck* _this = reinterpret_cast< ZtLiveCsHeartbeatAck* >(object);
-  (void)_this;
-}
-void ZtLiveCsHeartbeatAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtLiveCsHeartbeatAck::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtLiveCsHeartbeatAck& ZtLiveCsHeartbeatAck::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsHeartbeatAck_ZtLiveCsHeartbeat_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsHeartbeatAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsHeartbeatAck)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&servertimestampms_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&clientsequence_) -
-      reinterpret_cast<char*>(&servertimestampms_)) + sizeof(clientsequence_));
+  ::memset(&_impl_.servertimestampms_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.clientsequence_) -
+      reinterpret_cast<char*>(&_impl_.servertimestampms_)) + sizeof(_impl_.clientsequence_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtLiveCsHeartbeatAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtLiveCsHeartbeatAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int64 serverTimestampMs = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          servertimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.servertimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 clientTimestampMs = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          clienttimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.clienttimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 clientSequence = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          clientsequence_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.clientsequence_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtLiveCsHeartbeatAck::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtLiveCsHeartbeatAck::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtLiveCsHeartbeatAck)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 serverTimestampMs = 1;
-  if (this->servertimestampms() != 0) {
+  if (this->_internal_servertimestampms() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_servertimestampms(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_servertimestampms(), target);
   }
 
   // int64 clientTimestampMs = 2;
-  if (this->clienttimestampms() != 0) {
+  if (this->_internal_clienttimestampms() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_clienttimestampms(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_clienttimestampms(), target);
   }
 
   // int64 clientSequence = 3;
-  if (this->clientsequence() != 0) {
+  if (this->_internal_clientsequence() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_clientsequence(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_clientsequence(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtLiveCsHeartbeatAck)
@@ -487,78 +478,53 @@ size_t ZtLiveCsHeartbeatAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtLiveCsHeartbeatAck)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int64 serverTimestampMs = 1;
-  if (this->servertimestampms() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_servertimestampms());
+  if (this->_internal_servertimestampms() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_servertimestampms());
   }
 
   // int64 clientTimestampMs = 2;
-  if (this->clienttimestampms() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_clienttimestampms());
+  if (this->_internal_clienttimestampms() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_clienttimestampms());
   }
 
   // int64 clientSequence = 3;
-  if (this->clientsequence() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_clientsequence());
+  if (this->_internal_clientsequence() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_clientsequence());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtLiveCsHeartbeatAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtLiveCsHeartbeatAck)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtLiveCsHeartbeatAck* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtLiveCsHeartbeatAck>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtLiveCsHeartbeatAck)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtLiveCsHeartbeatAck)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtLiveCsHeartbeatAck::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtLiveCsHeartbeatAck::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtLiveCsHeartbeatAck::GetClassData() const { return &_class_data_; }
 
-void ZtLiveCsHeartbeatAck::MergeFrom(const ZtLiveCsHeartbeatAck& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsHeartbeatAck)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtLiveCsHeartbeatAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtLiveCsHeartbeatAck*>(&to_msg);
+  auto& from = static_cast<const ZtLiveCsHeartbeatAck&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsHeartbeatAck)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.servertimestampms() != 0) {
-    _internal_set_servertimestampms(from._internal_servertimestampms());
+  if (from._internal_servertimestampms() != 0) {
+    _this->_internal_set_servertimestampms(from._internal_servertimestampms());
   }
-  if (from.clienttimestampms() != 0) {
-    _internal_set_clienttimestampms(from._internal_clienttimestampms());
+  if (from._internal_clienttimestampms() != 0) {
+    _this->_internal_set_clienttimestampms(from._internal_clienttimestampms());
   }
-  if (from.clientsequence() != 0) {
-    _internal_set_clientsequence(from._internal_clientsequence());
+  if (from._internal_clientsequence() != 0) {
+    _this->_internal_set_clientsequence(from._internal_clientsequence());
   }
-}
-
-void ZtLiveCsHeartbeatAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtLiveCsHeartbeatAck)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtLiveCsHeartbeatAck::CopyFrom(const ZtLiveCsHeartbeatAck& from) {
@@ -574,27 +540,30 @@ bool ZtLiveCsHeartbeatAck::IsInitialized() const {
 
 void ZtLiveCsHeartbeatAck::InternalSwap(ZtLiveCsHeartbeatAck* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeatAck, clientsequence_)
-      + sizeof(ZtLiveCsHeartbeatAck::clientsequence_)
-      - PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeatAck, servertimestampms_)>(
-          reinterpret_cast<char*>(&servertimestampms_),
-          reinterpret_cast<char*>(&other->servertimestampms_));
+      PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeatAck, _impl_.clientsequence_)
+      + sizeof(ZtLiveCsHeartbeatAck::_impl_.clientsequence_)
+      - PROTOBUF_FIELD_OFFSET(ZtLiveCsHeartbeatAck, _impl_.servertimestampms_)>(
+          reinterpret_cast<char*>(&_impl_.servertimestampms_),
+          reinterpret_cast<char*>(&other->_impl_.servertimestampms_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsHeartbeatAck::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtLiveCsHeartbeat_2eproto_getter, &descriptor_table_ZtLiveCsHeartbeat_2eproto_once,
+      file_level_metadata_ZtLiveCsHeartbeat_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsHeartbeat* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsHeartbeat >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsHeartbeat*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsHeartbeat >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtLiveCsHeartbeat >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsHeartbeatAck* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsHeartbeatAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsHeartbeatAck*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsHeartbeatAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtLiveCsHeartbeatAck >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

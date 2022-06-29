@@ -14,51 +14,54 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_PkPlayerRoundStatistic_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PkPlayerRoundStatistic_PkPlayerRoundStatistic_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class PkPlayerStatisticDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PkPlayerStatistic> _instance;
-} _PkPlayerStatistic_default_instance_;
+PROTOBUF_CONSTEXPR PkPlayerStatistic::PkPlayerStatistic(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.d_)*/{}
+  , /*decltype(_impl_.b_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_)*/nullptr
+  , /*decltype(_impl_.c_)*/int64_t{0}
+  , /*decltype(_impl_.e_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PkPlayerStatisticDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PkPlayerStatisticDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PkPlayerStatisticDefaultTypeInternal() {}
+  union {
+    PkPlayerStatistic _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PkPlayerStatisticDefaultTypeInternal _PkPlayerStatistic_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_PkPlayerStatistic_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PkPlayerStatistic_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PkPlayerStatistic_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_PkPlayerStatistic_default_instance_;
-    new (ptr) ::AcFunDanmu::PkPlayerStatistic();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,
-      &scc_info_PkPlayerRoundStatistic_PkPlayerRoundStatistic_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_PkPlayerStatistic_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_PkPlayerStatistic_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_PkPlayerStatistic_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_PkPlayerStatistic_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_PkPlayerStatistic_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, a_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, b_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, c_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, d_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, e_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, _impl_.a_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, _impl_.b_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, _impl_.c_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, _impl_.d_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkPlayerStatistic, _impl_.e_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::PkPlayerStatistic)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::PkPlayerStatistic)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_PkPlayerStatistic_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_PkPlayerStatistic_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_PkPlayerStatistic_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -69,23 +72,25 @@ const char descriptor_table_protodef_PkPlayerStatistic_2eproto[] PROTOBUF_SECTIO
   "\t\022\t\n\001c\030\003 \001(\003\022-\n\001d\030\004 \003(\0132\".AcFunDanmu.PkP"
   "layerRoundStatistic\022\t\n\001e\030\005 \001(\005b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_PkPlayerStatistic_2eproto_deps[2] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_PkPlayerStatistic_2eproto_deps[2] = {
   &::descriptor_table_PkPlayerRoundStatistic_2eproto,
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_PkPlayerStatistic_2eproto_sccs[1] = {
-  &scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto.base,
+static ::_pbi::once_flag descriptor_table_PkPlayerStatistic_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PkPlayerStatistic_2eproto = {
+    false, false, 238, descriptor_table_protodef_PkPlayerStatistic_2eproto,
+    "PkPlayerStatistic.proto",
+    &descriptor_table_PkPlayerStatistic_2eproto_once, descriptor_table_PkPlayerStatistic_2eproto_deps, 2, 1,
+    schemas, file_default_instances, TableStruct_PkPlayerStatistic_2eproto::offsets,
+    file_level_metadata_PkPlayerStatistic_2eproto, file_level_enum_descriptors_PkPlayerStatistic_2eproto,
+    file_level_service_descriptors_PkPlayerStatistic_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_PkPlayerStatistic_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PkPlayerStatistic_2eproto = {
-  false, false, descriptor_table_protodef_PkPlayerStatistic_2eproto, "PkPlayerStatistic.proto", 238,
-  &descriptor_table_PkPlayerStatistic_2eproto_once, descriptor_table_PkPlayerStatistic_2eproto_sccs, descriptor_table_PkPlayerStatistic_2eproto_deps, 1, 2,
-  schemas, file_default_instances, TableStruct_PkPlayerStatistic_2eproto::offsets,
-  file_level_metadata_PkPlayerStatistic_2eproto, 1, file_level_enum_descriptors_PkPlayerStatistic_2eproto, file_level_service_descriptors_PkPlayerStatistic_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PkPlayerStatistic_2eproto_getter() {
+  return &descriptor_table_PkPlayerStatistic_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_PkPlayerStatistic_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_PkPlayerStatistic_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PkPlayerStatistic_2eproto(&descriptor_table_PkPlayerStatistic_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -97,131 +102,143 @@ class PkPlayerStatistic::_Internal {
 
 const ::AcFunDanmu::ZtLiveUserInfo&
 PkPlayerStatistic::_Internal::a(const PkPlayerStatistic* msg) {
-  return *msg->a_;
+  return *msg->_impl_.a_;
 }
 void PkPlayerStatistic::clear_a() {
-  if (GetArena() == nullptr && a_ != nullptr) {
-    delete a_;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_ != nullptr) {
+    delete _impl_.a_;
   }
-  a_ = nullptr;
+  _impl_.a_ = nullptr;
 }
 void PkPlayerStatistic::clear_d() {
-  d_.Clear();
+  _impl_.d_.Clear();
 }
-PkPlayerStatistic::PkPlayerStatistic(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  d_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+PkPlayerStatistic::PkPlayerStatistic(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.PkPlayerStatistic)
 }
 PkPlayerStatistic::PkPlayerStatistic(const PkPlayerStatistic& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      d_(from.d_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PkPlayerStatistic* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.d_){from._impl_.d_}
+    , decltype(_impl_.b_){}
+    , decltype(_impl_.a_){nullptr}
+    , decltype(_impl_.c_){}
+    , decltype(_impl_.e_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  b_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.b_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.b_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_b().empty()) {
-    b_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_b(), 
-      GetArena());
+    _this->_impl_.b_.Set(from._internal_b(), 
+      _this->GetArenaForAllocation());
   }
   if (from._internal_has_a()) {
-    a_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.a_);
-  } else {
-    a_ = nullptr;
+    _this->_impl_.a_ = new ::AcFunDanmu::ZtLiveUserInfo(*from._impl_.a_);
   }
-  ::memcpy(&c_, &from.c_,
-    static_cast<size_t>(reinterpret_cast<char*>(&e_) -
-    reinterpret_cast<char*>(&c_)) + sizeof(e_));
+  ::memcpy(&_impl_.c_, &from._impl_.c_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.e_) -
+    reinterpret_cast<char*>(&_impl_.c_)) + sizeof(_impl_.e_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.PkPlayerStatistic)
 }
 
-void PkPlayerStatistic::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto.base);
-  b_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&a_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&e_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(e_));
+inline void PkPlayerStatistic::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.d_){arena}
+    , decltype(_impl_.b_){}
+    , decltype(_impl_.a_){nullptr}
+    , decltype(_impl_.c_){int64_t{0}}
+    , decltype(_impl_.e_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.b_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.b_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 PkPlayerStatistic::~PkPlayerStatistic() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.PkPlayerStatistic)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PkPlayerStatistic::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  b_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete a_;
+inline void PkPlayerStatistic::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.d_.~RepeatedPtrField();
+  _impl_.b_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_;
 }
 
-void PkPlayerStatistic::ArenaDtor(void* object) {
-  PkPlayerStatistic* _this = reinterpret_cast< PkPlayerStatistic* >(object);
-  (void)_this;
-}
-void PkPlayerStatistic::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PkPlayerStatistic::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const PkPlayerStatistic& PkPlayerStatistic::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PkPlayerStatistic_PkPlayerStatistic_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PkPlayerStatistic::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.PkPlayerStatistic)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  d_.Clear();
-  b_.ClearToEmpty();
-  if (GetArena() == nullptr && a_ != nullptr) {
-    delete a_;
+  _impl_.d_.Clear();
+  _impl_.b_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_ != nullptr) {
+    delete _impl_.a_;
   }
-  a_ = nullptr;
-  ::memset(&c_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&e_) -
-      reinterpret_cast<char*>(&c_)) + sizeof(e_));
+  _impl_.a_ = nullptr;
+  ::memset(&_impl_.c_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.e_) -
+      reinterpret_cast<char*>(&_impl_.c_)) + sizeof(_impl_.e_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PkPlayerStatistic::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PkPlayerStatistic::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserInfo a = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string b = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_b();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.PkPlayerStatistic.b"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.PkPlayerStatistic.b"));
+        } else
+          goto handle_unusual;
         continue;
       // int64 c = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          c_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.c_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .AcFunDanmu.PkPlayerRoundStatistic d = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -229,53 +246,55 @@ const char* PkPlayerStatistic::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 e = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          e_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.e_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PkPlayerStatistic::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* PkPlayerStatistic::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.PkPlayerStatistic)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .AcFunDanmu.ZtLiveUserInfo a = 1;
-  if (this->has_a()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_a()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::a(this), target, stream);
+      InternalWriteMessage(1, _Internal::a(this),
+        _Internal::a(this).GetCachedSize(), target, stream);
   }
 
   // string b = 2;
-  if (this->b().size() > 0) {
+  if (!this->_internal_b().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_b().data(), static_cast<int>(this->_internal_b().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -285,27 +304,27 @@ failure:
   }
 
   // int64 c = 3;
-  if (this->c() != 0) {
+  if (this->_internal_c() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_c(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_c(), target);
   }
 
   // repeated .AcFunDanmu.PkPlayerRoundStatistic d = 4;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_d_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_d_size()); i < n; i++) {
+    const auto& repfield = this->_internal_d(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, this->_internal_d(i), target, stream);
+        InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // int32 e = 5;
-  if (this->e() != 0) {
+  if (this->_internal_e() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_e(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_e(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.PkPlayerStatistic)
@@ -316,96 +335,74 @@ size_t PkPlayerStatistic::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.PkPlayerStatistic)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.PkPlayerRoundStatistic d = 4;
   total_size += 1UL * this->_internal_d_size();
-  for (const auto& msg : this->d_) {
+  for (const auto& msg : this->_impl_.d_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string b = 2;
-  if (this->b().size() > 0) {
+  if (!this->_internal_b().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_b());
   }
 
   // .AcFunDanmu.ZtLiveUserInfo a = 1;
-  if (this->has_a()) {
+  if (this->_internal_has_a()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *a_);
+        *_impl_.a_);
   }
 
   // int64 c = 3;
-  if (this->c() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_c());
+  if (this->_internal_c() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_c());
   }
 
   // int32 e = 5;
-  if (this->e() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_e());
+  if (this->_internal_e() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_e());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PkPlayerStatistic::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.PkPlayerStatistic)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PkPlayerStatistic* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PkPlayerStatistic>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.PkPlayerStatistic)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.PkPlayerStatistic)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PkPlayerStatistic::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PkPlayerStatistic::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PkPlayerStatistic::GetClassData() const { return &_class_data_; }
 
-void PkPlayerStatistic::MergeFrom(const PkPlayerStatistic& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.PkPlayerStatistic)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void PkPlayerStatistic::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PkPlayerStatistic*>(&to_msg);
+  auto& from = static_cast<const PkPlayerStatistic&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.PkPlayerStatistic)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  d_.MergeFrom(from.d_);
-  if (from.b().size() > 0) {
-    _internal_set_b(from._internal_b());
+  _this->_impl_.d_.MergeFrom(from._impl_.d_);
+  if (!from._internal_b().empty()) {
+    _this->_internal_set_b(from._internal_b());
   }
-  if (from.has_a()) {
-    _internal_mutable_a()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(from._internal_a());
+  if (from._internal_has_a()) {
+    _this->_internal_mutable_a()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(
+        from._internal_a());
   }
-  if (from.c() != 0) {
-    _internal_set_c(from._internal_c());
+  if (from._internal_c() != 0) {
+    _this->_internal_set_c(from._internal_c());
   }
-  if (from.e() != 0) {
-    _internal_set_e(from._internal_e());
+  if (from._internal_e() != 0) {
+    _this->_internal_set_e(from._internal_e());
   }
-}
-
-void PkPlayerStatistic::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.PkPlayerStatistic)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PkPlayerStatistic::CopyFrom(const PkPlayerStatistic& from) {
@@ -421,26 +418,33 @@ bool PkPlayerStatistic::IsInitialized() const {
 
 void PkPlayerStatistic::InternalSwap(PkPlayerStatistic* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  d_.InternalSwap(&other->d_);
-  b_.Swap(&other->b_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.d_.InternalSwap(&other->_impl_.d_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.b_, lhs_arena,
+      &other->_impl_.b_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PkPlayerStatistic, e_)
-      + sizeof(PkPlayerStatistic::e_)
-      - PROTOBUF_FIELD_OFFSET(PkPlayerStatistic, a_)>(
-          reinterpret_cast<char*>(&a_),
-          reinterpret_cast<char*>(&other->a_));
+      PROTOBUF_FIELD_OFFSET(PkPlayerStatistic, _impl_.e_)
+      + sizeof(PkPlayerStatistic::_impl_.e_)
+      - PROTOBUF_FIELD_OFFSET(PkPlayerStatistic, _impl_.a_)>(
+          reinterpret_cast<char*>(&_impl_.a_),
+          reinterpret_cast<char*>(&other->_impl_.a_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PkPlayerStatistic::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PkPlayerStatistic_2eproto_getter, &descriptor_table_PkPlayerStatistic_2eproto_once,
+      file_level_metadata_PkPlayerStatistic_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::PkPlayerStatistic* Arena::CreateMaybeMessage< ::AcFunDanmu::PkPlayerStatistic >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::PkPlayerStatistic*
+Arena::CreateMaybeMessage< ::AcFunDanmu::PkPlayerStatistic >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::PkPlayerStatistic >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

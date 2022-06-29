@@ -14,72 +14,76 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class ZtLiveCsEnterRoomDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsEnterRoom> _instance;
-} _ZtLiveCsEnterRoom_default_instance_;
-class ZtLiveCsEnterRoomAckDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsEnterRoomAck> _instance;
-} _ZtLiveCsEnterRoomAck_default_instance_;
+PROTOBUF_CONSTEXPR ZtLiveCsEnterRoom::ZtLiveCsEnterRoom(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.enterroomattach_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.clientlivesdkversion_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.isauthor_)*/false
+  , /*decltype(_impl_.reconnectcount_)*/0
+  , /*decltype(_impl_.lasterrorcode_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtLiveCsEnterRoomDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtLiveCsEnterRoomDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtLiveCsEnterRoomDefaultTypeInternal() {}
+  union {
+    ZtLiveCsEnterRoom _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtLiveCsEnterRoomDefaultTypeInternal _ZtLiveCsEnterRoom_default_instance_;
+PROTOBUF_CONSTEXPR ZtLiveCsEnterRoomAck::ZtLiveCsEnterRoomAck(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.heartbeatintervalms_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtLiveCsEnterRoomAckDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtLiveCsEnterRoomAckDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtLiveCsEnterRoomAckDefaultTypeInternal() {}
+  union {
+    ZtLiveCsEnterRoomAck _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtLiveCsEnterRoomAckDefaultTypeInternal _ZtLiveCsEnterRoomAck_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_ZtLiveCsEnterRoom_2eproto[2];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsEnterRoom_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsEnterRoom_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsEnterRoom_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsEnterRoom();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto}, {}};
-
-static void InitDefaultsscc_info_ZtLiveCsEnterRoomAck_ZtLiveCsEnterRoom_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsEnterRoomAck_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsEnterRoomAck();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsEnterRoomAck_ZtLiveCsEnterRoom_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsEnterRoomAck_ZtLiveCsEnterRoom_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveCsEnterRoom_2eproto[2];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsEnterRoom_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsEnterRoom_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ZtLiveCsEnterRoom_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_ZtLiveCsEnterRoom_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, isauthor_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, reconnectcount_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, lasterrorcode_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, enterroomattach_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, clientlivesdkversion_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, _impl_.isauthor_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, _impl_.reconnectcount_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, _impl_.lasterrorcode_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, _impl_.enterroomattach_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoom, _impl_.clientlivesdkversion_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoomAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoomAck, heartbeatintervalms_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsEnterRoomAck, _impl_.heartbeatintervalms_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::ZtLiveCsEnterRoom)},
-  { 10, -1, sizeof(::AcFunDanmu::ZtLiveCsEnterRoomAck)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::ZtLiveCsEnterRoom)},
+  { 11, -1, -1, sizeof(::AcFunDanmu::ZtLiveCsEnterRoomAck)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtLiveCsEnterRoom_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtLiveCsEnterRoomAck_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_ZtLiveCsEnterRoom_default_instance_._instance,
+  &::AcFunDanmu::_ZtLiveCsEnterRoomAck_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_ZtLiveCsEnterRoom_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -90,22 +94,21 @@ const char descriptor_table_protodef_ZtLiveCsEnterRoom_2eproto[] PROTOBUF_SECTIO
   "iveSdkVersion\030\005 \001(\t\"3\n\024ZtLiveCsEnterRoom"
   "Ack\022\033\n\023heartbeatIntervalMs\030\001 \001(\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveCsEnterRoom_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_ZtLiveCsEnterRoom_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_ZtLiveCsEnterRoom_2eproto = {
+    false, false, 240, descriptor_table_protodef_ZtLiveCsEnterRoom_2eproto,
+    "ZtLiveCsEnterRoom.proto",
+    &descriptor_table_ZtLiveCsEnterRoom_2eproto_once, nullptr, 0, 2,
+    schemas, file_default_instances, TableStruct_ZtLiveCsEnterRoom_2eproto::offsets,
+    file_level_metadata_ZtLiveCsEnterRoom_2eproto, file_level_enum_descriptors_ZtLiveCsEnterRoom_2eproto,
+    file_level_service_descriptors_ZtLiveCsEnterRoom_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveCsEnterRoom_2eproto_sccs[2] = {
-  &scc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto.base,
-  &scc_info_ZtLiveCsEnterRoomAck_ZtLiveCsEnterRoom_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveCsEnterRoom_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveCsEnterRoom_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveCsEnterRoom_2eproto, "ZtLiveCsEnterRoom.proto", 240,
-  &descriptor_table_ZtLiveCsEnterRoom_2eproto_once, descriptor_table_ZtLiveCsEnterRoom_2eproto_sccs, descriptor_table_ZtLiveCsEnterRoom_2eproto_deps, 2, 0,
-  schemas, file_default_instances, TableStruct_ZtLiveCsEnterRoom_2eproto::offsets,
-  file_level_metadata_ZtLiveCsEnterRoom_2eproto, 2, file_level_enum_descriptors_ZtLiveCsEnterRoom_2eproto, file_level_service_descriptors_ZtLiveCsEnterRoom_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_ZtLiveCsEnterRoom_2eproto_getter() {
+  return &descriptor_table_ZtLiveCsEnterRoom_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveCsEnterRoom_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveCsEnterRoom_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_ZtLiveCsEnterRoom_2eproto(&descriptor_table_ZtLiveCsEnterRoom_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -114,176 +117,200 @@ class ZtLiveCsEnterRoom::_Internal {
  public:
 };
 
-ZtLiveCsEnterRoom::ZtLiveCsEnterRoom(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtLiveCsEnterRoom::ZtLiveCsEnterRoom(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtLiveCsEnterRoom)
 }
 ZtLiveCsEnterRoom::ZtLiveCsEnterRoom(const ZtLiveCsEnterRoom& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtLiveCsEnterRoom* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.enterroomattach_){}
+    , decltype(_impl_.clientlivesdkversion_){}
+    , decltype(_impl_.isauthor_){}
+    , decltype(_impl_.reconnectcount_){}
+    , decltype(_impl_.lasterrorcode_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  enterroomattach_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.enterroomattach_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.enterroomattach_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_enterroomattach().empty()) {
-    enterroomattach_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_enterroomattach(), 
-      GetArena());
+    _this->_impl_.enterroomattach_.Set(from._internal_enterroomattach(), 
+      _this->GetArenaForAllocation());
   }
-  clientlivesdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.clientlivesdkversion_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.clientlivesdkversion_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_clientlivesdkversion().empty()) {
-    clientlivesdkversion_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_clientlivesdkversion(), 
-      GetArena());
+    _this->_impl_.clientlivesdkversion_.Set(from._internal_clientlivesdkversion(), 
+      _this->GetArenaForAllocation());
   }
-  ::memcpy(&isauthor_, &from.isauthor_,
-    static_cast<size_t>(reinterpret_cast<char*>(&lasterrorcode_) -
-    reinterpret_cast<char*>(&isauthor_)) + sizeof(lasterrorcode_));
+  ::memcpy(&_impl_.isauthor_, &from._impl_.isauthor_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.lasterrorcode_) -
+    reinterpret_cast<char*>(&_impl_.isauthor_)) + sizeof(_impl_.lasterrorcode_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsEnterRoom)
 }
 
-void ZtLiveCsEnterRoom::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto.base);
-  enterroomattach_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  clientlivesdkversion_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&isauthor_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&lasterrorcode_) -
-      reinterpret_cast<char*>(&isauthor_)) + sizeof(lasterrorcode_));
+inline void ZtLiveCsEnterRoom::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.enterroomattach_){}
+    , decltype(_impl_.clientlivesdkversion_){}
+    , decltype(_impl_.isauthor_){false}
+    , decltype(_impl_.reconnectcount_){0}
+    , decltype(_impl_.lasterrorcode_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.enterroomattach_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.enterroomattach_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.clientlivesdkversion_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.clientlivesdkversion_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ZtLiveCsEnterRoom::~ZtLiveCsEnterRoom() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtLiveCsEnterRoom)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtLiveCsEnterRoom::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  enterroomattach_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  clientlivesdkversion_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void ZtLiveCsEnterRoom::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.enterroomattach_.Destroy();
+  _impl_.clientlivesdkversion_.Destroy();
 }
 
-void ZtLiveCsEnterRoom::ArenaDtor(void* object) {
-  ZtLiveCsEnterRoom* _this = reinterpret_cast< ZtLiveCsEnterRoom* >(object);
-  (void)_this;
-}
-void ZtLiveCsEnterRoom::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtLiveCsEnterRoom::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtLiveCsEnterRoom& ZtLiveCsEnterRoom::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsEnterRoom_ZtLiveCsEnterRoom_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsEnterRoom::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsEnterRoom)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  enterroomattach_.ClearToEmpty();
-  clientlivesdkversion_.ClearToEmpty();
-  ::memset(&isauthor_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&lasterrorcode_) -
-      reinterpret_cast<char*>(&isauthor_)) + sizeof(lasterrorcode_));
+  _impl_.enterroomattach_.ClearToEmpty();
+  _impl_.clientlivesdkversion_.ClearToEmpty();
+  ::memset(&_impl_.isauthor_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.lasterrorcode_) -
+      reinterpret_cast<char*>(&_impl_.isauthor_)) + sizeof(_impl_.lasterrorcode_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtLiveCsEnterRoom::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtLiveCsEnterRoom::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // bool isAuthor = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          isauthor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.isauthor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 reconnectCount = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          reconnectcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.reconnectcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 lastErrorCode = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          lasterrorcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.lasterrorcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string enterRoomAttach = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_enterroomattach();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsEnterRoom.enterRoomAttach"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsEnterRoom.enterRoomAttach"));
+        } else
+          goto handle_unusual;
         continue;
       // string clientLiveSdkVersion = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_clientlivesdkversion();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsEnterRoom.clientLiveSdkVersion"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsEnterRoom.clientLiveSdkVersion"));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtLiveCsEnterRoom::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtLiveCsEnterRoom::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtLiveCsEnterRoom)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool isAuthor = 1;
-  if (this->isauthor() != 0) {
+  if (this->_internal_isauthor() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_isauthor(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_isauthor(), target);
   }
 
   // int32 reconnectCount = 2;
-  if (this->reconnectcount() != 0) {
+  if (this->_internal_reconnectcount() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_reconnectcount(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_reconnectcount(), target);
   }
 
   // int32 lastErrorCode = 3;
-  if (this->lasterrorcode() != 0) {
+  if (this->_internal_lasterrorcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_lasterrorcode(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_lasterrorcode(), target);
   }
 
   // string enterRoomAttach = 4;
-  if (this->enterroomattach().size() > 0) {
+  if (!this->_internal_enterroomattach().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_enterroomattach().data(), static_cast<int>(this->_internal_enterroomattach().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -293,7 +320,7 @@ failure:
   }
 
   // string clientLiveSdkVersion = 5;
-  if (this->clientlivesdkversion().size() > 0) {
+  if (!this->_internal_clientlivesdkversion().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_clientlivesdkversion().data(), static_cast<int>(this->_internal_clientlivesdkversion().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -303,7 +330,7 @@ failure:
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtLiveCsEnterRoom)
@@ -314,96 +341,73 @@ size_t ZtLiveCsEnterRoom::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtLiveCsEnterRoom)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string enterRoomAttach = 4;
-  if (this->enterroomattach().size() > 0) {
+  if (!this->_internal_enterroomattach().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_enterroomattach());
   }
 
   // string clientLiveSdkVersion = 5;
-  if (this->clientlivesdkversion().size() > 0) {
+  if (!this->_internal_clientlivesdkversion().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_clientlivesdkversion());
   }
 
   // bool isAuthor = 1;
-  if (this->isauthor() != 0) {
+  if (this->_internal_isauthor() != 0) {
     total_size += 1 + 1;
   }
 
   // int32 reconnectCount = 2;
-  if (this->reconnectcount() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_reconnectcount());
+  if (this->_internal_reconnectcount() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_reconnectcount());
   }
 
   // int32 lastErrorCode = 3;
-  if (this->lasterrorcode() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_lasterrorcode());
+  if (this->_internal_lasterrorcode() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_lasterrorcode());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtLiveCsEnterRoom::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtLiveCsEnterRoom)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtLiveCsEnterRoom* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtLiveCsEnterRoom>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtLiveCsEnterRoom)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtLiveCsEnterRoom)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtLiveCsEnterRoom::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtLiveCsEnterRoom::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtLiveCsEnterRoom::GetClassData() const { return &_class_data_; }
 
-void ZtLiveCsEnterRoom::MergeFrom(const ZtLiveCsEnterRoom& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsEnterRoom)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtLiveCsEnterRoom::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtLiveCsEnterRoom*>(&to_msg);
+  auto& from = static_cast<const ZtLiveCsEnterRoom&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsEnterRoom)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.enterroomattach().size() > 0) {
-    _internal_set_enterroomattach(from._internal_enterroomattach());
+  if (!from._internal_enterroomattach().empty()) {
+    _this->_internal_set_enterroomattach(from._internal_enterroomattach());
   }
-  if (from.clientlivesdkversion().size() > 0) {
-    _internal_set_clientlivesdkversion(from._internal_clientlivesdkversion());
+  if (!from._internal_clientlivesdkversion().empty()) {
+    _this->_internal_set_clientlivesdkversion(from._internal_clientlivesdkversion());
   }
-  if (from.isauthor() != 0) {
-    _internal_set_isauthor(from._internal_isauthor());
+  if (from._internal_isauthor() != 0) {
+    _this->_internal_set_isauthor(from._internal_isauthor());
   }
-  if (from.reconnectcount() != 0) {
-    _internal_set_reconnectcount(from._internal_reconnectcount());
+  if (from._internal_reconnectcount() != 0) {
+    _this->_internal_set_reconnectcount(from._internal_reconnectcount());
   }
-  if (from.lasterrorcode() != 0) {
-    _internal_set_lasterrorcode(from._internal_lasterrorcode());
+  if (from._internal_lasterrorcode() != 0) {
+    _this->_internal_set_lasterrorcode(from._internal_lasterrorcode());
   }
-}
-
-void ZtLiveCsEnterRoom::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtLiveCsEnterRoom)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtLiveCsEnterRoom::CopyFrom(const ZtLiveCsEnterRoom& from) {
@@ -419,21 +423,30 @@ bool ZtLiveCsEnterRoom::IsInitialized() const {
 
 void ZtLiveCsEnterRoom::InternalSwap(ZtLiveCsEnterRoom* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  enterroomattach_.Swap(&other->enterroomattach_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  clientlivesdkversion_.Swap(&other->clientlivesdkversion_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.enterroomattach_, lhs_arena,
+      &other->_impl_.enterroomattach_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.clientlivesdkversion_, lhs_arena,
+      &other->_impl_.clientlivesdkversion_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ZtLiveCsEnterRoom, lasterrorcode_)
-      + sizeof(ZtLiveCsEnterRoom::lasterrorcode_)
-      - PROTOBUF_FIELD_OFFSET(ZtLiveCsEnterRoom, isauthor_)>(
-          reinterpret_cast<char*>(&isauthor_),
-          reinterpret_cast<char*>(&other->isauthor_));
+      PROTOBUF_FIELD_OFFSET(ZtLiveCsEnterRoom, _impl_.lasterrorcode_)
+      + sizeof(ZtLiveCsEnterRoom::_impl_.lasterrorcode_)
+      - PROTOBUF_FIELD_OFFSET(ZtLiveCsEnterRoom, _impl_.isauthor_)>(
+          reinterpret_cast<char*>(&_impl_.isauthor_),
+          reinterpret_cast<char*>(&other->_impl_.isauthor_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsEnterRoom::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtLiveCsEnterRoom_2eproto_getter, &descriptor_table_ZtLiveCsEnterRoom_2eproto_once,
+      file_level_metadata_ZtLiveCsEnterRoom_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -441,108 +454,112 @@ class ZtLiveCsEnterRoomAck::_Internal {
  public:
 };
 
-ZtLiveCsEnterRoomAck::ZtLiveCsEnterRoomAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtLiveCsEnterRoomAck::ZtLiveCsEnterRoomAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtLiveCsEnterRoomAck)
 }
 ZtLiveCsEnterRoomAck::ZtLiveCsEnterRoomAck(const ZtLiveCsEnterRoomAck& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtLiveCsEnterRoomAck* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.heartbeatintervalms_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  heartbeatintervalms_ = from.heartbeatintervalms_;
+  _this->_impl_.heartbeatintervalms_ = from._impl_.heartbeatintervalms_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsEnterRoomAck)
 }
 
-void ZtLiveCsEnterRoomAck::SharedCtor() {
-  heartbeatintervalms_ = PROTOBUF_LONGLONG(0);
+inline void ZtLiveCsEnterRoomAck::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.heartbeatintervalms_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ZtLiveCsEnterRoomAck::~ZtLiveCsEnterRoomAck() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtLiveCsEnterRoomAck)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtLiveCsEnterRoomAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void ZtLiveCsEnterRoomAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void ZtLiveCsEnterRoomAck::ArenaDtor(void* object) {
-  ZtLiveCsEnterRoomAck* _this = reinterpret_cast< ZtLiveCsEnterRoomAck* >(object);
-  (void)_this;
-}
-void ZtLiveCsEnterRoomAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtLiveCsEnterRoomAck::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtLiveCsEnterRoomAck& ZtLiveCsEnterRoomAck::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsEnterRoomAck_ZtLiveCsEnterRoom_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsEnterRoomAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsEnterRoomAck)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  heartbeatintervalms_ = PROTOBUF_LONGLONG(0);
+  _impl_.heartbeatintervalms_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtLiveCsEnterRoomAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtLiveCsEnterRoomAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int64 heartbeatIntervalMs = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          heartbeatintervalms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.heartbeatintervalms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtLiveCsEnterRoomAck::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtLiveCsEnterRoomAck::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtLiveCsEnterRoomAck)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 heartbeatIntervalMs = 1;
-  if (this->heartbeatintervalms() != 0) {
+  if (this->_internal_heartbeatintervalms() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_heartbeatintervalms(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_heartbeatintervalms(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtLiveCsEnterRoomAck)
@@ -553,58 +570,37 @@ size_t ZtLiveCsEnterRoomAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtLiveCsEnterRoomAck)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int64 heartbeatIntervalMs = 1;
-  if (this->heartbeatintervalms() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_heartbeatintervalms());
+  if (this->_internal_heartbeatintervalms() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_heartbeatintervalms());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtLiveCsEnterRoomAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtLiveCsEnterRoomAck)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtLiveCsEnterRoomAck* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtLiveCsEnterRoomAck>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtLiveCsEnterRoomAck)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtLiveCsEnterRoomAck)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtLiveCsEnterRoomAck::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtLiveCsEnterRoomAck::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtLiveCsEnterRoomAck::GetClassData() const { return &_class_data_; }
 
-void ZtLiveCsEnterRoomAck::MergeFrom(const ZtLiveCsEnterRoomAck& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsEnterRoomAck)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtLiveCsEnterRoomAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtLiveCsEnterRoomAck*>(&to_msg);
+  auto& from = static_cast<const ZtLiveCsEnterRoomAck&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsEnterRoomAck)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.heartbeatintervalms() != 0) {
-    _internal_set_heartbeatintervalms(from._internal_heartbeatintervalms());
+  if (from._internal_heartbeatintervalms() != 0) {
+    _this->_internal_set_heartbeatintervalms(from._internal_heartbeatintervalms());
   }
-}
-
-void ZtLiveCsEnterRoomAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtLiveCsEnterRoomAck)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtLiveCsEnterRoomAck::CopyFrom(const ZtLiveCsEnterRoomAck& from) {
@@ -620,22 +616,25 @@ bool ZtLiveCsEnterRoomAck::IsInitialized() const {
 
 void ZtLiveCsEnterRoomAck::InternalSwap(ZtLiveCsEnterRoomAck* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(heartbeatintervalms_, other->heartbeatintervalms_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.heartbeatintervalms_, other->_impl_.heartbeatintervalms_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsEnterRoomAck::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtLiveCsEnterRoom_2eproto_getter, &descriptor_table_ZtLiveCsEnterRoom_2eproto_once,
+      file_level_metadata_ZtLiveCsEnterRoom_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsEnterRoom* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsEnterRoom >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsEnterRoom*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsEnterRoom >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtLiveCsEnterRoom >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsEnterRoomAck* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsEnterRoomAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsEnterRoomAck*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsEnterRoomAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtLiveCsEnterRoomAck >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

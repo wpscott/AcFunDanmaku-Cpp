@@ -14,46 +14,48 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class CommonActionSignalLikeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalLike> _instance;
-} _CommonActionSignalLike_default_instance_;
+PROTOBUF_CONSTEXPR CommonActionSignalLike::CommonActionSignalLike(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.userinfo_)*/nullptr
+  , /*decltype(_impl_.sendtimems_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonActionSignalLikeDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonActionSignalLikeDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonActionSignalLikeDefaultTypeInternal() {}
+  union {
+    CommonActionSignalLike _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonActionSignalLikeDefaultTypeInternal _CommonActionSignalLike_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonActionSignalLike_CommonActionSignalLike_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_CommonActionSignalLike_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_CommonActionSignalLike_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_CommonActionSignalLike_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalLike_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalLike();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalLike_CommonActionSignalLike_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalLike_CommonActionSignalLike_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonActionSignalLike_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonActionSignalLike_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonActionSignalLike_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonActionSignalLike_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_CommonActionSignalLike_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalLike, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalLike, userinfo_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalLike, sendtimems_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalLike, _impl_.userinfo_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalLike, _impl_.sendtimems_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::CommonActionSignalLike)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::CommonActionSignalLike)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonActionSignalLike_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_CommonActionSignalLike_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_CommonActionSignalLike_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -63,22 +65,24 @@ const char descriptor_table_protodef_CommonActionSignalLike_2eproto[] PROTOBUF_S
   "u.ZtLiveUserInfo\022\022\n\nsendTimeMs\030\002 \001(\003b\006pr"
   "oto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonActionSignalLike_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_CommonActionSignalLike_2eproto_deps[1] = {
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonActionSignalLike_2eproto_sccs[1] = {
-  &scc_info_CommonActionSignalLike_CommonActionSignalLike_2eproto.base,
+static ::_pbi::once_flag descriptor_table_CommonActionSignalLike_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_CommonActionSignalLike_2eproto = {
+    false, false, 164, descriptor_table_protodef_CommonActionSignalLike_2eproto,
+    "CommonActionSignalLike.proto",
+    &descriptor_table_CommonActionSignalLike_2eproto_once, descriptor_table_CommonActionSignalLike_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_CommonActionSignalLike_2eproto::offsets,
+    file_level_metadata_CommonActionSignalLike_2eproto, file_level_enum_descriptors_CommonActionSignalLike_2eproto,
+    file_level_service_descriptors_CommonActionSignalLike_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonActionSignalLike_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonActionSignalLike_2eproto = {
-  false, false, descriptor_table_protodef_CommonActionSignalLike_2eproto, "CommonActionSignalLike.proto", 164,
-  &descriptor_table_CommonActionSignalLike_2eproto_once, descriptor_table_CommonActionSignalLike_2eproto_sccs, descriptor_table_CommonActionSignalLike_2eproto_deps, 1, 1,
-  schemas, file_default_instances, TableStruct_CommonActionSignalLike_2eproto::offsets,
-  file_level_metadata_CommonActionSignalLike_2eproto, 1, file_level_enum_descriptors_CommonActionSignalLike_2eproto, file_level_service_descriptors_CommonActionSignalLike_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_CommonActionSignalLike_2eproto_getter() {
+  return &descriptor_table_CommonActionSignalLike_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonActionSignalLike_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonActionSignalLike_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_CommonActionSignalLike_2eproto(&descriptor_table_CommonActionSignalLike_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -90,145 +94,145 @@ class CommonActionSignalLike::_Internal {
 
 const ::AcFunDanmu::ZtLiveUserInfo&
 CommonActionSignalLike::_Internal::userinfo(const CommonActionSignalLike* msg) {
-  return *msg->userinfo_;
+  return *msg->_impl_.userinfo_;
 }
 void CommonActionSignalLike::clear_userinfo() {
-  if (GetArena() == nullptr && userinfo_ != nullptr) {
-    delete userinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
+    delete _impl_.userinfo_;
   }
-  userinfo_ = nullptr;
+  _impl_.userinfo_ = nullptr;
 }
-CommonActionSignalLike::CommonActionSignalLike(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonActionSignalLike::CommonActionSignalLike(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonActionSignalLike)
 }
 CommonActionSignalLike::CommonActionSignalLike(const CommonActionSignalLike& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonActionSignalLike* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.userinfo_){nullptr}
+    , decltype(_impl_.sendtimems_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_userinfo()) {
-    userinfo_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.userinfo_);
-  } else {
-    userinfo_ = nullptr;
+    _this->_impl_.userinfo_ = new ::AcFunDanmu::ZtLiveUserInfo(*from._impl_.userinfo_);
   }
-  sendtimems_ = from.sendtimems_;
+  _this->_impl_.sendtimems_ = from._impl_.sendtimems_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalLike)
 }
 
-void CommonActionSignalLike::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalLike_CommonActionSignalLike_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&userinfo_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&sendtimems_) -
-      reinterpret_cast<char*>(&userinfo_)) + sizeof(sendtimems_));
+inline void CommonActionSignalLike::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.userinfo_){nullptr}
+    , decltype(_impl_.sendtimems_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CommonActionSignalLike::~CommonActionSignalLike() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonActionSignalLike)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonActionSignalLike::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete userinfo_;
+inline void CommonActionSignalLike::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.userinfo_;
 }
 
-void CommonActionSignalLike::ArenaDtor(void* object) {
-  CommonActionSignalLike* _this = reinterpret_cast< CommonActionSignalLike* >(object);
-  (void)_this;
-}
-void CommonActionSignalLike::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonActionSignalLike::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonActionSignalLike& CommonActionSignalLike::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalLike_CommonActionSignalLike_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalLike::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalLike)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && userinfo_ != nullptr) {
-    delete userinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.userinfo_ != nullptr) {
+    delete _impl_.userinfo_;
   }
-  userinfo_ = nullptr;
-  sendtimems_ = PROTOBUF_LONGLONG(0);
+  _impl_.userinfo_ = nullptr;
+  _impl_.sendtimems_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonActionSignalLike::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonActionSignalLike::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserInfo userInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_userinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 sendTimeMs = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          sendtimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.sendtimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonActionSignalLike::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonActionSignalLike::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonActionSignalLike)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .AcFunDanmu.ZtLiveUserInfo userInfo = 1;
-  if (this->has_userinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_userinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::userinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::userinfo(this),
+        _Internal::userinfo(this).GetCachedSize(), target, stream);
   }
 
   // int64 sendTimeMs = 2;
-  if (this->sendtimems() != 0) {
+  if (this->_internal_sendtimems() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_sendtimems(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_sendtimems(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonActionSignalLike)
@@ -239,68 +243,48 @@ size_t CommonActionSignalLike::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonActionSignalLike)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .AcFunDanmu.ZtLiveUserInfo userInfo = 1;
-  if (this->has_userinfo()) {
+  if (this->_internal_has_userinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *userinfo_);
+        *_impl_.userinfo_);
   }
 
   // int64 sendTimeMs = 2;
-  if (this->sendtimems() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_sendtimems());
+  if (this->_internal_sendtimems() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_sendtimems());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonActionSignalLike::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonActionSignalLike)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonActionSignalLike* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonActionSignalLike>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonActionSignalLike)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonActionSignalLike)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonActionSignalLike::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonActionSignalLike::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonActionSignalLike::GetClassData() const { return &_class_data_; }
 
-void CommonActionSignalLike::MergeFrom(const CommonActionSignalLike& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalLike)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonActionSignalLike::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonActionSignalLike*>(&to_msg);
+  auto& from = static_cast<const CommonActionSignalLike&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalLike)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_userinfo()) {
-    _internal_mutable_userinfo()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(from._internal_userinfo());
+  if (from._internal_has_userinfo()) {
+    _this->_internal_mutable_userinfo()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(
+        from._internal_userinfo());
   }
-  if (from.sendtimems() != 0) {
-    _internal_set_sendtimems(from._internal_sendtimems());
+  if (from._internal_sendtimems() != 0) {
+    _this->_internal_set_sendtimems(from._internal_sendtimems());
   }
-}
-
-void CommonActionSignalLike::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonActionSignalLike)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonActionSignalLike::CopyFrom(const CommonActionSignalLike& from) {
@@ -316,24 +300,26 @@ bool CommonActionSignalLike::IsInitialized() const {
 
 void CommonActionSignalLike::InternalSwap(CommonActionSignalLike* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CommonActionSignalLike, sendtimems_)
-      + sizeof(CommonActionSignalLike::sendtimems_)
-      - PROTOBUF_FIELD_OFFSET(CommonActionSignalLike, userinfo_)>(
-          reinterpret_cast<char*>(&userinfo_),
-          reinterpret_cast<char*>(&other->userinfo_));
+      PROTOBUF_FIELD_OFFSET(CommonActionSignalLike, _impl_.sendtimems_)
+      + sizeof(CommonActionSignalLike::_impl_.sendtimems_)
+      - PROTOBUF_FIELD_OFFSET(CommonActionSignalLike, _impl_.userinfo_)>(
+          reinterpret_cast<char*>(&_impl_.userinfo_),
+          reinterpret_cast<char*>(&other->_impl_.userinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalLike::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonActionSignalLike_2eproto_getter, &descriptor_table_CommonActionSignalLike_2eproto_once,
+      file_level_metadata_CommonActionSignalLike_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalLike* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalLike >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalLike*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalLike >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonActionSignalLike >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

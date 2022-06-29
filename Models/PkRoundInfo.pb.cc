@@ -14,69 +14,80 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class PkRoundInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PkRoundInfo> _instance;
-} _PkRoundInfo_default_instance_;
+PROTOBUF_CONSTEXPR PkRoundInfo::PkRoundInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.a_)*/int64_t{0}
+  , /*decltype(_impl_.b_)*/0
+  , /*decltype(_impl_.c_)*/0
+  , /*decltype(_impl_.d_)*/int64_t{0}
+  , /*decltype(_impl_.e_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PkRoundInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PkRoundInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PkRoundInfoDefaultTypeInternal() {}
+  union {
+    PkRoundInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PkRoundInfoDefaultTypeInternal _PkRoundInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_PkRoundInfo_PkRoundInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_PkRoundInfo_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PkRoundInfo_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PkRoundInfo_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_PkRoundInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::PkRoundInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PkRoundInfo_PkRoundInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PkRoundInfo_PkRoundInfo_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_PkRoundInfo_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_PkRoundInfo_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_PkRoundInfo_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_PkRoundInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_PkRoundInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, a_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, b_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, c_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, d_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, e_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, _impl_.a_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, _impl_.b_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, _impl_.c_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, _impl_.d_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::PkRoundInfo, _impl_.e_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::PkRoundInfo)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::PkRoundInfo)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_PkRoundInfo_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_PkRoundInfo_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_PkRoundInfo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\021PkRoundInfo.proto\022\nAcFunDanmu\"D\n\013PkRou"
-  "ndInfo\022\t\n\001a\030\001 \001(\003\022\t\n\001b\030\002 \001(\005\022\t\n\001c\030\003 \001(\005\022"
-  "\t\n\001d\030\004 \001(\003\022\t\n\001e\030\005 \001(\005b\006proto3"
+  "\n\021PkRoundInfo.proto\022\nAcFunDanmu\032\023ZtLiveP"
+  "kProto.proto\"_\n\013PkRoundInfo\022\t\n\001a\030\001 \001(\003\022\t"
+  "\n\001b\030\002 \001(\005\022\t\n\001c\030\003 \001(\005\022\t\n\001d\030\004 \001(\003\022$\n\001e\030\005 \001"
+  "(\0162\031.AcFunDanmu.ZtLivePkProtob\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_PkRoundInfo_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_PkRoundInfo_2eproto_deps[1] = {
+  &::descriptor_table_ZtLivePkProto_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_PkRoundInfo_2eproto_sccs[1] = {
-  &scc_info_PkRoundInfo_PkRoundInfo_2eproto.base,
+static ::_pbi::once_flag descriptor_table_PkRoundInfo_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PkRoundInfo_2eproto = {
+    false, false, 157, descriptor_table_protodef_PkRoundInfo_2eproto,
+    "PkRoundInfo.proto",
+    &descriptor_table_PkRoundInfo_2eproto_once, descriptor_table_PkRoundInfo_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_PkRoundInfo_2eproto::offsets,
+    file_level_metadata_PkRoundInfo_2eproto, file_level_enum_descriptors_PkRoundInfo_2eproto,
+    file_level_service_descriptors_PkRoundInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_PkRoundInfo_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PkRoundInfo_2eproto = {
-  false, false, descriptor_table_protodef_PkRoundInfo_2eproto, "PkRoundInfo.proto", 109,
-  &descriptor_table_PkRoundInfo_2eproto_once, descriptor_table_PkRoundInfo_2eproto_sccs, descriptor_table_PkRoundInfo_2eproto_deps, 1, 0,
-  schemas, file_default_instances, TableStruct_PkRoundInfo_2eproto::offsets,
-  file_level_metadata_PkRoundInfo_2eproto, 1, file_level_enum_descriptors_PkRoundInfo_2eproto, file_level_service_descriptors_PkRoundInfo_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PkRoundInfo_2eproto_getter() {
+  return &descriptor_table_PkRoundInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_PkRoundInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_PkRoundInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PkRoundInfo_2eproto(&descriptor_table_PkRoundInfo_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -85,167 +96,182 @@ class PkRoundInfo::_Internal {
  public:
 };
 
-PkRoundInfo::PkRoundInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+PkRoundInfo::PkRoundInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.PkRoundInfo)
 }
 PkRoundInfo::PkRoundInfo(const PkRoundInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PkRoundInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.a_){}
+    , decltype(_impl_.b_){}
+    , decltype(_impl_.c_){}
+    , decltype(_impl_.d_){}
+    , decltype(_impl_.e_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&e_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(e_));
+  ::memcpy(&_impl_.a_, &from._impl_.a_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.e_) -
+    reinterpret_cast<char*>(&_impl_.a_)) + sizeof(_impl_.e_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.PkRoundInfo)
 }
 
-void PkRoundInfo::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&a_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&e_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(e_));
+inline void PkRoundInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.a_){int64_t{0}}
+    , decltype(_impl_.b_){0}
+    , decltype(_impl_.c_){0}
+    , decltype(_impl_.d_){int64_t{0}}
+    , decltype(_impl_.e_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 PkRoundInfo::~PkRoundInfo() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.PkRoundInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PkRoundInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void PkRoundInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void PkRoundInfo::ArenaDtor(void* object) {
-  PkRoundInfo* _this = reinterpret_cast< PkRoundInfo* >(object);
-  (void)_this;
-}
-void PkRoundInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PkRoundInfo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const PkRoundInfo& PkRoundInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PkRoundInfo_PkRoundInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PkRoundInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.PkRoundInfo)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&e_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(e_));
+  ::memset(&_impl_.a_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.e_) -
+      reinterpret_cast<char*>(&_impl_.a_)) + sizeof(_impl_.e_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PkRoundInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PkRoundInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int64 a = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          a_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.a_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 b = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          b_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.b_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 c = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          c_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.c_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 d = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          d_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.d_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      // int32 e = 5;
+      // .AcFunDanmu.ZtLivePkProto e = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          e_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+          _internal_set_e(static_cast<::AcFunDanmu::ZtLivePkProto>(val));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PkRoundInfo::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* PkRoundInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.PkRoundInfo)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 a = 1;
-  if (this->a() != 0) {
+  if (this->_internal_a() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_a(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_a(), target);
   }
 
   // int32 b = 2;
-  if (this->b() != 0) {
+  if (this->_internal_b() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_b(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_b(), target);
   }
 
   // int32 c = 3;
-  if (this->c() != 0) {
+  if (this->_internal_c() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_c(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_c(), target);
   }
 
   // int64 d = 4;
-  if (this->d() != 0) {
+  if (this->_internal_d() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(4, this->_internal_d(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_d(), target);
   }
 
-  // int32 e = 5;
-  if (this->e() != 0) {
+  // .AcFunDanmu.ZtLivePkProto e = 5;
+  if (this->_internal_e() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_e(), target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      5, this->_internal_e(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.PkRoundInfo)
@@ -256,98 +282,70 @@ size_t PkRoundInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.PkRoundInfo)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int64 a = 1;
-  if (this->a() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_a());
+  if (this->_internal_a() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_a());
   }
 
   // int32 b = 2;
-  if (this->b() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_b());
+  if (this->_internal_b() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_b());
   }
 
   // int32 c = 3;
-  if (this->c() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_c());
+  if (this->_internal_c() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_c());
   }
 
   // int64 d = 4;
-  if (this->d() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_d());
+  if (this->_internal_d() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_d());
   }
 
-  // int32 e = 5;
-  if (this->e() != 0) {
+  // .AcFunDanmu.ZtLivePkProto e = 5;
+  if (this->_internal_e() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_e());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_e());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PkRoundInfo::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.PkRoundInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PkRoundInfo* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PkRoundInfo>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.PkRoundInfo)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.PkRoundInfo)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PkRoundInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PkRoundInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PkRoundInfo::GetClassData() const { return &_class_data_; }
 
-void PkRoundInfo::MergeFrom(const PkRoundInfo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.PkRoundInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void PkRoundInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PkRoundInfo*>(&to_msg);
+  auto& from = static_cast<const PkRoundInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.PkRoundInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.a() != 0) {
-    _internal_set_a(from._internal_a());
+  if (from._internal_a() != 0) {
+    _this->_internal_set_a(from._internal_a());
   }
-  if (from.b() != 0) {
-    _internal_set_b(from._internal_b());
+  if (from._internal_b() != 0) {
+    _this->_internal_set_b(from._internal_b());
   }
-  if (from.c() != 0) {
-    _internal_set_c(from._internal_c());
+  if (from._internal_c() != 0) {
+    _this->_internal_set_c(from._internal_c());
   }
-  if (from.d() != 0) {
-    _internal_set_d(from._internal_d());
+  if (from._internal_d() != 0) {
+    _this->_internal_set_d(from._internal_d());
   }
-  if (from.e() != 0) {
-    _internal_set_e(from._internal_e());
+  if (from._internal_e() != 0) {
+    _this->_internal_set_e(from._internal_e());
   }
-}
-
-void PkRoundInfo::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.PkRoundInfo)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PkRoundInfo::CopyFrom(const PkRoundInfo& from) {
@@ -363,24 +361,26 @@ bool PkRoundInfo::IsInitialized() const {
 
 void PkRoundInfo::InternalSwap(PkRoundInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PkRoundInfo, e_)
-      + sizeof(PkRoundInfo::e_)
-      - PROTOBUF_FIELD_OFFSET(PkRoundInfo, a_)>(
-          reinterpret_cast<char*>(&a_),
-          reinterpret_cast<char*>(&other->a_));
+      PROTOBUF_FIELD_OFFSET(PkRoundInfo, _impl_.e_)
+      + sizeof(PkRoundInfo::_impl_.e_)
+      - PROTOBUF_FIELD_OFFSET(PkRoundInfo, _impl_.a_)>(
+          reinterpret_cast<char*>(&_impl_.a_),
+          reinterpret_cast<char*>(&other->_impl_.a_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PkRoundInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PkRoundInfo_2eproto_getter, &descriptor_table_PkRoundInfo_2eproto_once,
+      file_level_metadata_PkRoundInfo_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::PkRoundInfo* Arena::CreateMaybeMessage< ::AcFunDanmu::PkRoundInfo >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::PkRoundInfo*
+Arena::CreateMaybeMessage< ::AcFunDanmu::PkRoundInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::PkRoundInfo >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

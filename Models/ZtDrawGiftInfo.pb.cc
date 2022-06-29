@@ -14,102 +14,109 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_ZtDrawGiftInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtDrawGiftInfo_ZtDrawPoint> _instance;
-} _ZtDrawGiftInfo_ZtDrawPoint_default_instance_;
-class ZtDrawGiftInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtDrawGiftInfo> _instance;
-} _ZtDrawGiftInfo_default_instance_;
+PROTOBUF_CONSTEXPR ZtDrawGiftInfo_ZtDrawPoint::ZtDrawGiftInfo_ZtDrawPoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.marginleft_)*/int64_t{0}
+  , /*decltype(_impl_.margintop_)*/int64_t{0}
+  , /*decltype(_impl_.scaleratio_)*/0
+  , /*decltype(_impl_.pointwidth_)*/int64_t{0}
+  , /*decltype(_impl_.pointheight_)*/int64_t{0}
+  , /*decltype(_impl_.handup_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal() {}
+  union {
+    ZtDrawGiftInfo_ZtDrawPoint _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtDrawGiftInfo_ZtDrawPointDefaultTypeInternal _ZtDrawGiftInfo_ZtDrawPoint_default_instance_;
+PROTOBUF_CONSTEXPR ZtDrawGiftInfo::ZtDrawGiftInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.drawpoint_)*/{}
+  , /*decltype(_impl_.screenwidth_)*/int64_t{0}
+  , /*decltype(_impl_.screenheight_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtDrawGiftInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtDrawGiftInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtDrawGiftInfoDefaultTypeInternal() {}
+  union {
+    ZtDrawGiftInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtDrawGiftInfoDefaultTypeInternal _ZtDrawGiftInfo_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_ZtDrawGiftInfo_2eproto[2];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_ZtDrawGiftInfo_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ZtDrawGiftInfo_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_ZtDrawGiftInfo_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtDrawGiftInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto}, {
-      &scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto.base,}};
-
-static void InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtDrawGiftInfo_ZtDrawPoint_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtDrawGiftInfo_2eproto[2];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtDrawGiftInfo_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtDrawGiftInfo_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ZtDrawGiftInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_ZtDrawGiftInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, marginleft_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, margintop_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, scaleratio_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, handup_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, _impl_.marginleft_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, _impl_.margintop_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, _impl_.scaleratio_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, _impl_.handup_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, _impl_.pointwidth_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint, _impl_.pointheight_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo, screenwidth_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo, screenheight_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo, drawpoint_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo, _impl_.screenwidth_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo, _impl_.screenheight_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtDrawGiftInfo, _impl_.drawpoint_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint)},
-  { 9, -1, sizeof(::AcFunDanmu::ZtDrawGiftInfo)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint)},
+  { 12, -1, -1, sizeof(::AcFunDanmu::ZtDrawGiftInfo)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtDrawGiftInfo_ZtDrawPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtDrawGiftInfo_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_ZtDrawGiftInfo_ZtDrawPoint_default_instance_._instance,
+  &::AcFunDanmu::_ZtDrawGiftInfo_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_ZtDrawGiftInfo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\024ZtDrawGiftInfo.proto\022\nAcFunDanmu\"\320\001\n\016Z"
+  "\n\024ZtDrawGiftInfo.proto\022\nAcFunDanmu\"\372\001\n\016Z"
   "tDrawGiftInfo\022\023\n\013screenWidth\030\001 \001(\003\022\024\n\014sc"
   "reenHeight\030\002 \001(\003\0229\n\tdrawPoint\030\003 \003(\0132&.Ac"
-  "FunDanmu.ZtDrawGiftInfo.ZtDrawPoint\032X\n\013Z"
-  "tDrawPoint\022\022\n\nmarginLeft\030\001 \001(\003\022\021\n\tmargin"
-  "Top\030\002 \001(\003\022\022\n\nscaleRatio\030\003 \001(\001\022\016\n\006handup\030"
-  "\004 \001(\010b\006proto3"
+  "FunDanmu.ZtDrawGiftInfo.ZtDrawPoint\032\201\001\n\013"
+  "ZtDrawPoint\022\022\n\nmarginLeft\030\001 \001(\003\022\021\n\tmargi"
+  "nTop\030\002 \001(\003\022\022\n\nscaleRatio\030\003 \001(\001\022\016\n\006handup"
+  "\030\004 \001(\010\022\022\n\npointWidth\030\005 \001(\003\022\023\n\013pointHeigh"
+  "t\030\006 \001(\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtDrawGiftInfo_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_ZtDrawGiftInfo_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_ZtDrawGiftInfo_2eproto = {
+    false, false, 295, descriptor_table_protodef_ZtDrawGiftInfo_2eproto,
+    "ZtDrawGiftInfo.proto",
+    &descriptor_table_ZtDrawGiftInfo_2eproto_once, nullptr, 0, 2,
+    schemas, file_default_instances, TableStruct_ZtDrawGiftInfo_2eproto::offsets,
+    file_level_metadata_ZtDrawGiftInfo_2eproto, file_level_enum_descriptors_ZtDrawGiftInfo_2eproto,
+    file_level_service_descriptors_ZtDrawGiftInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtDrawGiftInfo_2eproto_sccs[2] = {
-  &scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto.base,
-  &scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtDrawGiftInfo_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtDrawGiftInfo_2eproto = {
-  false, false, descriptor_table_protodef_ZtDrawGiftInfo_2eproto, "ZtDrawGiftInfo.proto", 253,
-  &descriptor_table_ZtDrawGiftInfo_2eproto_once, descriptor_table_ZtDrawGiftInfo_2eproto_sccs, descriptor_table_ZtDrawGiftInfo_2eproto_deps, 2, 0,
-  schemas, file_default_instances, TableStruct_ZtDrawGiftInfo_2eproto::offsets,
-  file_level_metadata_ZtDrawGiftInfo_2eproto, 2, file_level_enum_descriptors_ZtDrawGiftInfo_2eproto, file_level_service_descriptors_ZtDrawGiftInfo_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_ZtDrawGiftInfo_2eproto_getter() {
+  return &descriptor_table_ZtDrawGiftInfo_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtDrawGiftInfo_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtDrawGiftInfo_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_ZtDrawGiftInfo_2eproto(&descriptor_table_ZtDrawGiftInfo_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -118,154 +125,200 @@ class ZtDrawGiftInfo_ZtDrawPoint::_Internal {
  public:
 };
 
-ZtDrawGiftInfo_ZtDrawPoint::ZtDrawGiftInfo_ZtDrawPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtDrawGiftInfo_ZtDrawPoint::ZtDrawGiftInfo_ZtDrawPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
 }
 ZtDrawGiftInfo_ZtDrawPoint::ZtDrawGiftInfo_ZtDrawPoint(const ZtDrawGiftInfo_ZtDrawPoint& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtDrawGiftInfo_ZtDrawPoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.marginleft_){}
+    , decltype(_impl_.margintop_){}
+    , decltype(_impl_.scaleratio_){}
+    , decltype(_impl_.pointwidth_){}
+    , decltype(_impl_.pointheight_){}
+    , decltype(_impl_.handup_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&marginleft_, &from.marginleft_,
-    static_cast<size_t>(reinterpret_cast<char*>(&handup_) -
-    reinterpret_cast<char*>(&marginleft_)) + sizeof(handup_));
+  ::memcpy(&_impl_.marginleft_, &from._impl_.marginleft_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.handup_) -
+    reinterpret_cast<char*>(&_impl_.marginleft_)) + sizeof(_impl_.handup_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
 }
 
-void ZtDrawGiftInfo_ZtDrawPoint::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&marginleft_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&handup_) -
-      reinterpret_cast<char*>(&marginleft_)) + sizeof(handup_));
+inline void ZtDrawGiftInfo_ZtDrawPoint::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.marginleft_){int64_t{0}}
+    , decltype(_impl_.margintop_){int64_t{0}}
+    , decltype(_impl_.scaleratio_){0}
+    , decltype(_impl_.pointwidth_){int64_t{0}}
+    , decltype(_impl_.pointheight_){int64_t{0}}
+    , decltype(_impl_.handup_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ZtDrawGiftInfo_ZtDrawPoint::~ZtDrawGiftInfo_ZtDrawPoint() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtDrawGiftInfo_ZtDrawPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void ZtDrawGiftInfo_ZtDrawPoint::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void ZtDrawGiftInfo_ZtDrawPoint::ArenaDtor(void* object) {
-  ZtDrawGiftInfo_ZtDrawPoint* _this = reinterpret_cast< ZtDrawGiftInfo_ZtDrawPoint* >(object);
-  (void)_this;
-}
-void ZtDrawGiftInfo_ZtDrawPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtDrawGiftInfo_ZtDrawPoint::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtDrawGiftInfo_ZtDrawPoint& ZtDrawGiftInfo_ZtDrawPoint::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtDrawGiftInfo_ZtDrawPoint_ZtDrawGiftInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtDrawGiftInfo_ZtDrawPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&marginleft_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&handup_) -
-      reinterpret_cast<char*>(&marginleft_)) + sizeof(handup_));
+  ::memset(&_impl_.marginleft_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.handup_) -
+      reinterpret_cast<char*>(&_impl_.marginleft_)) + sizeof(_impl_.handup_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtDrawGiftInfo_ZtDrawPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtDrawGiftInfo_ZtDrawPoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int64 marginLeft = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          marginleft_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.marginleft_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 marginTop = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          margintop_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.margintop_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double scaleRatio = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
-          scaleratio_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.scaleratio_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // bool handup = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          handup_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.handup_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
+      // int64 pointWidth = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.pointwidth_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
         continue;
-      }
+      // int64 pointHeight = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _impl_.pointheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtDrawGiftInfo_ZtDrawPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtDrawGiftInfo_ZtDrawPoint::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 marginLeft = 1;
-  if (this->marginleft() != 0) {
+  if (this->_internal_marginleft() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_marginleft(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_marginleft(), target);
   }
 
   // int64 marginTop = 2;
-  if (this->margintop() != 0) {
+  if (this->_internal_margintop() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_margintop(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_margintop(), target);
   }
 
   // double scaleRatio = 3;
-  if (!(this->scaleratio() <= 0 && this->scaleratio() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_scaleratio = this->_internal_scaleratio();
+  uint64_t raw_scaleratio;
+  memcpy(&raw_scaleratio, &tmp_scaleratio, sizeof(tmp_scaleratio));
+  if (raw_scaleratio != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_scaleratio(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_scaleratio(), target);
   }
 
   // bool handup = 4;
-  if (this->handup() != 0) {
+  if (this->_internal_handup() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_handup(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_handup(), target);
+  }
+
+  // int64 pointWidth = 5;
+  if (this->_internal_pointwidth() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_pointwidth(), target);
+  }
+
+  // int64 pointHeight = 6;
+  if (this->_internal_pointheight() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_pointheight(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
@@ -276,84 +329,85 @@ size_t ZtDrawGiftInfo_ZtDrawPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int64 marginLeft = 1;
-  if (this->marginleft() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_marginleft());
+  if (this->_internal_marginleft() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_marginleft());
   }
 
   // int64 marginTop = 2;
-  if (this->margintop() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_margintop());
+  if (this->_internal_margintop() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_margintop());
   }
 
   // double scaleRatio = 3;
-  if (!(this->scaleratio() <= 0 && this->scaleratio() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_scaleratio = this->_internal_scaleratio();
+  uint64_t raw_scaleratio;
+  memcpy(&raw_scaleratio, &tmp_scaleratio, sizeof(tmp_scaleratio));
+  if (raw_scaleratio != 0) {
     total_size += 1 + 8;
   }
 
+  // int64 pointWidth = 5;
+  if (this->_internal_pointwidth() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_pointwidth());
+  }
+
+  // int64 pointHeight = 6;
+  if (this->_internal_pointheight() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_pointheight());
+  }
+
   // bool handup = 4;
-  if (this->handup() != 0) {
+  if (this->_internal_handup() != 0) {
     total_size += 1 + 1;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtDrawGiftInfo_ZtDrawPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtDrawGiftInfo_ZtDrawPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtDrawGiftInfo_ZtDrawPoint>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtDrawGiftInfo_ZtDrawPoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtDrawGiftInfo_ZtDrawPoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtDrawGiftInfo_ZtDrawPoint::GetClassData() const { return &_class_data_; }
 
-void ZtDrawGiftInfo_ZtDrawPoint::MergeFrom(const ZtDrawGiftInfo_ZtDrawPoint& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtDrawGiftInfo_ZtDrawPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtDrawGiftInfo_ZtDrawPoint*>(&to_msg);
+  auto& from = static_cast<const ZtDrawGiftInfo_ZtDrawPoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.marginleft() != 0) {
-    _internal_set_marginleft(from._internal_marginleft());
+  if (from._internal_marginleft() != 0) {
+    _this->_internal_set_marginleft(from._internal_marginleft());
   }
-  if (from.margintop() != 0) {
-    _internal_set_margintop(from._internal_margintop());
+  if (from._internal_margintop() != 0) {
+    _this->_internal_set_margintop(from._internal_margintop());
   }
-  if (!(from.scaleratio() <= 0 && from.scaleratio() >= 0)) {
-    _internal_set_scaleratio(from._internal_scaleratio());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_scaleratio = from._internal_scaleratio();
+  uint64_t raw_scaleratio;
+  memcpy(&raw_scaleratio, &tmp_scaleratio, sizeof(tmp_scaleratio));
+  if (raw_scaleratio != 0) {
+    _this->_internal_set_scaleratio(from._internal_scaleratio());
   }
-  if (from.handup() != 0) {
-    _internal_set_handup(from._internal_handup());
+  if (from._internal_pointwidth() != 0) {
+    _this->_internal_set_pointwidth(from._internal_pointwidth());
   }
-}
-
-void ZtDrawGiftInfo_ZtDrawPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (from._internal_pointheight() != 0) {
+    _this->_internal_set_pointheight(from._internal_pointheight());
+  }
+  if (from._internal_handup() != 0) {
+    _this->_internal_set_handup(from._internal_handup());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtDrawGiftInfo_ZtDrawPoint::CopyFrom(const ZtDrawGiftInfo_ZtDrawPoint& from) {
@@ -369,19 +423,20 @@ bool ZtDrawGiftInfo_ZtDrawPoint::IsInitialized() const {
 
 void ZtDrawGiftInfo_ZtDrawPoint::InternalSwap(ZtDrawGiftInfo_ZtDrawPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo_ZtDrawPoint, handup_)
-      + sizeof(ZtDrawGiftInfo_ZtDrawPoint::handup_)
-      - PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo_ZtDrawPoint, marginleft_)>(
-          reinterpret_cast<char*>(&marginleft_),
-          reinterpret_cast<char*>(&other->marginleft_));
+      PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo_ZtDrawPoint, _impl_.handup_)
+      + sizeof(ZtDrawGiftInfo_ZtDrawPoint::_impl_.handup_)
+      - PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo_ZtDrawPoint, _impl_.marginleft_)>(
+          reinterpret_cast<char*>(&_impl_.marginleft_),
+          reinterpret_cast<char*>(&other->_impl_.marginleft_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtDrawGiftInfo_ZtDrawPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtDrawGiftInfo_2eproto_getter, &descriptor_table_ZtDrawGiftInfo_2eproto_once,
+      file_level_metadata_ZtDrawGiftInfo_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -389,93 +444,96 @@ class ZtDrawGiftInfo::_Internal {
  public:
 };
 
-ZtDrawGiftInfo::ZtDrawGiftInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  drawpoint_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtDrawGiftInfo::ZtDrawGiftInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtDrawGiftInfo)
 }
 ZtDrawGiftInfo::ZtDrawGiftInfo(const ZtDrawGiftInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      drawpoint_(from.drawpoint_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtDrawGiftInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.drawpoint_){from._impl_.drawpoint_}
+    , decltype(_impl_.screenwidth_){}
+    , decltype(_impl_.screenheight_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&screenwidth_, &from.screenwidth_,
-    static_cast<size_t>(reinterpret_cast<char*>(&screenheight_) -
-    reinterpret_cast<char*>(&screenwidth_)) + sizeof(screenheight_));
+  ::memcpy(&_impl_.screenwidth_, &from._impl_.screenwidth_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.screenheight_) -
+    reinterpret_cast<char*>(&_impl_.screenwidth_)) + sizeof(_impl_.screenheight_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtDrawGiftInfo)
 }
 
-void ZtDrawGiftInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&screenwidth_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&screenheight_) -
-      reinterpret_cast<char*>(&screenwidth_)) + sizeof(screenheight_));
+inline void ZtDrawGiftInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.drawpoint_){arena}
+    , decltype(_impl_.screenwidth_){int64_t{0}}
+    , decltype(_impl_.screenheight_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ZtDrawGiftInfo::~ZtDrawGiftInfo() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtDrawGiftInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtDrawGiftInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void ZtDrawGiftInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.drawpoint_.~RepeatedPtrField();
 }
 
-void ZtDrawGiftInfo::ArenaDtor(void* object) {
-  ZtDrawGiftInfo* _this = reinterpret_cast< ZtDrawGiftInfo* >(object);
-  (void)_this;
-}
-void ZtDrawGiftInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtDrawGiftInfo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtDrawGiftInfo& ZtDrawGiftInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtDrawGiftInfo_ZtDrawGiftInfo_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtDrawGiftInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtDrawGiftInfo)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  drawpoint_.Clear();
-  ::memset(&screenwidth_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&screenheight_) -
-      reinterpret_cast<char*>(&screenwidth_)) + sizeof(screenheight_));
+  _impl_.drawpoint_.Clear();
+  ::memset(&_impl_.screenwidth_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.screenheight_) -
+      reinterpret_cast<char*>(&_impl_.screenwidth_)) + sizeof(_impl_.screenheight_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtDrawGiftInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtDrawGiftInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int64 screenWidth = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          screenwidth_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.screenwidth_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 screenHeight = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          screenheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.screenheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint drawPoint = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -483,58 +541,60 @@ const char* ZtDrawGiftInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtDrawGiftInfo::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtDrawGiftInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtDrawGiftInfo)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 screenWidth = 1;
-  if (this->screenwidth() != 0) {
+  if (this->_internal_screenwidth() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_screenwidth(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_screenwidth(), target);
   }
 
   // int64 screenHeight = 2;
-  if (this->screenheight() != 0) {
+  if (this->_internal_screenheight() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_screenheight(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_screenheight(), target);
   }
 
   // repeated .AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint drawPoint = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_drawpoint_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_drawpoint_size()); i < n; i++) {
+    const auto& repfield = this->_internal_drawpoint(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, this->_internal_drawpoint(i), target, stream);
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtDrawGiftInfo)
@@ -545,76 +605,53 @@ size_t ZtDrawGiftInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtDrawGiftInfo)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.ZtDrawGiftInfo.ZtDrawPoint drawPoint = 3;
   total_size += 1UL * this->_internal_drawpoint_size();
-  for (const auto& msg : this->drawpoint_) {
+  for (const auto& msg : this->_impl_.drawpoint_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // int64 screenWidth = 1;
-  if (this->screenwidth() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_screenwidth());
+  if (this->_internal_screenwidth() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_screenwidth());
   }
 
   // int64 screenHeight = 2;
-  if (this->screenheight() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_screenheight());
+  if (this->_internal_screenheight() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_screenheight());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtDrawGiftInfo::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtDrawGiftInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtDrawGiftInfo* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtDrawGiftInfo>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtDrawGiftInfo)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtDrawGiftInfo)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtDrawGiftInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtDrawGiftInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtDrawGiftInfo::GetClassData() const { return &_class_data_; }
 
-void ZtDrawGiftInfo::MergeFrom(const ZtDrawGiftInfo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtDrawGiftInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtDrawGiftInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtDrawGiftInfo*>(&to_msg);
+  auto& from = static_cast<const ZtDrawGiftInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtDrawGiftInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  drawpoint_.MergeFrom(from.drawpoint_);
-  if (from.screenwidth() != 0) {
-    _internal_set_screenwidth(from._internal_screenwidth());
+  _this->_impl_.drawpoint_.MergeFrom(from._impl_.drawpoint_);
+  if (from._internal_screenwidth() != 0) {
+    _this->_internal_set_screenwidth(from._internal_screenwidth());
   }
-  if (from.screenheight() != 0) {
-    _internal_set_screenheight(from._internal_screenheight());
+  if (from._internal_screenheight() != 0) {
+    _this->_internal_set_screenheight(from._internal_screenheight());
   }
-}
-
-void ZtDrawGiftInfo::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtDrawGiftInfo)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtDrawGiftInfo::CopyFrom(const ZtDrawGiftInfo& from) {
@@ -630,28 +667,31 @@ bool ZtDrawGiftInfo::IsInitialized() const {
 
 void ZtDrawGiftInfo::InternalSwap(ZtDrawGiftInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  drawpoint_.InternalSwap(&other->drawpoint_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.drawpoint_.InternalSwap(&other->_impl_.drawpoint_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo, screenheight_)
-      + sizeof(ZtDrawGiftInfo::screenheight_)
-      - PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo, screenwidth_)>(
-          reinterpret_cast<char*>(&screenwidth_),
-          reinterpret_cast<char*>(&other->screenwidth_));
+      PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo, _impl_.screenheight_)
+      + sizeof(ZtDrawGiftInfo::_impl_.screenheight_)
+      - PROTOBUF_FIELD_OFFSET(ZtDrawGiftInfo, _impl_.screenwidth_)>(
+          reinterpret_cast<char*>(&_impl_.screenwidth_),
+          reinterpret_cast<char*>(&other->_impl_.screenwidth_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtDrawGiftInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtDrawGiftInfo_2eproto_getter, &descriptor_table_ZtDrawGiftInfo_2eproto_once,
+      file_level_metadata_ZtDrawGiftInfo_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtDrawGiftInfo_ZtDrawPoint >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtDrawGiftInfo* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtDrawGiftInfo >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtDrawGiftInfo*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtDrawGiftInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtDrawGiftInfo >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

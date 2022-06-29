@@ -14,48 +14,56 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class ZtLiveScMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveScMessage> _instance;
-} _ZtLiveScMessage_default_instance_;
+PROTOBUF_CONSTEXPR ZtLiveScMessage::ZtLiveScMessage(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.messagetype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.payload_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.liveid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.ticket_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.servertimestampms_)*/int64_t{0}
+  , /*decltype(_impl_.compressiontype_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtLiveScMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtLiveScMessageDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtLiveScMessageDefaultTypeInternal() {}
+  union {
+    ZtLiveScMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtLiveScMessageDefaultTypeInternal _ZtLiveScMessage_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_ZtLiveScMessage_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_ZtLiveScMessage_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ZtLiveScMessage_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveScMessage_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveScMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveScMessage_2eproto[1];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_ZtLiveScMessage_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveScMessage_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ZtLiveScMessage_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_ZtLiveScMessage_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, messagetype_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, compressiontype_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, payload_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, liveid_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, ticket_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, servertimestampms_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, _impl_.messagetype_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, _impl_.compressiontype_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, _impl_.payload_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, _impl_.liveid_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, _impl_.ticket_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveScMessage, _impl_.servertimestampms_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::ZtLiveScMessage)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::ZtLiveScMessage)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtLiveScMessage_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_ZtLiveScMessage_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_ZtLiveScMessage_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -68,21 +76,21 @@ const char descriptor_table_protodef_ZtLiveScMessage_2eproto[] PROTOBUF_SECTION_
   "e\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE\020\001\022\010\n\004GZIP\020\002b\006prot"
   "o3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveScMessage_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_ZtLiveScMessage_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_ZtLiveScMessage_2eproto = {
+    false, false, 282, descriptor_table_protodef_ZtLiveScMessage_2eproto,
+    "ZtLiveScMessage.proto",
+    &descriptor_table_ZtLiveScMessage_2eproto_once, nullptr, 0, 1,
+    schemas, file_default_instances, TableStruct_ZtLiveScMessage_2eproto::offsets,
+    file_level_metadata_ZtLiveScMessage_2eproto, file_level_enum_descriptors_ZtLiveScMessage_2eproto,
+    file_level_service_descriptors_ZtLiveScMessage_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveScMessage_2eproto_sccs[1] = {
-  &scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveScMessage_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveScMessage_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveScMessage_2eproto, "ZtLiveScMessage.proto", 282,
-  &descriptor_table_ZtLiveScMessage_2eproto_once, descriptor_table_ZtLiveScMessage_2eproto_sccs, descriptor_table_ZtLiveScMessage_2eproto_deps, 1, 0,
-  schemas, file_default_instances, TableStruct_ZtLiveScMessage_2eproto::offsets,
-  file_level_metadata_ZtLiveScMessage_2eproto, 1, file_level_enum_descriptors_ZtLiveScMessage_2eproto, file_level_service_descriptors_ZtLiveScMessage_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_ZtLiveScMessage_2eproto_getter() {
+  return &descriptor_table_ZtLiveScMessage_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveScMessage_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveScMessage_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_ZtLiveScMessage_2eproto(&descriptor_table_ZtLiveScMessage_2eproto);
 namespace AcFunDanmu {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ZtLiveScMessage_CompressionType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_ZtLiveScMessage_2eproto);
@@ -99,14 +107,14 @@ bool ZtLiveScMessage_CompressionType_IsValid(int value) {
   }
 }
 
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 constexpr ZtLiveScMessage_CompressionType ZtLiveScMessage::UNKNOWN;
 constexpr ZtLiveScMessage_CompressionType ZtLiveScMessage::NONE;
 constexpr ZtLiveScMessage_CompressionType ZtLiveScMessage::GZIP;
 constexpr ZtLiveScMessage_CompressionType ZtLiveScMessage::CompressionType_MIN;
 constexpr ZtLiveScMessage_CompressionType ZtLiveScMessage::CompressionType_MAX;
 constexpr int ZtLiveScMessage::CompressionType_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
@@ -114,185 +122,224 @@ class ZtLiveScMessage::_Internal {
  public:
 };
 
-ZtLiveScMessage::ZtLiveScMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtLiveScMessage::ZtLiveScMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtLiveScMessage)
 }
 ZtLiveScMessage::ZtLiveScMessage(const ZtLiveScMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtLiveScMessage* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.messagetype_){}
+    , decltype(_impl_.payload_){}
+    , decltype(_impl_.liveid_){}
+    , decltype(_impl_.ticket_){}
+    , decltype(_impl_.servertimestampms_){}
+    , decltype(_impl_.compressiontype_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  messagetype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.messagetype_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.messagetype_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_messagetype().empty()) {
-    messagetype_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_messagetype(), 
-      GetArena());
+    _this->_impl_.messagetype_.Set(from._internal_messagetype(), 
+      _this->GetArenaForAllocation());
   }
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.payload_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_payload().empty()) {
-    payload_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payload(), 
-      GetArena());
+    _this->_impl_.payload_.Set(from._internal_payload(), 
+      _this->GetArenaForAllocation());
   }
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.liveid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.liveid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_liveid().empty()) {
-    liveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_liveid(), 
-      GetArena());
+    _this->_impl_.liveid_.Set(from._internal_liveid(), 
+      _this->GetArenaForAllocation());
   }
-  ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.ticket_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ticket_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_ticket().empty()) {
-    ticket_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ticket(), 
-      GetArena());
+    _this->_impl_.ticket_.Set(from._internal_ticket(), 
+      _this->GetArenaForAllocation());
   }
-  ::memcpy(&servertimestampms_, &from.servertimestampms_,
-    static_cast<size_t>(reinterpret_cast<char*>(&compressiontype_) -
-    reinterpret_cast<char*>(&servertimestampms_)) + sizeof(compressiontype_));
+  ::memcpy(&_impl_.servertimestampms_, &from._impl_.servertimestampms_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.compressiontype_) -
+    reinterpret_cast<char*>(&_impl_.servertimestampms_)) + sizeof(_impl_.compressiontype_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveScMessage)
 }
 
-void ZtLiveScMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto.base);
-  messagetype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&servertimestampms_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&compressiontype_) -
-      reinterpret_cast<char*>(&servertimestampms_)) + sizeof(compressiontype_));
+inline void ZtLiveScMessage::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.messagetype_){}
+    , decltype(_impl_.payload_){}
+    , decltype(_impl_.liveid_){}
+    , decltype(_impl_.ticket_){}
+    , decltype(_impl_.servertimestampms_){int64_t{0}}
+    , decltype(_impl_.compressiontype_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.messagetype_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.messagetype_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.payload_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.liveid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.liveid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.ticket_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ticket_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ZtLiveScMessage::~ZtLiveScMessage() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtLiveScMessage)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtLiveScMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  messagetype_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ticket_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void ZtLiveScMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.messagetype_.Destroy();
+  _impl_.payload_.Destroy();
+  _impl_.liveid_.Destroy();
+  _impl_.ticket_.Destroy();
 }
 
-void ZtLiveScMessage::ArenaDtor(void* object) {
-  ZtLiveScMessage* _this = reinterpret_cast< ZtLiveScMessage* >(object);
-  (void)_this;
-}
-void ZtLiveScMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtLiveScMessage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtLiveScMessage& ZtLiveScMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveScMessage_ZtLiveScMessage_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveScMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveScMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  messagetype_.ClearToEmpty();
-  payload_.ClearToEmpty();
-  liveid_.ClearToEmpty();
-  ticket_.ClearToEmpty();
-  ::memset(&servertimestampms_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&compressiontype_) -
-      reinterpret_cast<char*>(&servertimestampms_)) + sizeof(compressiontype_));
+  _impl_.messagetype_.ClearToEmpty();
+  _impl_.payload_.ClearToEmpty();
+  _impl_.liveid_.ClearToEmpty();
+  _impl_.ticket_.ClearToEmpty();
+  ::memset(&_impl_.servertimestampms_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.compressiontype_) -
+      reinterpret_cast<char*>(&_impl_.servertimestampms_)) + sizeof(_impl_.compressiontype_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtLiveScMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtLiveScMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string messageType = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_messagetype();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveScMessage.messageType"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveScMessage.messageType"));
+        } else
+          goto handle_unusual;
         continue;
       // .AcFunDanmu.ZtLiveScMessage.CompressionType compressionType = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_compressiontype(static_cast<::AcFunDanmu::ZtLiveScMessage_CompressionType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // bytes payload = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_payload();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string liveId = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_liveid();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveScMessage.liveId"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveScMessage.liveId"));
+        } else
+          goto handle_unusual;
         continue;
       // string ticket = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_ticket();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveScMessage.ticket"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveScMessage.ticket"));
+        } else
+          goto handle_unusual;
         continue;
       // int64 serverTimestampMs = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
-          servertimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _impl_.servertimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtLiveScMessage::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtLiveScMessage::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtLiveScMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string messageType = 1;
-  if (this->messagetype().size() > 0) {
+  if (!this->_internal_messagetype().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_messagetype().data(), static_cast<int>(this->_internal_messagetype().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -302,20 +349,20 @@ failure:
   }
 
   // .AcFunDanmu.ZtLiveScMessage.CompressionType compressionType = 2;
-  if (this->compressiontype() != 0) {
+  if (this->_internal_compressiontype() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       2, this->_internal_compressiontype(), target);
   }
 
   // bytes payload = 3;
-  if (this->payload().size() > 0) {
+  if (!this->_internal_payload().empty()) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_payload(), target);
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->_internal_liveid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_liveid().data(), static_cast<int>(this->_internal_liveid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -325,7 +372,7 @@ failure:
   }
 
   // string ticket = 5;
-  if (this->ticket().size() > 0) {
+  if (!this->_internal_ticket().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_ticket().data(), static_cast<int>(this->_internal_ticket().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -335,13 +382,13 @@ failure:
   }
 
   // int64 serverTimestampMs = 6;
-  if (this->servertimestampms() != 0) {
+  if (this->_internal_servertimestampms() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(6, this->_internal_servertimestampms(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_servertimestampms(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtLiveScMessage)
@@ -352,107 +399,86 @@ size_t ZtLiveScMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtLiveScMessage)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string messageType = 1;
-  if (this->messagetype().size() > 0) {
+  if (!this->_internal_messagetype().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_messagetype());
   }
 
   // bytes payload = 3;
-  if (this->payload().size() > 0) {
+  if (!this->_internal_payload().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payload());
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->_internal_liveid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_liveid());
   }
 
   // string ticket = 5;
-  if (this->ticket().size() > 0) {
+  if (!this->_internal_ticket().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_ticket());
   }
 
   // int64 serverTimestampMs = 6;
-  if (this->servertimestampms() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_servertimestampms());
+  if (this->_internal_servertimestampms() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_servertimestampms());
   }
 
   // .AcFunDanmu.ZtLiveScMessage.CompressionType compressionType = 2;
-  if (this->compressiontype() != 0) {
+  if (this->_internal_compressiontype() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_compressiontype());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_compressiontype());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtLiveScMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtLiveScMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtLiveScMessage* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtLiveScMessage>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtLiveScMessage)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtLiveScMessage)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtLiveScMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtLiveScMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtLiveScMessage::GetClassData() const { return &_class_data_; }
 
-void ZtLiveScMessage::MergeFrom(const ZtLiveScMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveScMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtLiveScMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtLiveScMessage*>(&to_msg);
+  auto& from = static_cast<const ZtLiveScMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveScMessage)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.messagetype().size() > 0) {
-    _internal_set_messagetype(from._internal_messagetype());
+  if (!from._internal_messagetype().empty()) {
+    _this->_internal_set_messagetype(from._internal_messagetype());
   }
-  if (from.payload().size() > 0) {
-    _internal_set_payload(from._internal_payload());
+  if (!from._internal_payload().empty()) {
+    _this->_internal_set_payload(from._internal_payload());
   }
-  if (from.liveid().size() > 0) {
-    _internal_set_liveid(from._internal_liveid());
+  if (!from._internal_liveid().empty()) {
+    _this->_internal_set_liveid(from._internal_liveid());
   }
-  if (from.ticket().size() > 0) {
-    _internal_set_ticket(from._internal_ticket());
+  if (!from._internal_ticket().empty()) {
+    _this->_internal_set_ticket(from._internal_ticket());
   }
-  if (from.servertimestampms() != 0) {
-    _internal_set_servertimestampms(from._internal_servertimestampms());
+  if (from._internal_servertimestampms() != 0) {
+    _this->_internal_set_servertimestampms(from._internal_servertimestampms());
   }
-  if (from.compressiontype() != 0) {
-    _internal_set_compressiontype(from._internal_compressiontype());
+  if (from._internal_compressiontype() != 0) {
+    _this->_internal_set_compressiontype(from._internal_compressiontype());
   }
-}
-
-void ZtLiveScMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtLiveScMessage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtLiveScMessage::CopyFrom(const ZtLiveScMessage& from) {
@@ -468,28 +494,44 @@ bool ZtLiveScMessage::IsInitialized() const {
 
 void ZtLiveScMessage::InternalSwap(ZtLiveScMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  messagetype_.Swap(&other->messagetype_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payload_.Swap(&other->payload_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  liveid_.Swap(&other->liveid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ticket_.Swap(&other->ticket_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.messagetype_, lhs_arena,
+      &other->_impl_.messagetype_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.payload_, lhs_arena,
+      &other->_impl_.payload_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.liveid_, lhs_arena,
+      &other->_impl_.liveid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.ticket_, lhs_arena,
+      &other->_impl_.ticket_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ZtLiveScMessage, compressiontype_)
-      + sizeof(ZtLiveScMessage::compressiontype_)
-      - PROTOBUF_FIELD_OFFSET(ZtLiveScMessage, servertimestampms_)>(
-          reinterpret_cast<char*>(&servertimestampms_),
-          reinterpret_cast<char*>(&other->servertimestampms_));
+      PROTOBUF_FIELD_OFFSET(ZtLiveScMessage, _impl_.compressiontype_)
+      + sizeof(ZtLiveScMessage::_impl_.compressiontype_)
+      - PROTOBUF_FIELD_OFFSET(ZtLiveScMessage, _impl_.servertimestampms_)>(
+          reinterpret_cast<char*>(&_impl_.servertimestampms_),
+          reinterpret_cast<char*>(&other->_impl_.servertimestampms_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveScMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtLiveScMessage_2eproto_getter, &descriptor_table_ZtLiveScMessage_2eproto_once,
+      file_level_metadata_ZtLiveScMessage_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveScMessage* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveScMessage >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveScMessage*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveScMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtLiveScMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

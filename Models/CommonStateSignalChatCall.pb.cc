@@ -14,68 +14,80 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class CommonStateSignalChatCallDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonStateSignalChatCall> _instance;
-} _CommonStateSignalChatCall_default_instance_;
+PROTOBUF_CONSTEXPR CommonStateSignalChatCall::CommonStateSignalChatCall(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.chatid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.liveid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.calltimestampms_)*/int64_t{0}
+  , /*decltype(_impl_.mediatype_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonStateSignalChatCallDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonStateSignalChatCallDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonStateSignalChatCallDefaultTypeInternal() {}
+  union {
+    CommonStateSignalChatCall _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonStateSignalChatCallDefaultTypeInternal _CommonStateSignalChatCall_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonStateSignalChatCall_CommonStateSignalChatCall_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_CommonStateSignalChatCall_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalChatCall_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalChatCall_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_CommonStateSignalChatCall_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonStateSignalChatCall();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonStateSignalChatCall_CommonStateSignalChatCall_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonStateSignalChatCall_CommonStateSignalChatCall_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonStateSignalChatCall_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonStateSignalChatCall_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonStateSignalChatCall_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonStateSignalChatCall_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_CommonStateSignalChatCall_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, chatid_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, liveid_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, calltimestampms_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, _impl_.chatid_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, _impl_.liveid_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, _impl_.calltimestampms_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonStateSignalChatCall, _impl_.mediatype_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::CommonStateSignalChatCall)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::CommonStateSignalChatCall)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonStateSignalChatCall_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_CommonStateSignalChatCall_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_CommonStateSignalChatCall_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\037CommonStateSignalChatCall.proto\022\nAcFun"
-  "Danmu\"T\n\031CommonStateSignalChatCall\022\016\n\006ch"
-  "atId\030\001 \001(\t\022\016\n\006liveId\030\002 \001(\t\022\027\n\017callTimest"
-  "ampMs\030\003 \001(\003b\006proto3"
+  "Danmu\032\023ChatMediaType.proto\"\202\001\n\031CommonSta"
+  "teSignalChatCall\022\016\n\006chatId\030\001 \001(\t\022\016\n\006live"
+  "Id\030\002 \001(\t\022\027\n\017callTimestampMs\030\003 \001(\003\022,\n\tmed"
+  "iaType\030\004 \001(\0162\031.AcFunDanmu.ChatMediaTypeb"
+  "\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonStateSignalChatCall_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_CommonStateSignalChatCall_2eproto_deps[1] = {
+  &::descriptor_table_ChatMediaType_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonStateSignalChatCall_2eproto_sccs[1] = {
-  &scc_info_CommonStateSignalChatCall_CommonStateSignalChatCall_2eproto.base,
+static ::_pbi::once_flag descriptor_table_CommonStateSignalChatCall_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_CommonStateSignalChatCall_2eproto = {
+    false, false, 207, descriptor_table_protodef_CommonStateSignalChatCall_2eproto,
+    "CommonStateSignalChatCall.proto",
+    &descriptor_table_CommonStateSignalChatCall_2eproto_once, descriptor_table_CommonStateSignalChatCall_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_CommonStateSignalChatCall_2eproto::offsets,
+    file_level_metadata_CommonStateSignalChatCall_2eproto, file_level_enum_descriptors_CommonStateSignalChatCall_2eproto,
+    file_level_service_descriptors_CommonStateSignalChatCall_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonStateSignalChatCall_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonStateSignalChatCall_2eproto = {
-  false, false, descriptor_table_protodef_CommonStateSignalChatCall_2eproto, "CommonStateSignalChatCall.proto", 139,
-  &descriptor_table_CommonStateSignalChatCall_2eproto_once, descriptor_table_CommonStateSignalChatCall_2eproto_sccs, descriptor_table_CommonStateSignalChatCall_2eproto_deps, 1, 0,
-  schemas, file_default_instances, TableStruct_CommonStateSignalChatCall_2eproto::offsets,
-  file_level_metadata_CommonStateSignalChatCall_2eproto, 1, file_level_enum_descriptors_CommonStateSignalChatCall_2eproto, file_level_service_descriptors_CommonStateSignalChatCall_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_CommonStateSignalChatCall_2eproto_getter() {
+  return &descriptor_table_CommonStateSignalChatCall_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonStateSignalChatCall_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonStateSignalChatCall_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_CommonStateSignalChatCall_2eproto(&descriptor_table_CommonStateSignalChatCall_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -84,137 +96,173 @@ class CommonStateSignalChatCall::_Internal {
  public:
 };
 
-CommonStateSignalChatCall::CommonStateSignalChatCall(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonStateSignalChatCall::CommonStateSignalChatCall(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonStateSignalChatCall)
 }
 CommonStateSignalChatCall::CommonStateSignalChatCall(const CommonStateSignalChatCall& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonStateSignalChatCall* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.chatid_){}
+    , decltype(_impl_.liveid_){}
+    , decltype(_impl_.calltimestampms_){}
+    , decltype(_impl_.mediatype_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.chatid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.chatid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_chatid().empty()) {
-    chatid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_chatid(), 
-      GetArena());
+    _this->_impl_.chatid_.Set(from._internal_chatid(), 
+      _this->GetArenaForAllocation());
   }
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.liveid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.liveid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_liveid().empty()) {
-    liveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_liveid(), 
-      GetArena());
+    _this->_impl_.liveid_.Set(from._internal_liveid(), 
+      _this->GetArenaForAllocation());
   }
-  calltimestampms_ = from.calltimestampms_;
+  ::memcpy(&_impl_.calltimestampms_, &from._impl_.calltimestampms_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.mediatype_) -
+    reinterpret_cast<char*>(&_impl_.calltimestampms_)) + sizeof(_impl_.mediatype_));
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonStateSignalChatCall)
 }
 
-void CommonStateSignalChatCall::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonStateSignalChatCall_CommonStateSignalChatCall_2eproto.base);
-  chatid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  calltimestampms_ = PROTOBUF_LONGLONG(0);
+inline void CommonStateSignalChatCall::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.chatid_){}
+    , decltype(_impl_.liveid_){}
+    , decltype(_impl_.calltimestampms_){int64_t{0}}
+    , decltype(_impl_.mediatype_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.chatid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.chatid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.liveid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.liveid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CommonStateSignalChatCall::~CommonStateSignalChatCall() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonStateSignalChatCall)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonStateSignalChatCall::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  chatid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void CommonStateSignalChatCall::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.chatid_.Destroy();
+  _impl_.liveid_.Destroy();
 }
 
-void CommonStateSignalChatCall::ArenaDtor(void* object) {
-  CommonStateSignalChatCall* _this = reinterpret_cast< CommonStateSignalChatCall* >(object);
-  (void)_this;
-}
-void CommonStateSignalChatCall::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonStateSignalChatCall::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonStateSignalChatCall& CommonStateSignalChatCall::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonStateSignalChatCall_CommonStateSignalChatCall_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonStateSignalChatCall::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonStateSignalChatCall)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  chatid_.ClearToEmpty();
-  liveid_.ClearToEmpty();
-  calltimestampms_ = PROTOBUF_LONGLONG(0);
+  _impl_.chatid_.ClearToEmpty();
+  _impl_.liveid_.ClearToEmpty();
+  ::memset(&_impl_.calltimestampms_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.mediatype_) -
+      reinterpret_cast<char*>(&_impl_.calltimestampms_)) + sizeof(_impl_.mediatype_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonStateSignalChatCall::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonStateSignalChatCall::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string chatId = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_chatid();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalChatCall.chatId"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalChatCall.chatId"));
+        } else
+          goto handle_unusual;
         continue;
       // string liveId = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_liveid();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalChatCall.liveId"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonStateSignalChatCall.liveId"));
+        } else
+          goto handle_unusual;
         continue;
       // int64 callTimestampMs = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          calltimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.calltimestampms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
+      // .AcFunDanmu.ChatMediaType mediaType = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_mediatype(static_cast<::AcFunDanmu::ChatMediaType>(val));
+        } else
+          goto handle_unusual;
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonStateSignalChatCall::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonStateSignalChatCall::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonStateSignalChatCall)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string chatId = 1;
-  if (this->chatid().size() > 0) {
+  if (!this->_internal_chatid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chatid().data(), static_cast<int>(this->_internal_chatid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -224,7 +272,7 @@ failure:
   }
 
   // string liveId = 2;
-  if (this->liveid().size() > 0) {
+  if (!this->_internal_liveid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_liveid().data(), static_cast<int>(this->_internal_liveid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -234,13 +282,20 @@ failure:
   }
 
   // int64 callTimestampMs = 3;
-  if (this->calltimestampms() != 0) {
+  if (this->_internal_calltimestampms() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_calltimestampms(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_calltimestampms(), target);
+  }
+
+  // .AcFunDanmu.ChatMediaType mediaType = 4;
+  if (this->_internal_mediatype() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      4, this->_internal_mediatype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonStateSignalChatCall)
@@ -251,78 +306,66 @@ size_t CommonStateSignalChatCall::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonStateSignalChatCall)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string chatId = 1;
-  if (this->chatid().size() > 0) {
+  if (!this->_internal_chatid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_chatid());
   }
 
   // string liveId = 2;
-  if (this->liveid().size() > 0) {
+  if (!this->_internal_liveid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_liveid());
   }
 
   // int64 callTimestampMs = 3;
-  if (this->calltimestampms() != 0) {
+  if (this->_internal_calltimestampms() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_calltimestampms());
+  }
+
+  // .AcFunDanmu.ChatMediaType mediaType = 4;
+  if (this->_internal_mediatype() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_calltimestampms());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_mediatype());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonStateSignalChatCall::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonStateSignalChatCall)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonStateSignalChatCall* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonStateSignalChatCall>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonStateSignalChatCall)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonStateSignalChatCall)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonStateSignalChatCall::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonStateSignalChatCall::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonStateSignalChatCall::GetClassData() const { return &_class_data_; }
 
-void CommonStateSignalChatCall::MergeFrom(const CommonStateSignalChatCall& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalChatCall)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonStateSignalChatCall::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonStateSignalChatCall*>(&to_msg);
+  auto& from = static_cast<const CommonStateSignalChatCall&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonStateSignalChatCall)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.chatid().size() > 0) {
-    _internal_set_chatid(from._internal_chatid());
+  if (!from._internal_chatid().empty()) {
+    _this->_internal_set_chatid(from._internal_chatid());
   }
-  if (from.liveid().size() > 0) {
-    _internal_set_liveid(from._internal_liveid());
+  if (!from._internal_liveid().empty()) {
+    _this->_internal_set_liveid(from._internal_liveid());
   }
-  if (from.calltimestampms() != 0) {
-    _internal_set_calltimestampms(from._internal_calltimestampms());
+  if (from._internal_calltimestampms() != 0) {
+    _this->_internal_set_calltimestampms(from._internal_calltimestampms());
   }
-}
-
-void CommonStateSignalChatCall::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonStateSignalChatCall)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (from._internal_mediatype() != 0) {
+    _this->_internal_set_mediatype(from._internal_mediatype());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonStateSignalChatCall::CopyFrom(const CommonStateSignalChatCall& from) {
@@ -338,21 +381,36 @@ bool CommonStateSignalChatCall::IsInitialized() const {
 
 void CommonStateSignalChatCall::InternalSwap(CommonStateSignalChatCall* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  chatid_.Swap(&other->chatid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  liveid_.Swap(&other->liveid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(calltimestampms_, other->calltimestampms_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.chatid_, lhs_arena,
+      &other->_impl_.chatid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.liveid_, lhs_arena,
+      &other->_impl_.liveid_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CommonStateSignalChatCall, _impl_.mediatype_)
+      + sizeof(CommonStateSignalChatCall::_impl_.mediatype_)
+      - PROTOBUF_FIELD_OFFSET(CommonStateSignalChatCall, _impl_.calltimestampms_)>(
+          reinterpret_cast<char*>(&_impl_.calltimestampms_),
+          reinterpret_cast<char*>(&other->_impl_.calltimestampms_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonStateSignalChatCall::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonStateSignalChatCall_2eproto_getter, &descriptor_table_CommonStateSignalChatCall_2eproto_once,
+      file_level_metadata_CommonStateSignalChatCall_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalChatCall* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalChatCall >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonStateSignalChatCall*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonStateSignalChatCall >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonStateSignalChatCall >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

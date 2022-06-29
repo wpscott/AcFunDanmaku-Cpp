@@ -14,206 +14,194 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_CommonActionSignalRichText_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ImageCdnNode_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ImageCdnNode_ImageCdnNode_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_ZtLiveUserInfo_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class CommonActionSignalRichText_ImageSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_ImageSegment> _instance;
-} _CommonActionSignalRichText_ImageSegment_default_instance_;
-class CommonActionSignalRichText_PlainSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_PlainSegment> _instance;
-} _CommonActionSignalRichText_PlainSegment_default_instance_;
-class CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_RichTextSegment> _instance;
-} _CommonActionSignalRichText_RichTextSegment_default_instance_;
-class CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText_UserInfoSegment> _instance;
-} _CommonActionSignalRichText_UserInfoSegment_default_instance_;
-class CommonActionSignalRichTextDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CommonActionSignalRichText> _instance;
-} _CommonActionSignalRichText_default_instance_;
+PROTOBUF_CONSTEXPR CommonActionSignalRichText_ImageSegment::CommonActionSignalRichText_ImageSegment(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.pictures_)*/{}
+  , /*decltype(_impl_.alternativetext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.alternativecolor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.d_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonActionSignalRichText_ImageSegmentDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonActionSignalRichText_ImageSegmentDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_ImageSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_ImageSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonActionSignalRichText_ImageSegmentDefaultTypeInternal _CommonActionSignalRichText_ImageSegment_default_instance_;
+PROTOBUF_CONSTEXPR CommonActionSignalRichText_PlainSegment::CommonActionSignalRichText_PlainSegment(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.text_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.color_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.c_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonActionSignalRichText_PlainSegmentDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonActionSignalRichText_PlainSegmentDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_PlainSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_PlainSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonActionSignalRichText_PlainSegmentDefaultTypeInternal _CommonActionSignalRichText_PlainSegment_default_instance_;
+PROTOBUF_CONSTEXPR CommonActionSignalRichText_RichTextSegment::CommonActionSignalRichText_RichTextSegment(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.segment_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_._oneof_case_)*/{}} {}
+struct CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_RichTextSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonActionSignalRichText_RichTextSegmentDefaultTypeInternal _CommonActionSignalRichText_RichTextSegment_default_instance_;
+PROTOBUF_CONSTEXPR CommonActionSignalRichText_UserInfoSegment::CommonActionSignalRichText_UserInfoSegment(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.color_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.user_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText_UserInfoSegment _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonActionSignalRichText_UserInfoSegmentDefaultTypeInternal _CommonActionSignalRichText_UserInfoSegment_default_instance_;
+PROTOBUF_CONSTEXPR CommonActionSignalRichText::CommonActionSignalRichText(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.segments_)*/{}
+  , /*decltype(_impl_.sendtimems_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CommonActionSignalRichTextDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CommonActionSignalRichTextDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CommonActionSignalRichTextDefaultTypeInternal() {}
+  union {
+    CommonActionSignalRichText _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CommonActionSignalRichTextDefaultTypeInternal _CommonActionSignalRichText_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_CommonActionSignalRichText_2eproto[5];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_CommonActionSignalRichText_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_CommonActionSignalRichText_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto}, {
-      &scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_ImageSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_ImageSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto}, {
-      &scc_info_ImageCdnNode_ImageCdnNode_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_PlainSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_PlainSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto}, {}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_RichTextSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_RichTextSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto}, {
-      &scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base,
-      &scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base,
-      &scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base,}};
-
-static void InitDefaultsscc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_CommonActionSignalRichText_UserInfoSegment_default_instance_;
-    new (ptr) ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto}, {
-      &scc_info_ZtLiveUserInfo_ZtLiveUserInfo_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_CommonActionSignalRichText_2eproto[5];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_CommonActionSignalRichText_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_CommonActionSignalRichText_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_CommonActionSignalRichText_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_CommonActionSignalRichText_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, pictures_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, alternativetext_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, alternativecolor_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, _impl_.pictures_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, _impl_.alternativetext_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, _impl_.alternativecolor_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_ImageSegment, _impl_.d_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_PlainSegment, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_PlainSegment, text_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_PlainSegment, color_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_PlainSegment, _impl_.text_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_PlainSegment, _impl_.color_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_PlainSegment, _impl_.c_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_RichTextSegment, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_RichTextSegment, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_RichTextSegment, _impl_._oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_RichTextSegment, segment_),
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_RichTextSegment, _impl_.segment_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment, user_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment, color_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment, _impl_.user_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment, _impl_.color_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText, segments_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText, sendtimems_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText, _impl_.segments_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::CommonActionSignalRichText, _impl_.sendtimems_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_ImageSegment)},
-  { 8, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_PlainSegment)},
-  { 15, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_RichTextSegment)},
-  { 24, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment)},
-  { 31, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_ImageSegment)},
+  { 10, -1, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_PlainSegment)},
+  { 19, -1, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_RichTextSegment)},
+  { 29, -1, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment)},
+  { 37, -1, -1, sizeof(::AcFunDanmu::CommonActionSignalRichText)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonActionSignalRichText_ImageSegment_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonActionSignalRichText_PlainSegment_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonActionSignalRichText_RichTextSegment_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonActionSignalRichText_UserInfoSegment_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_CommonActionSignalRichText_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_CommonActionSignalRichText_ImageSegment_default_instance_._instance,
+  &::AcFunDanmu::_CommonActionSignalRichText_PlainSegment_default_instance_._instance,
+  &::AcFunDanmu::_CommonActionSignalRichText_RichTextSegment_default_instance_._instance,
+  &::AcFunDanmu::_CommonActionSignalRichText_UserInfoSegment_default_instance_._instance,
+  &::AcFunDanmu::_CommonActionSignalRichText_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_CommonActionSignalRichText_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n CommonActionSignalRichText.proto\022\nAcFu"
   "nDanmu\032\024ZtLiveUserInfo.proto\032\022ImageCdnNo"
-  "de.proto\"\331\004\n\032CommonActionSignalRichText\022"
+  "de.proto\"\357\004\n\032CommonActionSignalRichText\022"
   "H\n\010segments\030\001 \003(\01326.AcFunDanmu.CommonAct"
   "ionSignalRichText.RichTextSegment\022\022\n\nsen"
-  "dTimeMs\030\002 \001(\003\032m\n\014ImageSegment\022*\n\010picture"
+  "dTimeMs\030\002 \001(\003\032x\n\014ImageSegment\022*\n\010picture"
   "s\030\001 \003(\0132\030.AcFunDanmu.ImageCdnNode\022\027\n\017alt"
   "ernativeText\030\002 \001(\t\022\030\n\020alternativeColor\030\003"
-  " \001(\t\032+\n\014PlainSegment\022\014\n\004text\030\001 \001(\t\022\r\n\005co"
-  "lor\030\002 \001(\t\032\364\001\n\017RichTextSegment\022J\n\010userInf"
-  "o\030\001 \001(\01326.AcFunDanmu.CommonActionSignalR"
-  "ichText.UserInfoSegmentH\000\022D\n\005plain\030\002 \001(\013"
-  "23.AcFunDanmu.CommonActionSignalRichText"
-  ".PlainSegmentH\000\022D\n\005image\030\003 \001(\01323.AcFunDa"
-  "nmu.CommonActionSignalRichText.ImageSegm"
-  "entH\000B\t\n\007segment\032J\n\017UserInfoSegment\022(\n\004u"
-  "ser\030\001 \001(\0132\032.AcFunDanmu.ZtLiveUserInfo\022\r\n"
-  "\005color\030\002 \001(\tb\006proto3"
+  " \001(\t\022\t\n\001d\030\004 \001(\t\0326\n\014PlainSegment\022\014\n\004text\030"
+  "\001 \001(\t\022\r\n\005color\030\002 \001(\t\022\t\n\001c\030\003 \001(\t\032\364\001\n\017Rich"
+  "TextSegment\022J\n\010userInfo\030\001 \001(\01326.AcFunDan"
+  "mu.CommonActionSignalRichText.UserInfoSe"
+  "gmentH\000\022D\n\005plain\030\002 \001(\01323.AcFunDanmu.Comm"
+  "onActionSignalRichText.PlainSegmentH\000\022D\n"
+  "\005image\030\003 \001(\01323.AcFunDanmu.CommonActionSi"
+  "gnalRichText.ImageSegmentH\000B\t\n\007segment\032J"
+  "\n\017UserInfoSegment\022(\n\004user\030\001 \001(\0132\032.AcFunD"
+  "anmu.ZtLiveUserInfo\022\r\n\005color\030\002 \001(\tb\006prot"
+  "o3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_CommonActionSignalRichText_2eproto_deps[2] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_CommonActionSignalRichText_2eproto_deps[2] = {
   &::descriptor_table_ImageCdnNode_2eproto,
   &::descriptor_table_ZtLiveUserInfo_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_CommonActionSignalRichText_2eproto_sccs[5] = {
-  &scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base,
-  &scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base,
+static ::_pbi::once_flag descriptor_table_CommonActionSignalRichText_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_CommonActionSignalRichText_2eproto = {
+    false, false, 722, descriptor_table_protodef_CommonActionSignalRichText_2eproto,
+    "CommonActionSignalRichText.proto",
+    &descriptor_table_CommonActionSignalRichText_2eproto_once, descriptor_table_CommonActionSignalRichText_2eproto_deps, 2, 5,
+    schemas, file_default_instances, TableStruct_CommonActionSignalRichText_2eproto::offsets,
+    file_level_metadata_CommonActionSignalRichText_2eproto, file_level_enum_descriptors_CommonActionSignalRichText_2eproto,
+    file_level_service_descriptors_CommonActionSignalRichText_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_CommonActionSignalRichText_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CommonActionSignalRichText_2eproto = {
-  false, false, descriptor_table_protodef_CommonActionSignalRichText_2eproto, "CommonActionSignalRichText.proto", 700,
-  &descriptor_table_CommonActionSignalRichText_2eproto_once, descriptor_table_CommonActionSignalRichText_2eproto_sccs, descriptor_table_CommonActionSignalRichText_2eproto_deps, 5, 2,
-  schemas, file_default_instances, TableStruct_CommonActionSignalRichText_2eproto::offsets,
-  file_level_metadata_CommonActionSignalRichText_2eproto, 5, file_level_enum_descriptors_CommonActionSignalRichText_2eproto, file_level_service_descriptors_CommonActionSignalRichText_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_CommonActionSignalRichText_2eproto_getter() {
+  return &descriptor_table_CommonActionSignalRichText_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_CommonActionSignalRichText_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_CommonActionSignalRichText_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_CommonActionSignalRichText_2eproto(&descriptor_table_CommonActionSignalRichText_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -223,87 +211,120 @@ class CommonActionSignalRichText_ImageSegment::_Internal {
 };
 
 void CommonActionSignalRichText_ImageSegment::clear_pictures() {
-  pictures_.Clear();
+  _impl_.pictures_.Clear();
 }
-CommonActionSignalRichText_ImageSegment::CommonActionSignalRichText_ImageSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  pictures_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonActionSignalRichText_ImageSegment::CommonActionSignalRichText_ImageSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
 }
 CommonActionSignalRichText_ImageSegment::CommonActionSignalRichText_ImageSegment(const CommonActionSignalRichText_ImageSegment& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      pictures_(from.pictures_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonActionSignalRichText_ImageSegment* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.pictures_){from._impl_.pictures_}
+    , decltype(_impl_.alternativetext_){}
+    , decltype(_impl_.alternativecolor_){}
+    , decltype(_impl_.d_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  alternativetext_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.alternativetext_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.alternativetext_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_alternativetext().empty()) {
-    alternativetext_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_alternativetext(), 
-      GetArena());
+    _this->_impl_.alternativetext_.Set(from._internal_alternativetext(), 
+      _this->GetArenaForAllocation());
   }
-  alternativecolor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.alternativecolor_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.alternativecolor_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_alternativecolor().empty()) {
-    alternativecolor_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_alternativecolor(), 
-      GetArena());
+    _this->_impl_.alternativecolor_.Set(from._internal_alternativecolor(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.d_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.d_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_d().empty()) {
+    _this->_impl_.d_.Set(from._internal_d(), 
+      _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
 }
 
-void CommonActionSignalRichText_ImageSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base);
-  alternativetext_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  alternativecolor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void CommonActionSignalRichText_ImageSegment::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.pictures_){arena}
+    , decltype(_impl_.alternativetext_){}
+    , decltype(_impl_.alternativecolor_){}
+    , decltype(_impl_.d_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.alternativetext_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.alternativetext_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.alternativecolor_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.alternativecolor_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.d_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.d_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CommonActionSignalRichText_ImageSegment::~CommonActionSignalRichText_ImageSegment() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonActionSignalRichText_ImageSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  alternativetext_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  alternativecolor_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void CommonActionSignalRichText_ImageSegment::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.pictures_.~RepeatedPtrField();
+  _impl_.alternativetext_.Destroy();
+  _impl_.alternativecolor_.Destroy();
+  _impl_.d_.Destroy();
 }
 
-void CommonActionSignalRichText_ImageSegment::ArenaDtor(void* object) {
-  CommonActionSignalRichText_ImageSegment* _this = reinterpret_cast< CommonActionSignalRichText_ImageSegment* >(object);
-  (void)_this;
-}
-void CommonActionSignalRichText_ImageSegment::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonActionSignalRichText_ImageSegment::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonActionSignalRichText_ImageSegment& CommonActionSignalRichText_ImageSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_ImageSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_ImageSegment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  pictures_.Clear();
-  alternativetext_.ClearToEmpty();
-  alternativecolor_.ClearToEmpty();
+  _impl_.pictures_.Clear();
+  _impl_.alternativetext_.ClearToEmpty();
+  _impl_.alternativecolor_.ClearToEmpty();
+  _impl_.d_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonActionSignalRichText_ImageSegment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonActionSignalRichText_ImageSegment::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.ImageCdnNode pictures = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -311,64 +332,78 @@ const char* CommonActionSignalRichText_ImageSegment::_InternalParse(const char* 
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string alternativeText = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_alternativetext();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.ImageSegment.alternativeText"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.ImageSegment.alternativeText"));
+        } else
+          goto handle_unusual;
         continue;
       // string alternativeColor = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_alternativecolor();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.ImageSegment.alternativeColor"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.ImageSegment.alternativeColor"));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
+      // string d = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_d();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.ImageSegment.d"));
+        } else
+          goto handle_unusual;
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonActionSignalRichText_ImageSegment::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonActionSignalRichText_ImageSegment::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.ImageCdnNode pictures = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_pictures_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_pictures_size()); i < n; i++) {
+    const auto& repfield = this->_internal_pictures(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_pictures(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // string alternativeText = 2;
-  if (this->alternativetext().size() > 0) {
+  if (!this->_internal_alternativetext().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_alternativetext().data(), static_cast<int>(this->_internal_alternativetext().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -378,7 +413,7 @@ failure:
   }
 
   // string alternativeColor = 3;
-  if (this->alternativecolor().size() > 0) {
+  if (!this->_internal_alternativecolor().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_alternativecolor().data(), static_cast<int>(this->_internal_alternativecolor().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -387,8 +422,18 @@ failure:
         3, this->_internal_alternativecolor(), target);
   }
 
+  // string d = 4;
+  if (!this->_internal_d().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_d().data(), static_cast<int>(this->_internal_d().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "AcFunDanmu.CommonActionSignalRichText.ImageSegment.d");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_d(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
@@ -399,76 +444,67 @@ size_t CommonActionSignalRichText_ImageSegment::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.ImageCdnNode pictures = 1;
   total_size += 1UL * this->_internal_pictures_size();
-  for (const auto& msg : this->pictures_) {
+  for (const auto& msg : this->_impl_.pictures_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string alternativeText = 2;
-  if (this->alternativetext().size() > 0) {
+  if (!this->_internal_alternativetext().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_alternativetext());
   }
 
   // string alternativeColor = 3;
-  if (this->alternativecolor().size() > 0) {
+  if (!this->_internal_alternativecolor().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_alternativecolor());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // string d = 4;
+  if (!this->_internal_d().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_d());
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonActionSignalRichText_ImageSegment::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonActionSignalRichText_ImageSegment* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonActionSignalRichText_ImageSegment>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonActionSignalRichText_ImageSegment::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonActionSignalRichText_ImageSegment::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonActionSignalRichText_ImageSegment::GetClassData() const { return &_class_data_; }
 
-void CommonActionSignalRichText_ImageSegment::MergeFrom(const CommonActionSignalRichText_ImageSegment& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonActionSignalRichText_ImageSegment::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonActionSignalRichText_ImageSegment*>(&to_msg);
+  auto& from = static_cast<const CommonActionSignalRichText_ImageSegment&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  pictures_.MergeFrom(from.pictures_);
-  if (from.alternativetext().size() > 0) {
-    _internal_set_alternativetext(from._internal_alternativetext());
+  _this->_impl_.pictures_.MergeFrom(from._impl_.pictures_);
+  if (!from._internal_alternativetext().empty()) {
+    _this->_internal_set_alternativetext(from._internal_alternativetext());
   }
-  if (from.alternativecolor().size() > 0) {
-    _internal_set_alternativecolor(from._internal_alternativecolor());
+  if (!from._internal_alternativecolor().empty()) {
+    _this->_internal_set_alternativecolor(from._internal_alternativecolor());
   }
-}
-
-void CommonActionSignalRichText_ImageSegment::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonActionSignalRichText.ImageSegment)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (!from._internal_d().empty()) {
+    _this->_internal_set_d(from._internal_d());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonActionSignalRichText_ImageSegment::CopyFrom(const CommonActionSignalRichText_ImageSegment& from) {
@@ -484,16 +520,29 @@ bool CommonActionSignalRichText_ImageSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_ImageSegment::InternalSwap(CommonActionSignalRichText_ImageSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  pictures_.InternalSwap(&other->pictures_);
-  alternativetext_.Swap(&other->alternativetext_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  alternativecolor_.Swap(&other->alternativecolor_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.pictures_.InternalSwap(&other->_impl_.pictures_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.alternativetext_, lhs_arena,
+      &other->_impl_.alternativetext_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.alternativecolor_, lhs_arena,
+      &other->_impl_.alternativecolor_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.d_, lhs_arena,
+      &other->_impl_.d_, rhs_arena
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_ImageSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -501,127 +550,172 @@ class CommonActionSignalRichText_PlainSegment::_Internal {
  public:
 };
 
-CommonActionSignalRichText_PlainSegment::CommonActionSignalRichText_PlainSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonActionSignalRichText_PlainSegment::CommonActionSignalRichText_PlainSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
 }
 CommonActionSignalRichText_PlainSegment::CommonActionSignalRichText_PlainSegment(const CommonActionSignalRichText_PlainSegment& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonActionSignalRichText_PlainSegment* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.text_){}
+    , decltype(_impl_.color_){}
+    , decltype(_impl_.c_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  text_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.text_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.text_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_text().empty()) {
-    text_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_text(), 
-      GetArena());
+    _this->_impl_.text_.Set(from._internal_text(), 
+      _this->GetArenaForAllocation());
   }
-  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.color_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.color_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_color().empty()) {
-    color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_color(), 
-      GetArena());
+    _this->_impl_.color_.Set(from._internal_color(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.c_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.c_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_c().empty()) {
+    _this->_impl_.c_.Set(from._internal_c(), 
+      _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
 }
 
-void CommonActionSignalRichText_PlainSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base);
-  text_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void CommonActionSignalRichText_PlainSegment::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.text_){}
+    , decltype(_impl_.color_){}
+    , decltype(_impl_.c_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.text_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.text_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.color_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.color_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.c_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.c_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CommonActionSignalRichText_PlainSegment::~CommonActionSignalRichText_PlainSegment() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonActionSignalRichText_PlainSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  text_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  color_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void CommonActionSignalRichText_PlainSegment::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.text_.Destroy();
+  _impl_.color_.Destroy();
+  _impl_.c_.Destroy();
 }
 
-void CommonActionSignalRichText_PlainSegment::ArenaDtor(void* object) {
-  CommonActionSignalRichText_PlainSegment* _this = reinterpret_cast< CommonActionSignalRichText_PlainSegment* >(object);
-  (void)_this;
-}
-void CommonActionSignalRichText_PlainSegment::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonActionSignalRichText_PlainSegment::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonActionSignalRichText_PlainSegment& CommonActionSignalRichText_PlainSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_PlainSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_PlainSegment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  text_.ClearToEmpty();
-  color_.ClearToEmpty();
+  _impl_.text_.ClearToEmpty();
+  _impl_.color_.ClearToEmpty();
+  _impl_.c_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonActionSignalRichText_PlainSegment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonActionSignalRichText_PlainSegment::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string text = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_text();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.PlainSegment.text"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.PlainSegment.text"));
+        } else
+          goto handle_unusual;
         continue;
       // string color = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_color();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.PlainSegment.color"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.PlainSegment.color"));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
+      // string c = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_c();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.PlainSegment.c"));
+        } else
+          goto handle_unusual;
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonActionSignalRichText_PlainSegment::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonActionSignalRichText_PlainSegment::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string text = 1;
-  if (this->text().size() > 0) {
+  if (!this->_internal_text().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_text().data(), static_cast<int>(this->_internal_text().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -631,7 +725,7 @@ failure:
   }
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->_internal_color().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_color().data(), static_cast<int>(this->_internal_color().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -640,8 +734,18 @@ failure:
         2, this->_internal_color(), target);
   }
 
+  // string c = 3;
+  if (!this->_internal_c().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_c().data(), static_cast<int>(this->_internal_c().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "AcFunDanmu.CommonActionSignalRichText.PlainSegment.c");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_c(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
@@ -652,68 +756,59 @@ size_t CommonActionSignalRichText_PlainSegment::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string text = 1;
-  if (this->text().size() > 0) {
+  if (!this->_internal_text().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_text());
   }
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->_internal_color().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_color());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // string c = 3;
+  if (!this->_internal_c().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_c());
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonActionSignalRichText_PlainSegment::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonActionSignalRichText_PlainSegment* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonActionSignalRichText_PlainSegment>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonActionSignalRichText_PlainSegment::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonActionSignalRichText_PlainSegment::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonActionSignalRichText_PlainSegment::GetClassData() const { return &_class_data_; }
 
-void CommonActionSignalRichText_PlainSegment::MergeFrom(const CommonActionSignalRichText_PlainSegment& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonActionSignalRichText_PlainSegment::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonActionSignalRichText_PlainSegment*>(&to_msg);
+  auto& from = static_cast<const CommonActionSignalRichText_PlainSegment&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.text().size() > 0) {
-    _internal_set_text(from._internal_text());
+  if (!from._internal_text().empty()) {
+    _this->_internal_set_text(from._internal_text());
   }
-  if (from.color().size() > 0) {
-    _internal_set_color(from._internal_color());
+  if (!from._internal_color().empty()) {
+    _this->_internal_set_color(from._internal_color());
   }
-}
-
-void CommonActionSignalRichText_PlainSegment::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonActionSignalRichText.PlainSegment)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (!from._internal_c().empty()) {
+    _this->_internal_set_c(from._internal_c());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonActionSignalRichText_PlainSegment::CopyFrom(const CommonActionSignalRichText_PlainSegment& from) {
@@ -729,15 +824,28 @@ bool CommonActionSignalRichText_PlainSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_PlainSegment::InternalSwap(CommonActionSignalRichText_PlainSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  text_.Swap(&other->text_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  color_.Swap(&other->color_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.text_, lhs_arena,
+      &other->_impl_.text_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.color_, lhs_arena,
+      &other->_impl_.color_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.c_, lhs_arena,
+      &other->_impl_.c_, rhs_arena
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_PlainSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -750,82 +858,91 @@ class CommonActionSignalRichText_RichTextSegment::_Internal {
 
 const ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment&
 CommonActionSignalRichText_RichTextSegment::_Internal::userinfo(const CommonActionSignalRichText_RichTextSegment* msg) {
-  return *msg->segment_.userinfo_;
+  return *msg->_impl_.segment_.userinfo_;
 }
 const ::AcFunDanmu::CommonActionSignalRichText_PlainSegment&
 CommonActionSignalRichText_RichTextSegment::_Internal::plain(const CommonActionSignalRichText_RichTextSegment* msg) {
-  return *msg->segment_.plain_;
+  return *msg->_impl_.segment_.plain_;
 }
 const ::AcFunDanmu::CommonActionSignalRichText_ImageSegment&
 CommonActionSignalRichText_RichTextSegment::_Internal::image(const CommonActionSignalRichText_RichTextSegment* msg) {
-  return *msg->segment_.image_;
+  return *msg->_impl_.segment_.image_;
 }
 void CommonActionSignalRichText_RichTextSegment::set_allocated_userinfo(::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment* userinfo) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_segment();
   if (userinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(userinfo);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(userinfo);
     if (message_arena != submessage_arena) {
       userinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, userinfo, submessage_arena);
     }
     set_has_userinfo();
-    segment_.userinfo_ = userinfo;
+    _impl_.segment_.userinfo_ = userinfo;
   }
   // @@protoc_insertion_point(field_set_allocated:AcFunDanmu.CommonActionSignalRichText.RichTextSegment.userInfo)
 }
 void CommonActionSignalRichText_RichTextSegment::set_allocated_plain(::AcFunDanmu::CommonActionSignalRichText_PlainSegment* plain) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_segment();
   if (plain) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(plain);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(plain);
     if (message_arena != submessage_arena) {
       plain = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, plain, submessage_arena);
     }
     set_has_plain();
-    segment_.plain_ = plain;
+    _impl_.segment_.plain_ = plain;
   }
   // @@protoc_insertion_point(field_set_allocated:AcFunDanmu.CommonActionSignalRichText.RichTextSegment.plain)
 }
 void CommonActionSignalRichText_RichTextSegment::set_allocated_image(::AcFunDanmu::CommonActionSignalRichText_ImageSegment* image) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_segment();
   if (image) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(image);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(image);
     if (message_arena != submessage_arena) {
       image = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, image, submessage_arena);
     }
     set_has_image();
-    segment_.image_ = image;
+    _impl_.segment_.image_ = image;
   }
   // @@protoc_insertion_point(field_set_allocated:AcFunDanmu.CommonActionSignalRichText.RichTextSegment.image)
 }
-CommonActionSignalRichText_RichTextSegment::CommonActionSignalRichText_RichTextSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonActionSignalRichText_RichTextSegment::CommonActionSignalRichText_RichTextSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
 }
 CommonActionSignalRichText_RichTextSegment::CommonActionSignalRichText_RichTextSegment(const CommonActionSignalRichText_RichTextSegment& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonActionSignalRichText_RichTextSegment* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.segment_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_segment();
   switch (from.segment_case()) {
     case kUserInfo: {
-      _internal_mutable_userinfo()->::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment::MergeFrom(from._internal_userinfo());
+      _this->_internal_mutable_userinfo()->::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment::MergeFrom(
+          from._internal_userinfo());
       break;
     }
     case kPlain: {
-      _internal_mutable_plain()->::AcFunDanmu::CommonActionSignalRichText_PlainSegment::MergeFrom(from._internal_plain());
+      _this->_internal_mutable_plain()->::AcFunDanmu::CommonActionSignalRichText_PlainSegment::MergeFrom(
+          from._internal_plain());
       break;
     }
     case kImage: {
-      _internal_mutable_image()->::AcFunDanmu::CommonActionSignalRichText_ImageSegment::MergeFrom(from._internal_image());
+      _this->_internal_mutable_image()->::AcFunDanmu::CommonActionSignalRichText_ImageSegment::MergeFrom(
+          from._internal_image());
       break;
     }
     case SEGMENT_NOT_SET: {
@@ -835,57 +952,56 @@ CommonActionSignalRichText_RichTextSegment::CommonActionSignalRichText_RichTextS
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
 }
 
-void CommonActionSignalRichText_RichTextSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base);
+inline void CommonActionSignalRichText_RichTextSegment::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.segment_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}
+  };
   clear_has_segment();
 }
 
 CommonActionSignalRichText_RichTextSegment::~CommonActionSignalRichText_RichTextSegment() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonActionSignalRichText_RichTextSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CommonActionSignalRichText_RichTextSegment::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (has_segment()) {
     clear_segment();
   }
 }
 
-void CommonActionSignalRichText_RichTextSegment::ArenaDtor(void* object) {
-  CommonActionSignalRichText_RichTextSegment* _this = reinterpret_cast< CommonActionSignalRichText_RichTextSegment* >(object);
-  (void)_this;
-}
-void CommonActionSignalRichText_RichTextSegment::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonActionSignalRichText_RichTextSegment::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonActionSignalRichText_RichTextSegment& CommonActionSignalRichText_RichTextSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_RichTextSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_RichTextSegment::clear_segment() {
 // @@protoc_insertion_point(one_of_clear_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
   switch (segment_case()) {
     case kUserInfo: {
-      if (GetArena() == nullptr) {
-        delete segment_.userinfo_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.segment_.userinfo_;
       }
       break;
     }
     case kPlain: {
-      if (GetArena() == nullptr) {
-        delete segment_.plain_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.segment_.plain_;
       }
       break;
     }
     case kImage: {
-      if (GetArena() == nullptr) {
-        delete segment_.image_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.segment_.image_;
       }
       break;
     }
@@ -893,13 +1009,13 @@ void CommonActionSignalRichText_RichTextSegment::clear_segment() {
       break;
     }
   }
-  _oneof_case_[0] = SEGMENT_NOT_SET;
+  _impl_._oneof_case_[0] = SEGMENT_NOT_SET;
 }
 
 
 void CommonActionSignalRichText_RichTextSegment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -907,88 +1023,88 @@ void CommonActionSignalRichText_RichTextSegment::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonActionSignalRichText_RichTextSegment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonActionSignalRichText_RichTextSegment::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .AcFunDanmu.CommonActionSignalRichText.UserInfoSegment userInfo = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_userinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .AcFunDanmu.CommonActionSignalRichText.PlainSegment plain = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_plain(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .AcFunDanmu.CommonActionSignalRichText.ImageSegment image = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_image(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonActionSignalRichText_RichTextSegment::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonActionSignalRichText_RichTextSegment::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .AcFunDanmu.CommonActionSignalRichText.UserInfoSegment userInfo = 1;
   if (_internal_has_userinfo()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::userinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::userinfo(this),
+        _Internal::userinfo(this).GetCachedSize(), target, stream);
   }
 
   // .AcFunDanmu.CommonActionSignalRichText.PlainSegment plain = 2;
   if (_internal_has_plain()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::plain(this), target, stream);
+      InternalWriteMessage(2, _Internal::plain(this),
+        _Internal::plain(this).GetCachedSize(), target, stream);
   }
 
   // .AcFunDanmu.CommonActionSignalRichText.ImageSegment image = 3;
   if (_internal_has_image()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::image(this), target, stream);
+      InternalWriteMessage(3, _Internal::image(this),
+        _Internal::image(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
@@ -999,7 +1115,7 @@ size_t CommonActionSignalRichText_RichTextSegment::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -1008,82 +1124,66 @@ size_t CommonActionSignalRichText_RichTextSegment::ByteSizeLong() const {
     case kUserInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *segment_.userinfo_);
+          *_impl_.segment_.userinfo_);
       break;
     }
     // .AcFunDanmu.CommonActionSignalRichText.PlainSegment plain = 2;
     case kPlain: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *segment_.plain_);
+          *_impl_.segment_.plain_);
       break;
     }
     // .AcFunDanmu.CommonActionSignalRichText.ImageSegment image = 3;
     case kImage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *segment_.image_);
+          *_impl_.segment_.image_);
       break;
     }
     case SEGMENT_NOT_SET: {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonActionSignalRichText_RichTextSegment::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonActionSignalRichText_RichTextSegment* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonActionSignalRichText_RichTextSegment>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonActionSignalRichText_RichTextSegment::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonActionSignalRichText_RichTextSegment::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonActionSignalRichText_RichTextSegment::GetClassData() const { return &_class_data_; }
 
-void CommonActionSignalRichText_RichTextSegment::MergeFrom(const CommonActionSignalRichText_RichTextSegment& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonActionSignalRichText_RichTextSegment::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonActionSignalRichText_RichTextSegment*>(&to_msg);
+  auto& from = static_cast<const CommonActionSignalRichText_RichTextSegment&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   switch (from.segment_case()) {
     case kUserInfo: {
-      _internal_mutable_userinfo()->::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment::MergeFrom(from._internal_userinfo());
+      _this->_internal_mutable_userinfo()->::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment::MergeFrom(
+          from._internal_userinfo());
       break;
     }
     case kPlain: {
-      _internal_mutable_plain()->::AcFunDanmu::CommonActionSignalRichText_PlainSegment::MergeFrom(from._internal_plain());
+      _this->_internal_mutable_plain()->::AcFunDanmu::CommonActionSignalRichText_PlainSegment::MergeFrom(
+          from._internal_plain());
       break;
     }
     case kImage: {
-      _internal_mutable_image()->::AcFunDanmu::CommonActionSignalRichText_ImageSegment::MergeFrom(from._internal_image());
+      _this->_internal_mutable_image()->::AcFunDanmu::CommonActionSignalRichText_ImageSegment::MergeFrom(
+          from._internal_image());
       break;
     }
     case SEGMENT_NOT_SET: {
       break;
     }
   }
-}
-
-void CommonActionSignalRichText_RichTextSegment::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonActionSignalRichText.RichTextSegment)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonActionSignalRichText_RichTextSegment::CopyFrom(const CommonActionSignalRichText_RichTextSegment& from) {
@@ -1099,15 +1199,16 @@ bool CommonActionSignalRichText_RichTextSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_RichTextSegment::InternalSwap(CommonActionSignalRichText_RichTextSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(segment_, other->segment_);
-  swap(_oneof_case_[0], other->_oneof_case_[0]);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.segment_, other->_impl_.segment_);
+  swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_RichTextSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -1118,144 +1219,153 @@ class CommonActionSignalRichText_UserInfoSegment::_Internal {
 
 const ::AcFunDanmu::ZtLiveUserInfo&
 CommonActionSignalRichText_UserInfoSegment::_Internal::user(const CommonActionSignalRichText_UserInfoSegment* msg) {
-  return *msg->user_;
+  return *msg->_impl_.user_;
 }
 void CommonActionSignalRichText_UserInfoSegment::clear_user() {
-  if (GetArena() == nullptr && user_ != nullptr) {
-    delete user_;
+  if (GetArenaForAllocation() == nullptr && _impl_.user_ != nullptr) {
+    delete _impl_.user_;
   }
-  user_ = nullptr;
+  _impl_.user_ = nullptr;
 }
-CommonActionSignalRichText_UserInfoSegment::CommonActionSignalRichText_UserInfoSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonActionSignalRichText_UserInfoSegment::CommonActionSignalRichText_UserInfoSegment(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
 }
 CommonActionSignalRichText_UserInfoSegment::CommonActionSignalRichText_UserInfoSegment(const CommonActionSignalRichText_UserInfoSegment& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonActionSignalRichText_UserInfoSegment* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.color_){}
+    , decltype(_impl_.user_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.color_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.color_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_color().empty()) {
-    color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_color(), 
-      GetArena());
+    _this->_impl_.color_.Set(from._internal_color(), 
+      _this->GetArenaForAllocation());
   }
   if (from._internal_has_user()) {
-    user_ = new ::AcFunDanmu::ZtLiveUserInfo(*from.user_);
-  } else {
-    user_ = nullptr;
+    _this->_impl_.user_ = new ::AcFunDanmu::ZtLiveUserInfo(*from._impl_.user_);
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
 }
 
-void CommonActionSignalRichText_UserInfoSegment::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base);
-  color_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  user_ = nullptr;
+inline void CommonActionSignalRichText_UserInfoSegment::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.color_){}
+    , decltype(_impl_.user_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.color_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.color_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CommonActionSignalRichText_UserInfoSegment::~CommonActionSignalRichText_UserInfoSegment() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonActionSignalRichText_UserInfoSegment::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  color_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete user_;
+inline void CommonActionSignalRichText_UserInfoSegment::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.color_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.user_;
 }
 
-void CommonActionSignalRichText_UserInfoSegment::ArenaDtor(void* object) {
-  CommonActionSignalRichText_UserInfoSegment* _this = reinterpret_cast< CommonActionSignalRichText_UserInfoSegment* >(object);
-  (void)_this;
-}
-void CommonActionSignalRichText_UserInfoSegment::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonActionSignalRichText_UserInfoSegment::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonActionSignalRichText_UserInfoSegment& CommonActionSignalRichText_UserInfoSegment::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_UserInfoSegment_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText_UserInfoSegment::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  color_.ClearToEmpty();
-  if (GetArena() == nullptr && user_ != nullptr) {
-    delete user_;
+  _impl_.color_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.user_ != nullptr) {
+    delete _impl_.user_;
   }
-  user_ = nullptr;
+  _impl_.user_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonActionSignalRichText_UserInfoSegment::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonActionSignalRichText_UserInfoSegment::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .AcFunDanmu.ZtLiveUserInfo user = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_user(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string color = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_color();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.UserInfoSegment.color"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.CommonActionSignalRichText.UserInfoSegment.color"));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonActionSignalRichText_UserInfoSegment::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonActionSignalRichText_UserInfoSegment::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .AcFunDanmu.ZtLiveUserInfo user = 1;
-  if (this->has_user()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_user()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::user(this), target, stream);
+      InternalWriteMessage(1, _Internal::user(this),
+        _Internal::user(this).GetCachedSize(), target, stream);
   }
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->_internal_color().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_color().data(), static_cast<int>(this->_internal_color().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1265,7 +1375,7 @@ failure:
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
@@ -1276,68 +1386,50 @@ size_t CommonActionSignalRichText_UserInfoSegment::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string color = 2;
-  if (this->color().size() > 0) {
+  if (!this->_internal_color().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_color());
   }
 
   // .AcFunDanmu.ZtLiveUserInfo user = 1;
-  if (this->has_user()) {
+  if (this->_internal_has_user()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *user_);
+        *_impl_.user_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonActionSignalRichText_UserInfoSegment::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonActionSignalRichText_UserInfoSegment* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonActionSignalRichText_UserInfoSegment>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonActionSignalRichText_UserInfoSegment::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonActionSignalRichText_UserInfoSegment::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonActionSignalRichText_UserInfoSegment::GetClassData() const { return &_class_data_; }
 
-void CommonActionSignalRichText_UserInfoSegment::MergeFrom(const CommonActionSignalRichText_UserInfoSegment& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonActionSignalRichText_UserInfoSegment::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonActionSignalRichText_UserInfoSegment*>(&to_msg);
+  auto& from = static_cast<const CommonActionSignalRichText_UserInfoSegment&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.color().size() > 0) {
-    _internal_set_color(from._internal_color());
+  if (!from._internal_color().empty()) {
+    _this->_internal_set_color(from._internal_color());
   }
-  if (from.has_user()) {
-    _internal_mutable_user()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(from._internal_user());
+  if (from._internal_has_user()) {
+    _this->_internal_mutable_user()->::AcFunDanmu::ZtLiveUserInfo::MergeFrom(
+        from._internal_user());
   }
-}
-
-void CommonActionSignalRichText_UserInfoSegment::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonActionSignalRichText.UserInfoSegment)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonActionSignalRichText_UserInfoSegment::CopyFrom(const CommonActionSignalRichText_UserInfoSegment& from) {
@@ -1353,15 +1445,21 @@ bool CommonActionSignalRichText_UserInfoSegment::IsInitialized() const {
 
 void CommonActionSignalRichText_UserInfoSegment::InternalSwap(CommonActionSignalRichText_UserInfoSegment* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  color_.Swap(&other->color_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(user_, other->user_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.color_, lhs_arena,
+      &other->_impl_.color_, rhs_arena
+  );
+  swap(_impl_.user_, other->_impl_.user_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText_UserInfoSegment::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[3]);
 }
-
 
 // ===================================================================
 
@@ -1369,72 +1467,74 @@ class CommonActionSignalRichText::_Internal {
  public:
 };
 
-CommonActionSignalRichText::CommonActionSignalRichText(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  segments_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CommonActionSignalRichText::CommonActionSignalRichText(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.CommonActionSignalRichText)
 }
 CommonActionSignalRichText::CommonActionSignalRichText(const CommonActionSignalRichText& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      segments_(from.segments_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CommonActionSignalRichText* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.segments_){from._impl_.segments_}
+    , decltype(_impl_.sendtimems_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  sendtimems_ = from.sendtimems_;
+  _this->_impl_.sendtimems_ = from._impl_.sendtimems_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.CommonActionSignalRichText)
 }
 
-void CommonActionSignalRichText::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto.base);
-  sendtimems_ = PROTOBUF_LONGLONG(0);
+inline void CommonActionSignalRichText::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.segments_){arena}
+    , decltype(_impl_.sendtimems_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CommonActionSignalRichText::~CommonActionSignalRichText() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.CommonActionSignalRichText)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CommonActionSignalRichText::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CommonActionSignalRichText::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.segments_.~RepeatedPtrField();
 }
 
-void CommonActionSignalRichText::ArenaDtor(void* object) {
-  CommonActionSignalRichText* _this = reinterpret_cast< CommonActionSignalRichText* >(object);
-  (void)_this;
-}
-void CommonActionSignalRichText::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CommonActionSignalRichText::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CommonActionSignalRichText& CommonActionSignalRichText::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CommonActionSignalRichText_CommonActionSignalRichText_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CommonActionSignalRichText::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.CommonActionSignalRichText)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  segments_.Clear();
-  sendtimems_ = PROTOBUF_LONGLONG(0);
+  _impl_.segments_.Clear();
+  _impl_.sendtimems_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CommonActionSignalRichText::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CommonActionSignalRichText::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .AcFunDanmu.CommonActionSignalRichText.RichTextSegment segments = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1442,59 +1542,62 @@ const char* CommonActionSignalRichText::_InternalParse(const char* ptr, ::PROTOB
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int64 sendTimeMs = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          sendtimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.sendtimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CommonActionSignalRichText::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CommonActionSignalRichText::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.CommonActionSignalRichText)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.CommonActionSignalRichText.RichTextSegment segments = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_segments_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_segments_size()); i < n; i++) {
+    const auto& repfield = this->_internal_segments(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_segments(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // int64 sendTimeMs = 2;
-  if (this->sendtimems() != 0) {
+  if (this->_internal_sendtimems() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_sendtimems(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_sendtimems(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.CommonActionSignalRichText)
@@ -1505,66 +1608,45 @@ size_t CommonActionSignalRichText::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.CommonActionSignalRichText)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AcFunDanmu.CommonActionSignalRichText.RichTextSegment segments = 1;
   total_size += 1UL * this->_internal_segments_size();
-  for (const auto& msg : this->segments_) {
+  for (const auto& msg : this->_impl_.segments_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // int64 sendTimeMs = 2;
-  if (this->sendtimems() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_sendtimems());
+  if (this->_internal_sendtimems() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_sendtimems());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CommonActionSignalRichText::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.CommonActionSignalRichText)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CommonActionSignalRichText* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CommonActionSignalRichText>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.CommonActionSignalRichText)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.CommonActionSignalRichText)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CommonActionSignalRichText::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CommonActionSignalRichText::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CommonActionSignalRichText::GetClassData() const { return &_class_data_; }
 
-void CommonActionSignalRichText::MergeFrom(const CommonActionSignalRichText& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CommonActionSignalRichText::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CommonActionSignalRichText*>(&to_msg);
+  auto& from = static_cast<const CommonActionSignalRichText&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.CommonActionSignalRichText)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  segments_.MergeFrom(from.segments_);
-  if (from.sendtimems() != 0) {
-    _internal_set_sendtimems(from._internal_sendtimems());
+  _this->_impl_.segments_.MergeFrom(from._impl_.segments_);
+  if (from._internal_sendtimems() != 0) {
+    _this->_internal_set_sendtimems(from._internal_sendtimems());
   }
-}
-
-void CommonActionSignalRichText::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.CommonActionSignalRichText)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CommonActionSignalRichText::CopyFrom(const CommonActionSignalRichText& from) {
@@ -1580,32 +1662,38 @@ bool CommonActionSignalRichText::IsInitialized() const {
 
 void CommonActionSignalRichText::InternalSwap(CommonActionSignalRichText* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  segments_.InternalSwap(&other->segments_);
-  swap(sendtimems_, other->sendtimems_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.segments_.InternalSwap(&other->_impl_.segments_);
+  swap(_impl_.sendtimems_, other->_impl_.sendtimems_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CommonActionSignalRichText::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_CommonActionSignalRichText_2eproto_getter, &descriptor_table_CommonActionSignalRichText_2eproto_once,
+      file_level_metadata_CommonActionSignalRichText_2eproto[4]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_ImageSegment* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_ImageSegment >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_ImageSegment*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_ImageSegment >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonActionSignalRichText_ImageSegment >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_PlainSegment* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_PlainSegment >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_PlainSegment*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_PlainSegment >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonActionSignalRichText_PlainSegment >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_RichTextSegment* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_RichTextSegment >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_RichTextSegment*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_RichTextSegment >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonActionSignalRichText_RichTextSegment >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonActionSignalRichText_UserInfoSegment >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText* Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::CommonActionSignalRichText*
+Arena::CreateMaybeMessage< ::AcFunDanmu::CommonActionSignalRichText >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::CommonActionSignalRichText >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

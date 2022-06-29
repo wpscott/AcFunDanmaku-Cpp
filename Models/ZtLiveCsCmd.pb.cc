@@ -14,74 +14,80 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace AcFunDanmu {
-class ZtLiveCsCmdDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsCmd> _instance;
-} _ZtLiveCsCmd_default_instance_;
-class ZtLiveCsCmdAckDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ZtLiveCsCmdAck> _instance;
-} _ZtLiveCsCmdAck_default_instance_;
+PROTOBUF_CONSTEXPR ZtLiveCsCmd::ZtLiveCsCmd(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.cmdtype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.payload_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.ticket_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.liveid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtLiveCsCmdDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtLiveCsCmdDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtLiveCsCmdDefaultTypeInternal() {}
+  union {
+    ZtLiveCsCmd _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtLiveCsCmdDefaultTypeInternal _ZtLiveCsCmd_default_instance_;
+PROTOBUF_CONSTEXPR ZtLiveCsCmdAck::ZtLiveCsCmdAck(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.cmdacktype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.errormsg_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.payload_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.errorcode_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ZtLiveCsCmdAckDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ZtLiveCsCmdAckDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ZtLiveCsCmdAckDefaultTypeInternal() {}
+  union {
+    ZtLiveCsCmdAck _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ZtLiveCsCmdAckDefaultTypeInternal _ZtLiveCsCmdAck_default_instance_;
 }  // namespace AcFunDanmu
-static void InitDefaultsscc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_ZtLiveCsCmd_2eproto[2];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsCmd_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsCmd_2eproto = nullptr;
 
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsCmd_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsCmd();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto}, {}};
-
-static void InitDefaultsscc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::AcFunDanmu::_ZtLiveCsCmdAck_default_instance_;
-    new (ptr) ::AcFunDanmu::ZtLiveCsCmdAck();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ZtLiveCsCmd_2eproto[2];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ZtLiveCsCmd_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ZtLiveCsCmd_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ZtLiveCsCmd_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_ZtLiveCsCmd_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, cmdtype_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, payload_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, ticket_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, liveid_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, _impl_.cmdtype_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, _impl_.payload_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, _impl_.ticket_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmd, _impl_.liveid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, cmdacktype_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, errorcode_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, errormsg_),
-  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, payload_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, _impl_.cmdacktype_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, _impl_.errorcode_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, _impl_.errormsg_),
+  PROTOBUF_FIELD_OFFSET(::AcFunDanmu::ZtLiveCsCmdAck, _impl_.payload_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::AcFunDanmu::ZtLiveCsCmd)},
-  { 9, -1, sizeof(::AcFunDanmu::ZtLiveCsCmdAck)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::AcFunDanmu::ZtLiveCsCmd)},
+  { 10, -1, -1, sizeof(::AcFunDanmu::ZtLiveCsCmdAck)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtLiveCsCmd_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::AcFunDanmu::_ZtLiveCsCmdAck_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::AcFunDanmu::_ZtLiveCsCmd_default_instance_._instance,
+  &::AcFunDanmu::_ZtLiveCsCmdAck_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_ZtLiveCsCmd_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -92,22 +98,21 @@ const char descriptor_table_protodef_ZtLiveCsCmd_2eproto[] PROTOBUF_SECTION_VARI
   "ode\030\002 \001(\003\022\020\n\010errorMsg\030\003 \001(\t\022\017\n\007payload\030\004"
   " \001(\014b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ZtLiveCsCmd_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_ZtLiveCsCmd_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_ZtLiveCsCmd_2eproto = {
+    false, false, 212, descriptor_table_protodef_ZtLiveCsCmd_2eproto,
+    "ZtLiveCsCmd.proto",
+    &descriptor_table_ZtLiveCsCmd_2eproto_once, nullptr, 0, 2,
+    schemas, file_default_instances, TableStruct_ZtLiveCsCmd_2eproto::offsets,
+    file_level_metadata_ZtLiveCsCmd_2eproto, file_level_enum_descriptors_ZtLiveCsCmd_2eproto,
+    file_level_service_descriptors_ZtLiveCsCmd_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ZtLiveCsCmd_2eproto_sccs[2] = {
-  &scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto.base,
-  &scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ZtLiveCsCmd_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ZtLiveCsCmd_2eproto = {
-  false, false, descriptor_table_protodef_ZtLiveCsCmd_2eproto, "ZtLiveCsCmd.proto", 212,
-  &descriptor_table_ZtLiveCsCmd_2eproto_once, descriptor_table_ZtLiveCsCmd_2eproto_sccs, descriptor_table_ZtLiveCsCmd_2eproto_deps, 2, 0,
-  schemas, file_default_instances, TableStruct_ZtLiveCsCmd_2eproto::offsets,
-  file_level_metadata_ZtLiveCsCmd_2eproto, 2, file_level_enum_descriptors_ZtLiveCsCmd_2eproto, file_level_service_descriptors_ZtLiveCsCmd_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_ZtLiveCsCmd_2eproto_getter() {
+  return &descriptor_table_ZtLiveCsCmd_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_ZtLiveCsCmd_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ZtLiveCsCmd_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_ZtLiveCsCmd_2eproto(&descriptor_table_ZtLiveCsCmd_2eproto);
 namespace AcFunDanmu {
 
 // ===================================================================
@@ -116,160 +121,197 @@ class ZtLiveCsCmd::_Internal {
  public:
 };
 
-ZtLiveCsCmd::ZtLiveCsCmd(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtLiveCsCmd::ZtLiveCsCmd(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtLiveCsCmd)
 }
 ZtLiveCsCmd::ZtLiveCsCmd(const ZtLiveCsCmd& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtLiveCsCmd* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.cmdtype_){}
+    , decltype(_impl_.payload_){}
+    , decltype(_impl_.ticket_){}
+    , decltype(_impl_.liveid_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  cmdtype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.cmdtype_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.cmdtype_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_cmdtype().empty()) {
-    cmdtype_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cmdtype(), 
-      GetArena());
+    _this->_impl_.cmdtype_.Set(from._internal_cmdtype(), 
+      _this->GetArenaForAllocation());
   }
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.payload_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_payload().empty()) {
-    payload_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payload(), 
-      GetArena());
+    _this->_impl_.payload_.Set(from._internal_payload(), 
+      _this->GetArenaForAllocation());
   }
-  ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.ticket_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ticket_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_ticket().empty()) {
-    ticket_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ticket(), 
-      GetArena());
+    _this->_impl_.ticket_.Set(from._internal_ticket(), 
+      _this->GetArenaForAllocation());
   }
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.liveid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.liveid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_liveid().empty()) {
-    liveid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_liveid(), 
-      GetArena());
+    _this->_impl_.liveid_.Set(from._internal_liveid(), 
+      _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsCmd)
 }
 
-void ZtLiveCsCmd::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto.base);
-  cmdtype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ticket_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void ZtLiveCsCmd::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.cmdtype_){}
+    , decltype(_impl_.payload_){}
+    , decltype(_impl_.ticket_){}
+    , decltype(_impl_.liveid_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.cmdtype_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.cmdtype_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.payload_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.ticket_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ticket_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.liveid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.liveid_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ZtLiveCsCmd::~ZtLiveCsCmd() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtLiveCsCmd)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtLiveCsCmd::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  cmdtype_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ticket_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  liveid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void ZtLiveCsCmd::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.cmdtype_.Destroy();
+  _impl_.payload_.Destroy();
+  _impl_.ticket_.Destroy();
+  _impl_.liveid_.Destroy();
 }
 
-void ZtLiveCsCmd::ArenaDtor(void* object) {
-  ZtLiveCsCmd* _this = reinterpret_cast< ZtLiveCsCmd* >(object);
-  (void)_this;
-}
-void ZtLiveCsCmd::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtLiveCsCmd::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtLiveCsCmd& ZtLiveCsCmd::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsCmd_ZtLiveCsCmd_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsCmd::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsCmd)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cmdtype_.ClearToEmpty();
-  payload_.ClearToEmpty();
-  ticket_.ClearToEmpty();
-  liveid_.ClearToEmpty();
+  _impl_.cmdtype_.ClearToEmpty();
+  _impl_.payload_.ClearToEmpty();
+  _impl_.ticket_.ClearToEmpty();
+  _impl_.liveid_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtLiveCsCmd::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtLiveCsCmd::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string cmdType = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_cmdtype();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmd.cmdType"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmd.cmdType"));
+        } else
+          goto handle_unusual;
         continue;
       // bytes payload = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_payload();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string ticket = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_ticket();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmd.ticket"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmd.ticket"));
+        } else
+          goto handle_unusual;
         continue;
       // string liveId = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_liveid();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmd.liveId"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmd.liveId"));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtLiveCsCmd::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtLiveCsCmd::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtLiveCsCmd)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string cmdType = 1;
-  if (this->cmdtype().size() > 0) {
+  if (!this->_internal_cmdtype().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cmdtype().data(), static_cast<int>(this->_internal_cmdtype().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -279,13 +321,13 @@ failure:
   }
 
   // bytes payload = 2;
-  if (this->payload().size() > 0) {
+  if (!this->_internal_payload().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_payload(), target);
   }
 
   // string ticket = 3;
-  if (this->ticket().size() > 0) {
+  if (!this->_internal_ticket().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_ticket().data(), static_cast<int>(this->_internal_ticket().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -295,7 +337,7 @@ failure:
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->_internal_liveid().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_liveid().data(), static_cast<int>(this->_internal_liveid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -305,7 +347,7 @@ failure:
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtLiveCsCmd)
@@ -316,88 +358,69 @@ size_t ZtLiveCsCmd::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtLiveCsCmd)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string cmdType = 1;
-  if (this->cmdtype().size() > 0) {
+  if (!this->_internal_cmdtype().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_cmdtype());
   }
 
   // bytes payload = 2;
-  if (this->payload().size() > 0) {
+  if (!this->_internal_payload().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payload());
   }
 
   // string ticket = 3;
-  if (this->ticket().size() > 0) {
+  if (!this->_internal_ticket().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_ticket());
   }
 
   // string liveId = 4;
-  if (this->liveid().size() > 0) {
+  if (!this->_internal_liveid().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_liveid());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtLiveCsCmd::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtLiveCsCmd)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtLiveCsCmd* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtLiveCsCmd>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtLiveCsCmd)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtLiveCsCmd)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtLiveCsCmd::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtLiveCsCmd::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtLiveCsCmd::GetClassData() const { return &_class_data_; }
 
-void ZtLiveCsCmd::MergeFrom(const ZtLiveCsCmd& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsCmd)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtLiveCsCmd::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtLiveCsCmd*>(&to_msg);
+  auto& from = static_cast<const ZtLiveCsCmd&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsCmd)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.cmdtype().size() > 0) {
-    _internal_set_cmdtype(from._internal_cmdtype());
+  if (!from._internal_cmdtype().empty()) {
+    _this->_internal_set_cmdtype(from._internal_cmdtype());
   }
-  if (from.payload().size() > 0) {
-    _internal_set_payload(from._internal_payload());
+  if (!from._internal_payload().empty()) {
+    _this->_internal_set_payload(from._internal_payload());
   }
-  if (from.ticket().size() > 0) {
-    _internal_set_ticket(from._internal_ticket());
+  if (!from._internal_ticket().empty()) {
+    _this->_internal_set_ticket(from._internal_ticket());
   }
-  if (from.liveid().size() > 0) {
-    _internal_set_liveid(from._internal_liveid());
+  if (!from._internal_liveid().empty()) {
+    _this->_internal_set_liveid(from._internal_liveid());
   }
-}
-
-void ZtLiveCsCmd::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtLiveCsCmd)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtLiveCsCmd::CopyFrom(const ZtLiveCsCmd& from) {
@@ -413,17 +436,32 @@ bool ZtLiveCsCmd::IsInitialized() const {
 
 void ZtLiveCsCmd::InternalSwap(ZtLiveCsCmd* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  cmdtype_.Swap(&other->cmdtype_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payload_.Swap(&other->payload_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ticket_.Swap(&other->ticket_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  liveid_.Swap(&other->liveid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.cmdtype_, lhs_arena,
+      &other->_impl_.cmdtype_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.payload_, lhs_arena,
+      &other->_impl_.payload_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.ticket_, lhs_arena,
+      &other->_impl_.ticket_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.liveid_, lhs_arena,
+      &other->_impl_.liveid_, rhs_arena
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsCmd::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtLiveCsCmd_2eproto_getter, &descriptor_table_ZtLiveCsCmd_2eproto_once,
+      file_level_metadata_ZtLiveCsCmd_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -431,153 +469,183 @@ class ZtLiveCsCmdAck::_Internal {
  public:
 };
 
-ZtLiveCsCmdAck::ZtLiveCsCmdAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ZtLiveCsCmdAck::ZtLiveCsCmdAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:AcFunDanmu.ZtLiveCsCmdAck)
 }
 ZtLiveCsCmdAck::ZtLiveCsCmdAck(const ZtLiveCsCmdAck& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ZtLiveCsCmdAck* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.cmdacktype_){}
+    , decltype(_impl_.errormsg_){}
+    , decltype(_impl_.payload_){}
+    , decltype(_impl_.errorcode_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  cmdacktype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.cmdacktype_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.cmdacktype_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_cmdacktype().empty()) {
-    cmdacktype_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cmdacktype(), 
-      GetArena());
+    _this->_impl_.cmdacktype_.Set(from._internal_cmdacktype(), 
+      _this->GetArenaForAllocation());
   }
-  errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.errormsg_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.errormsg_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_errormsg().empty()) {
-    errormsg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_errormsg(), 
-      GetArena());
+    _this->_impl_.errormsg_.Set(from._internal_errormsg(), 
+      _this->GetArenaForAllocation());
   }
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.payload_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_payload().empty()) {
-    payload_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_payload(), 
-      GetArena());
+    _this->_impl_.payload_.Set(from._internal_payload(), 
+      _this->GetArenaForAllocation());
   }
-  errorcode_ = from.errorcode_;
+  _this->_impl_.errorcode_ = from._impl_.errorcode_;
   // @@protoc_insertion_point(copy_constructor:AcFunDanmu.ZtLiveCsCmdAck)
 }
 
-void ZtLiveCsCmdAck::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto.base);
-  cmdacktype_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  errormsg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  errorcode_ = PROTOBUF_LONGLONG(0);
+inline void ZtLiveCsCmdAck::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.cmdacktype_){}
+    , decltype(_impl_.errormsg_){}
+    , decltype(_impl_.payload_){}
+    , decltype(_impl_.errorcode_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.cmdacktype_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.cmdacktype_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.errormsg_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.errormsg_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.payload_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.payload_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ZtLiveCsCmdAck::~ZtLiveCsCmdAck() {
   // @@protoc_insertion_point(destructor:AcFunDanmu.ZtLiveCsCmdAck)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ZtLiveCsCmdAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  cmdacktype_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  errormsg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  payload_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void ZtLiveCsCmdAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.cmdacktype_.Destroy();
+  _impl_.errormsg_.Destroy();
+  _impl_.payload_.Destroy();
 }
 
-void ZtLiveCsCmdAck::ArenaDtor(void* object) {
-  ZtLiveCsCmdAck* _this = reinterpret_cast< ZtLiveCsCmdAck* >(object);
-  (void)_this;
-}
-void ZtLiveCsCmdAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ZtLiveCsCmdAck::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ZtLiveCsCmdAck& ZtLiveCsCmdAck::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ZtLiveCsCmdAck_ZtLiveCsCmd_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ZtLiveCsCmdAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:AcFunDanmu.ZtLiveCsCmdAck)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cmdacktype_.ClearToEmpty();
-  errormsg_.ClearToEmpty();
-  payload_.ClearToEmpty();
-  errorcode_ = PROTOBUF_LONGLONG(0);
+  _impl_.cmdacktype_.ClearToEmpty();
+  _impl_.errormsg_.ClearToEmpty();
+  _impl_.payload_.ClearToEmpty();
+  _impl_.errorcode_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ZtLiveCsCmdAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ZtLiveCsCmdAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string cmdAckType = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_cmdacktype();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmdAck.cmdAckType"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmdAck.cmdAckType"));
+        } else
+          goto handle_unusual;
         continue;
       // int64 errorCode = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          errorcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.errorcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string errorMsg = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_errormsg();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmdAck.errorMsg"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "AcFunDanmu.ZtLiveCsCmdAck.errorMsg"));
+        } else
+          goto handle_unusual;
         continue;
       // bytes payload = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_payload();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ZtLiveCsCmdAck::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ZtLiveCsCmdAck::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AcFunDanmu.ZtLiveCsCmdAck)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string cmdAckType = 1;
-  if (this->cmdacktype().size() > 0) {
+  if (!this->_internal_cmdacktype().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cmdacktype().data(), static_cast<int>(this->_internal_cmdacktype().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -587,13 +655,13 @@ failure:
   }
 
   // int64 errorCode = 2;
-  if (this->errorcode() != 0) {
+  if (this->_internal_errorcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_errorcode(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_errorcode(), target);
   }
 
   // string errorMsg = 3;
-  if (this->errormsg().size() > 0) {
+  if (!this->_internal_errormsg().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_errormsg().data(), static_cast<int>(this->_internal_errormsg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -603,13 +671,13 @@ failure:
   }
 
   // bytes payload = 4;
-  if (this->payload().size() > 0) {
+  if (!this->_internal_payload().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_payload(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AcFunDanmu.ZtLiveCsCmdAck)
@@ -620,88 +688,67 @@ size_t ZtLiveCsCmdAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AcFunDanmu.ZtLiveCsCmdAck)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string cmdAckType = 1;
-  if (this->cmdacktype().size() > 0) {
+  if (!this->_internal_cmdacktype().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_cmdacktype());
   }
 
   // string errorMsg = 3;
-  if (this->errormsg().size() > 0) {
+  if (!this->_internal_errormsg().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_errormsg());
   }
 
   // bytes payload = 4;
-  if (this->payload().size() > 0) {
+  if (!this->_internal_payload().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_payload());
   }
 
   // int64 errorCode = 2;
-  if (this->errorcode() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_errorcode());
+  if (this->_internal_errorcode() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_errorcode());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ZtLiveCsCmdAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:AcFunDanmu.ZtLiveCsCmdAck)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ZtLiveCsCmdAck* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ZtLiveCsCmdAck>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AcFunDanmu.ZtLiveCsCmdAck)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:AcFunDanmu.ZtLiveCsCmdAck)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ZtLiveCsCmdAck::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ZtLiveCsCmdAck::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ZtLiveCsCmdAck::GetClassData() const { return &_class_data_; }
 
-void ZtLiveCsCmdAck::MergeFrom(const ZtLiveCsCmdAck& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsCmdAck)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ZtLiveCsCmdAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ZtLiveCsCmdAck*>(&to_msg);
+  auto& from = static_cast<const ZtLiveCsCmdAck&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:AcFunDanmu.ZtLiveCsCmdAck)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.cmdacktype().size() > 0) {
-    _internal_set_cmdacktype(from._internal_cmdacktype());
+  if (!from._internal_cmdacktype().empty()) {
+    _this->_internal_set_cmdacktype(from._internal_cmdacktype());
   }
-  if (from.errormsg().size() > 0) {
-    _internal_set_errormsg(from._internal_errormsg());
+  if (!from._internal_errormsg().empty()) {
+    _this->_internal_set_errormsg(from._internal_errormsg());
   }
-  if (from.payload().size() > 0) {
-    _internal_set_payload(from._internal_payload());
+  if (!from._internal_payload().empty()) {
+    _this->_internal_set_payload(from._internal_payload());
   }
-  if (from.errorcode() != 0) {
-    _internal_set_errorcode(from._internal_errorcode());
+  if (from._internal_errorcode() != 0) {
+    _this->_internal_set_errorcode(from._internal_errorcode());
   }
-}
-
-void ZtLiveCsCmdAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:AcFunDanmu.ZtLiveCsCmdAck)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ZtLiveCsCmdAck::CopyFrom(const ZtLiveCsCmdAck& from) {
@@ -717,25 +764,39 @@ bool ZtLiveCsCmdAck::IsInitialized() const {
 
 void ZtLiveCsCmdAck::InternalSwap(ZtLiveCsCmdAck* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  cmdacktype_.Swap(&other->cmdacktype_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  errormsg_.Swap(&other->errormsg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  payload_.Swap(&other->payload_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(errorcode_, other->errorcode_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.cmdacktype_, lhs_arena,
+      &other->_impl_.cmdacktype_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.errormsg_, lhs_arena,
+      &other->_impl_.errormsg_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.payload_, lhs_arena,
+      &other->_impl_.payload_, rhs_arena
+  );
+  swap(_impl_.errorcode_, other->_impl_.errorcode_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ZtLiveCsCmdAck::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_ZtLiveCsCmd_2eproto_getter, &descriptor_table_ZtLiveCsCmd_2eproto_once,
+      file_level_metadata_ZtLiveCsCmd_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace AcFunDanmu
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsCmd* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsCmd >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsCmd*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsCmd >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtLiveCsCmd >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsCmdAck* Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsCmdAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::AcFunDanmu::ZtLiveCsCmdAck*
+Arena::CreateMaybeMessage< ::AcFunDanmu::ZtLiveCsCmdAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AcFunDanmu::ZtLiveCsCmdAck >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
