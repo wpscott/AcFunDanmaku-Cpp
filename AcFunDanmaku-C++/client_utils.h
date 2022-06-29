@@ -136,10 +136,6 @@ namespace client_utils
 		buffer[offset + 1] = (length & 0x00FF0000) >> 16;
 		buffer[offset + 2] = (length & 0x0000FF00) >> 8;
 		buffer[offset + 3] = length & 0x000000FF;
-		//buffer.push_back((length & 0xFF000000) >> 24);
-		//buffer.push_back((length & 0x00FF0000) >> 16);
-		//buffer.push_back((length & 0x0000FF00) >> 8);
-		//buffer.push_back(length & 0x000000FF);
 	}
 
 	static websocket_outgoing_message encode(
@@ -184,14 +180,6 @@ namespace client_utils
 
 		const auto& header_len = std::accumulate(data.begin() + 4, data.begin() + 8, 0, convertor);
 		const auto& payload_len = std::accumulate(data.begin() + 8, data.begin() + 12, 0, convertor);
-		//header_len += static_cast<uint32_t>(data[7]);
-		//header_len += static_cast<uint32_t>(data[6]) << 8;
-		//header_len += static_cast<uint32_t>(data[5]) << 16;
-		//header_len += static_cast<uint32_t>(data[4]) << 24;
-		//payload_len += static_cast<uint32_t>(data[11]);
-		//payload_len += static_cast<uint32_t>(data[10]) << 8;
-		//payload_len += static_cast<uint32_t>(data[9]) << 16;
-		//payload_len += static_cast<uint32_t>(data[8]) << 24;
 
 		PacketHeader header{};
 		DownstreamPayload down{};
