@@ -5,223 +5,246 @@
 #include "client_utils.h"
 #include "enums.h"
 
-namespace AcFunDanmu {
-class client_request {
- public:
-  client_request(const int64_t& userId, const std::string& serviceToken,
-                 const std::vector<CryptoPP::byte>& securityKey,
-                 const std::string& liveId, const std::string& enterRoomAttach,
-                 const std::vector<std::string>& tickets)
-      : userId(userId),
-        serviceToken(serviceToken),
-        securityKey(securityKey),
-        liveId(liveId),
-        enterRoomAttach(enterRoomAttach),
-        tickets(tickets){};
+namespace AcFunDanmu
+{
+	class client_request
+	{
+	public:
+		client_request(const int64_t& user_id, std::string service_token,
+		               std::vector<CryptoPP::byte> security_key,
+		               std::string live_id, std::string enter_room_attach,
+		               std::vector<std::string> tickets)
+			: user_id_(user_id),
+			  service_token_(std::move(service_token)),
+			  security_key_(std::move(security_key)),
+			  live_id_(std::move(live_id)),
+			  enter_room_attach_(std::move(enter_room_attach)),
+			  tickets_(std::move(tickets))
+		{
+		}
 
-  void Register(const int64_t& instanceId, const std::string& sessionKey,
-                const long& lz4compressionThreshold) {
-    this->instanceId = instanceId;
-    this->sessionKey = std::vector<CryptoPP::byte>(sessionKey.size());
-    memcpy(&this->sessionKey[0], sessionKey.data(), sessionKey.size());
-    this->lz4compressionThreshold = lz4compressionThreshold;
-  }
+		void Register(const int64_t& instance_id, const std::string& session_key,
+		              const long& lz4_compression_threshold)
+		{
+			this->instance_id_ = instance_id;
+			this->session_key_ = std::vector<CryptoPP::byte>(session_key.size());
+			memcpy(&this->session_key_[0], session_key.data(), session_key.size());
+			this->lz4_compression_threshold_ = lz4_compression_threshold;
+		}
 
-  const int64_t& getSeqId() { return heartbeatSeqId; }
-  const std::vector<CryptoPP::byte>& getSecurityKey() { return securityKey; }
-  const std::vector<CryptoPP::byte>& getSessionKey() { return sessionKey; }
-  const std::string& nextTicket() { return tickets[++ticketIndex]; }
+		[[nodiscard]] const int64_t& get_seq_id() const { return heartbeat_seq_id_; }
+		const std::vector<CryptoPP::byte>& get_security_key() { return security_key_; }
+		const std::vector<CryptoPP::byte>& get_session_key() { return session_key_; }
+		const std::string& next_ticket() { return tickets_[++ticket_index_]; }
 
-  const websocket_outgoing_message RegisterRequest() {
-    AcFunDanmu::RegisterRequest reg;
-    auto app = reg.mutable_appinfo();
-    auto dev = reg.mutable_deviceinfo();
-    auto common = reg.mutable_ztcommoninfo();
-    app->set_appname(AppName);
-    app->set_sdkversion(SdkVersion);
-    dev->set_platformtype(AcFunDanmu::DeviceInfo::H5);
-    dev->set_devicemodel("h5");
-    common->set_kpn(KPN);
-    common->set_kpf(KPF);
-    common->set_uid(userId);
+		websocket_outgoing_message register_request()
+		{
+			RegisterRequest reg{};
+			auto app = reg.mutable_appinfo();
+			auto dev = reg.mutable_deviceinfo();
+			auto common = reg.mutable_ztcommoninfo();
+			app->set_sdkversion(client_live_sdk_version);
+			app->set_linkversion(link_version);
+			dev->set_platformtype(DeviceInfo::H5_WINDOWS);
+			dev->set_devicemodel("h5");
+			common->set_kpn(kpn);
+			common->set_kpf(kpf);
+			common->set_uid(user_id_);
 
-    reg.set_presencestatus(AcFunDanmu::RegisterRequest::kPresenceOnline);
-    reg.set_appactivestatus(AcFunDanmu::RegisterRequest::kAppInForeground);
-    reg.set_instanceid(instanceId);
+			reg.set_presencestatus(RegisterRequest::kPresenceOnline);
+			reg.set_appactivestatus(RegisterRequest::kAppInForeground);
+			reg.set_instanceid(instance_id_);
 
-    auto payload = generatePayload(Command::REGISTER, reg.SerializeAsString());
-    auto body = payload.SerializeAsString();
+			const auto& payload = generate_payload(Command::REGISTER, reg.SerializeAsString());
+			std::string body;
+			payload.SerializeToString(&body);
+			//const auto& body = payload.SerializeAsString();
 
-    auto header = generateHeader(body);
+			auto header = generate_header(body);
 
-    auto token = header.mutable_tokeninfo();
-    token->set_tokentype(AcFunDanmu::TokenInfo::kServiceToken);
-    token->set_token(serviceToken);
+			const auto token = header.mutable_tokeninfo();
+			token->set_tokentype(TokenInfo::kServiceToken);
+			token->set_token(service_token_);
 
-    header.set_encryptionmode(
-        AcFunDanmu::PacketHeader::kEncryptionServiceToken);
+			header.set_encryptionmode(
+				PacketHeader::kEncryptionServiceToken);
 
-    seqId++;
+			std::string header_str;
+			header.SerializeToString(&header_str);
 
-    return ClientUtils::Encode(header.SerializeAsString(), body, securityKey);
-  }
+			seq_id_++;
 
-  const websocket_outgoing_message KeepAliveRequest() {
-    AcFunDanmu::KeepAliveRequest kareq;
-    kareq.set_presencestatus(AcFunDanmu::RegisterRequest::kPresenceOnline);
-    kareq.set_appactivestatus(AcFunDanmu::RegisterRequest::kAppInForeground);
+			return client_utils::encode(header_str, body, security_key_);
+		}
 
-    auto payload =
-        generatePayload(Command::KEEP_ALIVE, kareq.SerializeAsString());
-    auto body = payload.SerializeAsString();
+		websocket_outgoing_message keep_alive_request()
+		{
+			KeepAliveRequest kareq;
+			kareq.set_presencestatus(RegisterRequest::kPresenceOnline);
+			kareq.set_appactivestatus(RegisterRequest::kAppInForeground);
 
-    auto header = generateHeader(body);
+			const auto& payload =
+				generate_payload(Command::KEEP_ALIVE, kareq.SerializeAsString());
+			const auto& body = payload.SerializeAsString();
 
-    seqId++;
+			const auto& header = generate_header(body);
 
-    return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
-  }
+			seq_id_++;
 
-  const websocket_outgoing_message EnterRoomRequest() {
-    AcFunDanmu::ZtLiveCsEnterRoom enterRoom;
-    enterRoom.set_enterroomattach(enterRoomAttach);
-    enterRoom.set_clientlivesdkversion(ClientLiveSdkVersion);
+			return client_utils::encode(header.SerializeAsString(), body, session_key_);
+		}
 
-    auto cmd = generateCommand(GlobalCommand::ENTER_ROOM,
-                               enterRoom.SerializeAsString());
+		websocket_outgoing_message enter_room_request()
+		{
+			ZtLiveCsEnterRoom enter_room{};
+			enter_room.set_enterroomattach(enter_room_attach_);
+			enter_room.set_clientlivesdkversion(client_live_sdk_version);
 
-    auto payload =
-        generatePayload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
-    auto body = payload.SerializeAsString();
+			const auto& cmd = generate_command(GlobalCommand::ENTER_ROOM,
+			                                   enter_room.SerializeAsString());
 
-    auto header = generateHeader(body);
+			const auto& payload =
+				generate_payload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
+			const auto& body = payload.SerializeAsString();
 
-    seqId++;
+			const auto& header = generate_header(body);
 
-    return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
-  }
+			seq_id_++;
 
-  const websocket_outgoing_message PushMessageResponse(long long headerSeqId) {
-    auto payload = generatePayload(Command::PUSH_MESSAGE);
-    auto body = payload.SerializeAsString();
+			return client_utils::encode(header.SerializeAsString(), body, session_key_);
+		}
 
-    auto header = generateHeader(body);
-    header.set_seqid(headerSeqId);
+		[[nodiscard]] websocket_outgoing_message push_message_response(long long headerSeqId) const
+		{
+			const auto& payload = generate_payload(Command::PUSH_MESSAGE);
+			const auto& body = payload.SerializeAsString();
 
-    return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
-  }
+			auto header = generate_header(body);
+			header.set_seqid(headerSeqId);
 
-  const websocket_outgoing_message HeartbeatRequest() {
-    ZtLiveCsHeartbeat heartbeat;
-    heartbeat.set_clienttimestampms(
-        std::chrono::duration_cast<std::chrono::milliseconds>(
-            std::chrono::system_clock::now().time_since_epoch())
-            .count());
-    heartbeat.set_sequence(heartbeatSeqId);
+			return client_utils::encode(header.SerializeAsString(), body, session_key_);
+		}
 
-    auto cmd = generateCommand(GlobalCommand::HEARTBEAT,
-                               heartbeat.SerializeAsString());
+		websocket_outgoing_message heartbeat_request()
+		{
+			ZtLiveCsHeartbeat heartbeat{};
+			heartbeat.set_clienttimestampms(
+				std::chrono::duration_cast<std::chrono::milliseconds>(
+					std::chrono::system_clock::now().time_since_epoch())
+				.count());
+			heartbeat.set_sequence(heartbeat_seq_id_);
 
-    auto payload =
-        generatePayload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
-    auto body = payload.SerializeAsString();
+			const auto& cmd = generate_command(GlobalCommand::HEARTBEAT,
+			                                   heartbeat.SerializeAsString());
 
-    auto header = generateHeader(body);
+			const auto& payload =
+				generate_payload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
+			const auto& body = payload.SerializeAsString();
 
-    heartbeatSeqId++;
-    seqId++;
+			const auto& header = generate_header(body);
 
-    return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
-  }
+			heartbeat_seq_id_++;
+			seq_id_++;
 
-  const websocket_outgoing_message UserExitRequest() {
-    auto cmd = generateCommand(GlobalCommand::USER_EXIT);
+			return client_utils::encode(header.SerializeAsString(), body, session_key_);
+		}
 
-    auto payload =
-        generatePayload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
-    auto body = payload.SerializeAsString();
+		[[nodiscard]] websocket_outgoing_message user_exit_request() const
+		{
+			const auto& cmd = generate_command(GlobalCommand::USER_EXIT);
 
-    auto header = generateHeader(body);
+			const auto& payload =
+				generate_payload(Command::GLOBAL_COMMAND, cmd.SerializeAsString());
+			const auto& body = payload.SerializeAsString();
 
-    return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
-  }
+			const auto& header = generate_header(body);
 
-  const websocket_outgoing_message UnregisterRequest() {
-    auto payload = generatePayload(Command::UNREGISTER);
-    auto body = payload.SerializeAsString();
+			return client_utils::encode(header.SerializeAsString(), body, session_key_);
+		}
 
-    auto header = generateHeader(body);
+		[[nodiscard]] websocket_outgoing_message unregister_request() const
+		{
+			const auto& payload = generate_payload(Command::UNREGISTER);
+			const auto& body = payload.SerializeAsString();
 
-    return ClientUtils::Encode(header.SerializeAsString(), body, sessionKey);
-  }
+			const auto& header = generate_header(body);
 
- private:
-  int64_t userId{};
-  std::string serviceToken{};
-  std::vector<CryptoPP::byte> securityKey{};
-  std::string liveId{};
-  std::string enterRoomAttach{};
-  std::vector<std::string> tickets{};
-  int64_t instanceId = 0;
-  std::vector<CryptoPP::byte> sessionKey;
-  int32_t lz4compressionThreshold{};
-  int64_t seqId = 1;
-  int64_t heartbeatSeqId = 0;
+			return client_utils::encode(header.SerializeAsString(), body, session_key_);
+		}
 
-  int ticketIndex = 0;
-  const std::string currentTicket() { return tickets[ticketIndex]; }
+	private:
+		int64_t user_id_{};
+		std::string service_token_{};
+		std::vector<CryptoPP::byte> security_key_{};
+		std::string live_id_{};
+		std::string enter_room_attach_{};
+		std::vector<std::string> tickets_{};
+		int64_t instance_id_ = 0;
+		std::vector<CryptoPP::byte> session_key_;
+		int32_t lz4_compression_threshold_{};
+		int64_t seq_id_ = 1;
+		int64_t heartbeat_seq_id_ = 0;
 
-  const AcFunDanmu::ZtLiveCsCmd generateCommand(const std::string& command) {
-    AcFunDanmu::ZtLiveCsCmd cmd;
-    cmd.set_cmdtype(command);
-    cmd.set_ticket(currentTicket());
-    cmd.set_liveid(liveId);
-    return cmd;
-  }
+		int ticket_index_ = 0;
+		[[nodiscard]] std::string current_ticket() const { return tickets_[ticket_index_]; }
 
-  const AcFunDanmu::ZtLiveCsCmd generateCommand(const std::string& command,
-                                                const std::string& msg) {
-    auto cmd = generateCommand(command);
-    cmd.set_payload(msg);
-    return cmd;
-  }
+		[[nodiscard]] ZtLiveCsCmd generate_command(const std::string& command) const
+		{
+			ZtLiveCsCmd cmd{};
+			cmd.set_cmdtype(command);
+			cmd.set_ticket(current_ticket());
+			cmd.set_liveid(live_id_);
+			return cmd;
+		}
 
-  const AcFunDanmu::UpstreamPayload generatePayload(
-      const std::string& command) {
-    AcFunDanmu::UpstreamPayload payload;
-    payload.set_command(command);
-    payload.set_retrycount(retryCount);
-    payload.set_seqid(seqId);
-    payload.set_subbiz(SubBiz);
-    return payload;
-  }
+		[[nodiscard]] ZtLiveCsCmd generate_command(const std::string& command,
+		                                           const std::string& msg) const
+		{
+			auto cmd = generate_command(command);
+			cmd.set_payload(msg);
+			return cmd;
+		}
 
-  const AcFunDanmu::UpstreamPayload generatePayload(const std::string& command,
-                                                    const std::string& msg) {
-    auto payload = generatePayload(command);
-    payload.set_payloaddata(msg);
-    return payload;
-  }
+		[[nodiscard]] UpstreamPayload generate_payload(
+			const std::string& command) const
+		{
+			UpstreamPayload payload{};
+			payload.set_command(command);
+			payload.set_retrycount(retry_count);
+			payload.set_seqid(seq_id_);
+			payload.set_subbiz(sub_biz);
+			return payload;
+		}
 
-  const AcFunDanmu::PacketHeader generateHeader(const std::string& msg) {
-    AcFunDanmu::PacketHeader header;
-    header.set_appid(AppId);
-    header.set_uid(userId);
-    header.set_instanceid(instanceId);
-    header.set_encryptionmode(AcFunDanmu::PacketHeader::kEncryptionSessionKey);
-    header.set_seqid(seqId);
-    header.set_kpn(KPN);
-    header.set_decodedpayloadlen(msg.length());
-    return header;
-  }
+		[[nodiscard]] UpstreamPayload generate_payload(const std::string& command,
+		                                               const std::string& msg) const
+		{
+			auto payload = generate_payload(command);
+			payload.set_payloaddata(msg);
+			return payload;
+		}
 
-  static const uint32_t retryCount = 1;
-  static const int32_t AppId = 13;
-  inline static const std::string AppName = "link-sdk";
-  inline static const std::string SdkVersion = "1.2.1";
-  inline static const std::string KPN = "ACFUN_APP";
-  inline static const std::string KPF = "PC_WEB";
-  inline static const std::string SubBiz = "mainApp";
-  inline static const std::string ClientLiveSdkVersion = "kwai-acfun-live-link";
-};
-}  // namespace AcFunDanmu
+		[[nodiscard]] PacketHeader generate_header(const std::string& msg) const
+		{
+			PacketHeader header{};
+			header.set_appid(app_id);
+			header.set_uid(user_id_);
+			header.set_instanceid(instance_id_);
+			header.set_encryptionmode(PacketHeader::kEncryptionSessionKey);
+			header.set_seqid(seq_id_);
+			header.set_kpn(kpn);
+			header.set_decodedpayloadlen(static_cast<uint32_t>(msg.length()));
+			return header;
+		}
+
+		static constexpr uint32_t retry_count = 1;
+		static constexpr int32_t app_id = 13;
+		inline static const std::string app_name = "link-sdk";
+		inline static const std::string sdk_version = "1.4.0.145";
+		inline static const std::string kpn = "ACFUN_APP";
+		inline static const std::string kpf = "WINDOWS_PC";
+		inline static const std::string sub_biz = "mainApp";
+		inline static const std::string client_live_sdk_version = "kwai-acfun-live-link";
+		inline static const std::string link_version = "2.13.8";
+	};
+} // namespace AcFunDanmu

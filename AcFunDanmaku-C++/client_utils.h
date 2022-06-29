@@ -17,9 +17,10 @@
 #include <cryptopp/hex.h>
 #include <cryptopp/osrng.h>
 
+#include <numeric>
 #include <tuple>
 
-#include "AppInfo.pb.h"
+#include "Im/AppInfo.pb.h"
 #include "CommonActionSignalComment.pb.h"
 #include "CommonActionSignalGift.pb.h"
 #include "CommonActionSignalLike.pb.h"
@@ -36,15 +37,18 @@
 #include "CommonStateSignalDisplayInfo.pb.h"
 #include "CommonStateSignalRecentComment.pb.h"
 #include "CommonStateSignalTopUsers.pb.h"
-#include "DeviceInfo.pb.h"
-#include "DownstreamPayload.pb.h"
-#include "KeepAlive.pb.h"
-#include "PacketHeader.pb.h"
-#include "Register.pb.h"
-#include "TokenInfo.pb.h"
-#include "Unregister.pb.h"
-#include "UpstreamPayload.pb.h"
-#include "ZtCommonInfo.pb.h"
+#include "Im/DeviceInfo.pb.h"
+#include "Im/DownstreamPayload.pb.h"
+#include "Im/KeepAliveRequest.pb.h"
+#include "Im/KeepAliveResponse.pb.h"
+#include "Im/PacketHeader.pb.h"
+#include "Im/RegisterRequest.pb.h"
+#include "Im/RegisterResponse.pb.h"
+#include "Im/TokenInfo.pb.h"
+#include "Im/UnregisterRequest.pb.h"
+#include "Im/UnregisterResponse.pb.h"
+#include "Im/UpstreamPayload.pb.h"
+#include "Im/ZtCommonInfo.pb.h"
 #include "ZtLiveCsCmd.pb.h"
 #include "ZtLiveCsEnterRoom.pb.h"
 #include "ZtLiveCsHeartbeat.pb.h"
@@ -67,137 +71,157 @@ using CryptoPP::StreamTransformationFilter;
 using CryptoPP::StringSink;
 using CryptoPP::StringSource;
 
-using namespace utility;            // Common utilities like string conversions
-using namespace web;                // Common features like URIs.
-using namespace web::http;          // Common HTTP functionality
-using namespace web::http::client;  // HTTP client features
-using namespace concurrency::streams;               // Asynchronous streams
-using namespace web::http::experimental::listener;  // HTTP server
-using namespace web::websockets::client;            // WebSockets client
-using namespace web::json;                          // JSON library
+using namespace utility; // Common utilities like string conversions
+using namespace web; // Common features like URIs.
+using namespace http; // Common HTTP functionality
+using namespace client; // HTTP client features
+using namespace concurrency::streams; // Asynchronous streams
+using namespace http::experimental::listener; // HTTP server
+using namespace websockets::client; // WebSockets client
+using namespace json; // JSON library
 
-namespace ClientUtils {
-static const int HeaderOffset = 12;
+using namespace AcFunDanmu::Im::Basic;
 
-const static inline std::string Encrypt(const std::vector<CryptoPP::byte>& key,
-                                        const std::string& body) {
-  AutoSeededRandomPool prng;
-  CryptoPP::SecByteBlock iv(AES::BLOCKSIZE);
-  prng.GenerateBlock(iv, iv.size());
+namespace client_utils
+{
+	static constexpr int header_offset = 12;
 
-  CryptoPP::SecByteBlock aeskey(&key[0], key.size());
+	static std::string encrypt(const std::vector<CryptoPP::byte>& key,
+	                           const std::string& body)
+	{
+		AutoSeededRandomPool prng;
+		CryptoPP::SecByteBlock iv(AES::BLOCKSIZE);
+		prng.GenerateBlock(iv, iv.size());
 
-  CBC_Mode<AES>::Encryption encryptor(aeskey, aeskey.size(), iv);
+		CryptoPP::SecByteBlock aeskey(&key[0], key.size());
 
-  std::string cipher;
+		CBC_Mode<AES>::Encryption encryptor(aeskey, aeskey.size(), iv);
 
-  StringSource encrypted(
-      body, true,
-      new StreamTransformationFilter(encryptor, new StringSink(cipher)));
+		std::string cipher;
 
-  std::stringstream ss;
-  ss << std::string((const char*)iv.data(), iv.size()) << cipher;
+		StringSource encrypted(
+			body, true,
+			new StreamTransformationFilter(encryptor, new StringSink(cipher)));
 
-  return ss.str();
-}
+		std::stringstream ss;
+		ss << std::string(reinterpret_cast<const char*>(iv.data()), iv.size()) << cipher;
 
-const static inline std::string Decrypt(const std::vector<CryptoPP::byte>& key,
-                                        const std::string& data) {
-  CryptoPP::SecByteBlock iv(
-      (const CryptoPP::byte*)data.substr(0, AES::BLOCKSIZE).data(),
-      AES::BLOCKSIZE);
-  CryptoPP::SecByteBlock aeskey(&key[0], key.size());
+		return ss.str();
+	}
 
-  CBC_Mode<AES>::Decryption decryptor(aeskey, aeskey.size(), iv);
+	static std::string decrypt(const std::vector<CryptoPP::byte>& key,
+	                           const std::string& data)
+	{
+		CryptoPP::SecByteBlock iv(
+			reinterpret_cast<const CryptoPP::byte*>(data.substr(0, AES::BLOCKSIZE).data()),
+			AES::BLOCKSIZE);
+		CryptoPP::SecByteBlock aeskey(&key[0], key.size());
 
-  std::string recovered;
+		CBC_Mode<AES>::Decryption decryptor(aeskey, aeskey.size(), iv);
 
-  StringSource decrypted(
-      data.substr(AES::BLOCKSIZE), true,
-      new StreamTransformationFilter(decryptor, new StringSink(recovered)));
+		std::string recovered;
 
-  return recovered;
-}
+		StringSource decrypted(
+			data.substr(AES::BLOCKSIZE), true,
+			new StreamTransformationFilter(decryptor, new StringSink(recovered)));
 
-static inline void convertLength(std::vector<uint8_t>& buffer,
-                                 const size_t& length) {
-  buffer.push_back((length & 0xFF000000) >> 24);
-  buffer.push_back((length & 0x00FF0000) >> 16);
-  buffer.push_back((length & 0x0000FF00) >> 8);
-  buffer.push_back(length & 0x000000FF);
-}
+		return recovered;
+	}
 
-const static inline websocket_outgoing_message Encode(
-    const std::string& header, const std::string& body,
-    const std::vector<CryptoPP::byte>& key) {
-  auto encrypted = Encrypt(key, body);
+	static void convert_length(std::vector<uint8_t>& buffer,
+	                           const int& offset,
+	                           const size_t& length)
+	{
+		buffer[offset + 0] = (length & 0xFF000000) >> 24;
+		buffer[offset + 1] = (length & 0x00FF0000) >> 16;
+		buffer[offset + 2] = (length & 0x0000FF00) >> 8;
+		buffer[offset + 3] = length & 0x000000FF;
+		//buffer.push_back((length & 0xFF000000) >> 24);
+		//buffer.push_back((length & 0x00FF0000) >> 16);
+		//buffer.push_back((length & 0x0000FF00) >> 8);
+		//buffer.push_back(length & 0x000000FF);
+	}
 
-  std::vector<uint8_t> buf;
-  buf.push_back(0xAB);
-  buf.push_back(0xCD);
-  buf.push_back(0x00);
-  buf.push_back(0x01);
-  convertLength(buf, header.length());
-  convertLength(buf, encrypted.length());
-  std::copy(header.begin(), header.end(), std::back_inserter(buf));
-  std::copy(encrypted.begin(), encrypted.end(), std::back_inserter(buf));
+	static websocket_outgoing_message encode(
+		const std::string& header, const std::string& body,
+		const std::vector<CryptoPP::byte>& key)
+	{
+		const auto& encrypted = encrypt(key, body);
 
-  producer_consumer_buffer<uint8_t> buffer;
-  auto length = buffer.putn_nocopy(&buf[0], buf.size()).get();
+		std::vector<uint8_t> buf(header_offset + header.length() + encrypted.length());
+		buf[0] = 0xAB;
+		buf[1] = 0xCD;
+		buf[2] = 0x00;
+		buf[3] = 0x01;
+		convert_length(buf, 4, header.length());
+		convert_length(buf, 8, encrypted.length());
+		std::copy(header.begin(), header.end(), buf.begin() + header_offset);
+		std::copy(encrypted.begin(), encrypted.end(), buf.begin() + header_offset + header.length());
 
-  websocket_outgoing_message msg;
-  msg.set_binary_message(buffer.create_istream(), length);
+		producer_consumer_buffer<uint8_t> buffer;
+		const auto& length = buffer.putn_nocopy(&buf[0], buf.size()).get();
 
-  return msg;
-}
+		websocket_outgoing_message msg;
+		msg.set_binary_message(buffer.create_istream(), length);
 
-const static inline std::tuple<AcFunDanmu::PacketHeader,
-                               AcFunDanmu::DownstreamPayload>
-Decode(const websocket_incoming_message& message,
-       const std::vector<CryptoPP::byte>& securityKey,
-       const std::vector<CryptoPP::byte>& sessionKey) {
-  const auto& is = message.body();
-  const auto& length = message.length();
+		return msg;
+	}
 
-  container_buffer<std::vector<uint8_t>> buffer;
-  is.read_to_end(buffer).wait();
+	static std::tuple<PacketHeader, DownstreamPayload>
+	decode(const websocket_incoming_message& message,
+	       const std::vector<CryptoPP::byte>& security_key,
+	       const std::vector<CryptoPP::byte>& session_key)
+	{
+		const auto& is = message.body();
+		const auto& length = message.length();
 
-  const auto& data = buffer.collection();
+		const container_buffer<std::vector<uint8_t>> buffer;
+		is.read_to_end(static_cast<streambuf<unsigned char>>(buffer)).wait();
 
-  size_t headerlen = 0, payloadlen = 0;
-  headerlen += ((size_t)data[7]);
-  headerlen += ((size_t)data[6] << 8);
-  headerlen += ((size_t)data[5] << 16);
-  headerlen += ((size_t)data[4] << 24);
-  payloadlen += ((size_t)data[11]);
-  payloadlen += ((size_t)data[10] << 8);
-  payloadlen += ((size_t)data[9] << 16);
-  payloadlen += ((size_t)data[8] << 24);
+		const auto& data = buffer.collection();
 
-  AcFunDanmu::PacketHeader header;
-  AcFunDanmu::DownstreamPayload down;
-  header.ParseFromArray(&data[HeaderOffset], headerlen);
-  auto encryptionMode = header.encryptionmode();
-  if (encryptionMode != AcFunDanmu::PacketHeader::kEncryptionNone) {
-    auto payload =
-        std::string((const char*)&data[HeaderOffset + headerlen], payloadlen);
-    auto decrypted = Decrypt(
-        encryptionMode == AcFunDanmu::PacketHeader::kEncryptionServiceToken
-            ? securityKey
-            : sessionKey,
-        payload);
+		auto convertor = [](const uint32_t& l, const uint32_t& r) { return (l << 8) + r; };
 
-    if (decrypted.length() != header.decodedpayloadlen()) {
-      throw "Invalid payload length";
-    }
+		const auto& header_len = std::accumulate(data.begin() + 4, data.begin() + 8, 0, convertor);
+		const auto& payload_len = std::accumulate(data.begin() + 8, data.begin() + 12, 0, convertor);
+		//header_len += static_cast<uint32_t>(data[7]);
+		//header_len += static_cast<uint32_t>(data[6]) << 8;
+		//header_len += static_cast<uint32_t>(data[5]) << 16;
+		//header_len += static_cast<uint32_t>(data[4]) << 24;
+		//payload_len += static_cast<uint32_t>(data[11]);
+		//payload_len += static_cast<uint32_t>(data[10]) << 8;
+		//payload_len += static_cast<uint32_t>(data[9]) << 16;
+		//payload_len += static_cast<uint32_t>(data[8]) << 24;
 
-    down.ParseFromString(decrypted);
-  } else {
-    if (payloadlen != header.decodedpayloadlen()) {
-      throw "Invalid payload length";
-    }
-    down.ParseFromArray(&data[HeaderOffset + headerlen], payloadlen);
-  }
-  return std::make_tuple(std::move(header), std::move(down));
-}
-}  // namespace ClientUtils
+		PacketHeader header{};
+		DownstreamPayload down{};
+		header.ParseFromArray(&data[header_offset], header_len);
+		if (const auto encryption_mode = header.encryptionmode(); encryption_mode !=
+			PacketHeader::kEncryptionNone)
+		{
+			const auto payload =
+				std::string(reinterpret_cast<const char*>(&data[header_offset + header_len]), payload_len);
+			const auto& decrypted = decrypt(
+				encryption_mode == PacketHeader::kEncryptionServiceToken
+					? security_key
+					: session_key,
+				payload);
+
+			if (decrypted.length() != header.decodedpayloadlen())
+			{
+				throw "Invalid payload length";
+			}
+
+			down.ParseFromString(decrypted);
+		}
+		else
+		{
+			if (payload_len != header.decodedpayloadlen())
+			{
+				throw "Invalid payload length";
+			}
+			down.ParseFromArray(&data[header_offset + header_len], payload_len);
+		}
+		return std::make_tuple(std::move(header), std::move(down));
+	}
+} // namespace ClientUtils
