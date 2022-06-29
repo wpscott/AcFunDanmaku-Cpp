@@ -87,7 +87,7 @@ namespace client_utils
 	static constexpr int header_offset = 12;
 
 	static std::string encrypt(const std::vector<CryptoPP::byte>& key,
-	                           const std::string& body)
+	                           const std::string& body) noexcept
 	{
 		AutoSeededRandomPool prng;
 		CryptoPP::SecByteBlock iv(AES::BLOCKSIZE);
@@ -110,7 +110,7 @@ namespace client_utils
 	}
 
 	static std::string decrypt(const std::vector<CryptoPP::byte>& key,
-	                           const std::string& data)
+	                           const std::string& data) noexcept
 	{
 		CryptoPP::SecByteBlock iv(
 			reinterpret_cast<const CryptoPP::byte*>(data.substr(0, AES::BLOCKSIZE).data()),
@@ -130,7 +130,7 @@ namespace client_utils
 
 	static void convert_length(std::vector<uint8_t>& buffer,
 	                           const int& offset,
-	                           const size_t& length)
+	                           const size_t& length) noexcept
 	{
 		buffer[offset + 0] = (length & 0xFF000000) >> 24;
 		buffer[offset + 1] = (length & 0x00FF0000) >> 16;
@@ -140,7 +140,7 @@ namespace client_utils
 
 	static websocket_outgoing_message encode(
 		const std::string& header, const std::string& body,
-		const std::vector<CryptoPP::byte>& key)
+		const std::vector<CryptoPP::byte>& key) noexcept
 	{
 		const auto& encrypted = encrypt(key, body);
 
@@ -166,7 +166,7 @@ namespace client_utils
 	static std::tuple<PacketHeader, DownstreamPayload>
 	decode(const websocket_incoming_message& message,
 	       const std::vector<CryptoPP::byte>& security_key,
-	       const std::vector<CryptoPP::byte>& session_key)
+	       const std::vector<CryptoPP::byte>& session_key) noexcept
 	{
 		const auto& is = message.body();
 		const auto& length = message.length();
