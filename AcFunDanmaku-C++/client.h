@@ -228,7 +228,7 @@ namespace AcFunDanmu
 #ifdef USE_TCP
 				boost::asio::io_context io_context;
 				tcp::resolver resolver(io_context);
-				tcp::resolver::results_type endpoints = resolver.resolve("slink.gifshow.com", "14000");
+				tcp::resolver::results_type endpoints = resolver.resolve(TCP_HOST, TCP_SERVICE);
 
 				tcp::socket socket(io_context);
 				boost::asio::connect(socket, endpoints);
@@ -548,9 +548,9 @@ namespace AcFunDanmu
 				};
 
 				client.connect(WS_HOST).then([&]
-				{
-					client.send(request.register_request());
-				});
+					{
+						client.send(request.register_request());
+					});
 
 				while (running)
 				{
@@ -668,7 +668,7 @@ namespace AcFunDanmu
 					}
 				}
 				return pplx::task_from_result(true);
-			}
+		}
 			catch (const std::exception& e)
 			{
 				ucout << conversions::to_string_t(e.what()) << std::endl;
@@ -710,7 +710,12 @@ namespace AcFunDanmu
 
 		inline static const string_t VisitorToken = U("acfun.api.visitor_st");
 
+#ifdef USE_TCP
+		inline static const std::string TCP_HOST = "slink.gifshow.com";
+		inline static const std::string TCP_SERVICE = "14000";
+#else
 		inline static const string_t WS_HOST = U("wss://klink-newproduct-ws2.kwaizt.com/");
+#endif
 
 		static bool is_ok(const http_response& response)
 		{
