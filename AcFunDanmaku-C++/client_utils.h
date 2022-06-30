@@ -4,12 +4,9 @@
 #include <cpprest/filestream.h>
 #include <cpprest/http_client.h>
 #include <cpprest/http_listener.h>  // HTTP server
-#include <cpprest/interopstream.h>  // Bridges for integrating Async streams with STL and WinRT streams
 #include <cpprest/json.h>                    // JSON library
-#include <cpprest/producerconsumerstream.h>  // Async streams for producer consumer scenarios
-#include <cpprest/rawptrstream.h>  // Async streams backed by raw pointer to memory
-#include <cpprest/uri.h>           // URI library
 #include <cpprest/ws_client.h>     // WebSocket client
+
 #include <cryptopp/aes.h>
 #include <cryptopp/ccm.h>
 #include <cryptopp/cryptlib.h>
@@ -39,6 +36,8 @@
 #include "CommonStateSignalTopUsers.pb.h"
 #include "Im/DeviceInfo.pb.h"
 #include "Im/DownstreamPayload.pb.h"
+#include "Im/HandshakeRequest.pb.h"
+#include "Im/HandshakeResponse.pb.h"
 #include "Im/KeepAliveRequest.pb.h"
 #include "Im/KeepAliveResponse.pb.h"
 #include "Im/PacketHeader.pb.h"
@@ -74,13 +73,33 @@ using CryptoPP::StringSource;
 using namespace utility; // Common utilities like string conversions
 using namespace web; // Common features like URIs.
 using namespace http; // Common HTTP functionality
+using namespace http::experimental::listener; // HTTP server
 using namespace client; // HTTP client features
 using namespace concurrency::streams; // Asynchronous streams
-using namespace http::experimental::listener; // HTTP server
-using namespace websockets::client; // WebSockets client
 using namespace json; // JSON library
 
 using namespace AcFunDanmu::Im::Basic;
+
+#ifdef USE_TCP
+#include <iostream>
+#include <boost/array.hpp>
+#include <boost/asio.hpp>
+
+using boost::asio::ip::tcp;
+
+using buffer_t = boost::array<uint8_t, 4096>;
+using message = std::vector<uint8_t>;
+#else
+#include <cpprest/interopstream.h>  // Bridges for integrating Async streams with STL and WinRT streams
+#include <cpprest/producerconsumerstream.h>  // Async streams for producer consumer scenarios
+#include <cpprest/rawptrstream.h>  // Async streams backed by raw pointer to memory
+#include <cpprest/uri.h>           // URI library
+
+using namespace websockets::client; // WebSockets client
+
+typedef websocket_incoming_message buffer_t;
+typedef websocket_outgoing_message message;
+#endif
 
 namespace client_utils
 {
@@ -138,7 +157,69 @@ namespace client_utils
 		buffer[offset + 3] = length & 0x000000FF;
 	}
 
-	static websocket_outgoing_message encode(
+#ifdef USE_TCP
+	static message encode(
+		const std::string& header, const std::string& body,
+		const std::vector<CryptoPP::byte>& key) noexcept
+	{
+		const auto& encrypted = encrypt(key, body);
+
+		std::vector<uint8_t> buf(header_offset + header.length() + encrypted.length());
+		buf[0] = 0xAB;
+		buf[1] = 0xCD;
+		buf[2] = 0x00;
+		buf[3] = 0x01;
+		convert_length(buf, 4, header.length());
+		convert_length(buf, 8, encrypted.length());
+		std::copy(header.begin(), header.end(), buf.begin() + header_offset);
+		std::copy(encrypted.begin(), encrypted.end(), buf.begin() + header_offset + header.length());
+
+		return buf;
+	}
+
+	static std::tuple<PacketHeader, DownstreamPayload>
+	decode(const buffer_t& data,
+	       const std::vector<CryptoPP::byte>& security_key,
+	       const std::vector<CryptoPP::byte>& session_key)
+	{
+		auto convertor = [](const uint32_t& l, const uint32_t& r) { return (l << 8) + r; };
+
+		const auto& header_len = std::accumulate(data.begin() + 4, data.begin() + 8, 0, convertor);
+		const auto& payload_len = std::accumulate(data.begin() + 8, data.begin() + 12, 0, convertor);
+
+		PacketHeader header{};
+		DownstreamPayload down{};
+		header.ParseFromArray(&data[header_offset], header_len);
+		if (const auto encryption_mode = header.encryptionmode(); encryption_mode !=
+			PacketHeader::kEncryptionNone)
+		{
+			const auto payload =
+				std::string(reinterpret_cast<const char*>(&data[header_offset + header_len]), payload_len);
+			const auto& decrypted = decrypt(
+				encryption_mode == PacketHeader::kEncryptionServiceToken
+					? security_key
+					: session_key,
+				payload);
+
+			if (decrypted.length() != header.decodedpayloadlen())
+			{
+				throw "Invalid payload length";
+			}
+
+			down.ParseFromString(decrypted);
+		}
+		else
+		{
+			if (payload_len != header.decodedpayloadlen())
+			{
+				throw "Invalid payload length";
+			}
+			down.ParseFromArray(&data[header_offset + header_len], payload_len);
+		}
+		return std::make_tuple(std::move(header), std::move(down));
+	}
+#else
+	static message encode(
 		const std::string& header, const std::string& body,
 		const std::vector<CryptoPP::byte>& key) noexcept
 	{
@@ -164,15 +245,15 @@ namespace client_utils
 	}
 
 	static std::tuple<PacketHeader, DownstreamPayload>
-	decode(const websocket_incoming_message& message,
+	decode(const buffer_t& message,
 	       const std::vector<CryptoPP::byte>& security_key,
-	       const std::vector<CryptoPP::byte>& session_key) noexcept
+	       const std::vector<CryptoPP::byte>& session_key)
 	{
 		const auto& is = message.body();
 		const auto& length = message.length();
 
 		const container_buffer<std::vector<uint8_t>> buffer;
-		is.read_to_end(static_cast<streambuf<unsigned char>>(buffer)).wait();
+		const auto& len = is.read_to_end(static_cast<streambuf<unsigned char>>(buffer)).get();
 
 		const auto& data = buffer.collection();
 
@@ -212,4 +293,5 @@ namespace client_utils
 		}
 		return std::make_tuple(std::move(header), std::move(down));
 	}
+#endif
 } // namespace ClientUtils

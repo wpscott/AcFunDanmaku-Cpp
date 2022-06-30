@@ -6,7 +6,6 @@
 
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
-#include <boost/system/error_code.hpp>
 #include <gzip/decompress.hpp>
 #include <unordered_map>
 
@@ -225,6 +224,279 @@ namespace AcFunDanmu
 			try
 			{
 				bool running = true;
+
+#ifdef USE_TCP
+				boost::asio::io_context io_context;
+				tcp::resolver resolver(io_context);
+				tcp::resolver::results_type endpoints = resolver.resolve("slink.gifshow.com", "14000");
+
+				tcp::socket socket(io_context);
+				boost::asio::connect(socket, endpoints);
+
+				int64_t heartbeat_interval = 0;
+				std::thread hbt;
+				boost::asio::io_service ios;
+				boost::asio::deadline_timer* timer = nullptr;
+
+				const auto& stop = [&]()
+				{
+					running = false;
+					try
+					{
+						socket.shutdown(boost::asio::socket_base::shutdown_both);
+						socket.close();
+					}
+					catch (const boost::system::system_error& e)
+					{
+						ucout << conversions::to_string_t(e.what()) << std::endl;
+					}
+					catch (const std::exception& e)
+					{
+						ucout << conversions::to_string_t(e.what()) << std::endl;
+					}
+					if (timer != nullptr)
+					{
+						timer->cancel();
+						ios.stop();
+						if (hbt.joinable())
+						{
+							hbt.join();
+						}
+						io_context.stop();
+					}
+				};
+
+				std::function<void(boost::system::error_code)> heartbeat_handler =
+					[&](const boost::system::error_code& error)
+				{
+					if (error) { stop(); }
+					if (!running || timer == nullptr) { stop(); }
+
+					try
+					{
+						boost::system::error_code err;
+
+						socket.write_some(boost::asio::buffer(request.heartbeat_request()), err);
+						if (err == boost::asio::error::eof)
+						{
+							stop();
+						}
+						else if (err)
+						{
+							ucout << conversions::to_string_t(err.what()) << std::endl;
+							stop();
+						}
+						if (request.get_seq_id() % 5 == 4)
+						{
+							socket.write_some(boost::asio::buffer(request.keep_alive_request()), err);
+							if (err == boost::asio::error::eof)
+							{
+								stop();
+							}
+							else if (err)
+							{
+								ucout << conversions::to_string_t(err.what()) << std::endl;
+								stop();
+							}
+						}
+						timer->expires_from_now(
+							boost::posix_time::milliseconds(heartbeat_interval));
+						timer->async_wait(heartbeat_handler);
+					}
+					catch (const boost::system::error_code& e)
+					{
+						ucout << conversions::to_string_t(e.what()) << std::endl;
+					}
+					catch (const std::exception& e)
+					{
+						ucout << conversions::to_string_t(e.what()) << std::endl;
+						stop();
+					}
+				};
+
+				buffer_t buf{};
+				boost::system::error_code error;
+
+				socket.write_some(boost::asio::buffer(request.handshake_request()), error);
+				if (error == boost::asio::error::eof)
+				{
+					return pplx::task_from_result(false);
+				}
+				if (error)
+				{
+					throw boost::system::system_error(error);
+				}
+				socket.read_some(boost::asio::buffer(buf), error);
+
+				socket.write_some(boost::asio::buffer(request.register_request()), error);
+
+				if (error == boost::asio::error::eof)
+				{
+					return pplx::task_from_result(false);
+				}
+				if (error)
+				{
+					ucout << conversions::to_string_t(error.what()) << std::endl;
+					return pplx::task_from_result(false);
+				}
+
+				while (running)
+				{
+					const auto& len = socket.read_some(boost::asio::buffer(buf), error);
+
+					if (error == boost::asio::error::eof)
+					{
+						return pplx::task_from_result(false);
+					}
+					if (error)
+					{
+						ucout << conversions::to_string_t(error.what()) << std::endl;
+						return pplx::task_from_result(false);
+					}
+
+					const auto& [header, down] = client_utils::decode(buf, request.get_security_key(),
+					                                                  request.get_session_key());
+
+					if (const auto& command = down.command(); command == Command::GLOBAL_COMMAND)
+					{
+						ZtLiveCsCmdAck cmd{};
+						cmd.ParseFromString(down.payloaddata());
+						if (const auto& cmdAck = cmd.cmdacktype(); cmdAck == GlobalCommand::ENTER_ROOM_ACK)
+						{
+							ZtLiveCsEnterRoomAck ack{};
+							ack.ParseFromString(cmd.payload());
+							heartbeat_interval = ack.heartbeatintervalms();
+
+							timer = new boost::asio::deadline_timer(
+								ios, boost::posix_time::milliseconds(heartbeat_interval));
+							timer->async_wait(heartbeat_handler);
+							hbt = std::thread([&] { ios.run(); });
+						}
+						else if (cmdAck == GlobalCommand::HEARTBEAT_ACK)
+						{
+						}
+						else if (cmdAck == GlobalCommand::USER_EXIT_ACK)
+						{
+						}
+						else
+						{
+							ucout << U("Unhandled Global.ZtLiveInteractive.CsCmdAck: ")
+								<< conversions::to_string_t(cmdAck) << std::endl;
+						}
+					}
+					else if (command == Command::KEEP_ALIVE)
+					{
+					}
+					else if (command == Command::PING)
+					{
+					}
+					else if (command == Command::REGISTER)
+					{
+						RegisterResponse reg_resp{};
+						reg_resp.ParseFromString(down.payloaddata());
+						request.Register(
+							reg_resp.instanceid(), reg_resp.sesskey(),
+							reg_resp.sdkoption().lz4compressionthresholdbytes());
+
+						boost::system::error_code err;
+						socket.write_some(boost::asio::buffer(request.keep_alive_request()), err);
+						if (err == boost::asio::error::eof)
+						{
+							stop();
+							break;
+						}
+						if (err) { throw boost::system::system_error(err); }
+						socket.write_some(boost::asio::buffer(request.enter_room_request()), err);
+						if (err == boost::asio::error::eof)
+						{
+							stop();
+							break;
+						}
+						if (err) { throw boost::system::system_error(err); }
+					}
+					else if (command == Command::UNREGISTER)
+					{
+						stop();
+						break;
+					}
+					else if (command == Command::PUSH_MESSAGE)
+					{
+						boost::system::error_code err;
+						socket.write_some(boost::asio::buffer(request.push_message_response(header.seqid())), err);
+						if (err == boost::asio::error::eof)
+						{
+							stop();
+							break;
+						}
+						if (err) { throw boost::system::system_error(err); }
+						ZtLiveScMessage message{};
+						message.ParseFromString(down.payloaddata());
+						std::string payload = message.payload();
+						if (message.compressiontype() ==
+							ZtLiveScMessage::GZIP)
+						{
+							payload = gzip::decompress(payload.data(), payload.length());
+						}
+
+						const auto& msgType = message.messagetype();
+						if (msgType == PushMessage::ACTION_SIGNAL ||
+							msgType == PushMessage::STATE_SIGNAL ||
+							msgType == PushMessage::NOTIFY_SIGNAL)
+						{
+							if (handler_)
+							{
+								handler_(uper_id_, msgType, payload);
+							}
+						}
+						else if (msgType == PushMessage::STATUS_CHANGED)
+						{
+							ZtLiveScStatusChanged status_changed{};
+							status_changed.ParseFromString(payload);
+							if (const auto& type = status_changed.type(); type == ZtLiveScStatusChanged::LIVE_CLOSED
+								||
+								type == ZtLiveScStatusChanged::LIVE_BANNED)
+							{
+								stop();
+								break;
+							}
+						}
+						else if (msgType == PushMessage::TICKET_INVALID)
+						{
+							request.next_ticket();
+							boost::system::error_code err;
+							socket.write_some(boost::asio::buffer(request.enter_room_request()), err);
+							if (err == boost::asio::error::eof)
+							{
+								stop();
+								break;
+							}
+							if (err) { throw boost::system::system_error(err); }
+						}
+						else
+						{
+							ucout << U("Unhandled Push.ZtLiveInteractive.Message: ")
+								<< conversions::to_string_t(msgType) << std::endl;
+						}
+					}
+					else
+					{
+						ucout << U("Unhandled command: ")
+							<< conversions::to_string_t(command) << std::endl;
+					}
+				}
+				return pplx::task_from_result(true);
+			}
+			catch (const boost::system::system_error& e)
+			{
+				ucout << conversions::to_string_t(e.what()) << std::endl;
+				return pplx::task_from_result(false);
+			}
+			catch (const std::exception& e)
+			{
+				ucout << conversions::to_string_t(e.what()) << std::endl;
+				return pplx::task_from_result(false);
+			}
+#else
 				websocket_client client;
 
 				int64_t heartbeat_interval;
@@ -250,34 +522,27 @@ namespace AcFunDanmu
 				std::function<void(boost::system::error_code)> heartbeat_handler =
 					[&](const boost::system::error_code& error)
 				{
-					if (!error)
+					if (error) { stop(); }
+					if (!running || !timer) { stop(); }
+
+					try
 					{
-						if (running && timer)
+						client.send(request.heartbeat_request());
+						if (request.get_seq_id() % 5 == 4)
 						{
-							try
-							{
-								client.send(request.heartbeat_request());
-								if (request.get_seq_id() % 5 == 4)
-								{
-									client.send(request.keep_alive_request());
-								}
-								timer->expires_from_now(
-									boost::posix_time::milliseconds(heartbeat_interval));
-								timer->async_wait(heartbeat_handler);
-							}
-							catch (const std::exception& e)
-							{
-								ucout << conversions::to_string_t(e.what()) << std::endl;
-								stop();
-							}
+							client.send(request.keep_alive_request());
 						}
-						else
-						{
-							stop();
-						}
+						timer->expires_from_now(
+							boost::posix_time::milliseconds(heartbeat_interval));
+						timer->async_wait(heartbeat_handler);
 					}
-					else
+					catch (const boost::system::error_code& e)
 					{
+						ucout << conversions::to_string_t(e.what()) << std::endl;
+					}
+					catch (const std::exception& e)
+					{
+						ucout << conversions::to_string_t(e.what()) << std::endl;
 						stop();
 					}
 				};
@@ -409,6 +674,7 @@ namespace AcFunDanmu
 				ucout << conversions::to_string_t(e.what()) << std::endl;
 				return pplx::task_from_result(false);
 			}
+#endif
 		}
 
 	private:
@@ -416,8 +682,6 @@ namespace AcFunDanmu
 		static string_t did_;
 
 		int64_t user_id_{};
-		// string_t didCookie{};
-		// string_t did{};
 		string_t uper_id_{};
 		string_t service_token_{};
 		string_t security_key_{};
@@ -430,8 +694,8 @@ namespace AcFunDanmu
 		std::unordered_map<int64_t, gift> gift_list_{};
 
 		inline static const string_t USER_AGENT =
-			U("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, "
-				"like Gecko) Chrome/85.0.4183.102 Safari/537.36");
+			U(
+				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36");
 
 		inline static const string_t HOST = U("https://live.acfun.cn/live/");
 

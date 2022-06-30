@@ -1,4 +1,5 @@
-﻿#include "client.h"
+﻿#define USE_TCP
+#include "client.h"
 
 // From https://stackoverflow.com/a/49622513
 #ifndef MS_STDLIB_BUGS
